@@ -550,6 +550,24 @@ function tryCombustion(a: Chemical, b: Chemical, lookup: ChemicalLookupPort): Re
   };
 }
 
+function tryResolvePair(
+  a: Chemical,
+  b: Chemical,
+  conditions: ReactionConditions,
+  lookup: ChemicalLookupPort
+): ReactionResolution | null {
+  const curated = lookup.findCuratedReactionsByReactantSet([a.id, b.id]).filter((r) => conditionsCompatible(r, conditions));
+  if (curated.length === 1) {
+    return buildResultFromCurated(curated[0] as CuratedReaction, lookup);
+  }
+  const attempts = [tryGasEvolution, tryAcidBase, tryMetalPlusAcid, trySingleDisplacement, tryPrecipitation, tryCombustion];
+  for (const attempt of attempts) {
+    const res = attempt(a, b, lookup);
+    if (res) return res;
+  }
+  return null;
+}
+
 export function resolveReaction(
   reactantChemicals: Chemical[],
   conditions: ReactionConditions,
@@ -559,7 +577,10 @@ export function resolveReaction(
     throw new Error("resolveReaction requires at least one reactant chemical.");
   }
 
-  const ids = reactantChemicals.map((c) => c.id);
+  // Deduplicate by chemical id so repeated species in a merged container don't distort matching
+  const uniqueChemicals = Array.from(new Map(reactantChemicals.map((c) => [c.id, c])).values());
+  const ids = uniqueChemicals.map((c) => c.id);
+
   const curatedMatches = lookup.findCuratedReactionsByReactantSet(ids);
   const compatible = curatedMatches.filter((r) => conditionsCompatible(r, conditions));
 
@@ -574,7 +595,7 @@ export function resolveReaction(
       status: "REACTION",
       confidenceTier: "PREDICTED",
       confidenceScore: 0.5,
-      reactants: reactantChemicals.map((c) => toSpecies(c, 1)),
+      reactants: uniqueChemicals.map((c) => toSpecies(c, 1)),
       products: [],
       observableEffects: [],
       explanation:
@@ -585,8 +606,8 @@ export function resolveReaction(
     };
   }
 
-  if (reactantChemicals.length === 2) {
-    const [a, b] = reactantChemicals as [Chemical, Chemical];
+  if (uniqueChemicals.length === 2) {
+    const [a, b] = uniqueChemicals as [Chemical, Chemical];
     const attempts = [tryGasEvolution, tryAcidBase, tryMetalPlusAcid, trySingleDisplacement, tryPrecipitation, tryCombustion];
     for (const attempt of attempts) {
       const result = attempt(a, b, lookup);
@@ -594,9 +615,43 @@ export function resolveReaction(
     }
   }
 
+  // Multi-chemical mixtures (e.g. after pouring multiple containers together or adding solvent)
+  // Check subsets of chemicals for an active reaction and treat remaining species as spectators.
+  if (uniqueChemicals.length > 2) {
+    let bestResult: { resolution: ReactionResolution; activeIds: Set<string> } | null = null;
+    for (let i = 0; i < uniqueChemicals.length; i++) {
+      for (let j = i + 1; j < uniqueChemicals.length; j++) {
+        const a = uniqueChemicals[i] as Chemical;
+        const b = uniqueChemicals[j] as Chemical;
+        const res = tryResolvePair(a, b, conditions, lookup);
+        if (res && res.status === "REACTION") {
+          if (!bestResult || res.confidenceScore > bestResult.resolution.confidenceScore) {
+            bestResult = { resolution: res, activeIds: new Set([a.id, b.id]) };
+          }
+        }
+      }
+    }
+
+    if (bestResult) {
+      const spectators = uniqueChemicals.filter((c) => !bestResult!.activeIds.has(c.id));
+      const spectatorNames = spectators.map((s) => `${s.commonName} (${s.formula})`).join(", ");
+      return {
+        ...bestResult.resolution,
+        explanation:
+          bestResult.resolution.explanation +
+          ` In this mixture, ${bestResult.resolution.reactants.map((r) => r.commonName).join(" and ")} react while ` +
+          `spectator species (${spectatorNames}) remain unreacted in the mixture.`,
+        warnings: [
+          ...bestResult.resolution.warnings,
+          `Spectator species present in mixture: ${spectatorNames}. They do not participate in the primary reaction.`,
+        ],
+      };
+    }
+  }
+
   const note =
     curatedMatches.length > 0
       ? "These exact chemicals do have a curated reaction on file, but not under the conditions provided (e.g. temperature or solvent out of range)."
       : undefined;
-  return unsupportedResult(reactantChemicals, note);
+  return unsupportedResult(uniqueChemicals, note);
 }

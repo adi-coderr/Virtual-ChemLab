@@ -104,6 +104,59 @@ describe("POST /api/reactions/simulate", () => {
     const res = await request(app).post("/api/reactions/simulate").send({ reactants: [] });
     expect(res.status).toBe(400);
   });
+
+  it("handles mixtures with more than 6 chemicals without a validation error", async () => {
+    const res = await request(app)
+      .post("/api/reactions/simulate")
+      .send({
+        reactants: [
+          { chemicalId: "hcl", amount: 20, unit: "mL", concentrationMolar: 0.1 },
+          { chemicalId: "naoh", amount: 20, unit: "mL", concentrationMolar: 0.1 },
+          { chemicalId: "agno3", amount: 10, unit: "mL", concentrationMolar: 0.1 },
+          { chemicalId: "nacl", amount: 5, unit: "g" },
+          { chemicalId: "cuso4", amount: 10, unit: "mL", concentrationMolar: 0.1 },
+          { chemicalId: "zn", amount: 2, unit: "g" },
+          { chemicalId: "water", amount: 50, unit: "mL", concentrationMolar: 55.5 },
+        ],
+      });
+
+    expect(res.status).toBe(200);
+    expect(res.body.data.resolution.status).toBe("REACTION");
+  });
+
+  it("resolves the reacting pair and notes spectator species when water or spectators are present", async () => {
+    const res = await request(app)
+      .post("/api/reactions/simulate")
+      .send({
+        reactants: [
+          { chemicalId: "hcl", amount: 50, unit: "mL", concentrationMolar: 0.1 },
+          { chemicalId: "naoh", amount: 50, unit: "mL", concentrationMolar: 0.1 },
+          { chemicalId: "water", amount: 100, unit: "mL", concentrationMolar: 55.5 },
+        ],
+      });
+
+    expect(res.status).toBe(200);
+    expect(res.body.data.resolution.status).toBe("REACTION");
+    expect(res.body.data.resolution.balancedEquation).toBe("HCl + NaOH → NaCl + H2O");
+    expect(res.body.data.resolution.warnings.some((w: string) => w.includes("Spectator species"))).toBe(true);
+  });
+
+  it("aggregates duplicate chemical inputs in stoichiometry calculations", async () => {
+    const res = await request(app)
+      .post("/api/reactions/simulate")
+      .send({
+        reactants: [
+          { chemicalId: "hcl", amount: 20, unit: "mL", concentrationMolar: 0.1 }, // 0.002 mol
+          { chemicalId: "hcl", amount: 30, unit: "mL", concentrationMolar: 0.1 }, // 0.003 mol -> total 0.005 mol
+          { chemicalId: "naoh", amount: 50, unit: "mL", concentrationMolar: 0.1 }, // 0.005 mol
+        ],
+      });
+
+    expect(res.status).toBe(200);
+    expect(res.body.data.resolution.status).toBe("REACTION");
+    const hclLine = res.body.data.stoichiometry.find((l: { chemicalId: string }) => l.chemicalId === "hcl");
+    expect(hclLine.inputMoles).toBeCloseTo(0.005, 6);
+  });
 });
 
 describe("POST /api/reactions/balance", () => {

@@ -31,7 +31,7 @@ export const chemicalListQuerySchema = z.object({
 });
 
 export const simulateReactionSchema = z.object({
-  reactants: z.array(reactionInputSpeciesSchema).min(1).max(6),
+  reactants: z.array(reactionInputSpeciesSchema).min(1).max(50),
   conditions: reactionConditionsSchema,
 });
 
@@ -42,7 +42,7 @@ export const balanceEquationRequestSchema = z.object({
 
 export const stoichiometryRequestSchema = z.object({
   reactionId: z.string().min(1),
-  reactantAmounts: z.array(reactionInputSpeciesSchema).min(1).max(6),
+  reactantAmounts: z.array(reactionInputSpeciesSchema).min(1).max(50),
   actualYieldMassGrams: z.number().positive().optional(),
 });
 
@@ -63,7 +63,7 @@ const coolPayloadSchema = z.object({ targetTemperatureC: z.number().min(-273.15)
 const removePayloadSchema = z.object({ chemicalId: z.string().min(1), containerId: z.string().optional() });
 const measurePayloadSchema = z.object({ containerId: z.string().optional(), note: z.string().max(300).optional() });
 const runReactionPayloadSchema = z.object({
-  reactants: z.array(reactionInputSpeciesSchema).min(1).max(6),
+  reactants: z.array(reactionInputSpeciesSchema).min(1).max(50),
   conditions: reactionConditionsSchema,
   containerId: z.string().optional(),
 });

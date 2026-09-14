@@ -59,6 +59,40 @@ function snapshot(state: LabState) {
   return { containers: state.containers.map((c) => ({ ...c, contents: [...c.contents] })), timeline: [...state.timeline] };
 }
 
+function consolidateContents(contents: ContainerContent[]): ContainerContent[] {
+  const map = new Map<string, ContainerContent>();
+  for (const item of contents) {
+    const existing = map.get(item.chemicalId);
+    if (!existing) {
+      map.set(item.chemicalId, { ...item });
+      continue;
+    }
+    if (existing.unit === item.unit) {
+      if ((existing.unit === "mL" || existing.unit === "L") && existing.concentrationMolar && item.concentrationMolar) {
+        const totalVolume = existing.amount + item.amount;
+        const totalMoles = existing.amount * existing.concentrationMolar + item.amount * item.concentrationMolar;
+        existing.amount = totalVolume;
+        existing.concentrationMolar = totalVolume > 0 ? totalMoles / totalVolume : existing.concentrationMolar;
+      } else {
+        existing.amount += item.amount;
+      }
+    } else if ((existing.unit === "mL" && item.unit === "L") || (existing.unit === "L" && item.unit === "mL")) {
+      const existingML = existing.unit === "mL" ? existing.amount : existing.amount * 1000;
+      const itemML = item.unit === "mL" ? item.amount : item.amount * 1000;
+      const totalML = existingML + itemML;
+      if (existing.concentrationMolar && item.concentrationMolar) {
+        const totalMoles = existingML * existing.concentrationMolar + itemML * item.concentrationMolar;
+        existing.concentrationMolar = totalML > 0 ? totalMoles / totalML : existing.concentrationMolar;
+      }
+      existing.unit = "mL";
+      existing.amount = totalML;
+    } else {
+      existing.amount += item.amount;
+    }
+  }
+  return Array.from(map.values());
+}
+
 export const useLabStore = create<LabState>((set, get) => ({
   experimentId: null,
   experimentStartedAt: Date.now(),
@@ -140,7 +174,9 @@ export const useLabStore = create<LabState>((set, get) => ({
           unit,
           concentrationMolar,
         };
-        const containers = s.containers.map((c) => (c.id === s.activeContainerId ? { ...c, contents: [...c.contents, content] } : c));
+        const containers = s.containers.map((c) =>
+          c.id === s.activeContainerId ? { ...c, contents: consolidateContents([...c.contents, content]) } : c
+        );
         const entry: TimelineEntry = {
           id: makeId(),
           timeLabel: timeLabel(s.experimentStartedAt),
@@ -170,15 +206,17 @@ export const useLabStore = create<LabState>((set, get) => ({
     set((s) => {
       const source = s.containers.find((c) => c.id === sourceId);
       if (!source || source.contents.length === 0) return {};
+      const target = s.containers.find((c) => c.id === targetId);
+      const mergedContents = target ? consolidateContents([...target.contents, ...source.contents]) : source.contents;
       const containers = s.containers.map((c) => {
         if (c.id === sourceId) return { ...c, contents: [] };
-        if (c.id === targetId) return { ...c, contents: [...c.contents, ...source.contents] };
+        if (c.id === targetId) return { ...c, contents: mergedContents };
         return c;
       });
       const entry: TimelineEntry = {
         id: makeId(),
         timeLabel: timeLabel(s.experimentStartedAt),
-        description: `Poured ${source.name} into ${s.containers.find((c) => c.id === targetId)?.name ?? "container"}`,
+        description: `Poured ${source.name} into ${target?.name ?? "container"}`,
         actionType: "MIX",
       };
       return { history: [...s.history, snapshot(s)], containers, timeline: [...s.timeline, entry], activeContainerId: targetId };
@@ -218,7 +256,8 @@ export const useLabStore = create<LabState>((set, get) => ({
     }
     set({ isLoading: true, error: null });
     try {
-      const reactants = container.contents.map((c) => ({
+      const consolidated = consolidateContents(container.contents);
+      const reactants = consolidated.map((c) => ({
         chemicalId: c.chemicalId,
         amount: c.amount,
         unit: c.unit,
@@ -234,16 +273,39 @@ export const useLabStore = create<LabState>((set, get) => ({
         let containers = s.containers;
         if (resolution.status === "REACTION") {
           const stoichByChemicalId = new Map((simulationResult.stoichiometry ?? []).map((line) => [line.chemicalId, line]));
-          const newContents: ContainerContent[] = resolution.products.map((p) => {
-            const line = stoichByChemicalId.get(p.chemicalId);
-            return {
-              chemicalId: p.chemicalId,
-              commonName: p.commonName,
-              formula: p.formula,
-              amount: line?.theoreticalYieldMass ?? 0,
+          const productContents: ContainerContent[] = resolution.products
+            .map((p) => {
+              const line = stoichByChemicalId.get(p.chemicalId);
+              const mass = line?.theoreticalYieldMass ?? 0;
+              return {
+                chemicalId: p.chemicalId,
+                commonName: p.commonName,
+                formula: p.formula,
+                amount: mass > 0 ? parseFloat(mass.toFixed(4)) : 0.1,
+                unit: "g" as Unit,
+              };
+            })
+            .filter((c) => c.amount > 0);
+
+          // Keep any unreacted excess reactants (where remainingMass > 0.001)
+          const excessReactants: ContainerContent[] = (simulationResult.stoichiometry ?? [])
+            .filter((line) => line.role === "reactant" && (line.remainingMass ?? 0) > 0.001)
+            .map((line) => ({
+              chemicalId: line.chemicalId,
+              commonName: line.commonName,
+              formula: line.formula,
+              amount: parseFloat((line.remainingMass ?? 0).toFixed(4)),
               unit: "g" as Unit,
-            };
-          });
+            }));
+
+          // Keep spectators (any chemical in container not involved in reaction)
+          const activeIds = new Set([
+            ...resolution.reactants.map((r) => r.chemicalId),
+            ...resolution.products.map((p) => p.chemicalId),
+          ]);
+          const spectators = container.contents.filter((c) => !activeIds.has(c.chemicalId));
+
+          const newContents = consolidateContents([...productContents, ...excessReactants, ...spectators]);
           containers = s.containers.map((c) => (c.id === container.id ? { ...c, contents: newContents } : c));
         }
         const entry: TimelineEntry = {

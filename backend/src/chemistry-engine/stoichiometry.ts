@@ -39,19 +39,23 @@ export function computeStoichiometry(
   products: StoichiometryProductInfo[],
   inputs: ReactionInputSpecies[]
 ): StoichiometryResult {
-  const inputByChemicalId = new Map(inputs.map((i) => [i.chemicalId, i]));
-
   const reactantMoles = reactants.map((r) => {
-    const input = inputByChemicalId.get(r.chemicalId);
-    if (!input) {
+    const matchingInputs = inputs.filter((i) => i.chemicalId === r.chemicalId);
+    if (matchingInputs.length === 0) {
       throw new ChemistryEngineError(
         `No quantity was provided for reactant "${r.commonName}" (${r.formula}), which this reaction requires.`,
         "MISSING_REACTANT_QUANTITY",
         { chemicalId: r.chemicalId }
       );
     }
-    const { moles, massGrams } = toMoles(input, r.molarMass);
-    return { ...r, providedMoles: moles, providedMass: massGrams };
+    let totalMoles = 0;
+    let totalMassGrams = 0;
+    for (const input of matchingInputs) {
+      const { moles, massGrams } = toMoles(input, r.molarMass);
+      totalMoles += moles;
+      totalMassGrams += massGrams ?? moles * r.molarMass;
+    }
+    return { ...r, providedMoles: totalMoles, providedMass: totalMassGrams };
   });
 
   // The limiting reagent is whichever reactant has the smallest "moles per
