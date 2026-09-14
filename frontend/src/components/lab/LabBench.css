@@ -1,0 +1,48 @@
+.lab-bench {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.lab-bench__surface {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  gap: var(--space-5);
+  padding: var(--space-5);
+  background-image: linear-gradient(var(--paper-200) 1px, transparent 1px), linear-gradient(90deg, var(--paper-200) 1px, transparent 1px);
+  background-size: 24px 24px;
+  background-color: var(--paper-50);
+  border-radius: var(--radius-lg);
+  border: var(--border-hairline);
+  overflow-y: auto;
+}
+
+.lab-bench__slot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.lab-bench__pour-btn {
+  font-size: var(--text-2xs);
+  font-weight: 600;
+  color: var(--azure-700);
+  background: var(--azure-100);
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: 3px var(--space-2);
+}
+.lab-bench__pour-btn.is-armed {
+  background: var(--amber-500);
+  color: white;
+}
+
+.lab-bench__empty {
+  padding: var(--space-6);
+  text-align: center;
+  color: var(--graphite-400);
+  font-size: var(--text-sm);
+}

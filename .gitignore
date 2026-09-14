@@ -1,0 +1,15 @@
+node_modules/
+dist/
+build/
+.env
+*.log
+.DS_Store
+
+backend/data/
+backend/*.db
+backend/*.db-wal
+backend/*.db-shm
+
+frontend/dist/
+.vite/
+coverage/

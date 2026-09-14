@@ -1,0 +1,71 @@
+.molecule-viewer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  height: 100%;
+}
+
+.molecule-viewer__toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.molecule-viewer__title {
+  font-size: var(--text-md);
+  font-weight: 600;
+}
+
+.molecule-viewer__toggle {
+  display: flex;
+  border: var(--border-hairline);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+.molecule-viewer__toggle button {
+  appearance: none;
+  border: none;
+  background: var(--paper-0);
+  padding: 4px var(--space-3);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  color: var(--graphite-600);
+}
+.molecule-viewer__toggle button.is-active {
+  background: var(--azure-600);
+  color: white;
+}
+
+.molecule-viewer__stage {
+  flex: 1;
+  min-height: 240px;
+}
+
+.molecule-viewer__caption {
+  font-size: var(--text-2xs);
+  color: var(--graphite-400);
+  line-height: 1.4;
+}
+
+.molecule-viewer--empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  text-align: center;
+  padding: var(--space-6) var(--space-4);
+  border: 1px dashed var(--paper-200);
+  border-radius: var(--radius-md);
+  min-height: 220px;
+}
+.molecule-viewer__empty-title {
+  font-weight: 600;
+  color: var(--graphite-600);
+}
+.molecule-viewer__empty-body {
+  font-size: var(--text-sm);
+  color: var(--graphite-400);
+  max-width: 34ch;
+  line-height: 1.5;
+}

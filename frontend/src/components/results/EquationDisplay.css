@@ -1,0 +1,33 @@
+.equation-display {
+  font-size: var(--text-lg);
+  font-weight: 500;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: var(--space-2);
+  color: var(--ink-950);
+}
+
+.equation-display__side {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: var(--space-2);
+}
+
+.equation-display__arrow {
+  color: var(--azure-600);
+  margin: 0 var(--space-1);
+  font-size: var(--text-xl);
+}
+
+.equation-display__plus {
+  margin: 0 var(--space-2);
+  color: var(--graphite-400);
+}
+
+.equation-display__coefficient {
+  color: var(--amber-700);
+  margin-right: 2px;
+  font-weight: 700;
+}

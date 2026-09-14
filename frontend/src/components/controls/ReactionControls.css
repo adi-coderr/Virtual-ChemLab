@@ -1,0 +1,75 @@
+.reaction-controls {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.reaction-controls__hint {
+  font-size: var(--text-sm);
+  color: var(--graphite-400);
+}
+
+.reaction-controls__add-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--space-3);
+  background: var(--azure-100);
+  border-radius: var(--radius-md);
+}
+
+.reaction-controls__add-title {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--azure-700);
+}
+
+.reaction-controls__row {
+  display: flex;
+  gap: var(--space-3);
+}
+
+.reaction-controls__row label,
+.reaction-controls__conc label,
+.reaction-controls__conditions label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: var(--text-xs);
+  font-weight: 500;
+  color: var(--graphite-600);
+  flex: 1;
+}
+
+.reaction-controls input[type="number"],
+.reaction-controls input[type="text"],
+.reaction-controls select {
+  border: var(--border-hairline);
+  border-radius: var(--radius-sm);
+  padding: var(--space-2);
+  font-size: var(--text-sm);
+  background: var(--paper-0);
+}
+
+.reaction-controls input[type="range"] {
+  width: 100%;
+}
+
+.reaction-controls__divider {
+  height: 1px;
+  background: var(--paper-200);
+}
+
+.reaction-controls__conditions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.reaction-controls__section-title {
+  font-size: var(--text-xs);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--graphite-400);
+}

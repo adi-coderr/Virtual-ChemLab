@@ -1,0 +1,96 @@
+/*
+  Design direction: a precision scientific instrument, not a SaaS dashboard.
+  - Palette: cool graphite chrome + pale sage-grey bench surface, with two
+    accents drawn from real chemistry (a cupric/Bunsen-flame blue as the
+    primary action color, a reagent amber for heat/energy/warnings).
+  - Type: Space Grotesk for chrome/headings/body (one family, distinctive,
+    slightly technical); JetBrains Mono specifically for chemical formulas,
+    equations, and numeric data, where monospacing genuinely helps alignment
+    and legibility rather than being decorative.
+  - Shape language: hairline 1px borders, small 2-6px radii (instrument
+    bezels, not bubbly cards), no soft ambient drop shadows.
+*/
+
+:root {
+  /* Core surfaces */
+  --ink-950: #10161a;
+  --ink-900: #161e23;
+  --ink-800: #1f2a30;
+  --ink-700: #2b3a42;
+  --graphite-600: #46565f;
+  --graphite-400: #7c8b93;
+  --graphite-200: #b9c3c8;
+
+  --paper-0: #ffffff;
+  --paper-50: #f4f6f4;
+  --paper-100: #eaeee9;
+  --paper-200: #dde3dd;
+
+  /* Accents drawn from real chemistry */
+  --azure-700: #155a73;
+  --azure-600: #1d7291;
+  --azure-500: #2f8fb0;
+  --azure-100: #dcedf3;
+
+  --amber-700: #935816;
+  --amber-600: #b16e1d;
+  --amber-500: #c98833;
+  --amber-100: #f5e6d0;
+
+  --violet-600: #5b4e8a;
+  --violet-100: #e7e3f3;
+
+  --red-600: #a83a3a;
+  --red-100: #f6e1e1;
+
+  --green-700: #3d7a4f;
+  --green-600: #4d9161;
+  --green-100: #e1efe4;
+
+  /* Confidence-tier colors: the single most important semantic signal in the app */
+  --tier-supported: #2f7a52;
+  --tier-supported-bg: #e3f1e7;
+  --tier-predicted: #1d7291;
+  --tier-predicted-bg: #dcedf3;
+  --tier-approximate: #b16e1d;
+  --tier-approximate-bg: #f5e6d0;
+  --tier-unknown: #6b6f76;
+  --tier-unknown-bg: #e9eae8;
+
+  /* Typography */
+  --font-display: "Space Grotesk", "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", "IBM Plex Mono", ui-monospace, monospace;
+
+  --text-2xs: 0.6875rem;
+  --text-xs: 0.75rem;
+  --text-sm: 0.8125rem;
+  --text-base: 0.9375rem;
+  --text-md: 1.0625rem;
+  --text-lg: 1.25rem;
+  --text-xl: 1.625rem;
+  --text-2xl: 2.1rem;
+
+  /* Spacing scale */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+
+  /* Shape */
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 6px;
+
+  --border-hairline: 1px solid var(--paper-200);
+  --border-hairline-dark: 1px solid var(--ink-700);
+
+  --shadow-panel: 0 1px 2px rgba(16, 22, 26, 0.06), 0 1px 0 rgba(16, 22, 26, 0.03);
+  --shadow-elevated: 0 4px 16px rgba(16, 22, 26, 0.14);
+
+  --transition-fast: 120ms ease;
+  --transition-base: 200ms cubic-bezier(0.2, 0, 0, 1);
+}

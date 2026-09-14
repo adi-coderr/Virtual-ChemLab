@@ -1,0 +1,18 @@
+.molecule-3d {
+  width: 100%;
+  height: 100%;
+  min-height: 260px;
+  border: var(--border-hairline);
+  border-radius: var(--radius-md);
+  background: radial-gradient(circle at 50% 40%, var(--ink-900), var(--ink-950));
+  overflow: hidden;
+  cursor: grab;
+}
+.molecule-3d:active {
+  cursor: grabbing;
+}
+.molecule-3d canvas {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+}
