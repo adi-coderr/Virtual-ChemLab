@@ -154,16 +154,43 @@ export const useLabStore = create<LabState>((set, get) => ({
 
   addChemical: async (chemical, amount, unit, concentrationMolar) => {
     const state = get();
-    if (!state.experimentId || !state.activeContainerId) return;
+    if (!state.activeContainerId) return;
     set({ isLoading: true, error: null });
     try {
-      await experimentsApi.addAction(state.experimentId, "ADD_CHEMICAL", {
-        chemicalId: chemical.id,
-        amount,
-        unit,
-        concentrationMolar,
-        containerId: state.activeContainerId,
-      });
+      let expId = state.experimentId;
+      if (!expId) {
+        const created = await experimentsApi.create("Untitled experiment");
+        expId = created.id;
+        set({ experimentId: expId });
+      }
+
+      try {
+        await experimentsApi.addAction(expId, "ADD_CHEMICAL", {
+          chemicalId: chemical.id,
+          amount,
+          unit,
+          concentrationMolar,
+          containerId: state.activeContainerId,
+        });
+      } catch (err) {
+        // If experiment was wiped (e.g. database reseeded/restarted), automatically recreate and retry
+        const msg = err instanceof Error ? err.message : "";
+        if (msg.includes("No experiment with id") || msg.includes("EXPERIMENT_NOT_FOUND")) {
+          const created = await experimentsApi.create("Untitled experiment");
+          expId = created.id;
+          set({ experimentId: expId });
+          await experimentsApi.addAction(expId, "ADD_CHEMICAL", {
+            chemicalId: chemical.id,
+            amount,
+            unit,
+            concentrationMolar,
+            containerId: state.activeContainerId,
+          });
+        } else {
+          throw err;
+        }
+      }
+
       set((s) => {
         const content: ContainerContent = {
           chemicalId: chemical.id,
@@ -263,10 +290,28 @@ export const useLabStore = create<LabState>((set, get) => ({
         unit: c.unit,
         concentrationMolar: c.concentrationMolar,
       }));
-      const { simulationResult } = (await experimentsApi.addAction(state.experimentId, "RUN_REACTION", {
-        reactants,
-        conditions: state.conditions,
-      })) as { simulationResult: SimulationResult };
+      let expId = state.experimentId;
+      let simRes: { simulationResult: SimulationResult };
+      try {
+        simRes = (await experimentsApi.addAction(expId, "RUN_REACTION", {
+          reactants,
+          conditions: state.conditions,
+        })) as { simulationResult: SimulationResult };
+      } catch (err) {
+        const msg = err instanceof Error ? err.message : "";
+        if (msg.includes("No experiment with id") || msg.includes("EXPERIMENT_NOT_FOUND")) {
+          const created = await experimentsApi.create("Untitled experiment");
+          expId = created.id;
+          set({ experimentId: expId });
+          simRes = (await experimentsApi.addAction(expId, "RUN_REACTION", {
+            reactants,
+            conditions: state.conditions,
+          })) as { simulationResult: SimulationResult };
+        } else {
+          throw err;
+        }
+      }
+      const { simulationResult } = simRes;
 
       set((s) => {
         const resolution = simulationResult.resolution;
@@ -335,10 +380,19 @@ export const useLabStore = create<LabState>((set, get) => ({
 
   resetExperiment: async () => {
     const state = get();
-    if (!state.experimentId) return;
     set({ isLoading: true, error: null });
     try {
-      await experimentsApi.reset(state.experimentId);
+      if (state.experimentId) {
+        try {
+          await experimentsApi.reset(state.experimentId);
+        } catch {
+          const created = await experimentsApi.create("Untitled experiment");
+          set({ experimentId: created.id });
+        }
+      } else {
+        const created = await experimentsApi.create("Untitled experiment");
+        set({ experimentId: created.id });
+      }
       const defaultContainer: Container = { id: makeId(), name: defaultContainerName("beaker", 1), equipmentType: "beaker", contents: [], temperatureC: 25 };
       set({
         containers: [defaultContainer],

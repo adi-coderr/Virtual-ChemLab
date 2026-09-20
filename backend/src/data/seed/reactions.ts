@@ -254,4 +254,67 @@ export const SEED_REACTIONS: SeedReaction[] = [
     source: TEXTBOOK_SOURCE,
     safetyNotes: "H2O2 is oxidizing/corrosive at higher concentrations; the catalyzed decomposition (\"elephant toothpaste\" style demonstrations) can produce hot foam -- keep away from skin and eyes.",
   },
+  {
+    id: "kno3-water-dissolution",
+    name: "Dissolution of potassium nitrate in water",
+    reactionType: "dissolution",
+    reactants: [
+      { chemicalId: "kno3", coefficient: 1 },
+      { chemicalId: "water", coefficient: 1 },
+    ],
+    products: [
+      { chemicalId: "kno3", coefficient: 1 },
+      { chemicalId: "water", coefficient: 1, isByproduct: true },
+    ],
+    equationDisplay: "KNO3 + H2O → KNO3(aq) + H2O",
+    netIonicEquation: "KNO3(s) → K⁺(aq) + NO3⁻(aq)",
+    confidenceScore: 0.99,
+    energyClassification: "endothermic",
+    temperatureMinC: 0,
+    temperatureMaxC: 100,
+    solvent: "water",
+    experimentalStatus: "experimentally_verified",
+    observableEffects: [
+      {
+        type: "dissolution",
+        description: "Solid white potassium nitrate dissolves readily in water to form a clear, colorless aqueous solution of hydrated K⁺ and NO₃⁻ ions.",
+        relatedChemicalId: "kno3",
+      },
+      {
+        type: "temperature_decrease",
+        description: "Noticeable drop in temperature; dissolution of potassium nitrate is strongly endothermic (ΔH_soln = +34.89 kJ/mol, lattice energy +687 kJ/mol vs hydration energy -652 kJ/mol). The container feels noticeably cold to the touch.",
+      },
+    ],
+    source: TEXTBOOK_SOURCE,
+    safetyNotes:
+      "Potassium nitrate is a strong oxidizing agent when solid. In aqueous solution at room temperature, it forms a neutral (pH ~7.0), chemically stable solution without hydrolysis. Avoid contact of dry residues with organic combustible materials or strong reducing agents.",
+  },
+  {
+    id: "kno3-dissolution",
+    name: "Dissolution of potassium nitrate in aqueous solvent",
+    reactionType: "dissolution",
+    reactants: [{ chemicalId: "kno3", coefficient: 1 }],
+    products: [{ chemicalId: "kno3", coefficient: 1 }],
+    equationDisplay: "KNO3(s) → KNO3(aq)",
+    netIonicEquation: "KNO3(s) → K⁺(aq) + NO3⁻(aq)",
+    confidenceScore: 0.99,
+    energyClassification: "endothermic",
+    temperatureMinC: 0,
+    temperatureMaxC: 100,
+    solvent: "water",
+    experimentalStatus: "experimentally_verified",
+    observableEffects: [
+      {
+        type: "dissolution",
+        description: "White crystalline potassium nitrate dissolves in water to form a clear, colorless aqueous solution of K⁺ and NO₃⁻ ions.",
+        relatedChemicalId: "kno3",
+      },
+      {
+        type: "temperature_decrease",
+        description: "Solution temperature decreases significantly; the dissolution process is strongly endothermic (ΔH_soln = +34.89 kJ/mol).",
+      },
+    ],
+    source: TEXTBOOK_SOURCE,
+    safetyNotes: "Potassium nitrate is an oxidizer in dry form. The resulting aqueous solution is neutral (pH ~7.0) and non-hazardous under normal laboratory conditions.",
+  },
 ];

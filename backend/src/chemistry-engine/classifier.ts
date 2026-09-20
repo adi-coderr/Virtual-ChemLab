@@ -48,6 +48,10 @@ export const REACTION_TYPE_LABELS: Record<ReactionType, { label: string; descrip
     label: "Oxidation-reduction (other)",
     description: "Electrons are transferred between species, outside the specific redox patterns modeled here.",
   },
+  dissolution: {
+    label: "Dissolution",
+    description: "A solute dissolves in a solvent, dissociating into hydrated ions or solvated molecules with characteristic enthalpy and solubility behavior.",
+  },
   unclassified: {
     label: "Unclassified",
     description: "This reaction did not match a recognized structural pattern.",

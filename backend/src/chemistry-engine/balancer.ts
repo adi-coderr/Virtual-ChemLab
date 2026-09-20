@@ -222,7 +222,13 @@ export function balanceEquation(reactants: BalancerSpecies[], products: Balancer
     );
   }
 
-  const solution = basis[0] as Fraction[];
+  let solution = basis[0] as Fraction[];
+  if (basis.length > 1 && solution.some((f) => f.isZero())) {
+    const sum = basis.reduce((acc, v) => acc.map((val, idx) => val.add(v[idx]!)));
+    if (sum.every((f) => !f.isZero())) {
+      solution = sum;
+    }
+  }
   const allCoefficients = fractionsToMinimalPositiveIntegers(solution, "the equation");
 
   const reactantCoefficients = allCoefficients.slice(0, reactants.length);

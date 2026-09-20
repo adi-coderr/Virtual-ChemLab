@@ -57,6 +57,7 @@ export type ReactionType =
   | "synthesis"
   | "decomposition"
   | "redox_other"
+  | "dissolution"
   | "unclassified";
 
 export type EnergyClassification = "exothermic" | "endothermic" | "unknown";
