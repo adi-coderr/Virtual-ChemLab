@@ -23,7 +23,14 @@ export function MoleculeViewer3D({ structure }: { structure: MoleculeStructure }
     scene.background = null;
 
     const camera = new THREE.PerspectiveCamera(45, 1, 0.1, 100);
-    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+    let renderer: THREE.WebGLRenderer;
+    try {
+      renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+    } catch (err) {
+      console.warn("WebGL not supported or unavailable:", err);
+      container.innerHTML = '<div style="padding:20px;text-align:center;color:#999;font-size:12px;">3D WebGL preview unavailable</div>';
+      return;
+    }
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
     container.appendChild(renderer.domElement);
 

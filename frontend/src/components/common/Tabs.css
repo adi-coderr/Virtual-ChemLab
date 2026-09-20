@@ -3,6 +3,7 @@
   flex-direction: column;
   height: 100%;
   min-height: 0;
+  min-width: 0;
 }
 
 .tabs__list {
@@ -10,6 +11,7 @@
   border-bottom: var(--border-hairline);
   flex-shrink: 0;
   overflow-x: auto;
+  min-width: 0;
 }
 
 .tabs__tab {
@@ -23,6 +25,7 @@
   color: var(--graphite-600);
   white-space: nowrap;
   transition: color var(--transition-fast), border-color var(--transition-fast);
+  flex-shrink: 0;
 }
 
 .tabs__tab:hover {
@@ -37,6 +40,8 @@
 .tabs__panel {
   flex: 1;
   min-height: 0;
+  min-width: 0;
   overflow-y: auto;
+  overflow-x: hidden;
   padding: var(--space-4);
 }

@@ -1,3 +1,4 @@
+import { useEffect, useRef } from "react";
 import { useLabStore } from "../../state/experimentStore";
 import "./Timeline.css";
 
@@ -16,6 +17,13 @@ export function Timeline() {
   const timeline = useLabStore((s) => s.timeline);
   const undo = useLabStore((s) => s.undo);
   const history = useLabStore((s) => s.history);
+  const listRef = useRef<HTMLOListElement>(null);
+
+  useEffect(() => {
+    if (listRef.current) {
+      listRef.current.scrollTo({ left: listRef.current.scrollWidth, behavior: "smooth" });
+    }
+  }, [timeline.length]);
 
   return (
     <div className="timeline">
@@ -25,7 +33,7 @@ export function Timeline() {
           Undo
         </button>
       </div>
-      <ol className="timeline__list">
+      <ol ref={listRef} className="timeline__list">
         {timeline.length === 0 && <li className="timeline__empty">No actions yet -- add a chemical to begin.</li>}
         {timeline.map((entry) => (
           <li key={entry.id} className="timeline__entry">
