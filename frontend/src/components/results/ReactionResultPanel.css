@@ -74,10 +74,13 @@
   color: var(--graphite-400);
 }
 
-.reaction-result__no-stoich {
+.reaction-result__no-stoich,
+.reaction-result__placeholder {
   font-size: var(--text-sm);
   color: var(--graphite-400);
   font-style: italic;
+  padding: var(--space-4) var(--space-2);
+  text-align: center;
 }
 
 .quantities-table {

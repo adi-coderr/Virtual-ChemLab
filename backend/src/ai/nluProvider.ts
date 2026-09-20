@@ -22,7 +22,7 @@ export interface ProposedOperation {
   assumedDefaults?: string[];
 }
 
-export type QueryKind = "WHAT_PRODUCED" | "WHY_PRECIPITATE" | "SHOW_IONIC_EQUATION" | "EXPLAIN_REACTION_TYPE" | "SAFETY_INFO" | "GENERAL";
+export type QueryKind = "WHAT_PRODUCED" | "WHY_PRECIPITATE" | "SHOW_IONIC_EQUATION" | "EXPLAIN_REACTION_TYPE" | "SAFETY_INFO" | "EXPLAIN_PROCESS_CHANGES" | "GENERAL";
 
 export interface ProposedQuery {
   kind: "query";

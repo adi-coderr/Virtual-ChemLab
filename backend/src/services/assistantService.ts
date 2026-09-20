@@ -77,6 +77,12 @@ export class AssistantService {
       case "SAFETY_INFO": {
         return resolution.safetyNotes ?? "No specific safety notes are on file for this reaction; always follow standard lab safety practices.";
       }
+      case "EXPLAIN_PROCESS_CHANGES": {
+        if (resolution.status !== "REACTION") {
+          return "No reaction has occurred in this experiment yet to explain chemical changes for.";
+        }
+        return resolution.processExplanation ?? resolution.explanation;
+      }
       default:
         return resolution.explanation;
     }

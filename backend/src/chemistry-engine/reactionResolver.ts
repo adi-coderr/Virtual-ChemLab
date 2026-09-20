@@ -6,6 +6,7 @@ import type {
   CuratedReaction,
   ObservableEffect,
   ElementComposition,
+  ChemicalProcessBreakdown,
 } from "./types.js";
 import { balanceEquation, type BalancerSpecies } from "./balancer.js";
 import { composeNeutralFormula, ion, type IonSpec } from "./ions.js";
@@ -568,7 +569,101 @@ function tryResolvePair(
   return null;
 }
 
-export function resolveReaction(
+export const CHEMISTRY_PROCESS_EXPLANATION =
+  "Explaining every change involved in a chemistry process.\n" +
+  "When two chemicals react, their atoms are rearranged: bonds in the reactants break and new bonds form, so entirely new substances appear with different molecular structures, shapes, polarities, oxidation states, and electron distributions (electrons are shared, transferred, or redistributed), and the original substances are consumed while their concentrations fall and the products' concentrations rise until a limiting reactant runs out or an equilibrium is reached. Because the substances themselves change, nearly all their properties change too: color, odor, taste, texture, hardness, density, melting and boiling points, vapor pressure, solubility, viscosity, surface tension, refractive index, light absorption and emission spectra, magnetic behavior, electrical and thermal conductivity, acidity or basicity (pH), reactivity, flammability, stability, toxicity, and the physical state or crystal structure (solid, liquid, gas, dissolved, or precipitated). You may also notice fizzing or bubbles from gas release, a cloudy or solid precipitate forming in a clear liquid, a rise or drop in temperature, glowing, flames, or sparks, hissing or popping sounds, and changes in volume or pressure (especially in closed containers where gases form). Energetically, chemical potential energy is converted into heat, light, electricity, or mechanical work (exothermic) or absorbed from the surroundings (endothermic), so enthalpy, entropy, and Gibbs free energy change, and the activation energy barrier, reaction rate, and extent of reaction depend on temperature, concentration, surface area, pressure, and catalysts. Even the number of molecules can change (2H₂ + O₂ → 2H₂O turns three molecules into two). What does not change are the atoms themselves (their types and counts, nuclei, and identities), the total mass, the total electric charge, and the total energy, all of which are conserved and only rearranged, which is why the reaction is a chemical change rather than a nuclear one.";
+
+export function generateProcessBreakdown(resolution: ReactionResolution): ChemicalProcessBreakdown {
+  const reactantCount = resolution.reactants.reduce((sum, r) => sum + (r.coefficient || 1), 0);
+  const productCount = resolution.products.reduce((sum, p) => sum + (p.coefficient || 1), 0);
+  const reactantNames = resolution.reactants
+    .map((r) => `${r.coefficient > 1 ? r.coefficient : ""}${r.formula} (${r.commonName})`)
+    .join(" + ");
+  const productNames =
+    resolution.products.length > 0
+      ? resolution.products.map((p) => `${p.coefficient > 1 ? p.coefficient : ""}${p.formula} (${p.commonName})`).join(" + ")
+      : "Transformed products";
+
+  const observableDetails =
+    resolution.observableEffects.length > 0
+      ? resolution.observableEffects.map((e) => `${e.type.replace(/_/g, " ")}: ${e.description}`)
+      : ["No extreme macroscopic signs observed; species participate in dissolved or subtle transformation."];
+
+  return {
+    masterExplanation: CHEMISTRY_PROCESS_EXPLANATION,
+    dimensions: [
+      {
+        title: "Atomic Rearrangement & Chemical Bonding",
+        category: "atomic_bonding",
+        description:
+          "Reactant bonds break and new chemical bonds form. Atoms are rearranged into entirely new chemical substances with altered molecular structures, shapes, polarities, oxidation states, and electron distributions.",
+        details: [
+          `Reactant initial configuration: ${reactantNames}`,
+          `Product synthesized configuration: ${productNames}`,
+          `Stoichiometric unit change: ${reactantCount} reactant unit(s) reorganize into ${productCount} product unit(s).`,
+          "Electrons are shared, transferred, or redistributed into new valence orbitals, generating completely different molecular geometries and dipole moments.",
+        ],
+      },
+      {
+        title: "Concentrations & Reaction Progress",
+        category: "concentrations",
+        description:
+          "Original substances are consumed and their concentrations fall, while products' concentrations rise until the limiting reactant is exhausted or chemical equilibrium is reached.",
+        details: [
+          "Reactants are consumed as the forward transformation advances.",
+          "Products accumulate over time until the limiting reagent is depleted or a dynamic equilibrium state is achieved.",
+          "Reaction extent and final concentrations follow stoichiometric ratios governed by the balanced chemical equation.",
+        ],
+      },
+      {
+        title: "Physical & Chemical Property Transformations",
+        category: "properties",
+        description:
+          "Because the chemical substances themselves change, nearly all physical and chemical properties shift.",
+        details: [
+          "States of matter & phase: Transformations between solid, liquid, gas, or aqueous states occur.",
+          "Thermodynamic constants: Melting points, boiling points, densities, and vapor pressures alter fundamentally.",
+          "Solution behavior: Changes in solubility, viscosity, surface tension, and refractive index.",
+          "Chemical reactivity: Drastic changes in pH (acidity/basicity), electrical/thermal conductivity, flammability, and chemical stability.",
+        ],
+      },
+      {
+        title: "Macroscopic Sensory Observations",
+        category: "observables",
+        description:
+          "Macroscopic phenomena provide visible and sensory evidence of atomic and electronic rearrangements.",
+        details: [
+          ...observableDetails,
+          "Common experimental indicators: Gas bubbles/fizzing, precipitate formation (solid forming in liquid), temperature shifts, luminescence, sounds, or pressure/volume changes.",
+        ],
+      },
+      {
+        title: "Thermodynamics & Energetics",
+        category: "thermodynamics",
+        description:
+          "Chemical potential energy stored in reactant bonds is converted into heat, light, electricity, or mechanical work, or absorbed from the surroundings.",
+        details: [
+          `Thermochemical nature: ${resolution.energyClassification ? resolution.energyClassification.toUpperCase() : "Energetically active"}`,
+          "Enthalpy (ΔH), entropy (ΔS), and Gibbs free energy (ΔG) change throughout the reaction.",
+          "Reaction rates and activation energy barriers depend on temperature, concentration, surface area, pressure, and the presence of catalysts.",
+        ],
+      },
+      {
+        title: "Fundamental Conservation Principles",
+        category: "conservation",
+        description:
+          "Atoms (their types, counts, nuclei, and identities), total mass, total electric charge, and total energy are strictly conserved.",
+        details: [
+          "Conservation of atoms: Every atomic nucleus is preserved identically; none are created or destroyed.",
+          "Conservation of mass & charge: Total mass and net electric charge before and after the reaction remain strictly identical.",
+          "Chemical vs Nuclear: This is a chemical change involving electron and bond rearrangements, not a nuclear transformation.",
+        ],
+      },
+    ],
+  };
+}
+
+function resolveReactionInternal(
   reactantChemicals: Chemical[],
   conditions: ReactionConditions,
   lookup: ChemicalLookupPort
@@ -654,4 +749,20 @@ export function resolveReaction(
       ? "These exact chemicals do have a curated reaction on file, but not under the conditions provided (e.g. temperature or solvent out of range)."
       : undefined;
   return unsupportedResult(uniqueChemicals, note);
+}
+
+export function resolveReaction(
+  reactantChemicals: Chemical[],
+  conditions: ReactionConditions,
+  lookup: ChemicalLookupPort
+): ReactionResolution {
+  const result = resolveReactionInternal(reactantChemicals, conditions, lookup);
+  if (result.status === "REACTION") {
+    return {
+      ...result,
+      processExplanation: CHEMISTRY_PROCESS_EXPLANATION,
+      processBreakdown: generateProcessBreakdown(result),
+    };
+  }
+  return result;
 }

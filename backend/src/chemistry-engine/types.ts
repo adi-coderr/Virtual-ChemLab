@@ -250,6 +250,18 @@ export interface StoichiometryLine {
   remainingMass?: number;
 }
 
+export interface ProcessChangeDimension {
+  title: string;
+  category: "atomic_bonding" | "concentrations" | "properties" | "observables" | "thermodynamics" | "conservation";
+  description: string;
+  details: string[];
+}
+
+export interface ChemicalProcessBreakdown {
+  masterExplanation: string;
+  dimensions: ProcessChangeDimension[];
+}
+
 export interface ReactionResolution {
   status: ReactionStatus;
   confidenceTier: ConfidenceTier;
@@ -267,6 +279,8 @@ export interface ReactionResolution {
   safetyNotes?: string;
   warnings: string[];
   missingInfo?: string[];
+  processExplanation?: string;
+  processBreakdown?: ChemicalProcessBreakdown;
 }
 
 export class ChemistryEngineError extends Error {

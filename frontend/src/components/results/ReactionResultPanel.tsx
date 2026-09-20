@@ -8,6 +8,7 @@ import { ObservableEffectsPanel } from "./ObservableEffectsPanel";
 import { PropertiesPanel } from "../properties/PropertiesPanel";
 import { SafetyPanel } from "../safety/SafetyPanel";
 import { MoleculeViewer } from "../molecule/MoleculeViewer";
+import { ProcessBreakdownPanel } from "./ProcessBreakdownPanel";
 import { Tabs } from "../common/Tabs";
 import { formatFormula } from "../../utils/formatFormula";
 import "./ReactionResultPanel.css";
@@ -73,22 +74,53 @@ export function ReactionResultPanel({ result }: { result: SimulationResult }) {
         </div>
       )}
 
-      {selectedChemical && (
-        <Tabs
-          defaultTabId="molecule"
-          tabs={[
-            { id: "molecule", label: "Molecular structure", content: <MoleculeViewer chemical={selectedChemical} /> },
-            { id: "properties", label: "Properties", content: <PropertiesPanel chemical={selectedChemical} /> },
-            { id: "effects", label: "Observable effects", content: <ObservableEffectsPanel effects={resolution.observableEffects} /> },
-            { id: "safety", label: "Safety", content: <SafetyPanel hazards={selectedChemical.hazards} safetyNotes={resolution.safetyNotes} /> },
-            {
-              id: "quantities",
-              label: "Quantities",
-              content: stoichiometry ? <QuantitiesTable lines={stoichiometry} /> : <p className="reaction-result__no-stoich">Quantities not computed for this result.</p>,
-            },
-          ]}
-        />
-      )}
+      <Tabs
+        defaultTabId="process"
+        tabs={[
+          {
+            id: "process",
+            label: "Process breakdown",
+            content: <ProcessBreakdownPanel resolution={resolution} />,
+          },
+          {
+            id: "molecule",
+            label: "Molecular structure",
+            content: selectedChemical ? (
+              <MoleculeViewer chemical={selectedChemical} />
+            ) : (
+              <p className="reaction-result__placeholder">Select a chemical above to view its 3D molecular structure.</p>
+            ),
+          },
+          {
+            id: "properties",
+            label: "Properties",
+            content: selectedChemical ? (
+              <PropertiesPanel chemical={selectedChemical} />
+            ) : (
+              <p className="reaction-result__placeholder">Select a chemical above to view properties.</p>
+            ),
+          },
+          {
+            id: "effects",
+            label: "Observable effects",
+            content: <ObservableEffectsPanel effects={resolution.observableEffects} />,
+          },
+          {
+            id: "safety",
+            label: "Safety",
+            content: selectedChemical ? (
+              <SafetyPanel hazards={selectedChemical.hazards} safetyNotes={resolution.safetyNotes} />
+            ) : (
+              <p className="reaction-result__placeholder">Select a chemical above to view safety notes.</p>
+            ),
+          },
+          {
+            id: "quantities",
+            label: "Quantities",
+            content: stoichiometry ? <QuantitiesTable lines={stoichiometry} /> : <p className="reaction-result__no-stoich">Quantities not computed for this result.</p>,
+          },
+        ]}
+      />
 
       {resolution.netIonicEquation && (
         <div className="reaction-result__ionic">

@@ -100,6 +100,9 @@ export class RuleBasedNluProvider implements NluProvider {
     if (/(is\s+(?:it|this)\s+(?:dangerous|safe|hazardous))|safety/.test(lower)) {
       return [{ kind: "query", question: "SAFETY_INFO" }];
     }
+    if (/(explain|what)\s+(?:every\s+|all\s+)?(?:the\s+)?(changes?|process|transformation)/.test(lower)) {
+      return [{ kind: "query", question: "EXPLAIN_PROCESS_CHANGES" }];
+    }
     if (/why\b/.test(lower) && lower.length < 120) {
       return [{ kind: "query", question: "GENERAL" }];
     }
