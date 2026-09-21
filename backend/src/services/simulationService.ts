@@ -1,16 +1,18 @@
 import type Database from "better-sqlite3";
 import { ChemicalRepository } from "../data/repositories/chemicalRepository.js";
 import { ReactionRepository } from "../data/repositories/reactionRepository.js";
-import { resolveReaction, type ChemicalLookupPort } from "../chemistry-engine/reactionResolver.js";
+import { resolveReaction, generateProcessBreakdown, type ChemicalLookupPort } from "../chemistry-engine/reactionResolver.js";
 import { computeStoichiometry } from "../chemistry-engine/stoichiometry.js";
+import { computeCalorimetry } from "../chemistry-engine/calorimetry.js";
 import { HttpError } from "../utils/errors.js";
-import type { Chemical, ReactionConditions, ReactionInputSpecies, ReactionResolution, StoichiometryLine } from "../chemistry-engine/types.js";
+import type { CalorimetryResult, Chemical, ReactionConditions, ReactionInputSpecies, ReactionResolution, StoichiometryLine } from "../chemistry-engine/types.js";
 import { logger } from "../utils/logger.js";
 
 export interface SimulationResult {
   resolution: ReactionResolution;
   stoichiometry?: StoichiometryLine[];
   limitingReagentChemicalId?: string;
+  calorimetry?: CalorimetryResult;
 }
 
 export class SimulationService {
@@ -81,7 +83,54 @@ export class SimulationService {
 
     try {
       const stoich = computeStoichiometry(stoichReactants, stoichProducts, inputs);
-      return { resolution, stoichiometry: stoich.lines, limitingReagentChemicalId: stoich.limitingReagentChemicalId };
+
+      let calorimetry: CalorimetryResult | undefined;
+      let augmentedResolution = resolution;
+
+      if (resolution.enthalpyKjPerMol !== undefined && stoich.extentMoles > 0) {
+        calorimetry = computeCalorimetry({
+          inputs,
+          extentMoles: stoich.extentMoles,
+          enthalpyKjPerMol: resolution.enthalpyKjPerMol,
+          initialTemperatureC: conditions.temperatureC ?? 25.0,
+          molarMassLookup: (id) => this.chemicalRepo.getById(id)?.molarMass,
+        });
+
+        const augmentedEffects = resolution.observableEffects.map((effect) => {
+          if (effect.type === "temperature_decrease" || effect.type === "temperature_increase") {
+            const isDecrease = calorimetry!.temperatureDeltaC < 0;
+            const changeLabel = isDecrease
+              ? `Temperature decreased by ${Math.abs(calorimetry!.temperatureDeltaC).toFixed(1)} °C (from ${calorimetry!.initialTemperatureC.toFixed(1)} °C to ${calorimetry!.finalTemperatureC.toFixed(1)} °C).`
+              : calorimetry!.temperatureDeltaC > 0
+                ? `Temperature increased by ${calorimetry!.temperatureDeltaC.toFixed(1)} °C (from ${calorimetry!.initialTemperatureC.toFixed(1)} °C to ${calorimetry!.finalTemperatureC.toFixed(1)} °C).`
+                : `No significant temperature change (${calorimetry!.initialTemperatureC.toFixed(1)} °C).`;
+
+            return {
+              ...effect,
+              temperatureDeltaC: calorimetry!.temperatureDeltaC,
+              initialTemperatureC: calorimetry!.initialTemperatureC,
+              finalTemperatureC: calorimetry!.finalTemperatureC,
+              description: `${changeLabel} ${effect.description}`,
+            };
+          }
+          return effect;
+        });
+
+        augmentedResolution = {
+          ...resolution,
+          observableEffects: augmentedEffects,
+          calorimetry,
+        };
+
+        augmentedResolution.processBreakdown = generateProcessBreakdown(augmentedResolution);
+      }
+
+      return {
+        resolution: augmentedResolution,
+        stoichiometry: stoich.lines,
+        limitingReagentChemicalId: stoich.limitingReagentChemicalId,
+        calorimetry,
+      };
     } catch (err) {
       // A resolvable reaction but incomplete quantity data: still return the
       // qualitative resolution (equation, products, safety) rather than

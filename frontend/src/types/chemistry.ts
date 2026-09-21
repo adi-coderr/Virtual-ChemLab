@@ -108,6 +108,22 @@ export interface ObservableEffect {
   relatedChemicalId?: string;
   colorFrom?: string;
   colorTo?: string;
+  temperatureDeltaC?: number;
+  initialTemperatureC?: number;
+  finalTemperatureC?: number;
+}
+
+export interface CalorimetryResult {
+  enthalpyKjPerMol: number;
+  extentMoles: number;
+  heatJoules: number;
+  solutionHeatJoules: number;
+  initialTemperatureC: number;
+  finalTemperatureC: number;
+  temperatureDeltaC: number;
+  totalMassGrams: number;
+  heatCapacityJPerC: number;
+  summaryText: string;
 }
 
 export interface ResolvedSpecies {
@@ -142,6 +158,8 @@ export interface ReactionResolution {
   products: ResolvedSpecies[];
   observableEffects: ObservableEffect[];
   energyClassification?: EnergyClassification;
+  enthalpyKjPerMol?: number;
+  calorimetry?: CalorimetryResult;
   explanation: string;
   ruleApplied: string;
   reference?: string;
@@ -171,6 +189,7 @@ export interface SimulationResult {
   resolution: ReactionResolution;
   stoichiometry?: StoichiometryLine[];
   limitingReagentChemicalId?: string;
+  calorimetry?: CalorimetryResult;
 }
 
 export type Unit = "g" | "kg" | "mg" | "mol" | "mmol" | "mL" | "L";

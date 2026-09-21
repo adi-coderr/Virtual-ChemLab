@@ -40,10 +40,22 @@ export function ContainerView({
       <div className="container-view__vessel">
         <div className="container-view__liquid" style={{ height: `${fillLevel}%`, background: liquidColor }} />
         {container.temperatureC >= 60 && <div className="container-view__heat-shimmer" aria-hidden="true" />}
+        {container.temperatureC <= 18 && <div className="container-view__cold-frost" aria-hidden="true" />}
       </div>
       <div className="container-view__label">
         <span className="container-view__name">{container.name}</span>
-        <span className="container-view__temp">{container.temperatureC}{"\u00b0C"}</span>
+        <span
+          className={`container-view__temp ${
+            container.temperatureC <= 18
+              ? "container-view__temp--cold"
+              : container.temperatureC >= 45
+                ? "container-view__temp--warm"
+                : ""
+          }`}
+        >
+          {container.temperatureC <= 18 ? "❄️ " : container.temperatureC >= 45 ? "🔥 " : ""}
+          {container.temperatureC}{"\u00b0C"}
+        </span>
       </div>
       <ul className="container-view__contents">
         {container.contents.map((c, i) => (

@@ -83,6 +83,16 @@ export class AssistantService {
         }
         return resolution.processExplanation ?? resolution.explanation;
       }
+      case "TEMPERATURE_CHANGE": {
+        if (result.calorimetry) {
+          return `The reaction caused a temperature change: ${result.calorimetry.summaryText}. Enthalpy ΔH = ${result.calorimetry.enthalpyKjPerMol > 0 ? "+" : ""}${result.calorimetry.enthalpyKjPerMol} kJ/mol.`;
+        }
+        const tempEffect = resolution.observableEffects.find((e) => e.type === "temperature_decrease" || e.type === "temperature_increase");
+        if (tempEffect) {
+          return tempEffect.description;
+        }
+        return "No measurable temperature change was recorded for this reaction.";
+      }
       default:
         return resolution.explanation;
     }

@@ -77,6 +77,14 @@ export function ProcessBreakdownPanel({ resolution }: ProcessBreakdownPanelProps
         "Chemical potential energy is converted into heat, light, electricity, or mechanical work (exothermic) or absorbed from surroundings (endothermic).",
       details: [
         `Thermal classification: ${resolution.energyClassification ? resolution.energyClassification.toUpperCase() : "Thermochemically active"}`,
+        ...(resolution.calorimetry
+          ? [
+              `Actual temperature change: ${resolution.calorimetry.summaryText}`,
+              `Reaction enthalpy: ΔH = ${resolution.calorimetry.enthalpyKjPerMol > 0 ? "+" : ""}${resolution.calorimetry.enthalpyKjPerMol} kJ/mol (${(Math.abs(resolution.calorimetry.heatJoules) / 1000).toFixed(2)} kJ ${resolution.calorimetry.heatJoules > 0 ? "absorbed from" : "released to"} ${resolution.calorimetry.totalMassGrams} g mixture)`,
+            ]
+          : resolution.enthalpyKjPerMol !== undefined
+            ? [`Standard enthalpy change: ΔH = ${resolution.enthalpyKjPerMol > 0 ? "+" : ""}${resolution.enthalpyKjPerMol} kJ/mol`]
+            : []),
         "Enthalpy (ΔH), entropy (ΔS), and Gibbs free energy (ΔG) change during the process.",
         "Activation energy barrier and reaction rate depend on temperature, concentration, and catalysts.",
       ],

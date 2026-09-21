@@ -12,3 +12,4 @@ export * from "./activitySeries.js";
 export * from "./oxidationState.js";
 export * from "./classifier.js";
 export * from "./reactionResolver.js";
+export * from "./calorimetry.js";

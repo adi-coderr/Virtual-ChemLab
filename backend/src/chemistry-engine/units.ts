@@ -56,6 +56,11 @@ export function toMoles(input: ReactionInputSpecies, molarMass: number): MolesRe
 
   if (unit === "mL" || unit === "L") {
     if (input.concentrationMolar === undefined) {
+      if (input.chemicalId === "water") {
+        const liters = volumeToLiters(amount, unit);
+        const massGrams = liters * 1000;
+        return { moles: massGrams / molarMass, massGrams };
+      }
       throw new ChemistryEngineError(
         `A volume ("${amount} ${unit}") was given without a concentration. Provide concentrationMolar ` +
           `(mol/L) for a solution, or specify the amount as mass or moles instead.`,

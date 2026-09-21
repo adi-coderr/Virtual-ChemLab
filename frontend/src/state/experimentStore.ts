@@ -351,23 +351,34 @@ export const useLabStore = create<LabState>((set, get) => ({
           const spectators = container.contents.filter((c) => !activeIds.has(c.chemicalId));
 
           const newContents = consolidateContents([...productContents, ...excessReactants, ...spectators]);
-          containers = s.containers.map((c) => (c.id === container.id ? { ...c, contents: newContents } : c));
+          const calorimetry = simulationResult.calorimetry ?? resolution.calorimetry;
+          const nextTemp = calorimetry ? calorimetry.finalTemperatureC : container.temperatureC;
+          containers = s.containers.map((c) => (c.id === container.id ? { ...c, contents: newContents, temperatureC: nextTemp } : c));
         }
+        const calorimetry = simulationResult.calorimetry ?? resolution.calorimetry;
+        const tempNote = calorimetry && calorimetry.temperatureDeltaC !== 0
+          ? ` (${calorimetry.temperatureDeltaC < 0 ? `temp dropped ${Math.abs(calorimetry.temperatureDeltaC).toFixed(1)} °C to ${calorimetry.finalTemperatureC.toFixed(1)} °C` : `temp rose ${calorimetry.temperatureDeltaC.toFixed(1)} °C to ${calorimetry.finalTemperatureC.toFixed(1)} °C`})`
+          : "";
+
         const entry: TimelineEntry = {
           id: makeId(),
           timeLabel: timeLabel(s.experimentStartedAt),
           description:
             resolution.status === "REACTION"
-              ? `Reaction detected (${resolution.confidenceTier.toLowerCase()}): ${resolution.balancedEquation ?? ""}`
+              ? `Reaction detected (${resolution.confidenceTier.toLowerCase()}): ${resolution.balancedEquation ?? ""}${tempNote}`
               : resolution.status === "NO_REACTION"
                 ? "No reaction detected under these conditions."
                 : "Reaction not confidently supported.",
           actionType: "RUN_REACTION",
         };
+        const nextConditions = calorimetry && container.id === s.activeContainerId
+          ? { ...s.conditions, temperatureC: calorimetry.finalTemperatureC }
+          : s.conditions;
         return {
           history: [...s.history, snapshot(s)],
           containers,
           timeline: [...s.timeline, entry],
+          conditions: nextConditions,
           lastSimulationResult: simulationResult,
           lastReactionContainerId: container.id,
           isLoading: false,

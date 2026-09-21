@@ -9,6 +9,7 @@ interface ReactionRow {
   net_ionic_equation: string | null;
   confidence_score: number;
   energy_classification: string;
+  enthalpy_kj_per_mol?: number | null;
   temperature_min_c: number | null;
   temperature_max_c: number | null;
   solvent: string | null;
@@ -63,6 +64,7 @@ export class ReactionRepository {
       equationDisplay: row.equation_display,
       netIonicEquation: row.net_ionic_equation ?? undefined,
       energyClassification: row.energy_classification as EnergyClassification,
+      enthalpyKjPerMol: row.enthalpy_kj_per_mol ?? undefined,
       temperatureMinC: row.temperature_min_c ?? undefined,
       temperatureMaxC: row.temperature_max_c ?? undefined,
       solvent: row.solvent ?? undefined,

@@ -57,6 +57,24 @@
   }
 }
 
+.container-view__cold-frost {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(160, 215, 255, 0.35) 0%, rgba(200, 235, 255, 0.15) 100%);
+  border: 1px solid rgba(140, 200, 255, 0.4);
+  pointer-events: none;
+  animation: frostPulse 2.5s ease-in-out infinite alternate;
+}
+
+@keyframes frostPulse {
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 0.9;
+  }
+}
+
 .container-view__label {
   display: flex;
   flex-direction: column;
@@ -74,6 +92,17 @@
   font-family: var(--font-mono);
   font-size: var(--text-2xs);
   color: var(--graphite-400);
+  transition: color var(--transition-fast);
+}
+
+.container-view__temp--cold {
+  color: #1e5c99;
+  font-weight: 600;
+}
+
+.container-view__temp--warm {
+  color: #c03d11;
+  font-weight: 600;
 }
 
 .container-view__contents {

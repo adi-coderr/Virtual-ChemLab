@@ -134,15 +134,17 @@ function seedChemicals(db: Database.Database): void {
 
 function seedReactions(db: Database.Database): void {
   const insertReaction = db.prepare(`
-    INSERT OR IGNORE INTO reactions (
+    INSERT INTO reactions (
       id, name, reaction_type, equation_display, net_ionic_equation, confidence_score,
-      energy_classification, temperature_min_c, temperature_max_c, solvent, catalyst_chemical_id,
+      energy_classification, enthalpy_kj_per_mol, temperature_min_c, temperature_max_c, solvent, catalyst_chemical_id,
       experimental_status, source, reference, safety_notes
     ) VALUES (
       @id, @name, @reactionType, @equationDisplay, @netIonicEquation, @confidenceScore,
-      @energyClassification, @temperatureMinC, @temperatureMaxC, @solvent, @catalystChemicalId,
+      @energyClassification, @enthalpyKjPerMol, @temperatureMinC, @temperatureMaxC, @solvent, @catalystChemicalId,
       @experimentalStatus, @source, @reference, @safetyNotes
-    )
+    ) ON CONFLICT(id) DO UPDATE SET
+      enthalpy_kj_per_mol = excluded.enthalpy_kj_per_mol,
+      energy_classification = excluded.energy_classification
   `);
   const insertReactant = db.prepare(`INSERT OR IGNORE INTO reaction_reactants (reaction_id, chemical_id, coefficient) VALUES (?, ?, ?)`);
   const insertProduct = db.prepare(
@@ -163,6 +165,7 @@ function seedReactions(db: Database.Database): void {
         netIonicEquation: r.netIonicEquation ?? null,
         confidenceScore: r.confidenceScore,
         energyClassification: r.energyClassification,
+        enthalpyKjPerMol: r.enthalpyKjPerMol ?? null,
         temperatureMinC: r.temperatureMinC ?? null,
         temperatureMaxC: r.temperatureMaxC ?? null,
         solvent: r.solvent ?? null,
@@ -186,7 +189,8 @@ function seedReactions(db: Database.Database): void {
 export function seedDatabase(db: Database.Database): void {
   const chemicalCount = (db.prepare("SELECT COUNT(*) as n FROM chemicals").get() as { n: number }).n;
   if (chemicalCount > 0) {
-    logger.info("Database already seeded, skipping", { chemicalCount });
+    logger.info("Database already seeded, refreshing reactions", { chemicalCount });
+    seedReactions(db);
     return;
   }
   logger.info("Seeding database...");

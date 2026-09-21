@@ -1,4 +1,4 @@
-import type { ReactionConditions, ReactionInputSpecies, ReactionResolution, StoichiometryLine } from "../chemistry-engine/types.js";
+import type { CalorimetryResult, ReactionConditions, ReactionInputSpecies, ReactionResolution, StoichiometryLine } from "../chemistry-engine/types.js";
 
 export type ExperimentActionType = "ADD_CHEMICAL" | "MIX" | "HEAT" | "COOL" | "REMOVE" | "MEASURE" | "RUN_REACTION" | "RESET";
 
@@ -38,6 +38,7 @@ export interface SimulationResultDTO {
   resolution: ReactionResolution;
   stoichiometry?: StoichiometryLine[];
   limitingReagentChemicalId?: string;
+  calorimetry?: CalorimetryResult;
 }
 
 export interface ApiError {

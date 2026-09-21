@@ -157,6 +157,32 @@ describe("POST /api/reactions/simulate", () => {
     const hclLine = res.body.data.stoichiometry.find((l: { chemicalId: string }) => l.chemicalId === "hcl");
     expect(hclLine.inputMoles).toBeCloseTo(0.005, 6);
   });
+
+  it("calculates exact temperature decrease for endothermic potassium nitrate dissolution", async () => {
+    const res = await request(app)
+      .post("/api/reactions/simulate")
+      .send({
+        reactants: [
+          { chemicalId: "kno3", amount: 10, unit: "g" },
+          { chemicalId: "water", amount: 100, unit: "mL" },
+        ],
+        conditions: { temperatureC: 25 },
+      });
+
+    expect(res.status).toBe(200);
+    expect(res.body.data.resolution.status).toBe("REACTION");
+    expect(res.body.data.calorimetry).toBeDefined();
+    expect(res.body.data.calorimetry.temperatureDeltaC).toBeLessThan(0);
+    expect(res.body.data.calorimetry.finalTemperatureC).toBeLessThan(25);
+
+    const tempEffect = res.body.data.resolution.observableEffects.find(
+      (e: { type: string }) => e.type === "temperature_decrease"
+    );
+    expect(tempEffect).toBeDefined();
+    expect(tempEffect.temperatureDeltaC).toBeLessThan(0);
+    expect(tempEffect.description).toContain("Temperature decreased by");
+    expect(tempEffect.description).toContain("from 25.0 °C to");
+  });
 });
 
 describe("POST /api/reactions/balance", () => {

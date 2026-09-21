@@ -24,6 +24,7 @@ export interface SeedReaction {
   netIonicEquation?: string;
   confidenceScore: number;
   energyClassification: EnergyClassification;
+  enthalpyKjPerMol?: number;
   temperatureMinC?: number;
   temperatureMaxC?: number;
   solvent?: string;
@@ -54,6 +55,7 @@ export const SEED_REACTIONS: SeedReaction[] = [
     netIonicEquation: "H+ + OH\u207b \u2192 H2O",
     confidenceScore: 0.99,
     energyClassification: "exothermic",
+    enthalpyKjPerMol: -57.1,
     temperatureMinC: 0,
     temperatureMaxC: 100,
     solvent: "water",
@@ -78,6 +80,7 @@ export const SEED_REACTIONS: SeedReaction[] = [
     netIonicEquation: "Ag+ + Cl\u207b \u2192 AgCl(s)",
     confidenceScore: 0.99,
     energyClassification: "unknown",
+    enthalpyKjPerMol: -65.7,
     temperatureMinC: 0,
     temperatureMaxC: 100,
     solvent: "water",
@@ -104,6 +107,7 @@ export const SEED_REACTIONS: SeedReaction[] = [
     netIonicEquation: "Zn + Cu2+ \u2192 Zn2+ + Cu",
     confidenceScore: 0.98,
     energyClassification: "exothermic",
+    enthalpyKjPerMol: -218.7,
     temperatureMinC: 0,
     temperatureMaxC: 100,
     solvent: "water",
@@ -130,6 +134,7 @@ export const SEED_REACTIONS: SeedReaction[] = [
     equationDisplay: "NaHCO3 + HCl \u2192 NaCl + H2O + CO2",
     confidenceScore: 0.98,
     energyClassification: "endothermic",
+    enthalpyKjPerMol: 12.7,
     temperatureMinC: 0,
     temperatureMaxC: 100,
     solvent: "water",
@@ -153,6 +158,7 @@ export const SEED_REACTIONS: SeedReaction[] = [
     equationDisplay: "CH4 + 2O2 \u2192 CO2 + 2H2O",
     confidenceScore: 0.99,
     energyClassification: "exothermic",
+    enthalpyKjPerMol: -890.7,
     experimentalStatus: "experimentally_verified",
     observableEffects: [{ type: "temperature_increase", description: "Burns with a pale blue flame, releasing substantial heat and light." }],
     source: TEXTBOOK_SOURCE,
@@ -174,6 +180,7 @@ export const SEED_REACTIONS: SeedReaction[] = [
     netIonicEquation: "Fe + Cu2+ \u2192 Fe2+ + Cu",
     confidenceScore: 0.98,
     energyClassification: "exothermic",
+    enthalpyKjPerMol: -152.0,
     temperatureMinC: 0,
     temperatureMaxC: 100,
     solvent: "water",
@@ -199,6 +206,7 @@ export const SEED_REACTIONS: SeedReaction[] = [
     netIonicEquation: "Ba2+ + SO4^2\u207b \u2192 BaSO4(s)",
     confidenceScore: 0.98,
     energyClassification: "unknown",
+    enthalpyKjPerMol: -19.0,
     temperatureMinC: 0,
     temperatureMaxC: 100,
     solvent: "water",
@@ -223,6 +231,7 @@ export const SEED_REACTIONS: SeedReaction[] = [
     netIonicEquation: "Pb2+ + 2I\u207b \u2192 PbI2(s)",
     confidenceScore: 0.98,
     energyClassification: "unknown",
+    enthalpyKjPerMol: -62.0,
     temperatureMinC: 0,
     temperatureMaxC: 100,
     solvent: "water",
@@ -245,6 +254,7 @@ export const SEED_REACTIONS: SeedReaction[] = [
     equationDisplay: "2H2O2 \u2192 2H2O + O2",
     confidenceScore: 0.97,
     energyClassification: "exothermic",
+    enthalpyKjPerMol: -98.2,
     catalystChemicalId: "mno2",
     experimentalStatus: "experimentally_verified",
     observableEffects: [
@@ -270,6 +280,7 @@ export const SEED_REACTIONS: SeedReaction[] = [
     netIonicEquation: "KNO3(s) → K⁺(aq) + NO3⁻(aq)",
     confidenceScore: 0.99,
     energyClassification: "endothermic",
+    enthalpyKjPerMol: 34.89,
     temperatureMinC: 0,
     temperatureMaxC: 100,
     solvent: "water",
@@ -299,6 +310,7 @@ export const SEED_REACTIONS: SeedReaction[] = [
     netIonicEquation: "KNO3(s) → K⁺(aq) + NO3⁻(aq)",
     confidenceScore: 0.99,
     energyClassification: "endothermic",
+    enthalpyKjPerMol: 34.89,
     temperatureMinC: 0,
     temperatureMaxC: 100,
     solvent: "water",

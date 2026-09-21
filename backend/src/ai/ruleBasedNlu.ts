@@ -103,6 +103,9 @@ export class RuleBasedNluProvider implements NluProvider {
     if (/(explain|what)\s+(?:every\s+|all\s+)?(?:the\s+)?(changes?|process|transformation)/.test(lower)) {
       return [{ kind: "query", question: "EXPLAIN_PROCESS_CHANGES" }];
     }
+    if (/(how\s+much\s+(?:did\s+)?(?:the\s+)?temp|what\s+(?:is|was)\s+(?:the\s+)?temp|did\s+(?:the\s+)?temp.*change|temperature\s+(?:change|decrease|increase|drop|rise))/.test(lower)) {
+      return [{ kind: "query", question: "TEMPERATURE_CHANGE" }];
+    }
     if (/why\b/.test(lower) && lower.length < 120) {
       return [{ kind: "query", question: "GENERAL" }];
     }

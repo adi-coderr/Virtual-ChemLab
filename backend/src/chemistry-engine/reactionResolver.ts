@@ -90,6 +90,7 @@ function buildResultFromCurated(reaction: CuratedReaction, lookup: ChemicalLooku
     products,
     observableEffects: reaction.observableEffects,
     energyClassification: reaction.energyClassification,
+    enthalpyKjPerMol: reaction.enthalpyKjPerMol,
     explanation:
       `This is a curated, experimentally-grounded reaction record (${REACTION_TYPE_LABELS[reaction.reactionType].label.toLowerCase()}). ` +
       (reaction.reference ? `Reference: ${reaction.reference}.` : ""),
@@ -249,6 +250,7 @@ function tryAcidBase(a: Chemical, b: Chemical, lookup: ChemicalLookupPort): Reac
     products,
     observableEffects: bothStrong ? [{ type: "temperature_increase", description: "Neutralization releases heat (exothermic)." }] : [],
     energyClassification: bothStrong ? "exothermic" : "unknown",
+    enthalpyKjPerMol: bothStrong ? -57.1 : undefined,
     explanation,
     ruleApplied: bothStrong ? "rule:strong_acid_strong_base_neutralization" : "rule:weak_acid_or_base_neutralization_approximate",
     warnings: balance.warnings,
@@ -644,6 +646,14 @@ export function generateProcessBreakdown(resolution: ReactionResolution): Chemic
           "Chemical potential energy stored in reactant bonds is converted into heat, light, electricity, or mechanical work, or absorbed from the surroundings.",
         details: [
           `Thermochemical nature: ${resolution.energyClassification ? resolution.energyClassification.toUpperCase() : "Energetically active"}`,
+          ...(resolution.calorimetry
+            ? [
+                `Actual temperature change: ${resolution.calorimetry.summaryText}`,
+                `Reaction enthalpy: ΔH = ${resolution.calorimetry.enthalpyKjPerMol > 0 ? "+" : ""}${resolution.calorimetry.enthalpyKjPerMol} kJ/mol (${(Math.abs(resolution.calorimetry.heatJoules) / 1000).toFixed(2)} kJ ${resolution.calorimetry.heatJoules > 0 ? "absorbed from" : "released to"} ${resolution.calorimetry.totalMassGrams} g mixture)`,
+              ]
+            : resolution.enthalpyKjPerMol !== undefined
+              ? [`Standard enthalpy change: ΔH = ${resolution.enthalpyKjPerMol > 0 ? "+" : ""}${resolution.enthalpyKjPerMol} kJ/mol`]
+              : []),
           "Enthalpy (ΔH), entropy (ΔS), and Gibbs free energy (ΔG) change throughout the reaction.",
           "Reaction rates and activation energy barriers depend on temperature, concentration, surface area, pressure, and the presence of catalysts.",
         ],

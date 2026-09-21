@@ -15,6 +15,7 @@ import "./ReactionResultPanel.css";
 
 export function ReactionResultPanel({ result }: { result: SimulationResult }) {
   const { resolution, stoichiometry } = result;
+  const calorimetry = result.calorimetry ?? resolution.calorimetry;
   const [selectedChemical, setSelectedChemical] = useState<Chemical | null>(null);
   const [selectedId, setSelectedId] = useState<string | null>(null);
 
@@ -51,6 +52,50 @@ export function ReactionResultPanel({ result }: { result: SimulationResult }) {
       )}
 
       <p className="reaction-result__explanation">{resolution.explanation}</p>
+
+      {calorimetry && (
+        <div
+          className={`reaction-result__thermo-card ${
+            calorimetry.temperatureDeltaC < 0
+              ? "reaction-result__thermo-card--cold"
+              : calorimetry.temperatureDeltaC > 0
+                ? "reaction-result__thermo-card--warm"
+                : "reaction-result__thermo-card--neutral"
+          }`}
+        >
+          <div className="reaction-result__thermo-icon" aria-hidden="true">
+            {calorimetry.temperatureDeltaC < 0 ? "❄️" : calorimetry.temperatureDeltaC > 0 ? "🔥" : "🌡️"}
+          </div>
+          <div className="reaction-result__thermo-info">
+            <div className="reaction-result__thermo-title">
+              {calorimetry.temperatureDeltaC < 0
+                ? `Temperature Decreased by ${Math.abs(calorimetry.temperatureDeltaC).toFixed(1)} °C`
+                : calorimetry.temperatureDeltaC > 0
+                  ? `Temperature Increased by ${calorimetry.temperatureDeltaC.toFixed(1)} °C`
+                  : "No Significant Temperature Change"}
+            </div>
+            <div className="reaction-result__thermo-details">
+              <span>
+                <strong>Initial:</strong> {calorimetry.initialTemperatureC.toFixed(1)} °C
+              </span>
+              <span className="reaction-result__thermo-arrow">→</span>
+              <span>
+                <strong>Final:</strong> {calorimetry.finalTemperatureC.toFixed(1)} °C
+              </span>
+              <span className="reaction-result__thermo-sep">•</span>
+              <span>
+                <strong>ΔH:</strong> {calorimetry.enthalpyKjPerMol > 0 ? "+" : ""}
+                {calorimetry.enthalpyKjPerMol} kJ/mol
+              </span>
+              <span className="reaction-result__thermo-sep">•</span>
+              <span>
+                <strong>Heat:</strong> {(Math.abs(calorimetry.heatJoules) / 1000).toFixed(2)} kJ{" "}
+                {calorimetry.heatJoules > 0 ? "absorbed" : "released"}
+              </span>
+            </div>
+          </div>
+        </div>
+      )}
 
       {resolution.warnings.length > 0 && (
         <ul className="reaction-result__warnings">

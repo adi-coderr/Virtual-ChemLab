@@ -78,6 +78,9 @@ export interface ObservableEffect {
   relatedChemicalId?: string;
   colorFrom?: string;
   colorTo?: string;
+  temperatureDeltaC?: number;
+  initialTemperatureC?: number;
+  finalTemperatureC?: number;
 }
 
 export interface AtomRecord {
@@ -216,9 +219,25 @@ export interface CuratedReaction {
   observableEffects: ObservableEffect[];
   experimentalStatus: "experimentally_verified" | "rule_derived" | "heuristic";
   confidenceScore: number;
+  enthalpyKjPerMol?: number;
   source: string;
   reference?: string;
   safetyNotes?: string;
+}
+
+export interface CalorimetryResult {
+  enthalpyKjPerMol: number;
+  extentMoles: number;
+  /** Heat of reaction in Joules. Positive for endothermic (absorbs heat), negative for exothermic (releases heat). */
+  heatJoules: number;
+  /** Heat transferred into the solution/mixture in Joules (-heatJoules). */
+  solutionHeatJoules: number;
+  initialTemperatureC: number;
+  finalTemperatureC: number;
+  temperatureDeltaC: number;
+  totalMassGrams: number;
+  heatCapacityJPerC: number;
+  summaryText: string;
 }
 
 export interface ReactionInputSpecies {
@@ -273,6 +292,8 @@ export interface ReactionResolution {
   products: ResolvedSpecies[];
   observableEffects: ObservableEffect[];
   energyClassification?: EnergyClassification;
+  enthalpyKjPerMol?: number;
+  calorimetry?: CalorimetryResult;
   explanation: string;
   ruleApplied: string;
   reference?: string;
