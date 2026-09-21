@@ -217,6 +217,12 @@ export interface CuratedReaction {
   equationDisplay: string;
   netIonicEquation?: string;
   energyClassification: EnergyClassification;
+  enthalpyKjPerMol?: number;
+  temperatureMinC?: number;
+  temperatureMaxC?: number;
+  solvent?: string;
+  safetyNotes?: string;
+  source?: string;
   observableEffects: ObservableEffect[];
   confidenceScore: number;
 }

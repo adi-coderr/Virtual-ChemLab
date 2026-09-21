@@ -183,6 +183,71 @@ describe("POST /api/reactions/simulate", () => {
     expect(tempEffect.description).toContain("Temperature decreased by");
     expect(tempEffect.description).toContain("from 25.0 °C to");
   });
+
+  it("calculates exact temperature decrease for ammonium nitrate dissolution (cold pack)", async () => {
+    const res = await request(app)
+      .post("/api/reactions/simulate")
+      .send({
+        reactants: [
+          { chemicalId: "nh4no3", amount: 10, unit: "g" },
+          { chemicalId: "water", amount: 100, unit: "mL" },
+        ],
+        conditions: { temperatureC: 25 },
+      });
+
+    expect(res.status).toBe(200);
+    expect(res.body.data.resolution.status).toBe("REACTION");
+    expect(res.body.data.resolution.confidenceTier).toBe("SUPPORTED");
+    expect(res.body.data.calorimetry.temperatureDeltaC).toBeLessThan(0);
+    expect(res.body.data.resolution.energyClassification).toBe("endothermic");
+  });
+
+  it("simulates copper(II) hydroxide precipitation from CuSO4 and NaOH", async () => {
+    const res = await request(app)
+      .post("/api/reactions/simulate")
+      .send({
+        reactants: [
+          { chemicalId: "cuso4", amount: 20, unit: "mL", concentrationMolar: 0.1 },
+          { chemicalId: "naoh", amount: 40, unit: "mL", concentrationMolar: 0.1 },
+        ],
+      });
+
+    expect(res.status).toBe(200);
+    expect(res.body.data.resolution.status).toBe("REACTION");
+    expect(res.body.data.resolution.confidenceTier).toBe("SUPPORTED");
+    expect(res.body.data.resolution.balancedEquation).toBe("CuSO4 + 2NaOH → Cu(OH)2 + Na2SO4");
+    expect(res.body.data.resolution.observableEffects.some((e: { type: string }) => e.type === "precipitation")).toBe(true);
+  });
+
+  it("simulates silver tree displacement of silver by copper", async () => {
+    const res = await request(app)
+      .post("/api/reactions/simulate")
+      .send({
+        reactants: [
+          { chemicalId: "cu", amount: 1, unit: "g" },
+          { chemicalId: "agno3", amount: 50, unit: "mL", concentrationMolar: 0.1 },
+        ],
+      });
+
+    expect(res.status).toBe(200);
+    expect(res.body.data.resolution.status).toBe("REACTION");
+    expect(res.body.data.resolution.confidenceTier).toBe("SUPPORTED");
+    expect(res.body.data.resolution.balancedEquation).toBe("Cu + 2AgNO3 → Cu(NO3)2 + 2Ag");
+    expect(res.body.data.resolution.netIonicEquation).toBe("Cu + 2Ag⁺ → Cu²⁺ + 2Ag(s)");
+  });
+});
+
+describe("GET /api/reactions", () => {
+  it("lists all curated reactions with complete details", async () => {
+    const res = await request(app).get("/api/reactions?limit=100");
+    expect(res.status).toBe(200);
+    expect(res.body.data.length).toBeGreaterThanOrEqual(30);
+    const rx = res.body.data.find((r: { id: string }) => r.id === "cuso4-naoh-precipitation");
+    expect(rx).toBeDefined();
+    expect(rx.equationDisplay).toBe("CuSO4 + 2NaOH → Cu(OH)2 + Na2SO4");
+    expect(rx.enthalpyKjPerMol).toBe(-56.0);
+    expect(rx.observableEffects.length).toBeGreaterThan(0);
+  });
 });
 
 describe("POST /api/reactions/balance", () => {
