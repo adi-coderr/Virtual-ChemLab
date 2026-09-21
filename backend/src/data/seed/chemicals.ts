@@ -273,7 +273,7 @@ function ionPairStructure(cationElement: string, cationCharge: number, anionElem
 // Seed chemicals
 // ---------------------------------------------------------------------------
 
-export const SEED_CHEMICALS: SeedChemical[] = [
+const INITIAL_CHEMICALS: SeedChemical[] = [
   // --- Acids ---
   {
     id: "hcl",
@@ -2976,7 +2976,7 @@ export const SEED_CHEMICALS: SeedChemical[] = [
     physicalState: "solid",
     density: 2.329,
     meltingPointC: 1414,
-    chemicalClass: "element",
+    chemicalClass: "nonmetal",
     substanceColor: "#4B4B4B",
     isElemental: true,
     hazardCodes: ["FLAMMABLE"],
@@ -3078,5 +3078,13 @@ export const SEED_CHEMICALS: SeedChemical[] = [
     notes: "Bright reddish-yellow solid residue formed from the thermal decrepitation of lead(II) nitrate.",
   },
 ];
+
+import { CHEMICALS_BATCH_4 } from "./chemicalsBatch4.js";
+
+export const SEED_CHEMICALS: SeedChemical[] = [
+  ...INITIAL_CHEMICALS,
+  ...CHEMICALS_BATCH_4,
+];
+
 
 

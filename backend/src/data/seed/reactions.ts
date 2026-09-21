@@ -38,7 +38,7 @@ export interface SeedReaction {
 const TEXTBOOK_SOURCE =
   "Standard general-chemistry textbook reaction (documented in essentially every intro chemistry text, e.g. Zumdahl's Chemistry or Brown/LeMay/Bursten's Chemistry: The Central Science); not a citation to a specific paper.";
 
-export const SEED_REACTIONS: SeedReaction[] = [
+const INITIAL_REACTIONS: SeedReaction[] = [
   {
     id: "hcl-naoh-neutralization",
     name: "Neutralization of hydrochloric acid with sodium hydroxide",
@@ -4867,6 +4867,14 @@ export const SEED_REACTIONS: SeedReaction[] = [
     safetyNotes: "Silver nitrate causes skin staining and chemical burns; collect silver residues for recycling.",
   },
 ];
+
+import { REACTIONS_BATCH_4 } from "./reactionsBatch4.js";
+
+export const SEED_REACTIONS: SeedReaction[] = [
+  ...INITIAL_REACTIONS,
+  ...REACTIONS_BATCH_4,
+];
+
 
 
 

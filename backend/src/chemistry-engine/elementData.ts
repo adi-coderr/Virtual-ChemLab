@@ -91,6 +91,7 @@ const ELEMENT_LIST: ElementInfo[] = [
   { symbol: "Xe", name: "Xenon", atomicNumber: 54, atomicMass: 131.293, cpkColor: "#429EB0", covalentRadiusPm: 140, category: "noble_gas" },
   { symbol: "Cs", name: "Caesium", atomicNumber: 55, atomicMass: 132.905, cpkColor: "#57178F", covalentRadiusPm: 244, category: "alkali_metal" },
   { symbol: "Ba", name: "Barium", atomicNumber: 56, atomicMass: 137.327, cpkColor: "#00C900", covalentRadiusPm: 149, category: "alkaline_earth_metal" },
+  { symbol: "W", name: "Tungsten", atomicNumber: 74, atomicMass: 183.84, cpkColor: "#2194D6", covalentRadiusPm: 162, category: "transition_metal" },
   { symbol: "Pt", name: "Platinum", atomicNumber: 78, atomicMass: 195.085, cpkColor: "#D0D0E0", covalentRadiusPm: 136, category: "transition_metal" },
   { symbol: "Au", name: "Gold", atomicNumber: 79, atomicMass: 196.967, cpkColor: "#FFD123", covalentRadiusPm: 136, category: "transition_metal" },
   { symbol: "Hg", name: "Mercury", atomicNumber: 80, atomicMass: 200.592, cpkColor: "#B8B8D0", covalentRadiusPm: 132, category: "transition_metal" },

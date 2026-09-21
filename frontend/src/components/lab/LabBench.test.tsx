@@ -93,13 +93,13 @@ describe("LabBench & ContainerView Auto-Sizing", () => {
     const removeBtns = screen.getAllByRole("button", { name: /remove/i });
     expect(removeBtns.length).toBe(2);
     act(() => {
-      fireEvent.click(removeBtns[1]);
+      fireEvent.click(removeBtns[1]!);
     });
 
     rerender(<LabBench />);
     // Should scale back to hero
     const remainingCards = container.querySelectorAll(".container-view");
     expect(remainingCards.length).toBe(1);
-    expect(remainingCards[0].classList.contains("container-view--hero")).toBe(true);
+    expect(remainingCards[0]!.classList.contains("container-view--hero")).toBe(true);
   });
 });

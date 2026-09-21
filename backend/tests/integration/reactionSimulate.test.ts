@@ -239,7 +239,7 @@ describe("POST /api/reactions/simulate", () => {
 
 describe("GET /api/reactions", () => {
   it("lists all curated reactions with complete details", async () => {
-    const res = await request(app).get("/api/reactions?limit=200");
+    const res = await request(app).get("/api/reactions?limit=1500");
     expect(res.status).toBe(200);
     expect(res.body.data.length).toBeGreaterThanOrEqual(30);
     const rx = res.body.data.find((r: { id: string }) => r.id === "cuso4-naoh-precipitation");
