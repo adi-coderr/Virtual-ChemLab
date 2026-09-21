@@ -22,8 +22,9 @@ export class ReactionController {
   };
 
   list = (req: Request, res: Response): void => {
-    const { limit, offset } = req.query as unknown as { limit: number; offset: number };
-    const result = this.reactionService.list(limit ?? 50, offset ?? 0);
+    const limit = req.query.limit !== undefined ? Number(req.query.limit) : 200;
+    const offset = req.query.offset !== undefined ? Number(req.query.offset) : 0;
+    const result = this.reactionService.list(limit, offset);
     res.json({ status: "ok", data: result.items, total: result.total });
   };
 

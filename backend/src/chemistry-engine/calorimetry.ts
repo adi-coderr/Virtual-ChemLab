@@ -71,8 +71,10 @@ export function computeCalorimetry(options: CalorimetryOptions): CalorimetryResu
   const rawDeltaT = solutionHeatJoules / heatCapacityJPerC;
   const rawFinalT = initialTemperatureC + rawDeltaT;
 
-  // Bound to physical liquid range for aqueous experiments (-5 °C to 100 °C)
-  const clampedFinalT = Math.min(100.0, Math.max(-5.0, rawFinalT));
+  // Bound to physical liquid range for aqueous experiments (-5 °C to 100 °C) when started at ambient/aqueous conditions
+  const clampedFinalT = initialTemperatureC <= 100.0
+    ? Math.min(100.0, Math.max(-5.0, rawFinalT))
+    : Math.max(-5.0, rawFinalT);
   const effectiveDeltaT = clampedFinalT - initialTemperatureC;
 
   const initialRound = Math.round(initialTemperatureC * 10) / 10;

@@ -150,8 +150,9 @@ function seedReactions(db: Database.Database): void {
   const insertProduct = db.prepare(
     `INSERT OR IGNORE INTO reaction_products (reaction_id, chemical_id, coefficient, is_byproduct) VALUES (?, ?, ?, ?)`
   );
+  const deleteEffects = db.prepare(`DELETE FROM reaction_observable_effects WHERE reaction_id = ?`);
   const insertEffect = db.prepare(`
-    INSERT OR IGNORE INTO reaction_observable_effects (reaction_id, effect_type, description, related_chemical_id, color_from, color_to)
+    INSERT INTO reaction_observable_effects (reaction_id, effect_type, description, related_chemical_id, color_from, color_to)
     VALUES (?, ?, ?, ?, ?, ?)
   `);
 
@@ -177,6 +178,7 @@ function seedReactions(db: Database.Database): void {
       });
       for (const reactant of r.reactants) insertReactant.run(r.id, reactant.chemicalId, reactant.coefficient);
       for (const product of r.products) insertProduct.run(r.id, product.chemicalId, product.coefficient, product.isByproduct ? 1 : 0);
+      deleteEffects.run(r.id);
       for (const effect of r.observableEffects) {
         insertEffect.run(r.id, effect.type, effect.description, effect.relatedChemicalId ?? null, effect.colorFrom ?? null, effect.colorTo ?? null);
       }
@@ -187,19 +189,13 @@ function seedReactions(db: Database.Database): void {
 
 /** Idempotent: safe to call on every server start. Uses INSERT OR IGNORE keyed on primary keys throughout. */
 export function seedDatabase(db: Database.Database): void {
-  const chemicalCount = (db.prepare("SELECT COUNT(*) as n FROM chemicals").get() as { n: number }).n;
-  if (chemicalCount > 0) {
-    logger.info("Database already seeded, refreshing reactions", { chemicalCount });
-    seedReactions(db);
-    return;
-  }
-  logger.info("Seeding database...");
   seedElements(db);
   seedHazards(db);
   seedChemicals(db);
   seedReactions(db);
-  logger.info("Seeding complete", {
+  logger.info("Database seed synced", {
     chemicals: SEED_CHEMICALS.length,
     reactions: SEED_REACTIONS.length,
   });
 }
+

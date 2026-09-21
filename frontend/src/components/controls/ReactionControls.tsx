@@ -27,7 +27,7 @@ export function ReactionControls({ pendingChemical, onAdded }: { pendingChemical
 
   useEffect(() => {
     let cancelled = false;
-    reactionsApi.list(100).then((res) => {
+    reactionsApi.list(200).then((res) => {
       if (!cancelled) setCuratedReactions(res.items);
     }).catch(() => {});
     return () => {
@@ -57,7 +57,7 @@ export function ReactionControls({ pendingChemical, onAdded }: { pendingChemical
           amt = r.coefficient || 1;
           u = "mol";
           conc = undefined;
-        } else if (chem.physicalState === "solid" && (chem.chemicalClass === "metal" || rx.reactionType === "dissolution")) {
+        } else if (chem.physicalState === "solid") {
           amt = 2 * (r.coefficient || 1);
           u = "g";
           conc = undefined;

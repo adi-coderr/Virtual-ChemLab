@@ -92,7 +92,7 @@ function buildResultFromCurated(reaction: CuratedReaction, lookup: ChemicalLooku
     energyClassification: reaction.energyClassification,
     enthalpyKjPerMol: reaction.enthalpyKjPerMol,
     explanation:
-      `This is a curated, experimentally-grounded reaction record (${REACTION_TYPE_LABELS[reaction.reactionType].label.toLowerCase()}). ` +
+      `This is a curated, experimentally-grounded reaction record (${(REACTION_TYPE_LABELS[reaction.reactionType]?.label ?? reaction.reactionType).toLowerCase()}). ` +
       (reaction.reference ? `Reference: ${reaction.reference}.` : ""),
     ruleApplied: `curated_reaction:${reaction.id}`,
     reference: reaction.reference,
