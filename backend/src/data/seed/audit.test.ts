@@ -12,15 +12,17 @@ seedDatabase(db);
 const simulationService = new SimulationService(db);
 
 const chemMap = new Map(SEED_CHEMICALS.map((c) => [c.id, c]));
-const batch2 = SEED_REACTIONS.slice(81); // the 50 new reactions (indices 81 to 130)
+const batch2 = SEED_REACTIONS.slice(81, 131); // Batch 2 reactions (50)
+const batch3 = SEED_REACTIONS.slice(131); // Batch 3 reactions (50 newly added)
 
-describe("Comprehensive Audit of 50 Newly Added Reactions", () => {
-  it("has exactly 50 reactions in batch 2 (total 131)", () => {
+describe("Comprehensive Audit of 50 Newly Added Batch 3 Reactions", () => {
+  it("has exactly 181 reactions total with 50 reactions in batch 3", () => {
     expect(batch2.length).toBe(50);
-    expect(SEED_REACTIONS.length).toBe(131);
+    expect(batch3.length).toBe(50);
+    expect(SEED_REACTIONS.length).toBe(181);
   });
 
-  describe.each(batch2.map((r, i) => [r.id, r, 82 + i] as const))("%s (#%d)", (id, r, _num) => {
+  describe.each(batch3.map((r, i) => [r.id, r, 132 + i] as const))("%s (#%d)", (id, r, _num) => {
     it("all reactant and product chemical IDs exist in seed chemicals", () => {
       for (const sp of [...r.reactants, ...r.products]) {
         expect(chemMap.has(sp.chemicalId), `Unknown chemical ID: ${sp.chemicalId} in reaction ${id}`).toBe(true);
