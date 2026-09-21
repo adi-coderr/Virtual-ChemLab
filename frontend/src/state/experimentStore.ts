@@ -42,6 +42,7 @@ interface LabState {
 
   initExperiment: () => Promise<void>;
   addEquipment: (type: EquipmentType) => void;
+  removeContainer: (id: string) => void;
   setActiveContainer: (id: string) => void;
   addChemical: (chemical: ChemicalSummary, amount: number, unit: Unit, concentrationMolar?: number) => Promise<void>;
   removeContent: (containerId: string, chemicalId: string) => void;
@@ -146,6 +147,27 @@ export const useLabStore = create<LabState>((set, get) => ({
         history: [...state.history, snapshot(state)],
         containers: [...state.containers, container],
         activeContainerId: container.id,
+      };
+    });
+  },
+
+  removeContainer: (id) => {
+    set((state) => {
+      if (state.containers.length <= 1) {
+        // If it's the only container, empty its contents rather than having zero containers
+        return {
+          history: [...state.history, snapshot(state)],
+          containers: state.containers.map((c) =>
+            c.id === id ? { ...c, contents: [], temperatureC: 25 } : c
+          ),
+        };
+      }
+      const remaining = state.containers.filter((c) => c.id !== id);
+      const nextActive = state.activeContainerId === id ? (remaining[0]?.id ?? null) : state.activeContainerId;
+      return {
+        history: [...state.history, snapshot(state)],
+        containers: remaining,
+        activeContainerId: nextActive,
       };
     });
   },
