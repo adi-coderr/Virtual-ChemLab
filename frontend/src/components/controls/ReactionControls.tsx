@@ -9,7 +9,7 @@ const UNITS: Unit[] = ["mL", "L", "g", "kg", "mg", "mol", "mmol"];
 const VOLUME_UNITS: Unit[] = ["mL", "L"];
 
 export function ReactionControls({ pendingChemical, onAdded }: { pendingChemical: ChemicalSummary | null; onAdded: () => void }) {
-  const [amount, setAmount] = useState(20);
+  const [amount, setAmount] = useState<number | "">(20);
   const [unit, setUnit] = useState<Unit>("mL");
   const [concentration, setConcentration] = useState<number | "">(0.1);
   const addChemical = useLabStore((s) => s.addChemical);
@@ -32,7 +32,14 @@ export function ReactionControls({ pendingChemical, onAdded }: { pendingChemical
           <div className="reaction-controls__row">
             <label>
               Amount
-              <input type="number" min={0} step="any" value={amount} onChange={(e) => setAmount(parseFloat(e.target.value) || 0)} />
+              <input
+                type="number"
+                min={0}
+                step="any"
+                value={amount}
+                placeholder="Amount"
+                onChange={(e) => setAmount(e.target.value === "" ? "" : parseFloat(e.target.value))}
+              />
             </label>
             <label>
               Unit
@@ -59,8 +66,9 @@ export function ReactionControls({ pendingChemical, onAdded }: { pendingChemical
           )}
           <Button
             variant="primary"
-            disabled={isLoading || amount <= 0 || (needsConcentration && (concentration === "" || concentration <= 0))}
+            disabled={isLoading || amount === "" || amount <= 0 || (needsConcentration && (concentration === "" || concentration <= 0))}
             onClick={async () => {
+              if (amount === "" || amount <= 0) return;
               await addChemical(pendingChemical, amount, unit, needsConcentration ? (concentration as number) : undefined);
               onAdded();
             }}
