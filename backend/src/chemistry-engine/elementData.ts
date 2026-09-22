@@ -83,6 +83,8 @@ const ELEMENT_LIST: ElementInfo[] = [
   { symbol: "Kr", name: "Krypton", atomicNumber: 36, atomicMass: 83.798, cpkColor: "#5CB8D1", covalentRadiusPm: 116, category: "noble_gas" },
   { symbol: "Rb", name: "Rubidium", atomicNumber: 37, atomicMass: 85.468, cpkColor: "#702EB0", covalentRadiusPm: 220, category: "alkali_metal" },
   { symbol: "Sr", name: "Strontium", atomicNumber: 38, atomicMass: 87.62, cpkColor: "#00FF00", covalentRadiusPm: 195, category: "alkaline_earth_metal" },
+  { symbol: "Mo", name: "Molybdenum", atomicNumber: 42, atomicMass: 95.95, cpkColor: "#54B5B5", covalentRadiusPm: 145, category: "transition_metal" },
+  { symbol: "Pd", name: "Palladium", atomicNumber: 46, atomicMass: 106.42, cpkColor: "#006985", covalentRadiusPm: 131, category: "transition_metal" },
   { symbol: "Ag", name: "Silver", atomicNumber: 47, atomicMass: 107.868, cpkColor: "#C0C0C0", covalentRadiusPm: 145, category: "transition_metal" },
   { symbol: "Cd", name: "Cadmium", atomicNumber: 48, atomicMass: 112.414, cpkColor: "#FFD98F", covalentRadiusPm: 144, category: "transition_metal" },
   { symbol: "Sn", name: "Tin", atomicNumber: 50, atomicMass: 118.710, cpkColor: "#668080", covalentRadiusPm: 139, category: "post_transition_metal" },
@@ -91,12 +93,15 @@ const ELEMENT_LIST: ElementInfo[] = [
   { symbol: "Xe", name: "Xenon", atomicNumber: 54, atomicMass: 131.293, cpkColor: "#429EB0", covalentRadiusPm: 140, category: "noble_gas" },
   { symbol: "Cs", name: "Caesium", atomicNumber: 55, atomicMass: 132.905, cpkColor: "#57178F", covalentRadiusPm: 244, category: "alkali_metal" },
   { symbol: "Ba", name: "Barium", atomicNumber: 56, atomicMass: 137.327, cpkColor: "#00C900", covalentRadiusPm: 149, category: "alkaline_earth_metal" },
+  { symbol: "La", name: "Lanthanum", atomicNumber: 57, atomicMass: 138.905, cpkColor: "#70D4FF", covalentRadiusPm: 169, category: "lanthanide" },
+  { symbol: "Ce", name: "Cerium", atomicNumber: 58, atomicMass: 140.116, cpkColor: "#FFFFC7", covalentRadiusPm: 165, category: "lanthanide" },
   { symbol: "W", name: "Tungsten", atomicNumber: 74, atomicMass: 183.84, cpkColor: "#2194D6", covalentRadiusPm: 162, category: "transition_metal" },
   { symbol: "Pt", name: "Platinum", atomicNumber: 78, atomicMass: 195.085, cpkColor: "#D0D0E0", covalentRadiusPm: 136, category: "transition_metal" },
   { symbol: "Au", name: "Gold", atomicNumber: 79, atomicMass: 196.967, cpkColor: "#FFD123", covalentRadiusPm: 136, category: "transition_metal" },
   { symbol: "Hg", name: "Mercury", atomicNumber: 80, atomicMass: 200.592, cpkColor: "#B8B8D0", covalentRadiusPm: 132, category: "transition_metal" },
   { symbol: "Pb", name: "Lead", atomicNumber: 82, atomicMass: 207.2, cpkColor: "#575961", covalentRadiusPm: 146, category: "post_transition_metal" },
   { symbol: "Bi", name: "Bismuth", atomicNumber: 83, atomicMass: 208.980, cpkColor: "#9E4FB5", covalentRadiusPm: 148, category: "post_transition_metal" },
+  { symbol: "U", name: "Uranium", atomicNumber: 92, atomicMass: 238.029, cpkColor: "#008FFF", covalentRadiusPm: 156, category: "actinide" },
 ];
 
 export const ELEMENT_DATA: Map<string, ElementInfo> = new Map(ELEMENT_LIST.map((e) => [e.symbol, e]));
