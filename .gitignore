@@ -9,6 +9,10 @@ backend/data/
 backend/*.db
 backend/*.db-wal
 backend/*.db-shm
+backend/prisma/*.db
+backend/prisma/*.db-journal
+backend/prisma/*.db-wal
+backend/prisma/*.db-shm
 
 frontend/dist/
 .vite/

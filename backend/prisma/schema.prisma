@@ -1,0 +1,28 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model Reaction {
+  id                   String   @id
+  reactantKey          String   @unique
+  name                 String
+  equation             String
+  netIonicEquation     String?
+  reactionType         String
+  reactants            Json
+  products             Json
+  conditions           Json
+  observations         Json
+  hazards              Json
+  source               String
+  verified             Boolean  @default(true)
+  confidenceScore      Float    @default(0.99)
+  createdAt            DateTime @default(now())
+
+  @@index([reactantKey])
+}
