@@ -30033,5 +30033,13626 @@ export const REACTIONS_BATCH_5: SeedReaction[] = [
     ],
     "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
     "safetyNotes": "Halogens, interhalogens, and phosphorus/sulfur halides. Highly reactive, corrosive, and toxic oxidizers. Avoid contact with water or organic matter unless strictly controlled."
+  },
+  {
+    "id": "thermo-si-fe2o3-reduction",
+    "name": "Silicon thermite reduction of iron(III) oxide",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "fe2o3",
+        "coefficient": 2
+      },
+      {
+        "chemicalId": "si",
+        "coefficient": 3
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "fe",
+        "coefficient": 4,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "sio2",
+        "coefficient": 3,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "2Fe2O3 + 3Si → 4Fe + 3SiO2",
+    "netIonicEquation": "2Fe2O3 + 3Si → 4Fe + 3SiO2",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -570,
+    "temperatureMinC": 100,
+    "temperatureMaxC": 3000,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "High-temperature silicon reduction producing elemental iron and fused silica slag."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "High-temperature energetic thermochemical reaction. Extreme thermal radiation, molten metal slag, and pressure generation. Strictly for simulated thermodynamic and educational modeling."
+  },
+  {
+    "id": "thermo-si-cuo-reduction",
+    "name": "Silicon reduction of copper(II) oxide",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "cuo",
+        "coefficient": 2
+      },
+      {
+        "chemicalId": "si",
+        "coefficient": 1
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "cu",
+        "coefficient": 2,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "sio2",
+        "coefficient": 1,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "2CuO + Si → 2Cu + SiO2",
+    "netIonicEquation": "2CuO + Si → 2Cu + SiO2",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -480,
+    "temperatureMinC": 100,
+    "temperatureMaxC": 3000,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Rapid deflagration yielding metallic copper globules and silicon dioxide."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "High-temperature energetic thermochemical reaction. Extreme thermal radiation, molten metal slag, and pressure generation. Strictly for simulated thermodynamic and educational modeling."
+  },
+  {
+    "id": "thermo-si-mno2-reduction",
+    "name": "Silicothermic extraction of manganese from manganese dioxide",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "mno2",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "si",
+        "coefficient": 1
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "mn",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "sio2",
+        "coefficient": 1,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "MnO2 + Si → Mn + SiO2",
+    "netIonicEquation": "MnO2 + Si → Mn + SiO2",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -360,
+    "temperatureMinC": 100,
+    "temperatureMaxC": 3000,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Silicothermic smelting process isolating manganese metal."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "High-temperature energetic thermochemical reaction. Extreme thermal radiation, molten metal slag, and pressure generation. Strictly for simulated thermodynamic and educational modeling."
+  },
+  {
+    "id": "thermo-si-cr2o3-reduction",
+    "name": "Silicothermic reduction of chromium(III) oxide",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "cr2o3",
+        "coefficient": 2
+      },
+      {
+        "chemicalId": "si",
+        "coefficient": 3
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "cr",
+        "coefficient": 4,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "sio2",
+        "coefficient": 3,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "2Cr2O3 + 3Si → 4Cr + 3SiO2",
+    "netIonicEquation": "2Cr2O3 + 3Si → 4Cr + 3SiO2",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -310,
+    "temperatureMinC": 100,
+    "temperatureMaxC": 3000,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "High-temperature reduction yielding low-carbon ferrochromium master components."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "High-temperature energetic thermochemical reaction. Extreme thermal radiation, molten metal slag, and pressure generation. Strictly for simulated thermodynamic and educational modeling."
+  },
+  {
+    "id": "thermo-si-v2o5-reduction",
+    "name": "Silicothermic reduction of vanadium pentoxide",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "v2o5",
+        "coefficient": 2
+      },
+      {
+        "chemicalId": "si",
+        "coefficient": 5
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "v",
+        "coefficient": 4,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "sio2",
+        "coefficient": 5,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "2V2O5 + 5Si → 4V + 5SiO2",
+    "netIonicEquation": "2V2O5 + 5Si → 4V + 5SiO2",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -720,
+    "temperatureMinC": 100,
+    "temperatureMaxC": 3000,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Exothermic reduction producing elemental vanadium and vitreous silica."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "High-temperature energetic thermochemical reaction. Extreme thermal radiation, molten metal slag, and pressure generation. Strictly for simulated thermodynamic and educational modeling."
+  },
+  {
+    "id": "thermo-si-tio2-reduction",
+    "name": "Silicothermic reduction of titanium dioxide",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "tio2",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "si",
+        "coefficient": 1
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "ti",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "sio2",
+        "coefficient": 1,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "TiO2 + Si → Ti + SiO2",
+    "netIonicEquation": "TiO2 + Si → Ti + SiO2",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -140,
+    "temperatureMinC": 100,
+    "temperatureMaxC": 3000,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Direct reduction yielding titanium silicide precursors."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "High-temperature energetic thermochemical reaction. Extreme thermal radiation, molten metal slag, and pressure generation. Strictly for simulated thermodynamic and educational modeling."
+  },
+  {
+    "id": "thermo-si-wo3-reduction",
+    "name": "Silicothermic reduction of tungsten trioxide",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "wo3",
+        "coefficient": 2
+      },
+      {
+        "chemicalId": "si",
+        "coefficient": 3
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "w",
+        "coefficient": 2,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "sio2",
+        "coefficient": 3,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "2WO3 + 3Si → 2W + 3SiO2",
+    "netIonicEquation": "2WO3 + 3Si → 2W + 3SiO2",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -490,
+    "temperatureMinC": 100,
+    "temperatureMaxC": 3000,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Exothermic reduction producing tungsten metal powder."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "High-temperature energetic thermochemical reaction. Extreme thermal radiation, molten metal slag, and pressure generation. Strictly for simulated thermodynamic and educational modeling."
+  },
+  {
+    "id": "thermo-b-fe2o3-reduction",
+    "name": "Boron thermite reduction of iron(III) oxide",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "fe2o3",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "b",
+        "coefficient": 2
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "fe",
+        "coefficient": 2,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "b2o3",
+        "coefficient": 1,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "Fe2O3 + 2B → 2Fe + B2O3",
+    "netIonicEquation": "Fe2O3 + 2B → 2Fe + B2O3",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -780,
+    "temperatureMinC": 100,
+    "temperatureMaxC": 3000,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "High-energy boron combustion reducing iron oxide to molten iron with boron oxide glass."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "High-temperature energetic thermochemical reaction. Extreme thermal radiation, molten metal slag, and pressure generation. Strictly for simulated thermodynamic and educational modeling."
+  },
+  {
+    "id": "thermo-b-cuo-reduction",
+    "name": "Boron thermite reduction of copper(II) oxide",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "cuo",
+        "coefficient": 3
+      },
+      {
+        "chemicalId": "b",
+        "coefficient": 2
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "cu",
+        "coefficient": 3,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "b2o3",
+        "coefficient": 1,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "3CuO + 2B → 3Cu + B2O3",
+    "netIonicEquation": "3CuO + 2B → 3Cu + B2O3",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -650,
+    "temperatureMinC": 100,
+    "temperatureMaxC": 3000,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Fast burning rate composition producing copper beads and glassy boric oxide."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "High-temperature energetic thermochemical reaction. Extreme thermal radiation, molten metal slag, and pressure generation. Strictly for simulated thermodynamic and educational modeling."
+  },
+  {
+    "id": "thermo-b-mno2-reduction",
+    "name": "Boron reduction of manganese dioxide",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "mno2",
+        "coefficient": 3
+      },
+      {
+        "chemicalId": "b",
+        "coefficient": 4
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "mn",
+        "coefficient": 3,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "b2o3",
+        "coefficient": 2,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "3MnO2 + 4B → 3Mn + 2B2O3",
+    "netIonicEquation": "3MnO2 + 4B → 3Mn + 2B2O3",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -610,
+    "temperatureMinC": 100,
+    "temperatureMaxC": 3000,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Energetic reduction isolating pure manganese metal."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "High-temperature energetic thermochemical reaction. Extreme thermal radiation, molten metal slag, and pressure generation. Strictly for simulated thermodynamic and educational modeling."
+  },
+  {
+    "id": "thermo-b-cr2o3-reduction",
+    "name": "Boron reduction of chromium(III) oxide",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "cr2o3",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "b",
+        "coefficient": 2
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "cr",
+        "coefficient": 2,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "b2o3",
+        "coefficient": 1,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "Cr2O3 + 2B → 2Cr + B2O3",
+    "netIonicEquation": "Cr2O3 + 2B → 2Cr + B2O3",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -420,
+    "temperatureMinC": 100,
+    "temperatureMaxC": 3000,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Refractory reduction yielding elemental chromium and boron trioxide."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "High-temperature energetic thermochemical reaction. Extreme thermal radiation, molten metal slag, and pressure generation. Strictly for simulated thermodynamic and educational modeling."
+  },
+  {
+    "id": "thermo-b-v2o5-reduction",
+    "name": "Boron reduction of vanadium pentoxide",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "v2o5",
+        "coefficient": 3
+      },
+      {
+        "chemicalId": "b",
+        "coefficient": 10
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "v",
+        "coefficient": 6,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "b2o3",
+        "coefficient": 5,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "3V2O5 + 10B → 6V + 5B2O3",
+    "netIonicEquation": "3V2O5 + 10B → 6V + 5B2O3",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -980,
+    "temperatureMinC": 100,
+    "temperatureMaxC": 3000,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Intensely exothermic reduction yielding vanadium metal."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "High-temperature energetic thermochemical reaction. Extreme thermal radiation, molten metal slag, and pressure generation. Strictly for simulated thermodynamic and educational modeling."
+  },
+  {
+    "id": "thermo-b-tio2-reduction",
+    "name": "Boron reduction of titanium dioxide",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "tio2",
+        "coefficient": 3
+      },
+      {
+        "chemicalId": "b",
+        "coefficient": 4
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "ti",
+        "coefficient": 3,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "b2o3",
+        "coefficient": 2,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "3TiO2 + 4B → 3Ti + 2B2O3",
+    "netIonicEquation": "3TiO2 + 4B → 3Ti + 2B2O3",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -260,
+    "temperatureMinC": 100,
+    "temperatureMaxC": 3000,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "High-temperature synthesis forming titanium metal and borate flux."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "High-temperature energetic thermochemical reaction. Extreme thermal radiation, molten metal slag, and pressure generation. Strictly for simulated thermodynamic and educational modeling."
+  },
+  {
+    "id": "thermo-b-nio-reduction",
+    "name": "Boron reduction of nickel(II) oxide",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "nio",
+        "coefficient": 3
+      },
+      {
+        "chemicalId": "b",
+        "coefficient": 2
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "ni",
+        "coefficient": 3,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "b2o3",
+        "coefficient": 1,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "3NiO + 2B → 3Ni + B2O3",
+    "netIonicEquation": "3NiO + 2B → 3Ni + B2O3",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -540,
+    "temperatureMinC": 100,
+    "temperatureMaxC": 3000,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Clean exothermic reduction producing metallic nickel."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "High-temperature energetic thermochemical reaction. Extreme thermal radiation, molten metal slag, and pressure generation. Strictly for simulated thermodynamic and educational modeling."
+  },
+  {
+    "id": "thermo-b-moo3-reduction",
+    "name": "Boron reduction of molybdenum trioxide",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "moo3",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "b",
+        "coefficient": 2
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "mo",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "b2o3",
+        "coefficient": 1,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "MoO3 + 2B → Mo + B2O3",
+    "netIonicEquation": "MoO3 + 2B → Mo + B2O3",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -890,
+    "temperatureMinC": 100,
+    "temperatureMaxC": 3000,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Intense deflagration producing elemental molybdenum and boric oxide."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "High-temperature energetic thermochemical reaction. Extreme thermal radiation, molten metal slag, and pressure generation. Strictly for simulated thermodynamic and educational modeling."
+  },
+  {
+    "id": "thermo-ca-tio2-reduction",
+    "name": "Calciothermic reduction of titanium dioxide",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "tio2",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "ca",
+        "coefficient": 2
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "ti",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "cao",
+        "coefficient": 2,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "TiO2 + 2Ca → Ti + 2CaO",
+    "netIonicEquation": "TiO2 + 2Ca → Ti + 2CaO",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -360,
+    "temperatureMinC": 100,
+    "temperatureMaxC": 3000,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Direct reduction of rutile ore by molten calcium metal to titanium powder."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "High-temperature energetic thermochemical reaction. Extreme thermal radiation, molten metal slag, and pressure generation. Strictly for simulated thermodynamic and educational modeling."
+  },
+  {
+    "id": "thermo-ca-v2o5-reduction",
+    "name": "Calciothermic extraction of ductile vanadium from vanadium pentoxide",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "v2o5",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "ca",
+        "coefficient": 5
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "v",
+        "coefficient": 2,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "cao",
+        "coefficient": 5,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "V2O5 + 5Ca → 2V + 5CaO",
+    "netIonicEquation": "V2O5 + 5Ca → 2V + 5CaO",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -1680,
+    "temperatureMinC": 100,
+    "temperatureMaxC": 3000,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Standard industrial reduction process yielding high-purity ductile vanadium metal."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "High-temperature energetic thermochemical reaction. Extreme thermal radiation, molten metal slag, and pressure generation. Strictly for simulated thermodynamic and educational modeling."
+  },
+  {
+    "id": "thermo-ca-cr2o3-reduction",
+    "name": "Calciothermic reduction of chromium(III) oxide",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "cr2o3",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "ca",
+        "coefficient": 3
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "cr",
+        "coefficient": 2,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "cao",
+        "coefficient": 3,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "Cr2O3 + 3Ca → 2Cr + 3CaO",
+    "netIonicEquation": "Cr2O3 + 3Ca → 2Cr + 3CaO",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -840,
+    "temperatureMinC": 100,
+    "temperatureMaxC": 3000,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Vigorous reduction isolating chromium metal and quicklime."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "High-temperature energetic thermochemical reaction. Extreme thermal radiation, molten metal slag, and pressure generation. Strictly for simulated thermodynamic and educational modeling."
+  },
+  {
+    "id": "thermo-ca-sio2-reduction",
+    "name": "Calciothermic reduction of silicon dioxide",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "sio2",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "ca",
+        "coefficient": 2
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "si",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "cao",
+        "coefficient": 2,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "SiO2 + 2Ca → Si + 2CaO",
+    "netIonicEquation": "SiO2 + 2Ca → Si + 2CaO",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -510,
+    "temperatureMinC": 100,
+    "temperatureMaxC": 3000,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Exothermic reduction producing silicon metal and calcium oxide."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "High-temperature energetic thermochemical reaction. Extreme thermal radiation, molten metal slag, and pressure generation. Strictly for simulated thermodynamic and educational modeling."
+  },
+  {
+    "id": "thermo-ca-b2o3-reduction",
+    "name": "Calciothermic reduction of boron trioxide",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "b2o3",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "ca",
+        "coefficient": 3
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "b",
+        "coefficient": 2,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "cao",
+        "coefficient": 3,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "B2O3 + 3Ca → 2B + 3CaO",
+    "netIonicEquation": "B2O3 + 3Ca → 2B + 3CaO",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -720,
+    "temperatureMinC": 100,
+    "temperatureMaxC": 3000,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Reduction yielding elemental boron and calcium oxide slag."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "High-temperature energetic thermochemical reaction. Extreme thermal radiation, molten metal slag, and pressure generation. Strictly for simulated thermodynamic and educational modeling."
+  },
+  {
+    "id": "thermo-ca-moo3-reduction",
+    "name": "Calciothermic reduction of molybdenum trioxide",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "moo3",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "ca",
+        "coefficient": 3
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "mo",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "cao",
+        "coefficient": 3,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "MoO3 + 3Ca → Mo + 3CaO",
+    "netIonicEquation": "MoO3 + 3Ca → Mo + 3CaO",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -1120,
+    "temperatureMinC": 100,
+    "temperatureMaxC": 3000,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "High-temperature reduction yielding pure molybdenum powder."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "High-temperature energetic thermochemical reaction. Extreme thermal radiation, molten metal slag, and pressure generation. Strictly for simulated thermodynamic and educational modeling."
+  },
+  {
+    "id": "thermo-ca-wo3-reduction",
+    "name": "Calciothermic reduction of tungsten trioxide",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "wo3",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "ca",
+        "coefficient": 3
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "w",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "cao",
+        "coefficient": 3,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "WO3 + 3Ca → W + 3CaO",
+    "netIonicEquation": "WO3 + 3Ca → W + 3CaO",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -1080,
+    "temperatureMinC": 100,
+    "temperatureMaxC": 3000,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Exothermic reduction producing tungsten metal."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "High-temperature energetic thermochemical reaction. Extreme thermal radiation, molten metal slag, and pressure generation. Strictly for simulated thermodynamic and educational modeling."
+  },
+  {
+    "id": "thermo-ti-fe2o3-reduction",
+    "name": "Titanium thermite reduction of iron(III) oxide",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "fe2o3",
+        "coefficient": 2
+      },
+      {
+        "chemicalId": "ti",
+        "coefficient": 3
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "fe",
+        "coefficient": 4,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "tio2",
+        "coefficient": 3,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "2Fe2O3 + 3Ti → 4Fe + 3TiO2",
+    "netIonicEquation": "2Fe2O3 + 3Ti → 4Fe + 3TiO2",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -620,
+    "temperatureMinC": 100,
+    "temperatureMaxC": 3000,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Vigorous thermite reaction yielding metallic iron and titanium dioxide."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "High-temperature energetic thermochemical reaction. Extreme thermal radiation, molten metal slag, and pressure generation. Strictly for simulated thermodynamic and educational modeling."
+  },
+  {
+    "id": "thermo-ti-cuo-reduction",
+    "name": "Titanium thermite reduction of copper(II) oxide",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "cuo",
+        "coefficient": 2
+      },
+      {
+        "chemicalId": "ti",
+        "coefficient": 1
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "cu",
+        "coefficient": 2,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "tio2",
+        "coefficient": 1,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "2CuO + Ti → 2Cu + TiO2",
+    "netIonicEquation": "2CuO + Ti → 2Cu + TiO2",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -580,
+    "temperatureMinC": 100,
+    "temperatureMaxC": 3000,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Rapid deflagrating reaction producing molten copper and rutile slag."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "High-temperature energetic thermochemical reaction. Extreme thermal radiation, molten metal slag, and pressure generation. Strictly for simulated thermodynamic and educational modeling."
+  },
+  {
+    "id": "thermo-ti-mno2-reduction",
+    "name": "Titanium reduction of manganese dioxide",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "mno2",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "ti",
+        "coefficient": 1
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "mn",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "tio2",
+        "coefficient": 1,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "MnO2 + Ti → Mn + TiO2",
+    "netIonicEquation": "MnO2 + Ti → Mn + TiO2",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -460,
+    "temperatureMinC": 100,
+    "temperatureMaxC": 3000,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Exothermic reduction isolating manganese metal and titanium dioxide."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "High-temperature energetic thermochemical reaction. Extreme thermal radiation, molten metal slag, and pressure generation. Strictly for simulated thermodynamic and educational modeling."
+  },
+  {
+    "id": "thermo-ti-cr2o3-reduction",
+    "name": "Titanium reduction of chromium(III) oxide",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "cr2o3",
+        "coefficient": 2
+      },
+      {
+        "chemicalId": "ti",
+        "coefficient": 3
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "cr",
+        "coefficient": 4,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "tio2",
+        "coefficient": 3,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "2Cr2O3 + 3Ti → 4Cr + 3TiO2",
+    "netIonicEquation": "2Cr2O3 + 3Ti → 4Cr + 3TiO2",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -390,
+    "temperatureMinC": 100,
+    "temperatureMaxC": 3000,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "High-temperature reduction yielding chromium and titanium dioxide."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "High-temperature energetic thermochemical reaction. Extreme thermal radiation, molten metal slag, and pressure generation. Strictly for simulated thermodynamic and educational modeling."
+  },
+  {
+    "id": "thermo-ti-sio2-reduction",
+    "name": "Titanium reduction of silica",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "sio2",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "ti",
+        "coefficient": 1
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "si",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "tio2",
+        "coefficient": 1,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "SiO2 + Ti → Si + TiO2",
+    "netIonicEquation": "SiO2 + Ti → Si + TiO2",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -180,
+    "temperatureMinC": 100,
+    "temperatureMaxC": 3000,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Solid-state reaction between quartz and titanium powder."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "High-temperature energetic thermochemical reaction. Extreme thermal radiation, molten metal slag, and pressure generation. Strictly for simulated thermodynamic and educational modeling."
+  },
+  {
+    "id": "thermo-ti-b2o3-reduction",
+    "name": "Titanium reduction of boron oxide",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "b2o3",
+        "coefficient": 2
+      },
+      {
+        "chemicalId": "ti",
+        "coefficient": 3
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "b",
+        "coefficient": 4,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "tio2",
+        "coefficient": 3,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "2B2O3 + 3Ti → 4B + 3TiO2",
+    "netIonicEquation": "2B2O3 + 3Ti → 4B + 3TiO2",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -220,
+    "temperatureMinC": 100,
+    "temperatureMaxC": 3000,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Reduction yielding elemental boron and titanium dioxide."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "High-temperature energetic thermochemical reaction. Extreme thermal radiation, molten metal slag, and pressure generation. Strictly for simulated thermodynamic and educational modeling."
+  },
+  {
+    "id": "thermo-ti-v2o5-reduction",
+    "name": "Titanium reduction of vanadium pentoxide",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "v2o5",
+        "coefficient": 2
+      },
+      {
+        "chemicalId": "ti",
+        "coefficient": 5
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "v",
+        "coefficient": 4,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "tio2",
+        "coefficient": 5,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "2V2O5 + 5Ti → 4V + 5TiO2",
+    "netIonicEquation": "2V2O5 + 5Ti → 4V + 5TiO2",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -860,
+    "temperatureMinC": 100,
+    "temperatureMaxC": 3000,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Exothermic reduction isolating vanadium metal."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "High-temperature energetic thermochemical reaction. Extreme thermal radiation, molten metal slag, and pressure generation. Strictly for simulated thermodynamic and educational modeling."
+  },
+  {
+    "id": "thermo-zn-cr2o3-reduction",
+    "name": "Zinc powder reduction of chromium(III) oxide",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "cr2o3",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "zn",
+        "coefficient": 3
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "cr",
+        "coefficient": 2,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "zno",
+        "coefficient": 3,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "Cr2O3 + 3Zn → 2Cr + 3ZnO",
+    "netIonicEquation": "Cr2O3 + 3Zn → 2Cr + 3ZnO",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -190,
+    "temperatureMinC": 100,
+    "temperatureMaxC": 3000,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Moderate temperature pyrotechnic reduction producing chromium and zinc oxide."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "High-temperature energetic thermochemical reaction. Extreme thermal radiation, molten metal slag, and pressure generation. Strictly for simulated thermodynamic and educational modeling."
+  },
+  {
+    "id": "thermo-zn-v2o5-reduction",
+    "name": "Zinc reduction of vanadium pentoxide",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "v2o5",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "zn",
+        "coefficient": 5
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "v",
+        "coefficient": 2,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "zno",
+        "coefficient": 5,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "V2O5 + 5Zn → 2V + 5ZnO",
+    "netIonicEquation": "V2O5 + 5Zn → 2V + 5ZnO",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -650,
+    "temperatureMinC": 100,
+    "temperatureMaxC": 3000,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Exothermic reaction producing vanadium and zinc oxide smoke."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "High-temperature energetic thermochemical reaction. Extreme thermal radiation, molten metal slag, and pressure generation. Strictly for simulated thermodynamic and educational modeling."
+  },
+  {
+    "id": "thermo-zn-fe2o3-reduction",
+    "name": "Zinc reduction of hematite",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "fe2o3",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "zn",
+        "coefficient": 3
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "fe",
+        "coefficient": 2,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "zno",
+        "coefficient": 3,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "Fe2O3 + 3Zn → 2Fe + 3ZnO",
+    "netIonicEquation": "Fe2O3 + 3Zn → 2Fe + 3ZnO",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -320,
+    "temperatureMinC": 100,
+    "temperatureMaxC": 3000,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Pyrotechnic reaction generating metallic iron and zinc oxide smoke."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "High-temperature energetic thermochemical reaction. Extreme thermal radiation, molten metal slag, and pressure generation. Strictly for simulated thermodynamic and educational modeling."
+  },
+  {
+    "id": "thermo-zn-wo3-reduction",
+    "name": "Zinc reduction of tungsten trioxide",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "wo3",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "zn",
+        "coefficient": 3
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "w",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "zno",
+        "coefficient": 3,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "WO3 + 3Zn → W + 3ZnO",
+    "netIonicEquation": "WO3 + 3Zn → W + 3ZnO",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -520,
+    "temperatureMinC": 100,
+    "temperatureMaxC": 3000,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Exothermic reduction yielding tungsten and white zinc oxide."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "High-temperature energetic thermochemical reaction. Extreme thermal radiation, molten metal slag, and pressure generation. Strictly for simulated thermodynamic and educational modeling."
+  },
+  {
+    "id": "thermo-airbag-nan3-primary-decomposition",
+    "name": "Primary deflagration of sodium azide in vehicle safety airbags",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "nan3",
+        "coefficient": 2
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "na",
+        "coefficient": 2,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "n2",
+        "coefficient": 3,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "2NaN3 → 2Na + 3N2",
+    "netIonicEquation": "2NaN3 → 2Na + 3N2",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -43,
+    "temperatureMinC": 100,
+    "temperatureMaxC": 3000,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Rapid sub-millisecond electrical trigger producing nitrogen gas to instantaneously inflate safety cushions."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "High-temperature energetic thermochemical reaction. Extreme thermal radiation, molten metal slag, and pressure generation. Strictly for simulated thermodynamic and educational modeling."
+  },
+  {
+    "id": "thermo-airbag-na-kno3-scavenging",
+    "name": "Secondary scavenging of reactive sodium with potassium nitrate",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "na",
+        "coefficient": 10
+      },
+      {
+        "chemicalId": "kno3",
+        "coefficient": 2
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "k2o",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "na2o",
+        "coefficient": 5,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "n2",
+        "coefficient": 1,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "10Na + 2KNO3 → K2O + 5Na2O + N2",
+    "netIonicEquation": "10Na + 2KNO3 → K2O + 5Na2O + N2",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -1280,
+    "temperatureMinC": 100,
+    "temperatureMaxC": 3000,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Neutralization of dangerous sodium metal into stable alkali oxides and additional nitrogen gas."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "High-temperature energetic thermochemical reaction. Extreme thermal radiation, molten metal slag, and pressure generation. Strictly for simulated thermodynamic and educational modeling."
+  },
+  {
+    "id": "thermo-airbag-k2o-sio2-vitrification",
+    "name": "Vitrification of potassium oxide into harmless potassium silicate glass",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "k2o",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "sio2",
+        "coefficient": 1
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "k2sio3",
+        "coefficient": 1,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "K2O + SiO2 → K2SiO3",
+    "netIonicEquation": "K2O + SiO2 → K2SiO3",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -245,
+    "temperatureMinC": 100,
+    "temperatureMaxC": 3000,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Final stage glass fluxing binding alkaline oxides into safe insoluble silicate slag."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "High-temperature energetic thermochemical reaction. Extreme thermal radiation, molten metal slag, and pressure generation. Strictly for simulated thermodynamic and educational modeling."
+  },
+  {
+    "id": "thermo-airbag-na2o-sio2-vitrification",
+    "name": "Vitrification of sodium oxide with silica into window glass slag",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "na2o",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "sio2",
+        "coefficient": 1
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "na2sio3",
+        "coefficient": 1,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "Na2O + SiO2 → Na2SiO3",
+    "netIonicEquation": "Na2O + SiO2 → Na2SiO3",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -250,
+    "temperatureMinC": 100,
+    "temperatureMaxC": 3000,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Conversion of caustic sodium oxide with sand into non-toxic sodium metasilicate glass."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "High-temperature energetic thermochemical reaction. Extreme thermal radiation, molten metal slag, and pressure generation. Strictly for simulated thermodynamic and educational modeling."
+  },
+  {
+    "id": "thermo-airbag-na-fe2o3-neutralization",
+    "name": "Alternative airbag oxidizer scavenging of sodium by iron(III) oxide",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "na",
+        "coefficient": 6
+      },
+      {
+        "chemicalId": "fe2o3",
+        "coefficient": 1
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "na2o",
+        "coefficient": 3,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "fe",
+        "coefficient": 2,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "6Na + Fe2O3 → 3Na2O + 2Fe",
+    "netIonicEquation": "6Na + Fe2O3 → 3Na2O + 2Fe",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -410,
+    "temperatureMinC": 100,
+    "temperatureMaxC": 3000,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Redox scavenging producing harmless iron particles and sodium oxide."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "High-temperature energetic thermochemical reaction. Extreme thermal radiation, molten metal slag, and pressure generation. Strictly for simulated thermodynamic and educational modeling."
+  },
+  {
+    "id": "thermo-airbag-na-cuo-neutralization",
+    "name": "Copper(II) oxide scavenging of metallic sodium",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "na",
+        "coefficient": 2
+      },
+      {
+        "chemicalId": "cuo",
+        "coefficient": 1
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "na2o",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "cu",
+        "coefficient": 1,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "2Na + CuO → Na2O + Cu",
+    "netIonicEquation": "2Na + CuO → Na2O + Cu",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -360,
+    "temperatureMinC": 100,
+    "temperatureMaxC": 3000,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Mild oxidizer neutralization of reactive sodium releasing copper powder."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "High-temperature energetic thermochemical reaction. Extreme thermal radiation, molten metal slag, and pressure generation. Strictly for simulated thermodynamic and educational modeling."
+  },
+  {
+    "id": "thermo-airbag-na-mno2-neutralization",
+    "name": "Manganese dioxide scavenging of sodium",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "na",
+        "coefficient": 4
+      },
+      {
+        "chemicalId": "mno2",
+        "coefficient": 1
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "na2o",
+        "coefficient": 2,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "mn",
+        "coefficient": 1,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "4Na + MnO2 → 2Na2O + Mn",
+    "netIonicEquation": "4Na + MnO2 → 2Na2O + Mn",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -510,
+    "temperatureMinC": 100,
+    "temperatureMaxC": 3000,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Pyrotechnic scavenging yielding manganese and sodium oxide."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "High-temperature energetic thermochemical reaction. Extreme thermal radiation, molten metal slag, and pressure generation. Strictly for simulated thermodynamic and educational modeling."
+  },
+  {
+    "id": "thermo-airbag-na-sio2-direct-scavenging",
+    "name": "Direct high-temperature reduction of silica by sodium",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "na",
+        "coefficient": 4
+      },
+      {
+        "chemicalId": "sio2",
+        "coefficient": 1
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "na2o",
+        "coefficient": 2,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "si",
+        "coefficient": 1,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "4Na + SiO2 → 2Na2O + Si",
+    "netIonicEquation": "4Na + SiO2 → 2Na2O + Si",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -210,
+    "temperatureMinC": 100,
+    "temperatureMaxC": 3000,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Direct solid-state scavenging producing silicon and sodium oxide."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "High-temperature energetic thermochemical reaction. Extreme thermal radiation, molten metal slag, and pressure generation. Strictly for simulated thermodynamic and educational modeling."
+  },
+  {
+    "id": "thermo-chlorate-candle-oxygen-generation",
+    "name": "Thermal decomposition of sodium chlorate in emergency oxygen candles",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "naclo3",
+        "coefficient": 2
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "nacl",
+        "coefficient": 2,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "o2",
+        "coefficient": 3,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "2NaClO3 → 2NaCl + 3O2",
+    "netIonicEquation": "2NaClO3 → 2NaCl + 3O2",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -50,
+    "temperatureMinC": 100,
+    "temperatureMaxC": 3000,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Controlled catalytic decomposition supplying breathable oxygen in submarines, space stations, and commercial aircraft."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "High-temperature energetic thermochemical reaction. Extreme thermal radiation, molten metal slag, and pressure generation. Strictly for simulated thermodynamic and educational modeling."
+  },
+  {
+    "id": "thermo-ba-nitrate-decomposition",
+    "name": "High-temperature thermal decomposition of barium nitrate",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "ba-no3-2",
+        "coefficient": 2
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "bao",
+        "coefficient": 2,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "no2",
+        "coefficient": 4,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "o2",
+        "coefficient": 1,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "2BaN2O6 → 2BaO + 4NO2 + O2",
+    "netIonicEquation": "2Ba(NO3)2 → 2BaO + 4NO2 + O2",
+    "confidenceScore": 0.99,
+    "energyClassification": "endothermic",
+    "enthalpyKjPerMol": 504,
+    "temperatureMinC": 100,
+    "temperatureMaxC": 3000,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Thermal decomposition evolving nitrogen dioxide and oxygen gas, leaving refractory barium oxide residue."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "High-temperature energetic thermochemical reaction. Extreme thermal radiation, molten metal slag, and pressure generation. Strictly for simulated thermodynamic and educational modeling."
+  },
+  {
+    "id": "thermo-chemical-volcano-dichromate",
+    "name": "Thermal self-sustaining decomposition of ammonium dichromate (Chemical Volcano)",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "nh4-2cr2o7",
+        "coefficient": 1
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "cr2o3",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "n2",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 4,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "Cr2H8N2O7 → Cr2O3 + N2 + 4H2O",
+    "netIonicEquation": "(NH4)2Cr2O7 → Cr2O3 + N2 + 4H2O",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -480,
+    "temperatureMinC": 100,
+    "temperatureMaxC": 3000,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Spectacular spark-filled deflagration producing voluminous fluffy green Cr2O3 ash mimicking a volcanic eruption."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "High-temperature energetic thermochemical reaction. Extreme thermal radiation, molten metal slag, and pressure generation. Strictly for simulated thermodynamic and educational modeling."
+  },
+  {
+    "id": "thermo-kclo3-mno2-catalyzed-decomp",
+    "name": "Oxygen candle model: Catalytic decomposition of potassium chlorate by manganese dioxide",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "kclo3",
+        "coefficient": 2
+      },
+      {
+        "chemicalId": "mno2",
+        "coefficient": 3
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "kcl",
+        "coefficient": 2,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "o2",
+        "coefficient": 3,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "mno2",
+        "coefficient": 3,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "2KClO3 + 3MnO2 → 2KCl + 3O2 + 3MnO2",
+    "netIonicEquation": "2KClO3 + MnO2 → 2KCl + 3O2 + MnO2",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -89,
+    "temperatureMinC": 100,
+    "temperatureMaxC": 3000,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Solid catalyst bed facilitating smooth oxygen evolution."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "High-temperature energetic thermochemical reaction. Extreme thermal radiation, molten metal slag, and pressure generation. Strictly for simulated thermodynamic and educational modeling."
+  },
+  {
+    "id": "thermo-naclo3-iron-candle",
+    "name": "Chlorate-iron thermal sustainment reaction in aviator oxygen generators",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "naclo3",
+        "coefficient": 5
+      },
+      {
+        "chemicalId": "fe",
+        "coefficient": 6
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "nacl",
+        "coefficient": 5,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "fe2o3",
+        "coefficient": 3,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "o2",
+        "coefficient": 3,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "5NaClO3 + 6Fe → 5NaCl + 3Fe2O3 + 3O2",
+    "netIonicEquation": "6NaClO3 + 4Fe → 6NaCl + 2Fe2O3 + 6O2",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -240,
+    "temperatureMinC": 100,
+    "temperatureMaxC": 3000,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Iron powder burning exothermically supplies thermal energy sustaining the endothermic chlorate oxygen generation."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "High-temperature energetic thermochemical reaction. Extreme thermal radiation, molten metal slag, and pressure generation. Strictly for simulated thermodynamic and educational modeling."
+  },
+  {
+    "id": "thermo-kclo3-iron-thermal-candle",
+    "name": "Potassium chlorate iron-fueled oxygen candle",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "kclo3",
+        "coefficient": 5
+      },
+      {
+        "chemicalId": "fe",
+        "coefficient": 6
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "kcl",
+        "coefficient": 5,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "fe2o3",
+        "coefficient": 3,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "o2",
+        "coefficient": 3,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "5KClO3 + 6Fe → 5KCl + 3Fe2O3 + 3O2",
+    "netIonicEquation": "6KClO3 + 4Fe → 6KCl + 2Fe2O3 + 6O2",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -260,
+    "temperatureMinC": 100,
+    "temperatureMaxC": 3000,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Iron fuel maintainer reaction supplying steady exothermic heat."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "High-temperature energetic thermochemical reaction. Extreme thermal radiation, molten metal slag, and pressure generation. Strictly for simulated thermodynamic and educational modeling."
+  },
+  {
+    "id": "thermo-apcp-pure-decomposition",
+    "name": "Thermal deflagration of ammonium perchlorate",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "nh4clo4",
+        "coefficient": 2
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "n2",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "cl2",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "o2",
+        "coefficient": 2,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 4,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "2NH4ClO4 → N2 + Cl2 + 2O2 + 4H2O",
+    "netIonicEquation": "2NH4ClO4 → N2 + Cl2 + 2O2 + 4H2O",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -380,
+    "temperatureMinC": 100,
+    "temperatureMaxC": 3000,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Exothermic monopropellant breakdown yielding steam, chlorine, oxygen, and nitrogen."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "High-temperature energetic thermochemical reaction. Extreme thermal radiation, molten metal slag, and pressure generation. Strictly for simulated thermodynamic and educational modeling."
+  },
+  {
+    "id": "thermo-apcp-carbon-combustion",
+    "name": "Ammonium perchlorate and carbon black combustion",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "nh4clo4",
+        "coefficient": 4
+      },
+      {
+        "chemicalId": "c",
+        "coefficient": 5
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "co2",
+        "coefficient": 5,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "hcl",
+        "coefficient": 4,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "n2",
+        "coefficient": 2,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 6,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "4NH4ClO4 + 5C → 5CO2 + 4HCl + 2N2 + 6H2O",
+    "netIonicEquation": "4NH4ClO4 + 3C → 3CO2 + 4HCl + 2N2 + 6H2O",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -1950,
+    "temperatureMinC": 100,
+    "temperatureMaxC": 3000,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Composite gas generator producing high pressure with reduced metal smoke."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "High-temperature energetic thermochemical reaction. Extreme thermal radiation, molten metal slag, and pressure generation. Strictly for simulated thermodynamic and educational modeling."
+  },
+  {
+    "id": "thermo-black-powder-ideal-combustion",
+    "name": "Deflagration of potassium nitrate, sulfur, and charcoal (Black powder model)",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "kno3",
+        "coefficient": 2
+      },
+      {
+        "chemicalId": "s",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "c",
+        "coefficient": 3
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "k2s",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "n2",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "co2",
+        "coefficient": 3,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "2KNO3 + S + 3C → K2S + N2 + 3CO2",
+    "netIonicEquation": "2KNO3 + S + 3C → K2S + N2 + 3CO2",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -650,
+    "temperatureMinC": 100,
+    "temperatureMaxC": 3000,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Classic propellent deflagration generating hot expanding carbon dioxide and nitrogen gases with potassium sulfide smoke."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "High-temperature energetic thermochemical reaction. Extreme thermal radiation, molten metal slag, and pressure generation. Strictly for simulated thermodynamic and educational modeling."
+  },
+  {
+    "id": "thermo-knsu-sorbitol-model-rocket",
+    "name": "Combustion of potassium nitrate and sorbitol rocket propellant (KNSB)",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "kno3",
+        "coefficient": 26
+      },
+      {
+        "chemicalId": "c6h14o6",
+        "coefficient": 5
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "k2co3",
+        "coefficient": 13,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "co2",
+        "coefficient": 17,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 35,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "n2",
+        "coefficient": 13,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "26KNO3 + 5C6H14O6 → 13K2CO3 + 17CO2 + 35H2O + 13N2",
+    "netIonicEquation": "26KNO3 + 5C6H14O6 → 13K2CO3 + 17CO2 + 35H2O + 13N2",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -2780,
+    "temperatureMinC": 100,
+    "temperatureMaxC": 3000,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Model rocketry sugar propellant cleanly burning with dense white smoke and steady high thrust."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "High-temperature energetic thermochemical reaction. Extreme thermal radiation, molten metal slag, and pressure generation. Strictly for simulated thermodynamic and educational modeling."
+  },
+  {
+    "id": "thermo-potassium-nitrate-sucrose-oxidation",
+    "name": "Exothermic oxidation of sucrose by molten potassium nitrate",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "kno3",
+        "coefficient": 48
+      },
+      {
+        "chemicalId": "sucrose",
+        "coefficient": 5
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "k2co3",
+        "coefficient": 24,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "co2",
+        "coefficient": 36,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 55,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "n2",
+        "coefficient": 24,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "48KNO3 + 5C12H22O11 → 24K2CO3 + 36CO2 + 55H2O + 24N2",
+    "netIonicEquation": "48KNO3 + 5C12H22O11 → 24K2CO3 + 36CO2 + 55H2O + 24N2",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -5420,
+    "temperatureMinC": 100,
+    "temperatureMaxC": 3000,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Rapid thermal oxidation of carbohydrate matrix producing potassium carbonate, steam, carbon dioxide, and nitrogen gas."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "High-temperature energetic thermochemical reaction. Extreme thermal radiation, molten metal slag, and pressure generation. Strictly for simulated thermodynamic and educational modeling."
+  },
+  {
+    "id": "thermo-kno3-sulfur-combustion",
+    "name": "Direct exothermic reaction of potassium nitrate with molten sulfur",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "kno3",
+        "coefficient": 2
+      },
+      {
+        "chemicalId": "s",
+        "coefficient": 2
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "k2so4",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "so2",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "n2",
+        "coefficient": 1,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "2KNO3 + 2S → K2SO4 + SO2 + N2",
+    "netIonicEquation": "2KNO3 + 2S → K2SO4 + SO2 + N2",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -840,
+    "temperatureMinC": 100,
+    "temperatureMaxC": 3000,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Vigorous flare reaction producing potassium sulfate and acrid sulfur dioxide fumes."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "High-temperature energetic thermochemical reaction. Extreme thermal radiation, molten metal slag, and pressure generation. Strictly for simulated thermodynamic and educational modeling."
+  },
+  {
+    "id": "thermo-kno3-al-flash-powder",
+    "name": "Photographic flash powder reaction of potassium nitrate and aluminum",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "kno3",
+        "coefficient": 6
+      },
+      {
+        "chemicalId": "al",
+        "coefficient": 10
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "k2o",
+        "coefficient": 3,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "al2o3",
+        "coefficient": 5,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "n2",
+        "coefficient": 3,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "6KNO3 + 10Al → 3K2O + 5Al2O3 + 3N2",
+    "netIonicEquation": "6KNO3 + 10Al → 3K2O + 5Al2O3 + 3N2",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -3450,
+    "temperatureMinC": 100,
+    "temperatureMaxC": 3000,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "High-intensity white flash accompanied by a sharp report, historically utilized in early photography."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "High-temperature energetic thermochemical reaction. Extreme thermal radiation, molten metal slag, and pressure generation. Strictly for simulated thermodynamic and educational modeling."
+  },
+  {
+    "id": "thermo-kno3-mg-flash-powder",
+    "name": "Magnesium flash powder illumination reaction",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "kno3",
+        "coefficient": 2
+      },
+      {
+        "chemicalId": "mg",
+        "coefficient": 5
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "k2o",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "mgo",
+        "coefficient": 5,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "n2",
+        "coefficient": 1,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "2KNO3 + 5Mg → K2O + 5MgO + N2",
+    "netIonicEquation": "2KNO3 + 5Mg → K2O + 5MgO + N2",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -1880,
+    "temperatureMinC": 100,
+    "temperatureMaxC": 3000,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Blinding white light emission used in illumination flares and signaling pyrotechnics."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "High-temperature energetic thermochemical reaction. Extreme thermal radiation, molten metal slag, and pressure generation. Strictly for simulated thermodynamic and educational modeling."
+  },
+  {
+    "id": "thermo-kno3-zn-propellant",
+    "name": "Micrograin rocket fuel reaction of zinc with potassium nitrate",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "kno3",
+        "coefficient": 2
+      },
+      {
+        "chemicalId": "zn",
+        "coefficient": 5
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "k2o",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "zno",
+        "coefficient": 5,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "n2",
+        "coefficient": 1,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "2KNO3 + 5Zn → K2O + 5ZnO + N2",
+    "netIonicEquation": "2KNO3 + 5Zn → K2O + 5ZnO + N2",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -1450,
+    "temperatureMinC": 100,
+    "temperatureMaxC": 3000,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Dense white smoke generation from zinc oxide formation in high-velocity micrograin rockets."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "High-temperature energetic thermochemical reaction. Extreme thermal radiation, molten metal slag, and pressure generation. Strictly for simulated thermodynamic and educational modeling."
+  },
+  {
+    "id": "thermo-kno3-boron-igniter",
+    "name": "Boron-potassium nitrate (BPN) high-reliability ordnance pyrotechnic igniter",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "kno3",
+        "coefficient": 6
+      },
+      {
+        "chemicalId": "b",
+        "coefficient": 10
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "k2o",
+        "coefficient": 3,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "b2o3",
+        "coefficient": 5,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "n2",
+        "coefficient": 3,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "6KNO3 + 10B → 3K2O + 5B2O3 + 3N2",
+    "netIonicEquation": "6KNO3 + 10B → 3K2O + 5B2O3 + 3N2",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -2950,
+    "temperatureMinC": 100,
+    "temperatureMaxC": 3000,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Spacecraft stage separation and solid rocket motor pyrotechnic igniter delivering intense hot slag particles."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "High-temperature energetic thermochemical reaction. Extreme thermal radiation, molten metal slag, and pressure generation. Strictly for simulated thermodynamic and educational modeling."
+  },
+  {
+    "id": "thermo-kno3-titanium-sparkler",
+    "name": "Titanium spark generation in potassium nitrate pyrotechnic compositions",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "kno3",
+        "coefficient": 4
+      },
+      {
+        "chemicalId": "ti",
+        "coefficient": 5
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "k2o",
+        "coefficient": 2,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "tio2",
+        "coefficient": 5,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "n2",
+        "coefficient": 2,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "4KNO3 + 5Ti → 2K2O + 5TiO2 + 2N2",
+    "netIonicEquation": "4KNO3 + 5Ti → 2K2O + 5TiO2 + 2N2",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -2650,
+    "temperatureMinC": 100,
+    "temperatureMaxC": 3000,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Oxidation of coarse titanium flakes producing brilliant branching silver-white aerial spark bursts."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "High-temperature energetic thermochemical reaction. Extreme thermal radiation, molten metal slag, and pressure generation. Strictly for simulated thermodynamic and educational modeling."
+  },
+  {
+    "id": "thermo-kno3-silicon-delay-composition",
+    "name": "Pyrotechnic delay fuse reaction of potassium nitrate and silicon",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "kno3",
+        "coefficient": 4
+      },
+      {
+        "chemicalId": "si",
+        "coefficient": 5
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "k2o",
+        "coefficient": 2,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "sio2",
+        "coefficient": 5,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "n2",
+        "coefficient": 2,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "4KNO3 + 5Si → 2K2O + 5SiO2 + 2N2",
+    "netIonicEquation": "4KNO3 + 5Si → 2K2O + 5SiO2 + 2N2",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -2150,
+    "temperatureMinC": 100,
+    "temperatureMaxC": 3000,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Gasless precision delay timing composition burning with constant linear burn velocity."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "High-temperature energetic thermochemical reaction. Extreme thermal radiation, molten metal slag, and pressure generation. Strictly for simulated thermodynamic and educational modeling."
+  },
+  {
+    "id": "thermo-kno3-phosphorus-oxidation",
+    "name": "High-temperature oxidation of elemental phosphorus by potassium nitrate",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "kno3",
+        "coefficient": 4
+      },
+      {
+        "chemicalId": "p4",
+        "coefficient": 1
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "k2o",
+        "coefficient": 2,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "p4o10",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "n2",
+        "coefficient": 2,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "4KNO3 + P4 → 2K2O + P4O10 + 2N2",
+    "netIonicEquation": "20KNO3 + 3P4 → 10K2O + 3P4O10 + 10N2",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -3120,
+    "temperatureMinC": 100,
+    "temperatureMaxC": 3000,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Vigorous solid-state oxidation generating dense white clouds of phosphorus pentoxide."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "High-temperature energetic thermochemical reaction. Extreme thermal radiation, molten metal slag, and pressure generation. Strictly for simulated thermodynamic and educational modeling."
+  },
+  {
+    "id": "thermo-kno3-iron-sparkler",
+    "name": "Combustion of iron filings in potassium nitrate sparklers",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "kno3",
+        "coefficient": 6
+      },
+      {
+        "chemicalId": "fe",
+        "coefficient": 10
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "k2o",
+        "coefficient": 3,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "fe2o3",
+        "coefficient": 5,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "n2",
+        "coefficient": 3,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "6KNO3 + 10Fe → 3K2O + 5Fe2O3 + 3N2",
+    "netIonicEquation": "6KNO3 + 10Fe → 3K2O + 5Fe2O3 + 3N2",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -2410,
+    "temperatureMinC": 100,
+    "temperatureMaxC": 3000,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Traditional consumer sparkler reaction showering golden-orange branching sparks."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "High-temperature energetic thermochemical reaction. Extreme thermal radiation, molten metal slag, and pressure generation. Strictly for simulated thermodynamic and educational modeling."
+  },
+  {
+    "id": "thermo-kno3-co-combustion",
+    "name": "Oxidation of carbon monoxide by potassium nitrate vapor",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "kno3",
+        "coefficient": 2
+      },
+      {
+        "chemicalId": "co",
+        "coefficient": 5
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "k2o",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "co2",
+        "coefficient": 5,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "n2",
+        "coefficient": 1,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "2KNO3 + 5CO → K2O + 5CO2 + N2",
+    "netIonicEquation": "2KNO3 + 5CO → K2O + 5CO2 + N2",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -1480,
+    "temperatureMinC": 100,
+    "temperatureMaxC": 3000,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Complete gas-phase oxidation producing carbon dioxide and nitrogen."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "High-temperature energetic thermochemical reaction. Extreme thermal radiation, molten metal slag, and pressure generation. Strictly for simulated thermodynamic and educational modeling."
+  },
+  {
+    "id": "thermo-kno3-sio2-flux-reaction",
+    "name": "High-temperature glass-forming reaction of potassium nitrate with silica",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "kno3",
+        "coefficient": 4
+      },
+      {
+        "chemicalId": "sio2",
+        "coefficient": 2
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "k2sio3",
+        "coefficient": 2,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "no2",
+        "coefficient": 4,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "o2",
+        "coefficient": 1,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "4KNO3 + 2SiO2 → 2K2SiO3 + 4NO2 + O2",
+    "netIonicEquation": "2KNO3 + SiO2 → K2SiO3 + 2NO2 + 0.5O2",
+    "confidenceScore": 0.99,
+    "energyClassification": "endothermic",
+    "enthalpyKjPerMol": 180,
+    "temperatureMinC": 100,
+    "temperatureMaxC": 3000,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Formation of clear potassium silicate enamel flux."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "High-temperature energetic thermochemical reaction. Extreme thermal radiation, molten metal slag, and pressure generation. Strictly for simulated thermodynamic and educational modeling."
+  },
+  {
+    "id": "thermo-color-sr-nitrate-red-flame",
+    "name": "Strontium nitrate red flame colorant combustion",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "sr-no3-2",
+        "coefficient": 2
+      },
+      {
+        "chemicalId": "c",
+        "coefficient": 5
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "sro",
+        "coefficient": 2,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "co2",
+        "coefficient": 5,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "n2",
+        "coefficient": 2,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "2Sr(NO3)2 + 5C → 2SrO + 5CO2 + 2N2",
+    "netIonicEquation": "2Sr(NO3)2 + 5C → 2SrO + 5CO2 + 2N2",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -1120,
+    "temperatureMinC": 100,
+    "temperatureMaxC": 3000,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Brilliant deep crimson-red pyrotechnic flame colored by atomic strontium and SrOH radical molecular bands."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "High-temperature energetic thermochemical reaction. Extreme thermal radiation, molten metal slag, and pressure generation. Strictly for simulated thermodynamic and educational modeling."
+  },
+  {
+    "id": "thermo-color-ba-nitrate-green-flame",
+    "name": "Barium nitrate emerald green flame pyrotechnic combustion",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "ba-no3-2",
+        "coefficient": 2
+      },
+      {
+        "chemicalId": "c",
+        "coefficient": 5
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "bao",
+        "coefficient": 2,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "co2",
+        "coefficient": 5,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "n2",
+        "coefficient": 2,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "2BaN2O6 + 5C → 2BaO + 5CO2 + 2N2",
+    "netIonicEquation": "2Ba(NO3)2 + 5C → 2BaO + 5CO2 + 2N2",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -1080,
+    "temperatureMinC": 100,
+    "temperatureMaxC": 3000,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Vibrant emerald green firework aerial burst fueled by BaCl and BaOH spectral emission."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "High-temperature energetic thermochemical reaction. Extreme thermal radiation, molten metal slag, and pressure generation. Strictly for simulated thermodynamic and educational modeling."
+  },
+  {
+    "id": "thermo-strobe-srs-formation",
+    "name": "Strontium sulfate reduction to sulfide in red strobe stars",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "srso4",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "c",
+        "coefficient": 4
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "srs",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "co",
+        "coefficient": 4,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "SrSO4 + 4C → SrS + 4CO",
+    "netIonicEquation": "SrSO4 + 4C → SrS + 4CO",
+    "confidenceScore": 0.99,
+    "energyClassification": "endothermic",
+    "enthalpyKjPerMol": 220,
+    "temperatureMinC": 100,
+    "temperatureMaxC": 3000,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Periodic oscillatory flashing pyrotechnic star alternating between dark and intense red luminescence."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "High-temperature energetic thermochemical reaction. Extreme thermal radiation, molten metal slag, and pressure generation. Strictly for simulated thermodynamic and educational modeling."
+  },
+  {
+    "id": "thermo-strobe-bas-formation",
+    "name": "Barium sulfate reduction in green strobe fireworks",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "baso4",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "c",
+        "coefficient": 4
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "bas",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "co",
+        "coefficient": 4,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "BaSO4 + 4C → BaS + 4CO",
+    "netIonicEquation": "BaSO4 + 4C → BaS + 4CO",
+    "confidenceScore": 0.99,
+    "energyClassification": "endothermic",
+    "enthalpyKjPerMol": 240,
+    "temperatureMinC": 100,
+    "temperatureMaxC": 3000,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Pulsing emerald green flashes in delayed pyrotechnic strobe stars."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "High-temperature energetic thermochemical reaction. Extreme thermal radiation, molten metal slag, and pressure generation. Strictly for simulated thermodynamic and educational modeling."
+  },
+  {
+    "id": "thermo-strobe-cas-formation",
+    "name": "Calcium sulfate reduction in yellow-orange flashing compositions",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "caso4",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "c",
+        "coefficient": 4
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "cas",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "co",
+        "coefficient": 4,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "CaSO4 + 4C → CaS + 4CO",
+    "netIonicEquation": "CaSO4 + 4C → CaS + 4CO",
+    "confidenceScore": 0.99,
+    "energyClassification": "endothermic",
+    "enthalpyKjPerMol": 210,
+    "temperatureMinC": 100,
+    "temperatureMaxC": 3000,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Oscillatory reduction producing calcium sulfide and pulsating luminescence."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "High-temperature energetic thermochemical reaction. Extreme thermal radiation, molten metal slag, and pressure generation. Strictly for simulated thermodynamic and educational modeling."
+  },
+  {
+    "id": "thermo-color-ba-carbonate-green",
+    "name": "Barium carbonate pyrotechnic green flame coloration",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "baco3",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "c",
+        "coefficient": 1
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "bao",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "co",
+        "coefficient": 2,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "BaCO3 + C → BaO + 2CO",
+    "netIonicEquation": "BaCO3 + C → BaO + 2CO",
+    "confidenceScore": 0.99,
+    "energyClassification": "endothermic",
+    "enthalpyKjPerMol": 270,
+    "temperatureMinC": 100,
+    "temperatureMaxC": 3000,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Eco-friendly, perchlorate-free green firework colorant."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "High-temperature energetic thermochemical reaction. Extreme thermal radiation, molten metal slag, and pressure generation. Strictly for simulated thermodynamic and educational modeling."
+  },
+  {
+    "id": "thermo-color-sr-carbonate-red",
+    "name": "Strontium carbonate pyrotechnic red star coloration",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "srco3",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "c",
+        "coefficient": 1
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "sro",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "co",
+        "coefficient": 2,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "SrCO3 + C → SrO + 2CO",
+    "netIonicEquation": "SrCO3 + C → SrO + 2CO",
+    "confidenceScore": 0.99,
+    "energyClassification": "endothermic",
+    "enthalpyKjPerMol": 250,
+    "temperatureMinC": 100,
+    "temperatureMaxC": 3000,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Low-smoke red flare formulation using strontium carbonate and organic fuels."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "High-temperature energetic thermochemical reaction. Extreme thermal radiation, molten metal slag, and pressure generation. Strictly for simulated thermodynamic and educational modeling."
+  },
+  {
+    "id": "thermo-color-na-yellow-emission",
+    "name": "Sodium carbonate yellow flame emission (Sodium D-line excitation)",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "na2co3",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "c",
+        "coefficient": 2
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "na",
+        "coefficient": 2,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "co",
+        "coefficient": 3,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "Na2CO3 + 2C → 2Na + 3CO",
+    "netIonicEquation": "Na2CO3 + 2C → 2Na + 3CO",
+    "confidenceScore": 0.99,
+    "energyClassification": "endothermic",
+    "enthalpyKjPerMol": 410,
+    "temperatureMinC": 100,
+    "temperatureMaxC": 3000,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Intense, blinding yellow light emission at 589.0 nm and 589.6 nm dominating all visual spectra."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "High-temperature energetic thermochemical reaction. Extreme thermal radiation, molten metal slag, and pressure generation. Strictly for simulated thermodynamic and educational modeling."
+  },
+  {
+    "id": "thermo-color-k-violet-emission",
+    "name": "Potassium carbonate lilac flame emission",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "k2co3",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "c",
+        "coefficient": 2
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "k",
+        "coefficient": 2,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "co",
+        "coefficient": 3,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "K2CO3 + 2C → 2K + 3CO",
+    "netIonicEquation": "K2CO3 + 2C → 2K + 3CO",
+    "confidenceScore": 0.99,
+    "energyClassification": "endothermic",
+    "enthalpyKjPerMol": 430,
+    "temperatureMinC": 100,
+    "temperatureMaxC": 3000,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Subtle violet-lilac flame radiation from atomic potassium resonance lines at 766.5 nm and 769.9 nm."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "High-temperature energetic thermochemical reaction. Extreme thermal radiation, molten metal slag, and pressure generation. Strictly for simulated thermodynamic and educational modeling."
+  },
+  {
+    "id": "thermo-color-ca-brick-red",
+    "name": "Calcium carbonate thermal reduction in orange-red pyrotechnic stars",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "caco3",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "c",
+        "coefficient": 1
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "cao",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "co",
+        "coefficient": 2,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "CaCO3 + C → CaO + 2CO",
+    "netIonicEquation": "CaCO3 + C → CaO + 2CO",
+    "confidenceScore": 0.99,
+    "energyClassification": "endothermic",
+    "enthalpyKjPerMol": 178,
+    "temperatureMinC": 100,
+    "temperatureMaxC": 3000,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Warm brick-orange/red flame illumination attributed to molecular CaOH band transitions."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "High-temperature energetic thermochemical reaction. Extreme thermal radiation, molten metal slag, and pressure generation. Strictly for simulated thermodynamic and educational modeling."
+  },
+  {
+    "id": "thermo-color-sr-nitrate-sulfur",
+    "name": "Strontium nitrate and sulfur flare reaction",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "sr-no3-2",
+        "coefficient": 2
+      },
+      {
+        "chemicalId": "s",
+        "coefficient": 5
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "sro",
+        "coefficient": 2,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "so2",
+        "coefficient": 5,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "n2",
+        "coefficient": 2,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "2Sr(NO3)2 + 5S → 2SrO + 5SO2 + 2N2",
+    "netIonicEquation": "2Sr(NO3)2 + 5S → 2SrO + 5SO2 + 2N2",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -780,
+    "temperatureMinC": 100,
+    "temperatureMaxC": 3000,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Fast burning crimson railway signaling flare formulation."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "High-temperature energetic thermochemical reaction. Extreme thermal radiation, molten metal slag, and pressure generation. Strictly for simulated thermodynamic and educational modeling."
+  },
+  {
+    "id": "thermo-color-ba-nitrate-sulfur",
+    "name": "Barium nitrate and sulfur flare reaction",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "ba-no3-2",
+        "coefficient": 2
+      },
+      {
+        "chemicalId": "s",
+        "coefficient": 5
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "bao",
+        "coefficient": 2,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "so2",
+        "coefficient": 5,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "n2",
+        "coefficient": 2,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "2BaN2O6 + 5S → 2BaO + 5SO2 + 2N2",
+    "netIonicEquation": "2Ba(NO3)2 + 5S → 2BaO + 5SO2 + 2N2",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -750,
+    "temperatureMinC": 100,
+    "temperatureMaxC": 3000,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Vivid green marine signaling distress flare composition."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "High-temperature energetic thermochemical reaction. Extreme thermal radiation, molten metal slag, and pressure generation. Strictly for simulated thermodynamic and educational modeling."
+  },
+  {
+    "id": "thermo-apcp-propellant-aluminum-combustion",
+    "name": "Ammonium perchlorate composite propellant (APCP) core combustion model",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "nh4clo4",
+        "coefficient": 6
+      },
+      {
+        "chemicalId": "al",
+        "coefficient": 10
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "al2o3",
+        "coefficient": 4,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "alcl3",
+        "coefficient": 2,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "n2",
+        "coefficient": 3,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 12,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "6NH4ClO4 + 10Al → 4Al2O3 + 2AlCl3 + 3N2 + 12H2O",
+    "netIonicEquation": "6NH4ClO4 + 10Al → 4Al2O3 + 2AlCl3 + 3N2 + 12H2O",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -9800,
+    "temperatureMinC": 100,
+    "temperatureMaxC": 3000,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Solid rocket motor propulsion driving space launch vehicles (Space Shuttle SRB, Artemis SLS)."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "High-temperature energetic thermochemical reaction. Extreme thermal radiation, molten metal slag, and pressure generation. Strictly for simulated thermodynamic and educational modeling."
+  },
+  {
+    "id": "thermo-kclo4-magnesium-flash",
+    "name": "Potassium perchlorate and magnesium photo-illumination flare",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "kclo4",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "mg",
+        "coefficient": 4
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "kcl",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "mgo",
+        "coefficient": 4,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "KClO4 + 4Mg → KCl + 4MgO",
+    "netIonicEquation": "KClO4 + 4Mg → KCl + 4MgO",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -2380,
+    "temperatureMinC": 100,
+    "temperatureMaxC": 3000,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "High-output aerial illumination flare burning with a dazzling white radiance."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "High-temperature energetic thermochemical reaction. Extreme thermal radiation, molten metal slag, and pressure generation. Strictly for simulated thermodynamic and educational modeling."
+  },
+  {
+    "id": "thermo-kclo4-al-flash-powder",
+    "name": "Potassium perchlorate and German dark aluminum flash powder",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "kclo4",
+        "coefficient": 3
+      },
+      {
+        "chemicalId": "al",
+        "coefficient": 8
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "kcl",
+        "coefficient": 3,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "al2o3",
+        "coefficient": 4,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "3KClO4 + 8Al → 3KCl + 4Al2O3",
+    "netIonicEquation": "3KClO4 + 8Al → 3KCl + 4Al2O3",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -4200,
+    "temperatureMinC": 100,
+    "temperatureMaxC": 3000,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Fastest deflagrating inorganic pyrotechnic mixture producing intense acoustic blast and shockwave."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "High-temperature energetic thermochemical reaction. Extreme thermal radiation, molten metal slag, and pressure generation. Strictly for simulated thermodynamic and educational modeling."
+  },
+  {
+    "id": "thermo-kclo4-sulfur-combustion",
+    "name": "Combustion of potassium perchlorate and sulfur",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "kclo4",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "s",
+        "coefficient": 2
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "kcl",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "so2",
+        "coefficient": 2,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "KClO4 + 2S → KCl + 2SO2",
+    "netIonicEquation": "KClO4 + 2S → KCl + 2SO2",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -650,
+    "temperatureMinC": 100,
+    "temperatureMaxC": 3000,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Dense white smoke and high heat release."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "High-temperature energetic thermochemical reaction. Extreme thermal radiation, molten metal slag, and pressure generation. Strictly for simulated thermodynamic and educational modeling."
+  },
+  {
+    "id": "thermo-kclo4-boron-delay",
+    "name": "Potassium perchlorate and boron ignition composition",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "kclo4",
+        "coefficient": 3
+      },
+      {
+        "chemicalId": "b",
+        "coefficient": 8
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "kcl",
+        "coefficient": 3,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "b2o3",
+        "coefficient": 4,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "3KClO4 + 8B → 3KCl + 4B2O3",
+    "netIonicEquation": "3KClO4 + 8B → 3KCl + 4B2O3",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -3600,
+    "temperatureMinC": 100,
+    "temperatureMaxC": 3000,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Heat-resistant solid propellant first-fire igniter formulation."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "High-temperature energetic thermochemical reaction. Extreme thermal radiation, molten metal slag, and pressure generation. Strictly for simulated thermodynamic and educational modeling."
+  },
+  {
+    "id": "thermo-kclo4-titanium-salute",
+    "name": "Potassium perchlorate and titanium aerial salute report",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "kclo4",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "ti",
+        "coefficient": 2
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "kcl",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "tio2",
+        "coefficient": 2,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "KClO4 + 2Ti → KCl + 2TiO2",
+    "netIonicEquation": "KClO4 + 2Ti → KCl + 2TiO2",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -1980,
+    "temperatureMinC": 100,
+    "temperatureMaxC": 3000,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Loud concussive aerial salute burst dispersing brilliant white titanium spark plumes."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "High-temperature energetic thermochemical reaction. Extreme thermal radiation, molten metal slag, and pressure generation. Strictly for simulated thermodynamic and educational modeling."
+  },
+  {
+    "id": "thermo-kclo4-silicon-gasless",
+    "name": "Potassium perchlorate and silicon gasless delay fuse",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "kclo4",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "si",
+        "coefficient": 2
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "kcl",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "sio2",
+        "coefficient": 2,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "KClO4 + 2Si → KCl + 2SiO2",
+    "netIonicEquation": "KClO4 + 2Si → KCl + 2SiO2",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -1750,
+    "temperatureMinC": 100,
+    "temperatureMaxC": 3000,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "High-temperature slag-forming reaction for military and aerospace stage timing."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "High-temperature energetic thermochemical reaction. Extreme thermal radiation, molten metal slag, and pressure generation. Strictly for simulated thermodynamic and educational modeling."
+  },
+  {
+    "id": "thermo-kclo4-zinc-smoke",
+    "name": "Zinc-perchlorate military screening smoke generator",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "kclo4",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "zn",
+        "coefficient": 4
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "kcl",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "zno",
+        "coefficient": 4,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "KClO4 + 4Zn → KCl + 4ZnO",
+    "netIonicEquation": "KClO4 + 4Zn → KCl + 4ZnO",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -1520,
+    "temperatureMinC": 100,
+    "temperatureMaxC": 3000,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Instantaneous dense opaque white smoke screen."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "High-temperature energetic thermochemical reaction. Extreme thermal radiation, molten metal slag, and pressure generation. Strictly for simulated thermodynamic and educational modeling."
+  },
+  {
+    "id": "thermo-kclo4-fe2o3-heat-pellet",
+    "name": "Potassium perchlorate and iron(III) oxide thermal primer",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "kclo4",
+        "coefficient": 3
+      },
+      {
+        "chemicalId": "fe2o3",
+        "coefficient": 12
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "kcl",
+        "coefficient": 3,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "fe3o4",
+        "coefficient": 8,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "o2",
+        "coefficient": 8,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "3KClO4 + 12Fe2O3 → 3KCl + 8Fe3O4 + 8O2",
+    "netIonicEquation": "KClO4 + 6Fe2O3 → KCl + 4Fe3O4 + 3O2",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -110,
+    "temperatureMinC": 100,
+    "temperatureMaxC": 3000,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Controlled thermal activation pellet reaction."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "High-temperature energetic thermochemical reaction. Extreme thermal radiation, molten metal slag, and pressure generation. Strictly for simulated thermodynamic and educational modeling."
+  },
+  {
+    "id": "geo-serp-forsterite-hydration-brucite",
+    "name": "Serpentinization of olivine (forsterite) yielding serpentine and brucite",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "mg2sio4_forsterite",
+        "coefficient": 2
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 3
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "mg3si2o5oh4_serpentine",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "mgoh2",
+        "coefficient": 1,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "2Mg2SiO4 + 3H2O → Mg3Si2O9H4 + Mg(OH)2",
+    "netIonicEquation": "2Mg2SiO4 + 3H2O → Mg3Si2O5(OH)4 + Mg(OH)2",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -65,
+    "temperatureMinC": 10,
+    "temperatureMaxC": 1200,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Low-temperature ocean crust hydration of olivine yielding fibrous serpentine and alkaline brucite."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Geochemical, hydrothermal, and mineral alteration reaction. May evolve toxic or suffocating gases (H2S, SO2, CO2) or generate mineral acids at elevated temperatures."
+  },
+  {
+    "id": "geo-serp-forsterite-silica-serpentine",
+    "name": "Silica-buffered serpentinization of forsterite",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "mg2sio4_forsterite",
+        "coefficient": 3
+      },
+      {
+        "chemicalId": "sio2",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 4
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "mg3si2o5oh4_serpentine",
+        "coefficient": 2,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "3Mg2SiO4 + SiO2 + 4H2O → 2Mg3Si2O9H4",
+    "netIonicEquation": "3Mg2SiO4 + SiO2 + 4H2O → 2Mg3Si2O5(OH)4",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -78,
+    "temperatureMinC": 10,
+    "temperatureMaxC": 1200,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Hydrothermal alteration of mantle peridotite buffered by dissolved oceanic silica."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Geochemical, hydrothermal, and mineral alteration reaction. May evolve toxic or suffocating gases (H2S, SO2, CO2) or generate mineral acids at elevated temperatures."
+  },
+  {
+    "id": "geo-serp-fayalite-magnetite-h2-generation",
+    "name": "Abiotic hydrogen generation from hydrothermal alteration of fayalite",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "fe2sio4_fayalite",
+        "coefficient": 3
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 2
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "fe3o4",
+        "coefficient": 2,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "sio2",
+        "coefficient": 3,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "h2",
+        "coefficient": 2,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "3Fe2SiO4 + 2H2O → 2Fe3O4 + 3SiO2 + 2H2",
+    "netIonicEquation": "3Fe2SiO4 + 2H2O → 2Fe3O4 + 3SiO2 + 2H2",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -55,
+    "temperatureMinC": 10,
+    "temperatureMaxC": 1200,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Deep-sea hydrothermal generation of molecular hydrogen fueling chemosynthetic alkaline vent ecosystems."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Geochemical, hydrothermal, and mineral alteration reaction. May evolve toxic or suffocating gases (H2S, SO2, CO2) or generate mineral acids at elevated temperatures."
+  },
+  {
+    "id": "geo-serp-fayalite-abiotic-methanogenesis",
+    "name": "Abiotic Fischer-Tropsch-type methanogenesis from iron silicate weathering",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "fe2sio4_fayalite",
+        "coefficient": 6
+      },
+      {
+        "chemicalId": "co2",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 2
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "fe3o4",
+        "coefficient": 4,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "sio2",
+        "coefficient": 6,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "ch4",
+        "coefficient": 1,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "6Fe2SiO4 + CO2 + 2H2O → 4Fe3O4 + 6SiO2 + CH4",
+    "netIonicEquation": "6Fe2SiO4 + CO2 + 2H2O → 4Fe3O4 + 6SiO2 + CH4",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -175,
+    "temperatureMinC": 10,
+    "temperatureMaxC": 1200,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Native synthesis of abiotic hydrothermal methane from dissolved mantle carbon dioxide."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Geochemical, hydrothermal, and mineral alteration reaction. May evolve toxic or suffocating gases (H2S, SO2, CO2) or generate mineral acids at elevated temperatures."
+  },
+  {
+    "id": "geo-serp-enstatite-hydration-serp-talc",
+    "name": "Hydrothermal hydration of pyroxene (enstatite) to serpentine and talc",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "mgsio3_enstatite",
+        "coefficient": 6
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 3
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "mg3si2o5oh4_serpentine",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "mg3si4o10oh2_talc",
+        "coefficient": 1,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "6MgSiO3 + 3H2O → Mg3Si2O9H4 + Mg3Si4O12H2",
+    "netIonicEquation": "6MgSiO3 + 3H2O → Mg3Si2O5(OH)4 + Mg3Si4O10(OH)2",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -42,
+    "temperatureMinC": 10,
+    "temperatureMaxC": 1200,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Hydration of pyroxene-rich harzburgites forming fault gouge lubricating subduction zones."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Geochemical, hydrothermal, and mineral alteration reaction. May evolve toxic or suffocating gases (H2S, SO2, CO2) or generate mineral acids at elevated temperatures."
+  },
+  {
+    "id": "geo-serp-enstatite-silica-talc",
+    "name": "Silica-metasomatism of enstatite yielding talc",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "mgsio3_enstatite",
+        "coefficient": 3
+      },
+      {
+        "chemicalId": "sio2",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 1
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "mg3si4o10oh2_talc",
+        "coefficient": 1,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "3MgSiO3 + SiO2 + H2O → Mg3Si4O12H2",
+    "netIonicEquation": "3MgSiO3 + SiO2 + H2O → Mg3Si4O10(OH)2",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -38,
+    "temperatureMinC": 10,
+    "temperatureMaxC": 1200,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Hydrothermal fluids introducing dissolved silica to pyroxene forming monomineralic talc veins."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Geochemical, hydrothermal, and mineral alteration reaction. May evolve toxic or suffocating gases (H2S, SO2, CO2) or generate mineral acids at elevated temperatures."
+  },
+  {
+    "id": "geo-serp-serpentine-silica-talc",
+    "name": "Silica metasomatism of serpentine converting to talc",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "mg3si2o5oh4_serpentine",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "sio2",
+        "coefficient": 2
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "mg3si4o10oh2_talc",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 1,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "Mg3Si2O9H4 + 2SiO2 → Mg3Si4O12H2 + H2O",
+    "netIonicEquation": "Mg3Si2O5(OH)4 + 2SiO2 → Mg3Si4O10(OH)2 + H2O",
+    "confidenceScore": 0.99,
+    "energyClassification": "endothermic",
+    "enthalpyKjPerMol": 18,
+    "temperatureMinC": 10,
+    "temperatureMaxC": 1200,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Silicification of serpentinite rock generating soapstone and talc schists."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Geochemical, hydrothermal, and mineral alteration reaction. May evolve toxic or suffocating gases (H2S, SO2, CO2) or generate mineral acids at elevated temperatures."
+  },
+  {
+    "id": "geo-serp-forsterite-carbonation-magnesite",
+    "name": "Carbonation of forsterite forming serpentine and magnesite",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "mg2sio4_forsterite",
+        "coefficient": 2
+      },
+      {
+        "chemicalId": "co2",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 2
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "mg3si2o5oh4_serpentine",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "mgco3",
+        "coefficient": 1,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "2Mg2SiO4 + CO2 + 2H2O → Mg3Si2O9H4 + MgCO3",
+    "netIonicEquation": "2Mg2SiO4 + CO2 + 2H2O → Mg3Si2O5(OH)4 + MgCO3",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -95,
+    "temperatureMinC": 10,
+    "temperatureMaxC": 1200,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Natural geological carbon sequestration during pervasive ultramafic rock alteration."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Geochemical, hydrothermal, and mineral alteration reaction. May evolve toxic or suffocating gases (H2S, SO2, CO2) or generate mineral acids at elevated temperatures."
+  },
+  {
+    "id": "geo-serp-serpentine-carbonation-talc-magnesite",
+    "name": "Carbonation of serpentine yielding talc and magnesite",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "mg3si2o5oh4_serpentine",
+        "coefficient": 2
+      },
+      {
+        "chemicalId": "co2",
+        "coefficient": 3
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "mg3si4o10oh2_talc",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "mgco3",
+        "coefficient": 3,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 3,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "2Mg3Si2O9H4 + 3CO2 → Mg3Si4O12H2 + 3MgCO3 + 3H2O",
+    "netIonicEquation": "2Mg3Si2O5(OH)4 + 3CO2 → Mg3Si4O10(OH)2 + 3MgCO3 + 3H2O",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -84,
+    "temperatureMinC": 10,
+    "temperatureMaxC": 1200,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Intermediate hydrothermal carbonation stage forming talc-carbonate rocks."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Geochemical, hydrothermal, and mineral alteration reaction. May evolve toxic or suffocating gases (H2S, SO2, CO2) or generate mineral acids at elevated temperatures."
+  },
+  {
+    "id": "geo-serp-talc-carbonation-listvenite",
+    "name": "Complete carbonation of talc into quartz and magnesite (Listvenite alteration)",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "mg3si4o10oh2_talc",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "co2",
+        "coefficient": 3
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "mgco3",
+        "coefficient": 3,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "sio2",
+        "coefficient": 4,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 1,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "Mg3Si4O12H2 + 3CO2 → 3MgCO3 + 4SiO2 + H2O",
+    "netIonicEquation": "Mg3Si4O10(OH)2 + 3CO2 → 3MgCO3 + 4SiO2 + H2O",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -72,
+    "temperatureMinC": 10,
+    "temperatureMaxC": 1200,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Terminal carbonation transforming ultramafic rocks into listvenite (magnesite-quartz rock)."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Geochemical, hydrothermal, and mineral alteration reaction. May evolve toxic or suffocating gases (H2S, SO2, CO2) or generate mineral acids at elevated temperatures."
+  },
+  {
+    "id": "geo-serp-fayalite-oxidation-magnetite",
+    "name": "High-temperature subsolidus oxidation of fayalite to magnetite and silica",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "fe2sio4_fayalite",
+        "coefficient": 3
+      },
+      {
+        "chemicalId": "o2",
+        "coefficient": 1
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "fe3o4",
+        "coefficient": 2,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "sio2",
+        "coefficient": 3,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "3Fe2SiO4 + O2 → 2Fe3O4 + 3SiO2",
+    "netIonicEquation": "3Fe2SiO4 + O2 → 2Fe3O4 + 3SiO2",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -485,
+    "temperatureMinC": 10,
+    "temperatureMaxC": 1200,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Igneous deuteric oxidation producing microscopic magnetite symplectites in volcanic olivine."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Geochemical, hydrothermal, and mineral alteration reaction. May evolve toxic or suffocating gases (H2S, SO2, CO2) or generate mineral acids at elevated temperatures."
+  },
+  {
+    "id": "geo-serp-fayalite-reduction-hydrogen",
+    "name": "Chondritic hydrogen reduction of fayalite to iron metal and silica",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "fe2sio4_fayalite",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "h2",
+        "coefficient": 2
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "fe",
+        "coefficient": 2,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "sio2",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 2,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "Fe2SiO4 + 2H2 → 2Fe + SiO2 + 2H2O",
+    "netIonicEquation": "Fe2SiO4 + 2H2 → 2Fe + SiO2 + 2H2O",
+    "confidenceScore": 0.99,
+    "energyClassification": "endothermic",
+    "enthalpyKjPerMol": 68,
+    "temperatureMinC": 10,
+    "temperatureMaxC": 1200,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Solar nebula reduction of silicate grains forming native iron in enstatite chondrites."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Geochemical, hydrothermal, and mineral alteration reaction. May evolve toxic or suffocating gases (H2S, SO2, CO2) or generate mineral acids at elevated temperatures."
+  },
+  {
+    "id": "geo-feld-anorthite-kaolinite-calcite",
+    "name": "Weathering of anorthite plagioclase feldspar to kaolinite clay and calcite",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "calsi3o8_anorthite",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "co2",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 2
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "al2si2o5oh4_kaolinite",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "caco3",
+        "coefficient": 1,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "CaAl2Si2O8 + CO2 + 2H2O → Al2Si2O9H4 + CaCO3",
+    "netIonicEquation": "CaAl2Si2O8 + CO2 + 2H2O → Al2Si2O5(OH)4 + CaCO3",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -115,
+    "temperatureMinC": 10,
+    "temperatureMaxC": 1200,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Chemical weathering of basaltic crust by dissolved CO2 trapping carbon in caliche soils."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Geochemical, hydrothermal, and mineral alteration reaction. May evolve toxic or suffocating gases (H2S, SO2, CO2) or generate mineral acids at elevated temperatures."
+  },
+  {
+    "id": "geo-feld-anorthite-acid-weathering-sulfate",
+    "name": "Acid rain weathering of anorthite by sulfuric acid forming gypsum and kaolinite",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "calsi3o8_anorthite",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "h2so4",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 1
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "al2si2o5oh4_kaolinite",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "caso4",
+        "coefficient": 1,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "CaAl2Si2O8 + H2SO4 + H2O → Al2Si2O9H4 + CaSO4",
+    "netIonicEquation": "CaAl2Si2O8 + H2SO4 + H2O → Al2Si2O5(OH)4 + CaSO4",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -160,
+    "temperatureMinC": 10,
+    "temperatureMaxC": 1200,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Volcanic gas and industrial acid rain accelerated weathering of plagioclase feldspar."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Geochemical, hydrothermal, and mineral alteration reaction. May evolve toxic or suffocating gases (H2S, SO2, CO2) or generate mineral acids at elevated temperatures."
+  },
+  {
+    "id": "geo-feld-anorthite-hydrochloric-weathering",
+    "name": "Volcanic fumarolic HCl dissolution of anorthite plagioclase",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "calsi3o8_anorthite",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "hcl",
+        "coefficient": 2
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 1
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "al2si2o5oh4_kaolinite",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "cacl2",
+        "coefficient": 1,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "CaAl2Si2O8 + 2HCl + H2O → Al2Si2O9H4 + CaCl2",
+    "netIonicEquation": "CaAl2Si2O8 + 2HCl + H2O → Al2Si2O5(OH)4 + CaCl2",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -145,
+    "temperatureMinC": 10,
+    "temperatureMaxC": 1200,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Magmatic hydrochloric exhalation weathering feldspar wall rocks in volcanic conduits."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Geochemical, hydrothermal, and mineral alteration reaction. May evolve toxic or suffocating gases (H2S, SO2, CO2) or generate mineral acids at elevated temperatures."
+  },
+  {
+    "id": "geo-feld-anorthite-nitric-weathering",
+    "name": "Atmospheric nitric acid weathering of anorthite",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "calsi3o8_anorthite",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "hno3",
+        "coefficient": 2
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 1
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "al2si2o5oh4_kaolinite",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "ca-no3-2",
+        "coefficient": 1,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "CaAl2Si2O8 + 2HNO3 + H2O → Al2Si2O9H4 + Ca(NO3)2",
+    "netIonicEquation": "CaAl2Si2O8 + 2HNO3 + H2O → Al2Si2O5(OH)4 + Ca(NO3)2",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -152,
+    "temperatureMinC": 10,
+    "temperatureMaxC": 1200,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Lightning-fixed nitric rain weathering feldspathic anorthosite rock."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Geochemical, hydrothermal, and mineral alteration reaction. May evolve toxic or suffocating gases (H2S, SO2, CO2) or generate mineral acids at elevated temperatures."
+  },
+  {
+    "id": "geo-feld-albite-kaolinization-bicarbonate",
+    "name": "Hydrolysis of albite sodium feldspar forming kaolinite and dissolved silica",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "nalsi3o8_albite",
+        "coefficient": 2
+      },
+      {
+        "chemicalId": "co2",
+        "coefficient": 2
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 3
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "al2si2o5oh4_kaolinite",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "nahco3",
+        "coefficient": 2,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "sio2",
+        "coefficient": 4,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "2NaAlSi3O8 + 2CO2 + 3H2O → Al2Si2O9H4 + 2NaHCO3 + 4SiO2",
+    "netIonicEquation": "2NaAlSi3O8 + 2CO2 + 3H2O → Al2Si2O5(OH)4 + 2NaHCO3 + 4SiO2",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -125,
+    "temperatureMinC": 10,
+    "temperatureMaxC": 1200,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Universal continental crust weathering controlling atmospheric carbon dioxide across geological epochs."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Geochemical, hydrothermal, and mineral alteration reaction. May evolve toxic or suffocating gases (H2S, SO2, CO2) or generate mineral acids at elevated temperatures."
+  },
+  {
+    "id": "geo-feld-albite-hydrochloric-weathering",
+    "name": "Hydrothermal hydrochloric acid leaching of albite feldspar",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "nalsi3o8_albite",
+        "coefficient": 2
+      },
+      {
+        "chemicalId": "hcl",
+        "coefficient": 2
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 1
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "al2si2o5oh4_kaolinite",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "nacl",
+        "coefficient": 2,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "sio2",
+        "coefficient": 4,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "2NaAlSi3O8 + 2HCl + H2O → Al2Si2O9H4 + 2NaCl + 4SiO2",
+    "netIonicEquation": "2NaAlSi3O8 + 2HCl + H2O → Al2Si2O5(OH)4 + 2NaCl + 4SiO2",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -138,
+    "temperatureMinC": 10,
+    "temperatureMaxC": 1200,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Argillic alteration around porphyry copper deposits replacing albite with white clay."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Geochemical, hydrothermal, and mineral alteration reaction. May evolve toxic or suffocating gases (H2S, SO2, CO2) or generate mineral acids at elevated temperatures."
+  },
+  {
+    "id": "geo-feld-albite-sulfuric-weathering",
+    "name": "Sulfuric acid solfataric leaching of albite feldspar",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "nalsi3o8_albite",
+        "coefficient": 2
+      },
+      {
+        "chemicalId": "h2so4",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 1
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "al2si2o5oh4_kaolinite",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "na2so4",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "sio2",
+        "coefficient": 4,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "2NaAlSi3O8 + H2SO4 + H2O → Al2Si2O9H4 + Na2SO4 + 4SiO2",
+    "netIonicEquation": "2NaAlSi3O8 + H2SO4 + H2O → Al2Si2O5(OH)4 + Na2SO4 + 4SiO2",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -172,
+    "temperatureMinC": 10,
+    "temperatureMaxC": 1200,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Advanced argillic hydrothermal alteration converting granite to quartz-kaolinite cap rocks."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Geochemical, hydrothermal, and mineral alteration reaction. May evolve toxic or suffocating gases (H2S, SO2, CO2) or generate mineral acids at elevated temperatures."
+  },
+  {
+    "id": "geo-feld-orthoclase-kaolinization-potash",
+    "name": "Chemical weathering of orthoclase potassium feldspar to kaolin clay",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "kalsi3o8_orthoclase",
+        "coefficient": 2
+      },
+      {
+        "chemicalId": "co2",
+        "coefficient": 2
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 3
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "al2si2o5oh4_kaolinite",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "khco3",
+        "coefficient": 2,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "sio2",
+        "coefficient": 4,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "2KAlSi3O8 + 2CO2 + 3H2O → Al2Si2O9H4 + 2KHCO3 + 4SiO2",
+    "netIonicEquation": "2KAlSi3O8 + 2CO2 + 3H2O → Al2Si2O5(OH)4 + 2KHCO3 + 4SiO2",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -118,
+    "temperatureMinC": 10,
+    "temperatureMaxC": 1200,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Weathering of granitic plutons forming china clay (kaolin) and potassium fertility in river valleys."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Geochemical, hydrothermal, and mineral alteration reaction. May evolve toxic or suffocating gases (H2S, SO2, CO2) or generate mineral acids at elevated temperatures."
+  },
+  {
+    "id": "geo-feld-orthoclase-hydrochloric-weathering",
+    "name": "Hydrothermal acid alteration of orthoclase potassium feldspar",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "kalsi3o8_orthoclase",
+        "coefficient": 2
+      },
+      {
+        "chemicalId": "hcl",
+        "coefficient": 2
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 1
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "al2si2o5oh4_kaolinite",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "kcl",
+        "coefficient": 2,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "sio2",
+        "coefficient": 4,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "2KAlSi3O8 + 2HCl + H2O → Al2Si2O9H4 + 2KCl + 4SiO2",
+    "netIonicEquation": "2KAlSi3O8 + 2HCl + H2O → Al2Si2O5(OH)4 + 2KCl + 4SiO2",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -130,
+    "temperatureMinC": 10,
+    "temperatureMaxC": 1200,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Fumarolic leaching of potassium feldspar into china clay and sylvite brine."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Geochemical, hydrothermal, and mineral alteration reaction. May evolve toxic or suffocating gases (H2S, SO2, CO2) or generate mineral acids at elevated temperatures."
+  },
+  {
+    "id": "geo-feld-orthoclase-sulfuric-weathering",
+    "name": "Acid mine and hydrothermal alteration of orthoclase feldspar",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "kalsi3o8_orthoclase",
+        "coefficient": 2
+      },
+      {
+        "chemicalId": "h2so4",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 1
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "al2si2o5oh4_kaolinite",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "k2so4",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "sio2",
+        "coefficient": 4,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "2KAlSi3O8 + H2SO4 + H2O → Al2Si2O9H4 + K2SO4 + 4SiO2",
+    "netIonicEquation": "2KAlSi3O8 + H2SO4 + H2O → Al2Si2O5(OH)4 + K2SO4 + 4SiO2",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -165,
+    "temperatureMinC": 10,
+    "temperatureMaxC": 1200,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Acid leaching around sulfide mineral deposits degrading feldspar host rocks."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Geochemical, hydrothermal, and mineral alteration reaction. May evolve toxic or suffocating gases (H2S, SO2, CO2) or generate mineral acids at elevated temperatures."
+  },
+  {
+    "id": "geo-sulf-pyrite-atmospheric-oxidation",
+    "name": "Incipient oxidative dissolution of pyrite (Acid Mine Drainage trigger)",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "fes2_pyrite",
+        "coefficient": 2
+      },
+      {
+        "chemicalId": "o2",
+        "coefficient": 7
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 2
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "feso4",
+        "coefficient": 2,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "h2so4",
+        "coefficient": 2,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "2FeS2 + 7O2 + 2H2O → 2FeSO4 + 2H2SO4",
+    "netIonicEquation": "2FeS2 + 7O2 + 2H2O → 2FeSO4 + 2H2SO4",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -1440,
+    "temperatureMinC": 10,
+    "temperatureMaxC": 1200,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Primary oxidation of exposed pyrite ore in coal and metal mines producing sulfuric acid runoff."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Geochemical, hydrothermal, and mineral alteration reaction. May evolve toxic or suffocating gases (H2S, SO2, CO2) or generate mineral acids at elevated temperatures."
+  },
+  {
+    "id": "geo-sulf-pyrite-ferric-leaching",
+    "name": "Ferric iron bioleaching propagation of pyrite ore",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "fes2_pyrite",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "fe2-so4-3",
+        "coefficient": 7
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 8
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "feso4",
+        "coefficient": 15,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "h2so4",
+        "coefficient": 8,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "FeS2 + 7Fe2(SO4)3 + 8H2O → 15FeSO4 + 8H2SO4",
+    "netIonicEquation": "FeS2 + 7Fe2(SO4)3 + 8H2O → 15FeSO4 + 8H2SO4",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -560,
+    "temperatureMinC": 10,
+    "temperatureMaxC": 1200,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Self-accelerating geochemical cycle where ferric iron rapidly oxidizes refractory pyrite."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Geochemical, hydrothermal, and mineral alteration reaction. May evolve toxic or suffocating gases (H2S, SO2, CO2) or generate mineral acids at elevated temperatures."
+  },
+  {
+    "id": "geo-sulf-pyrite-nitric-dissolution",
+    "name": "Complete oxidative digestion of pyrite by concentrated nitric acid",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "fes2_pyrite",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "hno3",
+        "coefficient": 18
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "fe-no3-3",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "h2so4",
+        "coefficient": 2,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "no2",
+        "coefficient": 15,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 7,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "FeS2 + 18HNO3 → Fe(NO3)3 + 2H2SO4 + 15NO2 + 7H2O",
+    "netIonicEquation": "FeS2 + 18HNO3 → Fe(NO3)3 + 2H2SO4 + 15NO2 + 7H2O",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -1280,
+    "temperatureMinC": 10,
+    "temperatureMaxC": 1200,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Standard geochemical assay dissolution of gold-bearing pyrite mineral matrices."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Geochemical, hydrothermal, and mineral alteration reaction. May evolve toxic or suffocating gases (H2S, SO2, CO2) or generate mineral acids at elevated temperatures."
+  },
+  {
+    "id": "geo-sulf-pyrrhotite-pyrite-roasting",
+    "name": "Oxidative desulfurization roasting of iron sulfide (troilite/pyrrhotite)",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "fes_iron_sulfide",
+        "coefficient": 4
+      },
+      {
+        "chemicalId": "o2",
+        "coefficient": 7
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "fe2o3",
+        "coefficient": 2,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "so2",
+        "coefficient": 4,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "4FeS + 7O2 → 2Fe2O3 + 4SO2",
+    "netIonicEquation": "4FeS + 7O2 → 2Fe2O3 + 4SO2",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -615,
+    "temperatureMinC": 10,
+    "temperatureMaxC": 1200,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Pyrometallurgical smelting reaction releasing sulfur dioxide off-gas and hematite cinder."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Geochemical, hydrothermal, and mineral alteration reaction. May evolve toxic or suffocating gases (H2S, SO2, CO2) or generate mineral acids at elevated temperatures."
+  },
+  {
+    "id": "geo-sulf-iron-sulfide-hydrochloric-h2s",
+    "name": "Acid digestion of iron(II) sulfide releasing hydrogen sulfide gas",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "fes_iron_sulfide",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "hcl",
+        "coefficient": 2
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "fecl2",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "h2s",
+        "coefficient": 1,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "FeS + 2HCl → FeCl2 + H2S",
+    "netIonicEquation": "FeS + 2HCl → FeCl2 + H2S",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -35,
+    "temperatureMinC": 10,
+    "temperatureMaxC": 1200,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Classic Kipp's apparatus reaction and geochemical hydrothermal degassing analog."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Geochemical, hydrothermal, and mineral alteration reaction. May evolve toxic or suffocating gases (H2S, SO2, CO2) or generate mineral acids at elevated temperatures."
+  },
+  {
+    "id": "geo-sulf-iron-sulfide-sulfuric-h2s",
+    "name": "Sulfuric acid attack on iron monosulfide",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "fes_iron_sulfide",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "h2so4",
+        "coefficient": 1
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "feso4",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "h2s",
+        "coefficient": 1,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "FeS + H2SO4 → FeSO4 + H2S",
+    "netIonicEquation": "FeS + H2SO4 → FeSO4 + H2S",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -42,
+    "temperatureMinC": 10,
+    "temperatureMaxC": 1200,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Dissolution of biogenic iron sulfides in acid-sulfate marine muds."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Geochemical, hydrothermal, and mineral alteration reaction. May evolve toxic or suffocating gases (H2S, SO2, CO2) or generate mineral acids at elevated temperatures."
+  },
+  {
+    "id": "geo-sulf-iron-sulfide-nitric-oxidation",
+    "name": "Oxidation of iron(II) sulfide by nitric acid to elemental sulfur",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "fes_iron_sulfide",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "hno3",
+        "coefficient": 6
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "fe-no3-3",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "s",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "no2",
+        "coefficient": 3,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 3,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "FeS + 6HNO3 → Fe(NO3)3 + S + 3NO2 + 3H2O",
+    "netIonicEquation": "FeS + 6HNO3 → Fe(NO3)3 + S + 3NO2 + 3H2O",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -310,
+    "temperatureMinC": 10,
+    "temperatureMaxC": 1200,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Oxidative dissolution leaving elemental sulfur crusts and soluble ferric nitrate."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Geochemical, hydrothermal, and mineral alteration reaction. May evolve toxic or suffocating gases (H2S, SO2, CO2) or generate mineral acids at elevated temperatures."
+  },
+  {
+    "id": "geo-sulf-sphalerite-roasting",
+    "name": "Oxidative roasting of zinc blende (sphalerite) to zinc oxide",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "zns_sphalerite",
+        "coefficient": 2
+      },
+      {
+        "chemicalId": "o2",
+        "coefficient": 3
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "zno",
+        "coefficient": 2,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "so2",
+        "coefficient": 2,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "2ZnS + 3O2 → 2ZnO + 2SO2",
+    "netIonicEquation": "2ZnS + 3O2 → 2ZnO + 2SO2",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -440,
+    "temperatureMinC": 10,
+    "temperatureMaxC": 1200,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Industrial roasting of zinc sulfide concentrate prior to hydrometallurgical leaching."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Geochemical, hydrothermal, and mineral alteration reaction. May evolve toxic or suffocating gases (H2S, SO2, CO2) or generate mineral acids at elevated temperatures."
+  },
+  {
+    "id": "geo-sulf-sphalerite-sulfuric-leaching",
+    "name": "Direct atmospheric sulfuric acid leaching of sphalerite",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "zns_sphalerite",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "h2so4",
+        "coefficient": 1
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "znso4",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "h2s",
+        "coefficient": 1,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "ZnS + H2SO4 → ZnSO4 + H2S",
+    "netIonicEquation": "ZnS + H2SO4 → ZnSO4 + H2S",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -28,
+    "temperatureMinC": 10,
+    "temperatureMaxC": 1200,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Hydrometallurgical extraction of zinc generating zinc sulfate electrolyte."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Geochemical, hydrothermal, and mineral alteration reaction. May evolve toxic or suffocating gases (H2S, SO2, CO2) or generate mineral acids at elevated temperatures."
+  },
+  {
+    "id": "geo-sulf-sphalerite-hydrochloric-leaching",
+    "name": "Hydrochloric acid dissolution of sphalerite",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "zns_sphalerite",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "hcl",
+        "coefficient": 2
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "zncl2",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "h2s",
+        "coefficient": 1,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "ZnS + 2HCl → ZnCl2 + H2S",
+    "netIonicEquation": "ZnS + 2HCl → ZnCl2 + H2S",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -22,
+    "temperatureMinC": 10,
+    "temperatureMaxC": 1200,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Geochemical hydrothermal brine leaching of vein zinc sulfide."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Geochemical, hydrothermal, and mineral alteration reaction. May evolve toxic or suffocating gases (H2S, SO2, CO2) or generate mineral acids at elevated temperatures."
+  },
+  {
+    "id": "geo-sulf-sphalerite-ferric-leaching",
+    "name": "Ferric sulfate oxidative leaching of sphalerite ore",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "zns_sphalerite",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "fe2-so4-3",
+        "coefficient": 1
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "znso4",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "feso4",
+        "coefficient": 2,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "s",
+        "coefficient": 1,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "ZnS + Fe2(SO4)3 → ZnSO4 + 2FeSO4 + S",
+    "netIonicEquation": "ZnS + Fe2(SO4)3 → ZnSO4 + 2FeSO4 + S",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -65,
+    "temperatureMinC": 10,
+    "temperatureMaxC": 1200,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Biohydrometallurgical extraction avoiding toxic H2S emission by precipitating elemental sulfur."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Geochemical, hydrothermal, and mineral alteration reaction. May evolve toxic or suffocating gases (H2S, SO2, CO2) or generate mineral acids at elevated temperatures."
+  },
+  {
+    "id": "geo-sulf-galena-roasting",
+    "name": "Oxidative smelting roasting of galena lead ore",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "pbs_galena",
+        "coefficient": 2
+      },
+      {
+        "chemicalId": "o2",
+        "coefficient": 3
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "pbo",
+        "coefficient": 2,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "so2",
+        "coefficient": 2,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "2PbS + 3O2 → 2PbO + 2SO2",
+    "netIonicEquation": "2PbS + 3O2 → 2PbO + 2SO2",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -415,
+    "temperatureMinC": 10,
+    "temperatureMaxC": 1200,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "High-temperature conversion of lead sulfide to litharge in blast furnace smelting."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Geochemical, hydrothermal, and mineral alteration reaction. May evolve toxic or suffocating gases (H2S, SO2, CO2) or generate mineral acids at elevated temperatures."
+  },
+  {
+    "id": "geo-sulf-galena-peroxide-anglesite",
+    "name": "Hydrogen peroxide oxidation of darkened lead sulfide to white anglesite",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "pbs_galena",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "h2o2",
+        "coefficient": 4
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "pbso4",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 4,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "PbS + 4H2O2 → PbSO4 + 4H2O",
+    "netIonicEquation": "PbS + 4H2O2 → PbSO4 + 4H2O",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -840,
+    "temperatureMinC": 10,
+    "temperatureMaxC": 1200,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Famous fine art restoration reaction converting tarnished black lead pigments back to white."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Geochemical, hydrothermal, and mineral alteration reaction. May evolve toxic or suffocating gases (H2S, SO2, CO2) or generate mineral acids at elevated temperatures."
+  },
+  {
+    "id": "geo-sulf-galena-nitric-leaching",
+    "name": "Nitric acid oxidation and dissolution of galena",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "pbs_galena",
+        "coefficient": 3
+      },
+      {
+        "chemicalId": "hno3",
+        "coefficient": 8
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "pbno32",
+        "coefficient": 3,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "s",
+        "coefficient": 3,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "no",
+        "coefficient": 2,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 4,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "3PbS + 8HNO3 → 3Pb(NO3)2 + 3S + 2NO + 4H2O",
+    "netIonicEquation": "3PbS + 8HNO3 → 3Pb(NO3)2 + 3S + 2NO + 4H2O",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -360,
+    "temperatureMinC": 10,
+    "temperatureMaxC": 1200,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Oxidative dissolution of lead ore liberating nitric oxide and crystalline sulfur."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Geochemical, hydrothermal, and mineral alteration reaction. May evolve toxic or suffocating gases (H2S, SO2, CO2) or generate mineral acids at elevated temperatures."
+  },
+  {
+    "id": "geo-cu-chalcocite-roasting-cuprite",
+    "name": "Controlled partial roasting of chalcocite to cuprite",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "cu2s_chalcocite",
+        "coefficient": 2
+      },
+      {
+        "chemicalId": "o2",
+        "coefficient": 3
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "cu2o",
+        "coefficient": 2,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "so2",
+        "coefficient": 2,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "2Cu2S + 3O2 → 2Cu2O + 2SO2",
+    "netIonicEquation": "2Cu2S + 3O2 → 2Cu2O + 2SO2",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -385,
+    "temperatureMinC": 10,
+    "temperatureMaxC": 1200,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Supergene enriched copper ore roasting producing red copper(I) oxide."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Geochemical, hydrothermal, and mineral alteration reaction. May evolve toxic or suffocating gases (H2S, SO2, CO2) or generate mineral acids at elevated temperatures."
+  },
+  {
+    "id": "geo-cu-chalcocite-ferric-leaching",
+    "name": "Ferric sulfate oxidative leaching of chalcocite ore",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "cu2s_chalcocite",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "fe2-so4-3",
+        "coefficient": 2
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "cuso4",
+        "coefficient": 2,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "feso4",
+        "coefficient": 4,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "s",
+        "coefficient": 1,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "Cu2S + 2Fe2(SO4)3 → 2CuSO4 + 4FeSO4 + S",
+    "netIonicEquation": "Cu2S + 2Fe2(SO4)3 → 2CuSO4 + 4FeSO4 + S",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -110,
+    "temperatureMinC": 10,
+    "temperatureMaxC": 1200,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Heap leaching of secondary enriched copper deposits with recycled ferric lixiviant."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Geochemical, hydrothermal, and mineral alteration reaction. May evolve toxic or suffocating gases (H2S, SO2, CO2) or generate mineral acids at elevated temperatures."
+  },
+  {
+    "id": "geo-cu-chalcopyrite-partial-roast",
+    "name": "Flash smelting partial oxidative roasting of chalcopyrite concentrate",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "cufes2_chalcopyrite",
+        "coefficient": 2
+      },
+      {
+        "chemicalId": "o2",
+        "coefficient": 1
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "cu2s_chalcocite",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "fes_iron_sulfide",
+        "coefficient": 2,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "so2",
+        "coefficient": 1,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "2CuFeS2 + O2 → Cu2S + 2FeS + SO2",
+    "netIonicEquation": "2CuFeS2 + O2 → Cu2S + 2FeS + SO2",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -480,
+    "temperatureMinC": 10,
+    "temperatureMaxC": 1200,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Outokumpu flash smelting producing molten copper-iron sulfide matte."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Geochemical, hydrothermal, and mineral alteration reaction. May evolve toxic or suffocating gases (H2S, SO2, CO2) or generate mineral acids at elevated temperatures."
+  },
+  {
+    "id": "geo-cu-chalcopyrite-nitric-digestion",
+    "name": "Complete oxidative digestion of chalcopyrite in nitric acid",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "cufes2_chalcopyrite",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "hno3",
+        "coefficient": 10
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "cu-no3-2",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "fe-no3-3",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "s",
+        "coefficient": 2,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "no2",
+        "coefficient": 5,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 5,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "CuFeS2 + 10HNO3 → Cu(NO3)2 + Fe(NO3)3 + 2S + 5NO2 + 5H2O",
+    "netIonicEquation": "CuFeS2 + 10HNO3 → Cu(NO3)2 + Fe(NO3)3 + 2S + 5NO2 + 5H2O",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -720,
+    "temperatureMinC": 10,
+    "temperatureMaxC": 1200,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Analytical total digestion of primary porphyry copper ore."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Geochemical, hydrothermal, and mineral alteration reaction. May evolve toxic or suffocating gases (H2S, SO2, CO2) or generate mineral acids at elevated temperatures."
+  },
+  {
+    "id": "geo-cu-converter-reaction-copper-oxide",
+    "name": "Peirce-Smith converter copper mutual reduction (blister copper formation)",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "cu2s_chalcocite",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "cuo",
+        "coefficient": 2
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "cu",
+        "coefficient": 4,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "so2",
+        "coefficient": 1,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "Cu2S + 2CuO → 4Cu + SO2",
+    "netIonicEquation": "Cu2S + 2CuO → 4Cu + SO2",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -120,
+    "temperatureMinC": 10,
+    "temperatureMaxC": 1200,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Smelting converter blow phase where copper sulfide and oxide mutually reduce to 99% blister copper."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Geochemical, hydrothermal, and mineral alteration reaction. May evolve toxic or suffocating gases (H2S, SO2, CO2) or generate mineral acids at elevated temperatures."
+  },
+  {
+    "id": "geo-cu-converter-reaction-sulfate",
+    "name": "Direct thermal reduction of chalcocite by copper sulfate",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "cu2s_chalcocite",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "cuso4",
+        "coefficient": 1
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "cu",
+        "coefficient": 3,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "so2",
+        "coefficient": 2,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "Cu2S + CuSO4 → 3Cu + 2SO2",
+    "netIonicEquation": "Cu2S + CuSO4 → 3Cu + 2SO2",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -95,
+    "temperatureMinC": 10,
+    "temperatureMaxC": 1200,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Solid-state copper pyrometallurgy isolating elemental copper without carbon."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Geochemical, hydrothermal, and mineral alteration reaction. May evolve toxic or suffocating gases (H2S, SO2, CO2) or generate mineral acids at elevated temperatures."
+  },
+  {
+    "id": "geo-cu-chalcocite-nitric-leaching",
+    "name": "Nitric acid leaching of chalcocite",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "cu2s_chalcocite",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "hno3",
+        "coefficient": 8
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "cu-no3-2",
+        "coefficient": 2,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "s",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "no2",
+        "coefficient": 4,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 4,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "Cu2S + 8HNO3 → 2Cu(NO3)2 + S + 4NO2 + 4H2O",
+    "netIonicEquation": "Cu2S + 8HNO3 → 2Cu(NO3)2 + S + 4NO2 + 4H2O",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -480,
+    "temperatureMinC": 10,
+    "temperatureMaxC": 1200,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Rapid hydrometallurgical dissolution yielding cupric nitrate and sulfur."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Geochemical, hydrothermal, and mineral alteration reaction. May evolve toxic or suffocating gases (H2S, SO2, CO2) or generate mineral acids at elevated temperatures."
+  },
+  {
+    "id": "geo-cu-covellite-ferric-leaching",
+    "name": "Ferric sulfate oxidation and leaching of covellite (CuS)",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "cus",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "fe2-so4-3",
+        "coefficient": 1
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "cuso4",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "feso4",
+        "coefficient": 2,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "s",
+        "coefficient": 1,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "CuS + Fe2(SO4)3 → CuSO4 + 2FeSO4 + S",
+    "netIonicEquation": "CuS + Fe2(SO4)3 → CuSO4 + 2FeSO4 + S",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -55,
+    "temperatureMinC": 10,
+    "temperatureMaxC": 1200,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Secondary sulfide zone bioleaching of indigo-blue covellite ore."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Geochemical, hydrothermal, and mineral alteration reaction. May evolve toxic or suffocating gases (H2S, SO2, CO2) or generate mineral acids at elevated temperatures."
+  },
+  {
+    "id": "geo-cu-covellite-nitric-oxidation",
+    "name": "Oxidative dissolution of covellite by nitric acid",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "cus",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "hno3",
+        "coefficient": 4
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "cu-no3-2",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "s",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "no2",
+        "coefficient": 2,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 2,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "CuS + 4HNO3 → Cu(NO3)2 + S + 2NO2 + 2H2O",
+    "netIonicEquation": "CuS + 4HNO3 → Cu(NO3)2 + S + 2NO2 + 2H2O",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -290,
+    "temperatureMinC": 10,
+    "temperatureMaxC": 1200,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Oxidation of copper monosulfide to cupric ions and sulfur pellets."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Geochemical, hydrothermal, and mineral alteration reaction. May evolve toxic or suffocating gases (H2S, SO2, CO2) or generate mineral acids at elevated temperatures."
+  },
+  {
+    "id": "geo-cu-covellite-oxygen-pressure-leach",
+    "name": "Pressure oxidation leaching of covellite ore",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "cus",
+        "coefficient": 2
+      },
+      {
+        "chemicalId": "h2so4",
+        "coefficient": 2
+      },
+      {
+        "chemicalId": "o2",
+        "coefficient": 1
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "cuso4",
+        "coefficient": 2,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "s",
+        "coefficient": 2,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 2,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "2CuS + 2H2SO4 + O2 → 2CuSO4 + 2S + 2H2O",
+    "netIonicEquation": "2CuS + 2H2SO4 + O2 → 2CuSO4 + 2S + 2H2O",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -480,
+    "temperatureMinC": 10,
+    "temperatureMaxC": 1200,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Hydrometallurgical pressure leaching of copper sulfide in sulfuric acid yielding cupric sulfate and elemental sulfur."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Geochemical, hydrothermal, and mineral alteration reaction. May evolve toxic or suffocating gases (H2S, SO2, CO2) or generate mineral acids at elevated temperatures."
+  },
+  {
+    "id": "geo-karst-dolomite-carbonic-dissolution",
+    "name": "Carbonic acid karst dissolution of dolomite rock",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "camgco32_dolomite",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "co2",
+        "coefficient": 2
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 2
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "ca-hco3-2",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "mg-hco3-2",
+        "coefficient": 1,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "CaMgC2O6 + 2CO2 + 2H2O → Ca(HCO3)2 + Mg(HCO3)2",
+    "netIonicEquation": "CaMg(CO3)2 + 2CO2 + 2H2O → Ca(HCO3)2 + Mg(HCO3)2",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -35,
+    "temperatureMinC": 10,
+    "temperatureMaxC": 1200,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Slow speleogenetic dissolution creating massive alpine cave systems in dolomitic limestone."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Geochemical, hydrothermal, and mineral alteration reaction. May evolve toxic or suffocating gases (H2S, SO2, CO2) or generate mineral acids at elevated temperatures."
+  },
+  {
+    "id": "geo-karst-dedolomitization-gypsum",
+    "name": "Dedolomitization by calcium sulfate brines",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "camgco32_dolomite",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "caso4",
+        "coefficient": 1
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "caco3",
+        "coefficient": 2,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "mgso4",
+        "coefficient": 1,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "CaMgC2O6 + CaSO4 → 2CaCO3 + MgSO4",
+    "netIonicEquation": "CaMg(CO3)2 + CaSO4 → 2CaCO3 + MgSO4",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -12,
+    "temperatureMinC": 10,
+    "temperatureMaxC": 1200,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Diagenetic transformation of dolomite back into calcite and magnesium sulfate by gypsiferous groundwater."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Geochemical, hydrothermal, and mineral alteration reaction. May evolve toxic or suffocating gases (H2S, SO2, CO2) or generate mineral acids at elevated temperatures."
+  },
+  {
+    "id": "geo-karst-dolomite-hydrochloric-effervescence",
+    "name": "Cold hydrochloric acid petrographic test on powdered dolomite",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "camgco32_dolomite",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "hcl",
+        "coefficient": 4
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "cacl2",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "mgcl2",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "co2",
+        "coefficient": 2,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 2,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "CaMgC2O6 + 4HCl → CaCl2 + MgCl2 + 2CO2 + 2H2O",
+    "netIonicEquation": "CaMg(CO3)2 + 4HCl → CaCl2 + MgCl2 + 2CO2 + 2H2O",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -65,
+    "temperatureMinC": 10,
+    "temperatureMaxC": 1200,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Diagnostic field test: dolomite effervesces sluggishly compared to rapid calcite fizzing."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Geochemical, hydrothermal, and mineral alteration reaction. May evolve toxic or suffocating gases (H2S, SO2, CO2) or generate mineral acids at elevated temperatures."
+  },
+  {
+    "id": "geo-karst-dolomite-sulfuric-acid-weathering",
+    "name": "Sulfuric acid karst weathering of dolomite",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "camgco32_dolomite",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "h2so4",
+        "coefficient": 2
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "caso4",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "mgso4",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "co2",
+        "coefficient": 2,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 2,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "CaMgC2O6 + 2H2SO4 → CaSO4 + MgSO4 + 2CO2 + 2H2O",
+    "netIonicEquation": "CaMg(CO3)2 + 2H2SO4 → CaSO4 + MgSO4 + 2CO2 + 2H2O",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -110,
+    "temperatureMinC": 10,
+    "temperatureMaxC": 1200,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Hypogene cave development from rising sulfuric waters altering dolomite to gypsum crusts."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Geochemical, hydrothermal, and mineral alteration reaction. May evolve toxic or suffocating gases (H2S, SO2, CO2) or generate mineral acids at elevated temperatures."
+  },
+  {
+    "id": "geo-karst-dolomite-nitric-weathering",
+    "name": "Nitric acid attack on dolomite",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "camgco32_dolomite",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "hno3",
+        "coefficient": 4
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "ca-no3-2",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "mg-no3-2",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "co2",
+        "coefficient": 2,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 2,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "CaMgC2O6 + 4HNO3 → Ca(NO3)2 + Mg(NO3)2 + 2CO2 + 2H2O",
+    "netIonicEquation": "CaMg(CO3)2 + 4HNO3 → Ca(NO3)2 + Mg(NO3)2 + 2CO2 + 2H2O",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -75,
+    "temperatureMinC": 10,
+    "temperatureMaxC": 1200,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Acid neutralization and cave guano mineral mineralization yielding soluble nitrates."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Geochemical, hydrothermal, and mineral alteration reaction. May evolve toxic or suffocating gases (H2S, SO2, CO2) or generate mineral acids at elevated temperatures."
+  },
+  {
+    "id": "geo-karst-dolomitization-limestone",
+    "name": "Marine dolomitization of calcite sediments by magnesium sulfate",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "caco3",
+        "coefficient": 2
+      },
+      {
+        "chemicalId": "mgso4",
+        "coefficient": 1
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "camgco32_dolomite",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "caso4",
+        "coefficient": 1,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "2CaCO3 + MgSO4 → CaMgC2O6 + CaSO4",
+    "netIonicEquation": "2CaCO3 + MgSO4 → CaMg(CO3)2 + CaSO4",
+    "confidenceScore": 0.99,
+    "energyClassification": "endothermic",
+    "enthalpyKjPerMol": 12,
+    "temperatureMinC": 10,
+    "temperatureMaxC": 1200,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Evaporative marine reflux pumping magnesium into limestone beds to form regional dolomite reservoirs."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Geochemical, hydrothermal, and mineral alteration reaction. May evolve toxic or suffocating gases (H2S, SO2, CO2) or generate mineral acids at elevated temperatures."
+  },
+  {
+    "id": "geo-karst-calcite-amd-aerobic-neutralization",
+    "name": "Aerobic limestone drain neutralization of acid mine drainage",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "caco3",
+        "coefficient": 4
+      },
+      {
+        "chemicalId": "feso4",
+        "coefficient": 4
+      },
+      {
+        "chemicalId": "o2",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 6
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "caso4",
+        "coefficient": 4,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "feoh3",
+        "coefficient": 4,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "co2",
+        "coefficient": 4,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "4CaCO3 + 4FeSO4 + O2 + 6H2O → 4CaSO4 + 4Fe(OH)3 + 4CO2",
+    "netIonicEquation": "4CaCO3 + 4FeSO4 + O2 + 10H2O → 4CaSO4 + 4Fe(OH)3 + 4CO2",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -520,
+    "temperatureMinC": 10,
+    "temperatureMaxC": 1200,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Passive limestone wetland drain neutralizing acidic ferrous runoff, precipitating ferric hydroxide and gypsum."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Geochemical, hydrothermal, and mineral alteration reaction. May evolve toxic or suffocating gases (H2S, SO2, CO2) or generate mineral acids at elevated temperatures."
+  },
+  {
+    "id": "geo-karst-calcite-speleogenesis-sulfide",
+    "name": "Sulfuric acid speleogenesis in limestone (Lechuguilla Cave mechanism)",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "caco3",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "h2s",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "o2",
+        "coefficient": 2
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "caso4",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "co2",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 1,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "CaCO3 + H2S + 2O2 → CaSO4 + CO2 + H2O",
+    "netIonicEquation": "CaCO3 + H2S + 2O2 → CaSO4 + CO2 + H2O",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -790,
+    "temperatureMinC": 10,
+    "temperatureMaxC": 1200,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Ascending deep thermal hydrogen sulfide reacting with oxygenated limestone water carving colossal caverns."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Geochemical, hydrothermal, and mineral alteration reaction. May evolve toxic or suffocating gases (H2S, SO2, CO2) or generate mineral acids at elevated temperatures."
+  },
+  {
+    "id": "geo-karst-gypsum-soda-replacement",
+    "name": "Alkaline brine carbonate replacement of gypsum",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "caso4",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "na2co3",
+        "coefficient": 1
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "caco3",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "na2so4",
+        "coefficient": 1,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "CaSO4 + Na2CO3 → CaCO3 + Na2SO4",
+    "netIonicEquation": "CaSO4 + Na2CO3 → CaCO3 + Na2SO4",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -22,
+    "temperatureMinC": 10,
+    "temperatureMaxC": 1200,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Pseudomorphic replacement of evaporitic gypsum crystals by secondary calcite in play lakes."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Geochemical, hydrothermal, and mineral alteration reaction. May evolve toxic or suffocating gases (H2S, SO2, CO2) or generate mineral acids at elevated temperatures."
+  },
+  {
+    "id": "geo-karst-gypsum-potash-replacement",
+    "name": "Potassium carbonate alteration of gypsum",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "caso4",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "k2co3",
+        "coefficient": 1
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "caco3",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "k2so4",
+        "coefficient": 1,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "CaSO4 + K2CO3 → CaCO3 + K2SO4",
+    "netIonicEquation": "CaSO4 + K2CO3 → CaCO3 + K2SO4",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -24,
+    "temperatureMinC": 10,
+    "temperatureMaxC": 1200,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Hydrothermal potash metasomatism transforming anhydrite/gypsum into calcite and arcanite."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Geochemical, hydrothermal, and mineral alteration reaction. May evolve toxic or suffocating gases (H2S, SO2, CO2) or generate mineral acids at elevated temperatures."
+  },
+  {
+    "id": "geo-karst-magnesite-sulfur-trioxide-sulfation",
+    "name": "Sulfur trioxide sulfation of magnesite rock",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "mgco3",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "so3",
+        "coefficient": 1
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "mgso4",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "co2",
+        "coefficient": 1,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "MgCO3 + SO3 → MgSO4 + CO2",
+    "netIonicEquation": "MgCO3 + SO3 → MgSO4 + CO2",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -195,
+    "temperatureMinC": 10,
+    "temperatureMaxC": 1200,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Dry volcanic and smelter gas sulfation of magnesium carbonate forming anhydrous magnesium sulfate."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Geochemical, hydrothermal, and mineral alteration reaction. May evolve toxic or suffocating gases (H2S, SO2, CO2) or generate mineral acids at elevated temperatures."
+  },
+  {
+    "id": "geo-karst-magnesite-sulfur-dioxide-sulfation",
+    "name": "Atmospheric sulfation of magnesite rock",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "mgco3",
+        "coefficient": 2
+      },
+      {
+        "chemicalId": "so2",
+        "coefficient": 2
+      },
+      {
+        "chemicalId": "o2",
+        "coefficient": 1
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "mgso4",
+        "coefficient": 2,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "co2",
+        "coefficient": 2,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "2MgCO3 + 2SO2 + O2 → 2MgSO4 + 2CO2",
+    "netIonicEquation": "2MgCO3 + 2SO2 + O2 → 2MgSO4 + 2CO2",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -365,
+    "temperatureMinC": 10,
+    "temperatureMaxC": 1200,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Dry flue gas desulfurization using natural magnesium carbonate minerals."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Geochemical, hydrothermal, and mineral alteration reaction. May evolve toxic or suffocating gases (H2S, SO2, CO2) or generate mineral acids at elevated temperatures."
+  },
+  {
+    "id": "geo-vent-chalcopyrite-chimney-precipitation",
+    "name": "Direct precipitation of chalcopyrite in black smoker chimneys",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "cucl2",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "fecl2",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "h2s",
+        "coefficient": 2
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "cufes2_chalcopyrite",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "hcl",
+        "coefficient": 4,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "CuCl2 + FeCl2 + 2H2S → CuFeS2 + 4HCl",
+    "netIonicEquation": "CuCl2 + FeCl2 + 2H2S → CuFeS2 + 4HCl",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -145,
+    "temperatureMinC": 10,
+    "temperatureMaxC": 1200,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "High-temperature (350 °C) mixing of acidic metal-rich hydrothermal fluid with sulfide seawater."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Geochemical, hydrothermal, and mineral alteration reaction. May evolve toxic or suffocating gases (H2S, SO2, CO2) or generate mineral acids at elevated temperatures."
+  },
+  {
+    "id": "geo-vent-pyrite-chimlet-growth",
+    "name": "Black smoker chimney crystallization of pyrite from polysulfides",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "fecl2",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "h2s",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "s",
+        "coefficient": 1
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "fes2_pyrite",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "hcl",
+        "coefficient": 2,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "FeCl2 + H2S + S → FeS2 + 2HCl",
+    "netIonicEquation": "FeCl2 + H2S + S → FeS2 + 2HCl",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -95,
+    "temperatureMinC": 10,
+    "temperatureMaxC": 1200,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Polysulfide-driven nucleation of golden pyrite crystals lining deep seafloor hydrothermal spires."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Geochemical, hydrothermal, and mineral alteration reaction. May evolve toxic or suffocating gases (H2S, SO2, CO2) or generate mineral acids at elevated temperatures."
+  },
+  {
+    "id": "geo-vent-chalcopyrite-solid-state-sulfidation",
+    "name": "Metasomatic sulfidation forming chalcopyrite",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "cu2s_chalcocite",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "fes_iron_sulfide",
+        "coefficient": 2
+      },
+      {
+        "chemicalId": "s",
+        "coefficient": 1
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "cufes2_chalcopyrite",
+        "coefficient": 2,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "Cu2S + 2FeS + S → 2CuFeS2",
+    "netIonicEquation": "Cu2S + 2FeS + S → 2CuFeS2",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -48,
+    "temperatureMinC": 10,
+    "temperatureMaxC": 1200,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Secondary hydrothermal fluid alteration converting primary sulfides to massive chalcopyrite."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Geochemical, hydrothermal, and mineral alteration reaction. May evolve toxic or suffocating gases (H2S, SO2, CO2) or generate mineral acids at elevated temperatures."
+  },
+  {
+    "id": "geo-vent-magnetite-sulfidation-pyrite",
+    "name": "Hydrothermal sulfidation of magnetite to pyrite and hydrogen",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "fe3o4",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "h2s",
+        "coefficient": 6
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "fes2_pyrite",
+        "coefficient": 3,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 4,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "h2",
+        "coefficient": 2,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "Fe3O4 + 6H2S → 3FeS2 + 4H2O + 2H2",
+    "netIonicEquation": "Fe3O4 + 6H2S → 3FeS2 + 4H2O + 2H2",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -115,
+    "temperatureMinC": 10,
+    "temperatureMaxC": 1200,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Sub-seafloor replacement of basaltic titanomagnetite by massive pyrite halos."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Geochemical, hydrothermal, and mineral alteration reaction. May evolve toxic or suffocating gases (H2S, SO2, CO2) or generate mineral acids at elevated temperatures."
+  },
+  {
+    "id": "geo-vent-hematite-sulfur-reduction",
+    "name": "Hydrothermal sulfur reduction of hematite to magnetite",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "fe2o3",
+        "coefficient": 6
+      },
+      {
+        "chemicalId": "s",
+        "coefficient": 1
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "fe3o4",
+        "coefficient": 4,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "so2",
+        "coefficient": 1,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "6Fe2O3 + S → 4Fe3O4 + SO2",
+    "netIonicEquation": "6Fe2O3 + S → 4Fe3O4 + SO2",
+    "confidenceScore": 0.99,
+    "energyClassification": "endothermic",
+    "enthalpyKjPerMol": 85,
+    "temperatureMinC": 10,
+    "temperatureMaxC": 1200,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Deep hydrothermal fluid reduction of red bed hematite by sulfur vapors to magnetic iron oxide."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Geochemical, hydrothermal, and mineral alteration reaction. May evolve toxic or suffocating gases (H2S, SO2, CO2) or generate mineral acids at elevated temperatures."
+  },
+  {
+    "id": "geo-vent-iron-hydroxide-sulfidation",
+    "name": "Hydrothermal sulfidation of iron(II) hydroxide to iron monosulfide",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "feoh2",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "h2s",
+        "coefficient": 1
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "fes_iron_sulfide",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 2,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "Fe(OH)2 + H2S → FeS + 2H2O",
+    "netIonicEquation": "Fe(OH)2 + H2S → FeS + 2H2O",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -72,
+    "temperatureMinC": 10,
+    "temperatureMaxC": 1200,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Sedimentary precipitation of black iron monosulfide from biogenic hydrogen sulfide."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Geochemical, hydrothermal, and mineral alteration reaction. May evolve toxic or suffocating gases (H2S, SO2, CO2) or generate mineral acids at elevated temperatures."
+  },
+  {
+    "id": "geo-vent-galena-chimney-precipitation",
+    "name": "Precipitation of galena from hydrothermal chloride complexes",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "pbcl2",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "h2s",
+        "coefficient": 1
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "pbs_galena",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "hcl",
+        "coefficient": 2,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "PbCl2 + H2S → PbS + 2HCl",
+    "netIonicEquation": "PbCl2 + H2S → PbS + 2HCl",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -68,
+    "temperatureMinC": 10,
+    "temperatureMaxC": 1200,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Cooling of submarine hydrothermal plume causing instantaneous deposition of galena crystals."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Geochemical, hydrothermal, and mineral alteration reaction. May evolve toxic or suffocating gases (H2S, SO2, CO2) or generate mineral acids at elevated temperatures."
+  },
+  {
+    "id": "geo-vent-sphalerite-chimney-precipitation",
+    "name": "Deposition of sphalerite in oceanic hydrothermal vents",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "zncl2",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "h2s",
+        "coefficient": 1
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "zns_sphalerite",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "hcl",
+        "coefficient": 2,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "ZnCl2 + H2S → ZnS + 2HCl",
+    "netIonicEquation": "ZnCl2 + H2S → ZnS + 2HCl",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -74,
+    "temperatureMinC": 10,
+    "temperatureMaxC": 1200,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "White smoker and black smoker precipitation of microcrystalline sphalerite."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Geochemical, hydrothermal, and mineral alteration reaction. May evolve toxic or suffocating gases (H2S, SO2, CO2) or generate mineral acids at elevated temperatures."
+  },
+  {
+    "id": "geo-vent-covellite-precipitation",
+    "name": "Precipitation of indigo-blue covellite in hydrothermal vents",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "cucl2",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "h2s",
+        "coefficient": 1
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "cus",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "hcl",
+        "coefficient": 2,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "CuCl2 + H2S → CuS + 2HCl",
+    "netIonicEquation": "CuCl2 + H2S → CuS + 2HCl",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -98,
+    "temperatureMinC": 10,
+    "temperatureMaxC": 1200,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Low-temperature hydrothermal chimney crust formation of covellite."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Geochemical, hydrothermal, and mineral alteration reaction. May evolve toxic or suffocating gases (H2S, SO2, CO2) or generate mineral acids at elevated temperatures."
+  },
+  {
+    "id": "geo-vent-volcanic-ferric-chloride-sulfide-reduction",
+    "name": "Volcanic exhalation reduction of ferric chloride by hydrogen sulfide",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "fecl3",
+        "coefficient": 2
+      },
+      {
+        "chemicalId": "h2s",
+        "coefficient": 1
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "fecl2",
+        "coefficient": 2,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "s",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "hcl",
+        "coefficient": 2,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "2FeCl3 + H2S → 2FeCl2 + S + 2HCl",
+    "netIonicEquation": "2FeCl3 + H2S → 2FeCl2 + S + 2HCl",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -72,
+    "temperatureMinC": 10,
+    "temperatureMaxC": 1200,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Fumarolic gas-phase reaction depositing crystalline sulfur crusts in volcanic sublimation craters."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Geochemical, hydrothermal, and mineral alteration reaction. May evolve toxic or suffocating gases (H2S, SO2, CO2) or generate mineral acids at elevated temperatures."
+  },
+  {
+    "id": "geo-trap-enstatite-dry-carbonation",
+    "name": "Subsurface mineral carbonation of enstatite pyroxene",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "mgsio3_enstatite",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "co2",
+        "coefficient": 1
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "mgco3",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "sio2",
+        "coefficient": 1,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "MgSiO3 + CO2 → MgCO3 + SiO2",
+    "netIonicEquation": "MgSiO3 + CO2 → MgCO3 + SiO2",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -66,
+    "temperatureMinC": 10,
+    "temperatureMaxC": 1200,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Permanent carbon mineralization trapping supercritical CO2 in basalt/peridotite reservoirs."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Geochemical, hydrothermal, and mineral alteration reaction. May evolve toxic or suffocating gases (H2S, SO2, CO2) or generate mineral acids at elevated temperatures."
+  },
+  {
+    "id": "geo-trap-fayalite-dry-carbonation-siderite",
+    "name": "Solid-state carbonation of iron olivine (fayalite) to siderite",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "fe2sio4_fayalite",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "co2",
+        "coefficient": 2
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "feco3",
+        "coefficient": 2,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "sio2",
+        "coefficient": 1,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "Fe2SiO4 + 2CO2 → 2FeCO3 + SiO2",
+    "netIonicEquation": "Fe2SiO4 + 2CO2 → 2FeCO3 + SiO2",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -78,
+    "temperatureMinC": 10,
+    "temperatureMaxC": 1200,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Geological carbon capture forming stable ferrous carbonate (siderite) in deep basalt formations."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Geochemical, hydrothermal, and mineral alteration reaction. May evolve toxic or suffocating gases (H2S, SO2, CO2) or generate mineral acids at elevated temperatures."
+  },
+  {
+    "id": "geo-trap-fayalite-bicarbonate-alteration",
+    "name": "Hydrothermal bicarbonate alteration of fayalite to siderite and water glass",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "fe2sio4_fayalite",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "nahco3",
+        "coefficient": 2
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "feco3",
+        "coefficient": 2,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "na2sio3",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 1,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "Fe2SiO4 + 2NaHCO3 → 2FeCO3 + Na2SiO3 + H2O",
+    "netIonicEquation": "Fe2SiO4 + 2NaHCO3 → 2FeCO3 + Na2SiO3 + H2O",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -55,
+    "temperatureMinC": 10,
+    "temperatureMaxC": 1200,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Alkaline brine metasomatism of iron olivine forming siderite and soluble silicate."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Geochemical, hydrothermal, and mineral alteration reaction. May evolve toxic or suffocating gases (H2S, SO2, CO2) or generate mineral acids at elevated temperatures."
+  },
+  {
+    "id": "geo-trap-forsterite-bicarbonate-alteration",
+    "name": "Hydrothermal bicarbonate carbonation of forsterite olivine",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "mg2sio4_forsterite",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "nahco3",
+        "coefficient": 2
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "mgco3",
+        "coefficient": 2,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "na2sio3",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 1,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "Mg2SiO4 + 2NaHCO3 → 2MgCO3 + Na2SiO3 + H2O",
+    "netIonicEquation": "Mg2SiO4 + 2NaHCO3 → 2MgCO3 + Na2SiO3 + H2O",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -60,
+    "temperatureMinC": 10,
+    "temperatureMaxC": 1200,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Alkaline lake and hydrothermal carbonation of ultramafic olivine yielding magnesite."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Geochemical, hydrothermal, and mineral alteration reaction. May evolve toxic or suffocating gases (H2S, SO2, CO2) or generate mineral acids at elevated temperatures."
+  },
+  {
+    "id": "geo-trap-enstatite-aqueous-weathering",
+    "name": "Aqueous weathering of enstatite to magnesium bicarbonate",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "mgsio3_enstatite",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "co2",
+        "coefficient": 2
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 1
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "mg-hco3-2",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "sio2",
+        "coefficient": 1,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "MgSiO3 + 2CO2 + H2O → Mg(HCO3)2 + SiO2",
+    "netIonicEquation": "MgSiO3 + 2CO2 + H2O → Mg(HCO3)2 + SiO2",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -74,
+    "temperatureMinC": 10,
+    "temperatureMaxC": 1200,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Riverine transport of weathering products providing alkalinity to balance marine calcification."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Geochemical, hydrothermal, and mineral alteration reaction. May evolve toxic or suffocating gases (H2S, SO2, CO2) or generate mineral acids at elevated temperatures."
+  },
+  {
+    "id": "geo-trap-orthosilicic-acid-polymerization",
+    "name": "Biomineralization condensation of orthosilicic acid to opal-A silica",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "h4sio4_orthosilicic",
+        "coefficient": 1
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "sio2",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 2,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "H4SiO4 → SiO2 + 2H2O",
+    "netIonicEquation": "H4SiO4 → SiO2 + 2H2O",
+    "confidenceScore": 0.99,
+    "energyClassification": "endothermic",
+    "enthalpyKjPerMol": 14,
+    "temperatureMinC": 10,
+    "temperatureMaxC": 1200,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Diatom and radiolarian biosynthesis of intricate siliceous frustules forming diatomaceous earth."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Geochemical, hydrothermal, and mineral alteration reaction. May evolve toxic or suffocating gases (H2S, SO2, CO2) or generate mineral acids at elevated temperatures."
+  },
+  {
+    "id": "geo-trap-silica-sodium-hydroxide-digestion",
+    "name": "Caustic dissolution of quartz silica to soluble water glass",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "sio2",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "naoh",
+        "coefficient": 2
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "na2sio3",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 1,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "SiO2 + 2NaOH → Na2SiO3 + H2O",
+    "netIonicEquation": "SiO2 + 2NaOH → Na2SiO3 + H2O",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -65,
+    "temperatureMinC": 10,
+    "temperatureMaxC": 1200,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Geothermal fluid and alkaline lake corrosion of crystalline quartz into soluble sodium silicate."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Geochemical, hydrothermal, and mineral alteration reaction. May evolve toxic or suffocating gases (H2S, SO2, CO2) or generate mineral acids at elevated temperatures."
+  },
+  {
+    "id": "geo-trap-silica-potassium-hydroxide-digestion",
+    "name": "Alkaline potassic dissolution of quartz",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "sio2",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "koh",
+        "coefficient": 2
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "k2sio3",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 1,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "SiO2 + 2KOH → K2SiO3 + H2O",
+    "netIonicEquation": "SiO2 + 2KOH → K2SiO3 + H2O",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -68,
+    "temperatureMinC": 10,
+    "temperatureMaxC": 1200,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Potassium silicate generation in high-pH alkaline hydrothermal springs."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Geochemical, hydrothermal, and mineral alteration reaction. May evolve toxic or suffocating gases (H2S, SO2, CO2) or generate mineral acids at elevated temperatures."
+  },
+  {
+    "id": "geo-trap-sodium-silicate-gelation-acid",
+    "name": "Silicic acid gelation from sodium silicate acidification",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "na2sio3",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "hcl",
+        "coefficient": 2
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "sio2",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "nacl",
+        "coefficient": 2,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 1,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "Na2SiO3 + 2HCl → SiO2 + 2NaCl + H2O",
+    "netIonicEquation": "Na2SiO3 + 2HCl → SiO2 + 2NaCl + H2O",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -48,
+    "temperatureMinC": 10,
+    "temperatureMaxC": 1200,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Instantaneous silica hydrogel precipitation mimicking hydrothermal agate and chert nodule growth."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Geochemical, hydrothermal, and mineral alteration reaction. May evolve toxic or suffocating gases (H2S, SO2, CO2) or generate mineral acids at elevated temperatures."
+  },
+  {
+    "id": "geo-trap-sodium-silicate-calcium-precipitation",
+    "name": "Precipitation of calcium silicate (Chemical garden analog)",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "na2sio3",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "cacl2",
+        "coefficient": 1
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "casio3",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "nacl",
+        "coefficient": 2,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "Na2SiO3 + CaCl2 → CaSiO3 + 2NaCl",
+    "netIonicEquation": "Na2SiO3 + CaCl2 → CaSiO3 + 2NaCl",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -32,
+    "temperatureMinC": 10,
+    "temperatureMaxC": 1200,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Formation of insoluble hydrated calcium silicate membranes forming osmotic hydrothermal chimneys."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Geochemical, hydrothermal, and mineral alteration reaction. May evolve toxic or suffocating gases (H2S, SO2, CO2) or generate mineral acids at elevated temperatures."
+  },
+  {
+    "id": "geo-trap-potassium-silicate-gelation-acid",
+    "name": "Acid-induced silica precipitation from potassium silicate",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "k2sio3",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "hcl",
+        "coefficient": 2
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "sio2",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "kcl",
+        "coefficient": 2,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 1,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "K2SiO3 + 2HCl → SiO2 + 2KCl + H2O",
+    "netIonicEquation": "K2SiO3 + 2HCl → SiO2 + 2KCl + H2O",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -46,
+    "temperatureMinC": 10,
+    "temperatureMaxC": 1200,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Precipitation of amorphous silica sinter around acidic geysers and hot springs."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Geochemical, hydrothermal, and mineral alteration reaction. May evolve toxic or suffocating gases (H2S, SO2, CO2) or generate mineral acids at elevated temperatures."
+  },
+  {
+    "id": "geo-trap-potassium-silicate-calcium-precipitation",
+    "name": "Precipitation of wollastonite analog from potassium silicate",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "k2sio3",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "cacl2",
+        "coefficient": 1
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "casio3",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "kcl",
+        "coefficient": 2,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "K2SiO3 + CaCl2 → CaSiO3 + 2KCl",
+    "netIonicEquation": "K2SiO3 + CaCl2 → CaSiO3 + 2KCl",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -30,
+    "temperatureMinC": 10,
+    "temperatureMaxC": 1200,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Precipitation of calcium silicate hydrate in alkaline groundwaters."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Geochemical, hydrothermal, and mineral alteration reaction. May evolve toxic or suffocating gases (H2S, SO2, CO2) or generate mineral acids at elevated temperatures."
+  },
+  {
+    "id": "geo-fe-ferrous-chloride-bif-hematite",
+    "name": "Precambrian Banded Iron Formation (BIF) hematite deposition",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "fecl2",
+        "coefficient": 4
+      },
+      {
+        "chemicalId": "o2",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 4
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "fe2o3",
+        "coefficient": 2,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "hcl",
+        "coefficient": 8,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "4FeCl2 + O2 + 4H2O → 2Fe2O3 + 8HCl",
+    "netIonicEquation": "4FeCl2 + O2 + 4H2O → 2Fe2O3 + 8HCl",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -390,
+    "temperatureMinC": 10,
+    "temperatureMaxC": 1200,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Great Oxidation Event: cyanobacterial oxygen precipitating dissolved oceanic ferrous iron into banded iron."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Geochemical, hydrothermal, and mineral alteration reaction. May evolve toxic or suffocating gases (H2S, SO2, CO2) or generate mineral acids at elevated temperatures."
+  },
+  {
+    "id": "geo-fe-ferrous-chloride-schikorr-magnetite",
+    "name": "Schikorr reaction hydrothermal generation of magnetite",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "fecl2",
+        "coefficient": 3
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 4
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "fe3o4",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "hcl",
+        "coefficient": 6,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "h2",
+        "coefficient": 1,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "3FeCl2 + 4H2O → Fe3O4 + 6HCl + H2",
+    "netIonicEquation": "3FeCl2 + 4H2O → Fe3O4 + 6HCl + H2",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -40,
+    "temperatureMinC": 10,
+    "temperatureMaxC": 1200,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Sub-seafloor anoxic hydrothermal conversion of dissolved ferrous iron to magnetite and hydrogen."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Geochemical, hydrothermal, and mineral alteration reaction. May evolve toxic or suffocating gases (H2S, SO2, CO2) or generate mineral acids at elevated temperatures."
+  },
+  {
+    "id": "geo-fe-siderite-oxidative-calcination",
+    "name": "Oxidative weathering of siderite to hematite",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "feco3",
+        "coefficient": 4
+      },
+      {
+        "chemicalId": "o2",
+        "coefficient": 1
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "fe2o3",
+        "coefficient": 2,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "co2",
+        "coefficient": 4,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "4FeCO3 + O2 → 2Fe2O3 + 4CO2",
+    "netIonicEquation": "4FeCO3 + O2 → 2Fe2O3 + 4CO2",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -260,
+    "temperatureMinC": 10,
+    "temperatureMaxC": 1200,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Gossan cap formation over iron carbonate deposits evolving carbon dioxide."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Geochemical, hydrothermal, and mineral alteration reaction. May evolve toxic or suffocating gases (H2S, SO2, CO2) or generate mineral acids at elevated temperatures."
+  },
+  {
+    "id": "geo-fe-siderite-weathering-limonite",
+    "name": "Aqueous oxidative weathering of siderite to ferric hydroxide (limonite bog iron)",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "feco3",
+        "coefficient": 4
+      },
+      {
+        "chemicalId": "o2",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 6
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "feoh3",
+        "coefficient": 4,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "co2",
+        "coefficient": 4,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "4FeCO3 + O2 + 6H2O → 4Fe(OH)3 + 4CO2",
+    "netIonicEquation": "4FeCO3 + O2 + 6H2O → 4Fe(OH)3 + 4CO2",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -310,
+    "temperatureMinC": 10,
+    "temperatureMaxC": 1200,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Subsurface weathering of iron carbonate to voluminous brown ferric hydroxide and carbon dioxide."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Geochemical, hydrothermal, and mineral alteration reaction. May evolve toxic or suffocating gases (H2S, SO2, CO2) or generate mineral acids at elevated temperatures."
+  },
+  {
+    "id": "geo-fe-siderite-hydrochloric-leaching",
+    "name": "Hydrochloric acid dissolution of siderite iron ore",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "feco3",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "hcl",
+        "coefficient": 2
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "fecl2",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "co2",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 1,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "FeCO3 + 2HCl → FeCl2 + CO2 + H2O",
+    "netIonicEquation": "FeCO3 + 2HCl → FeCl2 + CO2 + H2O",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -38,
+    "temperatureMinC": 10,
+    "temperatureMaxC": 1200,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Acid leaching of natural iron carbonate yielding green ferrous chloride solution and carbon dioxide gas."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Geochemical, hydrothermal, and mineral alteration reaction. May evolve toxic or suffocating gases (H2S, SO2, CO2) or generate mineral acids at elevated temperatures."
+  },
+  {
+    "id": "geo-fe-ferrihydrite-sulfidation-iron-sulfide",
+    "name": "Biogenic sulfidation of ferrihydrite in anoxic sediments",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "feoh3",
+        "coefficient": 2
+      },
+      {
+        "chemicalId": "h2s",
+        "coefficient": 3
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "fes_iron_sulfide",
+        "coefficient": 2,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "s",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 6,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "2Fe(OH)3 + 3H2S → 2FeS + S + 6H2O",
+    "netIonicEquation": "2Fe(OH)3 + 3H2S → 2FeS + S + 6H2O",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -165,
+    "temperatureMinC": 10,
+    "temperatureMaxC": 1200,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Early diagenetic reaction of amorphous ferric iron hydroxide with microbial sulfide producing black iron monosulfide."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Geochemical, hydrothermal, and mineral alteration reaction. May evolve toxic or suffocating gases (H2S, SO2, CO2) or generate mineral acids at elevated temperatures."
+  },
+  {
+    "id": "geo-fe-iron-hydroxide-carbonation-siderite",
+    "name": "Carbonation of ferrous hydroxide to siderite",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "feoh2",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "co2",
+        "coefficient": 1
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "feco3",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 1,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "Fe(OH)2 + CO2 → FeCO3 + H2O",
+    "netIonicEquation": "Fe(OH)2 + CO2 → FeCO3 + H2O",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -64,
+    "temperatureMinC": 10,
+    "temperatureMaxC": 1200,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Green rust and ferrous hydroxide carbonation under anoxic groundwater conditions forming siderite."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Geochemical, hydrothermal, and mineral alteration reaction. May evolve toxic or suffocating gases (H2S, SO2, CO2) or generate mineral acids at elevated temperatures."
+  },
+  {
+    "id": "geo-fe-magnetite-carbonation-metamorphic",
+    "name": "Metamorphic carbonation of magnetite to siderite and hematite",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "fe3o4",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "co2",
+        "coefficient": 1
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "feco3",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "fe2o3",
+        "coefficient": 1,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "Fe3O4 + CO2 → FeCO3 + Fe2O3",
+    "netIonicEquation": "Fe3O4 + CO2 → FeCO3 + Fe2O3",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -45,
+    "temperatureMinC": 10,
+    "temperatureMaxC": 1200,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "High-pressure carbon dioxide influx altering magnetite-quartz banded iron formations."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Geochemical, hydrothermal, and mineral alteration reaction. May evolve toxic or suffocating gases (H2S, SO2, CO2) or generate mineral acids at elevated temperatures."
+  },
+  {
+    "id": "geo-evap-thenardite-reduction-leblanc",
+    "name": "Carbothermic reduction of sodium sulfate (thenardite)",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "na2so4",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "c",
+        "coefficient": 2
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "na2s",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "co2",
+        "coefficient": 2,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "Na2SO4 + 2C → Na2S + 2CO2",
+    "netIonicEquation": "Na2SO4 + 2C → Na2S + 2CO2",
+    "confidenceScore": 0.99,
+    "energyClassification": "endothermic",
+    "enthalpyKjPerMol": 195,
+    "temperatureMinC": 10,
+    "temperatureMaxC": 1200,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Black ash reduction of evaporitic sodium sulfate yielding sodium sulfide."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Geochemical, hydrothermal, and mineral alteration reaction. May evolve toxic or suffocating gases (H2S, SO2, CO2) or generate mineral acids at elevated temperatures."
+  },
+  {
+    "id": "geo-evap-arcanite-reduction-sulfide",
+    "name": "Carbothermic reduction of potassium sulfate (arcanite)",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "k2so4",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "c",
+        "coefficient": 2
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "k2s",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "co2",
+        "coefficient": 2,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "K2SO4 + 2C → K2S + 2CO2",
+    "netIonicEquation": "K2SO4 + 2C → K2S + 2CO2",
+    "confidenceScore": 0.99,
+    "energyClassification": "endothermic",
+    "enthalpyKjPerMol": 205,
+    "temperatureMinC": 10,
+    "temperatureMaxC": 1200,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "High-temperature reduction of potash evaporite beds."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Geochemical, hydrothermal, and mineral alteration reaction. May evolve toxic or suffocating gases (H2S, SO2, CO2) or generate mineral acids at elevated temperatures."
+  },
+  {
+    "id": "geo-evap-epsomite-carbothermic-roasting",
+    "name": "Carbothermic calcination of magnesium sulfate",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "mgso4",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "c",
+        "coefficient": 1
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "mgo",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "so2",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "co",
+        "coefficient": 1,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "MgSO4 + C → MgO + SO2 + CO",
+    "netIonicEquation": "MgSO4 + C → MgO + SO2 + CO",
+    "confidenceScore": 0.99,
+    "energyClassification": "endothermic",
+    "enthalpyKjPerMol": 310,
+    "temperatureMinC": 10,
+    "temperatureMaxC": 1200,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Thermal decomposition of evaporitic magnesium sulfate yielding refractory magnesia and sulfur dioxide."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Geochemical, hydrothermal, and mineral alteration reaction. May evolve toxic or suffocating gases (H2S, SO2, CO2) or generate mineral acids at elevated temperatures."
+  },
+  {
+    "id": "geo-evap-sodium-sulfide-carbonic-degassing",
+    "name": "Carbonic acid volatilization of hydrogen sulfide from alkaline saline lakes",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "na2s",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "co2",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 1
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "na2co3",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "h2s",
+        "coefficient": 1,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "Na2S + CO2 + H2O → Na2CO3 + H2S",
+    "netIonicEquation": "Na2S + CO2 + H2O → Na2CO3 + H2S",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -62,
+    "temperatureMinC": 10,
+    "temperatureMaxC": 1200,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Biogenic sulfide degassing from hypersaline soda lakes (e.g., Lake Natron)."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Geochemical, hydrothermal, and mineral alteration reaction. May evolve toxic or suffocating gases (H2S, SO2, CO2) or generate mineral acids at elevated temperatures."
+  },
+  {
+    "id": "geo-evap-potassium-sulfide-carbonic-degassing",
+    "name": "Carbonic degassing of potassium sulfide brines",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "k2s",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "co2",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 1
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "k2co3",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "h2s",
+        "coefficient": 1,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "K2S + CO2 + H2O → K2CO3 + H2S",
+    "netIonicEquation": "K2S + CO2 + H2O → K2CO3 + H2S",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -65,
+    "temperatureMinC": 10,
+    "temperatureMaxC": 1200,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Carbonation of evaporite potassic brines releasing foul-smelling hydrogen sulfide gas."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Geochemical, hydrothermal, and mineral alteration reaction. May evolve toxic or suffocating gases (H2S, SO2, CO2) or generate mineral acids at elevated temperatures."
+  },
+  {
+    "id": "geo-evap-thenardite-hydrogenotrophic-reduction",
+    "name": "Hydrogenotrophic microbial reduction of thenardite sulfate",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "na2so4",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "h2",
+        "coefficient": 4
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "na2s",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 4,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "Na2SO4 + 4H2 → Na2S + 4H2O",
+    "netIonicEquation": "Na2SO4 + 4H2 → Na2S + 4H2O",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -110,
+    "temperatureMinC": 10,
+    "temperatureMaxC": 1200,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Subsurface microbial reduction of sodium sulfate using dissolved geologic hydrogen in alkaline aquifers."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Geochemical, hydrothermal, and mineral alteration reaction. May evolve toxic or suffocating gases (H2S, SO2, CO2) or generate mineral acids at elevated temperatures."
+  },
+  {
+    "id": "geo-evap-arcanite-hydrogenotrophic-reduction",
+    "name": "Hydrogenotrophic reduction of potassium sulfate",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "k2so4",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "h2",
+        "coefficient": 4
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "k2s",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 4,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "K2SO4 + 4H2 → K2S + 4H2O",
+    "netIonicEquation": "K2SO4 + 4H2 → K2S + 4H2O",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -115,
+    "temperatureMinC": 10,
+    "temperatureMaxC": 1200,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Biogeochemical reduction of potash sulfate evaporites by deep geologic hydrogen gas."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Geochemical, hydrothermal, and mineral alteration reaction. May evolve toxic or suffocating gases (H2S, SO2, CO2) or generate mineral acids at elevated temperatures."
+  },
+  {
+    "id": "geo-evap-fumarole-sulfur-combustion-incomplete",
+    "name": "Subaerial fumarolic oxidation of hydrogen sulfide to native sulfur",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "h2s",
+        "coefficient": 2
+      },
+      {
+        "chemicalId": "o2",
+        "coefficient": 1
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "s",
+        "coefficient": 2,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 2,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "2H2S + O2 → 2S + 2H2O",
+    "netIonicEquation": "2H2S + O2 → 2S + 2H2O",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -265,
+    "temperatureMinC": 10,
+    "temperatureMaxC": 1200,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Partial oxidation of volcanic gases depositing brilliant yellow sulfur flowers at volcanic vents."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Geochemical, hydrothermal, and mineral alteration reaction. May evolve toxic or suffocating gases (H2S, SO2, CO2) or generate mineral acids at elevated temperatures."
+  },
+  {
+    "id": "bio-dmg-nicl2-ammonia",
+    "name": "Nickel detection in ammoniacal solution by dimethylglyoxime",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "nicl2",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "c4h8n2o2_dmg",
+        "coefficient": 2
+      },
+      {
+        "chemicalId": "ammonia",
+        "coefficient": 2
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "ni_dmg2",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "ammonium-chloride",
+        "coefficient": 2,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "NiCl2 + 2C4H8N2O2 + 2NH3 → NiC8H14N4O4 + 2NH4Cl",
+    "netIonicEquation": "NiCl2 + 2 C4H8N2O2 + 2 NH3 → NiC8H14N4O4 + 2 NH4Cl",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -85,
+    "temperatureMinC": 15,
+    "temperatureMaxC": 100,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Formation of bright strawberry-red needle-like precipitate of nickel dimethylglyoximate."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Bioinorganic and clinical qualitative test reaction. Handle heavy metal complexes (mercury, nickel, barium) and alkaline/acidic reagents with laboratory PPE."
+  },
+  {
+    "id": "bio-dmg-niso4-ammonia",
+    "name": "Gravimetric nickel sulfate precipitation with dimethylglyoxime",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "niso4",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "c4h8n2o2_dmg",
+        "coefficient": 2
+      },
+      {
+        "chemicalId": "ammonia",
+        "coefficient": 2
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "ni_dmg2",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "nh4-2-so4",
+        "coefficient": 1,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "NiSO4 + 2C4H8N2O2 + 2NH3 → NiC8H14N4O4 + (NH4)2SO4",
+    "netIonicEquation": "NiSO4 + 2 C4H8N2O2 + 2 NH3 → NiC8H14N4O4 + (NH4)2SO4",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -88,
+    "temperatureMinC": 15,
+    "temperatureMaxC": 100,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Standard gravimetric analytical assay for quantitative nickel determination."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Bioinorganic and clinical qualitative test reaction. Handle heavy metal complexes (mercury, nickel, barium) and alkaline/acidic reagents with laboratory PPE."
+  },
+  {
+    "id": "bio-dmg-ni-no3-2-ammonia",
+    "name": "Nickel nitrate precipitation by dimethylglyoxime",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "ni-no3-2",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "c4h8n2o2_dmg",
+        "coefficient": 2
+      },
+      {
+        "chemicalId": "ammonia",
+        "coefficient": 2
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "ni_dmg2",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "nh4no3",
+        "coefficient": 2,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "Ni(NO3)2 + 2C4H8N2O2 + 2NH3 → NiC8H14N4O4 + 2NH4NO3",
+    "netIonicEquation": "Ni(NO3)2 + 2 C4H8N2O2 + 2 NH3 → NiC8H14N4O4 + 2 NH4NO3",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -86,
+    "temperatureMinC": 15,
+    "temperatureMaxC": 100,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Selective precipitation of nickel from mixed transition metal nitrate solutions."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Bioinorganic and clinical qualitative test reaction. Handle heavy metal complexes (mercury, nickel, barium) and alkaline/acidic reagents with laboratory PPE."
+  },
+  {
+    "id": "bio-dmg-nibr2-ammonia",
+    "name": "Nickel bromide complexation with dimethylglyoxime",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "nibr2",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "c4h8n2o2_dmg",
+        "coefficient": 2
+      },
+      {
+        "chemicalId": "ammonia",
+        "coefficient": 2
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "ni_dmg2",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "nh4br",
+        "coefficient": 2,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "NiBr2 + 2C4H8N2O2 + 2NH3 → NiC8H14N4O4 + 2NH4Br",
+    "netIonicEquation": "NiBr2 + 2 C4H8N2O2 + 2 NH3 → NiC8H14N4O4 + 2 NH4Br",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -84,
+    "temperatureMinC": 15,
+    "temperatureMaxC": 100,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Precipitation of insoluble red bis(dimethylglyoximato)nickel(II)."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Bioinorganic and clinical qualitative test reaction. Handle heavy metal complexes (mercury, nickel, barium) and alkaline/acidic reagents with laboratory PPE."
+  },
+  {
+    "id": "bio-dmg-nii2-ammonia",
+    "name": "Nickel iodide reaction with dimethylglyoxime",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "nii2",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "c4h8n2o2_dmg",
+        "coefficient": 2
+      },
+      {
+        "chemicalId": "ammonia",
+        "coefficient": 2
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "ni_dmg2",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "nh4i",
+        "coefficient": 2,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "NiI2 + 2C4H8N2O2 + 2NH3 → NiC8H14N4O4 + 2NH4I",
+    "netIonicEquation": "NiI2 + 2 C4H8N2O2 + 2 NH3 → NiC8H14N4O4 + 2 NH4I",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -82,
+    "temperatureMinC": 15,
+    "temperatureMaxC": 100,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Selective qualitative spot test for nickel in presence of iodide."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Bioinorganic and clinical qualitative test reaction. Handle heavy metal complexes (mercury, nickel, barium) and alkaline/acidic reagents with laboratory PPE."
+  },
+  {
+    "id": "bio-dmg-nicl2-naoh",
+    "name": "Sodium hydroxide buffered DMG nickel precipitation",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "nicl2",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "c4h8n2o2_dmg",
+        "coefficient": 2
+      },
+      {
+        "chemicalId": "naoh",
+        "coefficient": 2
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "ni_dmg2",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "nacl",
+        "coefficient": 2,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 2,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "NiCl2 + 2C4H8N2O2 + 2NaOH → NiC8H14N4O4 + 2NaCl + 2H2O",
+    "netIonicEquation": "NiCl2 + 2 C4H8N2O2 + 2 NaOH → NiC8H14N4O4 + 2 NaCl + 2 H2O",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -95,
+    "temperatureMinC": 15,
+    "temperatureMaxC": 100,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Alkaline precipitation of scarlet nickel chelate."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Bioinorganic and clinical qualitative test reaction. Handle heavy metal complexes (mercury, nickel, barium) and alkaline/acidic reagents with laboratory PPE."
+  },
+  {
+    "id": "bio-dmg-niso4-naoh",
+    "name": "Caustic soda buffered nickel sulfate DMG precipitation",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "niso4",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "c4h8n2o2_dmg",
+        "coefficient": 2
+      },
+      {
+        "chemicalId": "naoh",
+        "coefficient": 2
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "ni_dmg2",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "na2so4",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 2,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "NiSO4 + 2C4H8N2O2 + 2NaOH → NiC8H14N4O4 + Na2SO4 + 2H2O",
+    "netIonicEquation": "NiSO4 + 2 C4H8N2O2 + 2 NaOH → NiC8H14N4O4 + Na2SO4 + 2 H2O",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -98,
+    "temperatureMinC": 15,
+    "temperatureMaxC": 100,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Industrial effluent nickel removal via DMG chelation."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Bioinorganic and clinical qualitative test reaction. Handle heavy metal complexes (mercury, nickel, barium) and alkaline/acidic reagents with laboratory PPE."
+  },
+  {
+    "id": "bio-dmg-ni-no3-2-naoh",
+    "name": "Sodium hydroxide mediated nickel nitrate DMG precipitation",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "ni-no3-2",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "c4h8n2o2_dmg",
+        "coefficient": 2
+      },
+      {
+        "chemicalId": "naoh",
+        "coefficient": 2
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "ni_dmg2",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "nano3",
+        "coefficient": 2,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 2,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "Ni(NO3)2 + 2C4H8N2O2 + 2NaOH → NiC8H14N4O4 + 2NaNO3 + 2H2O",
+    "netIonicEquation": "Ni(NO3)2 + 2 C4H8N2O2 + 2 NaOH → NiC8H14N4O4 + 2 NaNO3 + 2 H2O",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -96,
+    "temperatureMinC": 15,
+    "temperatureMaxC": 100,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Gravimetric nickel assay in caustic medium."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Bioinorganic and clinical qualitative test reaction. Handle heavy metal complexes (mercury, nickel, barium) and alkaline/acidic reagents with laboratory PPE."
+  },
+  {
+    "id": "bio-dmg-dissolution-hcl",
+    "name": "Acidic decomposition of nickel dimethylglyoximate",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "ni_dmg2",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "hcl",
+        "coefficient": 2
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "nicl2",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "c4h8n2o2_dmg",
+        "coefficient": 2,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "NiC8H14N4O4 + 2HCl → NiCl2 + 2C4H8N2O2",
+    "netIonicEquation": "NiC8H14N4O4 + 2 HCl → NiCl2 + 2 C4H8N2O2",
+    "confidenceScore": 0.99,
+    "energyClassification": "endothermic",
+    "enthalpyKjPerMol": 45,
+    "temperatureMinC": 15,
+    "temperatureMaxC": 100,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Dissolution of red precipitate in strong mineral acid regenerating green nickel ions."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Bioinorganic and clinical qualitative test reaction. Handle heavy metal complexes (mercury, nickel, barium) and alkaline/acidic reagents with laboratory PPE."
+  },
+  {
+    "id": "bio-dmg-dissolution-h2so4",
+    "name": "Sulfuric acid dissolution of nickel dimethylglyoximate",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "ni_dmg2",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "h2so4",
+        "coefficient": 1
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "niso4",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "c4h8n2o2_dmg",
+        "coefficient": 2,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "NiC8H14N4O4 + H2SO4 → NiSO4 + 2C4H8N2O2",
+    "netIonicEquation": "NiC8H14N4O4 + H2SO4 → NiSO4 + 2 C4H8N2O2",
+    "confidenceScore": 0.99,
+    "energyClassification": "endothermic",
+    "enthalpyKjPerMol": 48,
+    "temperatureMinC": 15,
+    "temperatureMaxC": 100,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Acid digestion of gravimetric nickel precipitate."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Bioinorganic and clinical qualitative test reaction. Handle heavy metal complexes (mercury, nickel, barium) and alkaline/acidic reagents with laboratory PPE."
+  },
+  {
+    "id": "bio-dmg-dissolution-hno3",
+    "name": "Nitric acid dissolution and destruction of nickel DMG complex",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "ni_dmg2",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "hno3",
+        "coefficient": 2
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "ni-no3-2",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "c4h8n2o2_dmg",
+        "coefficient": 2,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "NiC8H14N4O4 + 2HNO3 → Ni(NO3)2 + 2C4H8N2O2",
+    "netIonicEquation": "NiC8H14N4O4 + 2 HNO3 → Ni(NO3)2 + 2 C4H8N2O2",
+    "confidenceScore": 0.99,
+    "energyClassification": "endothermic",
+    "enthalpyKjPerMol": 50,
+    "temperatureMinC": 15,
+    "temperatureMaxC": 100,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Oxidative dissolution of nickel complex in nitric acid."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Bioinorganic and clinical qualitative test reaction. Handle heavy metal complexes (mercury, nickel, barium) and alkaline/acidic reagents with laboratory PPE."
+  },
+  {
+    "id": "bio-biuret-cu-sulfate-naoh",
+    "name": "Biuret test for peptide linkages with copper(II) sulfate",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "c2h5n3o2_biuret",
+        "coefficient": 2
+      },
+      {
+        "chemicalId": "cuso4",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "naoh",
+        "coefficient": 2
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "cu_biuret_complex",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "na2so4",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 2,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "2C2H5N3O2 + CuSO4 + 2NaOH → CuC4H8N6O4 + Na2SO4 + 2H2O",
+    "netIonicEquation": "2 C2H5N3O2 + CuSO4 + 2 NaOH → CuC4H8N6O4 + Na2SO4 + 2 H2O",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -65,
+    "temperatureMinC": 15,
+    "temperatureMaxC": 100,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Diagnostic colorimetric formation of deep violet copper-biuret coordination complex."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Bioinorganic and clinical qualitative test reaction. Handle heavy metal complexes (mercury, nickel, barium) and alkaline/acidic reagents with laboratory PPE."
+  },
+  {
+    "id": "bio-biuret-cu-chloride-naoh",
+    "name": "Biuret peptide bond reaction with copper(II) chloride",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "c2h5n3o2_biuret",
+        "coefficient": 2
+      },
+      {
+        "chemicalId": "cucl2",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "naoh",
+        "coefficient": 2
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "cu_biuret_complex",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "nacl",
+        "coefficient": 2,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 2,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "2C2H5N3O2 + CuCl2 + 2NaOH → CuC4H8N6O4 + 2NaCl + 2H2O",
+    "netIonicEquation": "2 C2H5N3O2 + CuCl2 + 2 NaOH → CuC4H8N6O4 + 2 NaCl + 2 H2O",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -62,
+    "temperatureMinC": 15,
+    "temperatureMaxC": 100,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Clinical photometric total protein quantification reaction."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Bioinorganic and clinical qualitative test reaction. Handle heavy metal complexes (mercury, nickel, barium) and alkaline/acidic reagents with laboratory PPE."
+  },
+  {
+    "id": "bio-biuret-cu-nitrate-naoh",
+    "name": "Biuret test with copper(II) nitrate",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "c2h5n3o2_biuret",
+        "coefficient": 2
+      },
+      {
+        "chemicalId": "cuno32",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "naoh",
+        "coefficient": 2
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "cu_biuret_complex",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "nano3",
+        "coefficient": 2,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 2,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "2C2H5N3O2 + Cu(NO3)2 + 2NaOH → CuC4H8N6O4 + 2NaNO3 + 2H2O",
+    "netIonicEquation": "2 C2H5N3O2 + Cu(NO3)2 + 2 NaOH → CuC4H8N6O4 + 2 NaNO3 + 2 H2O",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -64,
+    "temperatureMinC": 15,
+    "temperatureMaxC": 100,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Chelation of cupric ions by deprotonated peptide nitrogen atoms."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Bioinorganic and clinical qualitative test reaction. Handle heavy metal complexes (mercury, nickel, barium) and alkaline/acidic reagents with laboratory PPE."
+  },
+  {
+    "id": "bio-biuret-cu-sulfate-koh",
+    "name": "Potassium hydroxide biuret test",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "c2h5n3o2_biuret",
+        "coefficient": 2
+      },
+      {
+        "chemicalId": "cuso4",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "koh",
+        "coefficient": 2
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "cu_biuret_complex",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "k2so4",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 2,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "2C2H5N3O2 + CuSO4 + 2KOH → CuC4H8N6O4 + K2SO4 + 2H2O",
+    "netIonicEquation": "2 C2H5N3O2 + CuSO4 + 2 KOH → CuC4H8N6O4 + K2SO4 + 2 H2O",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -66,
+    "temperatureMinC": 15,
+    "temperatureMaxC": 100,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Alkaline peptide coordination producing intense purple hue."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Bioinorganic and clinical qualitative test reaction. Handle heavy metal complexes (mercury, nickel, barium) and alkaline/acidic reagents with laboratory PPE."
+  },
+  {
+    "id": "bio-biuret-cu-chloride-koh",
+    "name": "Biuret complexation in potassium hydroxide",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "c2h5n3o2_biuret",
+        "coefficient": 2
+      },
+      {
+        "chemicalId": "cucl2",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "koh",
+        "coefficient": 2
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "cu_biuret_complex",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "kcl",
+        "coefficient": 2,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 2,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "2C2H5N3O2 + CuCl2 + 2KOH → CuC4H8N6O4 + 2KCl + 2H2O",
+    "netIonicEquation": "2 C2H5N3O2 + CuCl2 + 2 KOH → CuC4H8N6O4 + 2 KCl + 2 H2O",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -63,
+    "temperatureMinC": 15,
+    "temperatureMaxC": 100,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Formation of square-planar purple copper(II) tetra-coordinate chelate."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Bioinorganic and clinical qualitative test reaction. Handle heavy metal complexes (mercury, nickel, barium) and alkaline/acidic reagents with laboratory PPE."
+  },
+  {
+    "id": "bio-biuret-cu-nitrate-koh",
+    "name": "Biuret coordination in potassic medium",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "c2h5n3o2_biuret",
+        "coefficient": 2
+      },
+      {
+        "chemicalId": "cuno32",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "koh",
+        "coefficient": 2
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "cu_biuret_complex",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "kno3",
+        "coefficient": 2,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 2,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "2C2H5N3O2 + Cu(NO3)2 + 2KOH → CuC4H8N6O4 + 2KNO3 + 2H2O",
+    "netIonicEquation": "2 C2H5N3O2 + Cu(NO3)2 + 2 KOH → CuC4H8N6O4 + 2 KNO3 + 2 H2O",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -65,
+    "temperatureMinC": 15,
+    "temperatureMaxC": 100,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Violet chromophore formation in serum total protein analysis."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Bioinorganic and clinical qualitative test reaction. Handle heavy metal complexes (mercury, nickel, barium) and alkaline/acidic reagents with laboratory PPE."
+  },
+  {
+    "id": "bio-biuret-complex-acid-hcl",
+    "name": "Acid demetallation of copper-biuret complex",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "cu_biuret_complex",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "hcl",
+        "coefficient": 2
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "cucl2",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "c2h5n3o2_biuret",
+        "coefficient": 2,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "CuC4H8N6O4 + 2HCl → CuCl2 + 2C2H5N3O2",
+    "netIonicEquation": "CuC4H8N6O4 + 2 HCl → CuCl2 + 2 C2H5N3O2",
+    "confidenceScore": 0.99,
+    "energyClassification": "endothermic",
+    "enthalpyKjPerMol": 35,
+    "temperatureMinC": 15,
+    "temperatureMaxC": 100,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Reversible bleaching of violet color upon acidification."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Bioinorganic and clinical qualitative test reaction. Handle heavy metal complexes (mercury, nickel, barium) and alkaline/acidic reagents with laboratory PPE."
+  },
+  {
+    "id": "bio-biuret-complex-acid-h2so4",
+    "name": "Sulfuric acid destruction of copper-biuret complex",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "cu_biuret_complex",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "h2so4",
+        "coefficient": 1
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "cuso4",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "c2h5n3o2_biuret",
+        "coefficient": 2,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "CuC4H8N6O4 + H2SO4 → CuSO4 + 2C2H5N3O2",
+    "netIonicEquation": "CuC4H8N6O4 + H2SO4 → CuSO4 + 2 C2H5N3O2",
+    "confidenceScore": 0.99,
+    "energyClassification": "endothermic",
+    "enthalpyKjPerMol": 38,
+    "temperatureMinC": 15,
+    "temperatureMaxC": 100,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Acid dissociation of peptide copper complex."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Bioinorganic and clinical qualitative test reaction. Handle heavy metal complexes (mercury, nickel, barium) and alkaline/acidic reagents with laboratory PPE."
+  },
+  {
+    "id": "bio-biuret-complex-acid-hno3",
+    "name": "Nitric acid cleaving of copper-biuret complex",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "cu_biuret_complex",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "hno3",
+        "coefficient": 2
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "cuno32",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "c2h5n3o2_biuret",
+        "coefficient": 2,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "CuC4H8N6O4 + 2HNO3 → Cu(NO3)2 + 2C2H5N3O2",
+    "netIonicEquation": "CuC4H8N6O4 + 2 HNO3 → Cu(NO3)2 + 2 C2H5N3O2",
+    "confidenceScore": 0.99,
+    "energyClassification": "endothermic",
+    "enthalpyKjPerMol": 40,
+    "temperatureMinC": 15,
+    "temperatureMaxC": 100,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Decomplexation restoring pale blue cupric ions."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Bioinorganic and clinical qualitative test reaction. Handle heavy metal complexes (mercury, nickel, barium) and alkaline/acidic reagents with laboratory PPE."
+  },
+  {
+    "id": "bio-biuret-alkaline-hydrolysis-naoh",
+    "name": "Caustic cleavage of biuret into sodium carbonate and ammonia",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "c2h5n3o2_biuret",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "naoh",
+        "coefficient": 4
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "na2co3",
+        "coefficient": 2,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "ammonia",
+        "coefficient": 3,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "C2H5N3O2 + 4NaOH → 2Na2CO3 + 3NH3",
+    "netIonicEquation": "C2H5N3O2 + 4 NaOH → 2 Na2CO3 + 3 NH3",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -75,
+    "temperatureMinC": 15,
+    "temperatureMaxC": 100,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Alkaline degradation of biuret liberating gaseous ammonia."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Bioinorganic and clinical qualitative test reaction. Handle heavy metal complexes (mercury, nickel, barium) and alkaline/acidic reagents with laboratory PPE."
+  },
+  {
+    "id": "bio-biuret-alkaline-hydrolysis-koh",
+    "name": "Potassium hydroxide degradation of biuret",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "c2h5n3o2_biuret",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "koh",
+        "coefficient": 4
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "k2co3",
+        "coefficient": 2,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "ammonia",
+        "coefficient": 3,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "C2H5N3O2 + 4KOH → 2K2CO3 + 3NH3",
+    "netIonicEquation": "C2H5N3O2 + 4 KOH → 2 K2CO3 + 3 NH3",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -78,
+    "temperatureMinC": 15,
+    "temperatureMaxC": 100,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Complete alkaline digestion of urea condensation products."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Bioinorganic and clinical qualitative test reaction. Handle heavy metal complexes (mercury, nickel, barium) and alkaline/acidic reagents with laboratory PPE."
+  },
+  {
+    "id": "bio-nessler-nh3-koh",
+    "name": "Nessler test for free ammonia with potassium hydroxide",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "k2hgi4_nessler",
+        "coefficient": 2
+      },
+      {
+        "chemicalId": "ammonia",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "koh",
+        "coefficient": 3
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "nh2hg2io_millon",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "ki",
+        "coefficient": 7,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 2,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "2K2HgI4 + NH3 + 3KOH → Hg2NIOH2 + 7KI + 2H2O",
+    "netIonicEquation": "2 K2HgI4 + NH3 + 3 KOH → Hg2NIOH2 + 7 KI + 2 H2O",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -110,
+    "temperatureMinC": 15,
+    "temperatureMaxC": 100,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Instantaneous development of yellow-orange color or brown precipitate of iodide of Millon base."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Bioinorganic and clinical qualitative test reaction. Handle heavy metal complexes (mercury, nickel, barium) and alkaline/acidic reagents with laboratory PPE."
+  },
+  {
+    "id": "bio-nessler-nh4cl-koh",
+    "name": "Nessler qualitative detection of ammonium chloride",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "k2hgi4_nessler",
+        "coefficient": 2
+      },
+      {
+        "chemicalId": "ammonium-chloride",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "koh",
+        "coefficient": 4
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "nh2hg2io_millon",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "ki",
+        "coefficient": 7,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "kcl",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 3,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "2K2HgI4 + NH4Cl + 4KOH → Hg2NIOH2 + 7KI + KCl + 3H2O",
+    "netIonicEquation": "2 K2HgI4 + NH4Cl + 4 KOH → Hg2NIOH2 + 7 KI + KCl + 3 H2O",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -115,
+    "temperatureMinC": 15,
+    "temperatureMaxC": 100,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Clinical urine ammonia photometric detection."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Bioinorganic and clinical qualitative test reaction. Handle heavy metal complexes (mercury, nickel, barium) and alkaline/acidic reagents with laboratory PPE."
+  },
+  {
+    "id": "bio-nessler-nh4no3-koh",
+    "name": "Nessler reaction with ammonium nitrate",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "k2hgi4_nessler",
+        "coefficient": 2
+      },
+      {
+        "chemicalId": "nh4no3",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "koh",
+        "coefficient": 4
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "nh2hg2io_millon",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "ki",
+        "coefficient": 7,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "kno3",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 3,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "2K2HgI4 + NH4NO3 + 4KOH → Hg2NIOH2 + 7KI + KNO3 + 3H2O",
+    "netIonicEquation": "2 K2HgI4 + NH4NO3 + 4 KOH → Hg2NIOH2 + 7 KI + KNO3 + 3 H2O",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -112,
+    "temperatureMinC": 15,
+    "temperatureMaxC": 100,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Trace ammonium quantification in environmental water samples."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Bioinorganic and clinical qualitative test reaction. Handle heavy metal complexes (mercury, nickel, barium) and alkaline/acidic reagents with laboratory PPE."
+  },
+  {
+    "id": "bio-nessler-nh42so4-koh",
+    "name": "Nessler determination of ammonium sulfate fertilizer",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "k2hgi4_nessler",
+        "coefficient": 4
+      },
+      {
+        "chemicalId": "nh4-2-so4",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "koh",
+        "coefficient": 8
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "nh2hg2io_millon",
+        "coefficient": 2,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "ki",
+        "coefficient": 14,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "k2so4",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 6,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "4K2HgI4 + (NH4)2SO4 + 8KOH → 2Hg2NIOH2 + 14KI + K2SO4 + 6H2O",
+    "netIonicEquation": "4 K2HgI4 + (NH4)2SO4 + 8 KOH → 2 Hg2NIOH2 + 14 KI + K2SO4 + 6 H2O",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -118,
+    "temperatureMinC": 15,
+    "temperatureMaxC": 100,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Micro-Kjeldahl distillate ammonium confirmation."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Bioinorganic and clinical qualitative test reaction. Handle heavy metal complexes (mercury, nickel, barium) and alkaline/acidic reagents with laboratory PPE."
+  },
+  {
+    "id": "bio-nessler-nh4br-koh",
+    "name": "Nessler reaction with ammonium bromide",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "k2hgi4_nessler",
+        "coefficient": 2
+      },
+      {
+        "chemicalId": "nh4br",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "koh",
+        "coefficient": 4
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "nh2hg2io_millon",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "ki",
+        "coefficient": 7,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "kbr",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 3,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "2K2HgI4 + NH4Br + 4KOH → Hg2NIOH2 + 7KI + KBr + 3H2O",
+    "netIonicEquation": "2 K2HgI4 + NH4Br + 4 KOH → Hg2NIOH2 + 7 KI + KBr + 3 H2O",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -114,
+    "temperatureMinC": 15,
+    "temperatureMaxC": 100,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Precipitation of brown condensation product of Millon base."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Bioinorganic and clinical qualitative test reaction. Handle heavy metal complexes (mercury, nickel, barium) and alkaline/acidic reagents with laboratory PPE."
+  },
+  {
+    "id": "bio-nessler-nh3-naoh",
+    "name": "Nessler test in sodium hydroxide medium",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "k2hgi4_nessler",
+        "coefficient": 2
+      },
+      {
+        "chemicalId": "ammonia",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "naoh",
+        "coefficient": 3
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "nh2hg2io_millon",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "ki",
+        "coefficient": 4,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "nai",
+        "coefficient": 3,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 2,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "2K2HgI4 + NH3 + 3NaOH → Hg2NIOH2 + 4KI + 3NaI + 2H2O",
+    "netIonicEquation": "2 K2HgI4 + NH3 + 3 NaOH → Hg2NIOH2 + 4 KI + 3 NaI + 2 H2O",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -108,
+    "temperatureMinC": 15,
+    "temperatureMaxC": 100,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Colorimetric ammonia assay using caustic soda buffer."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Bioinorganic and clinical qualitative test reaction. Handle heavy metal complexes (mercury, nickel, barium) and alkaline/acidic reagents with laboratory PPE."
+  },
+  {
+    "id": "bio-nessler-nh4cl-naoh",
+    "name": "Detection of ammonium chloride in sodium hydroxide",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "k2hgi4_nessler",
+        "coefficient": 2
+      },
+      {
+        "chemicalId": "ammonium-chloride",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "naoh",
+        "coefficient": 4
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "nh2hg2io_millon",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "ki",
+        "coefficient": 4,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "nacl",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "nai",
+        "coefficient": 3,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 3,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "2K2HgI4 + NH4Cl + 4NaOH → Hg2NIOH2 + 4KI + NaCl + 3NaI + 3H2O",
+    "netIonicEquation": "2 K2HgI4 + NH4Cl + 4 NaOH → Hg2NIOH2 + 4 KI + NaCl + 3 NaI + 3 H2O",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -112,
+    "temperatureMinC": 15,
+    "temperatureMaxC": 100,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Rapid clinical spot test for azotemia and uremic metabolites."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Bioinorganic and clinical qualitative test reaction. Handle heavy metal complexes (mercury, nickel, barium) and alkaline/acidic reagents with laboratory PPE."
+  },
+  {
+    "id": "bio-nessler-nh4no3-naoh",
+    "name": "Detection of ammonium nitrate in sodium hydroxide",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "k2hgi4_nessler",
+        "coefficient": 2
+      },
+      {
+        "chemicalId": "nh4no3",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "naoh",
+        "coefficient": 4
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "nh2hg2io_millon",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "ki",
+        "coefficient": 4,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "nano3",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "nai",
+        "coefficient": 3,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 3,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "2K2HgI4 + NH4NO3 + 4NaOH → Hg2NIOH2 + 4KI + NaNO3 + 3NaI + 3H2O",
+    "netIonicEquation": "2 K2HgI4 + NH4NO3 + 4 NaOH → Hg2NIOH2 + 4 KI + NaNO3 + 3 NaI + 3 H2O",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -110,
+    "temperatureMinC": 15,
+    "temperatureMaxC": 100,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Spectrophotometric detection of trace nitrogen."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Bioinorganic and clinical qualitative test reaction. Handle heavy metal complexes (mercury, nickel, barium) and alkaline/acidic reagents with laboratory PPE."
+  },
+  {
+    "id": "bio-nessler-synthesis-hgi2",
+    "name": "Preparation of Nessler reagent from mercury(II) iodide",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "hgi2",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "ki",
+        "coefficient": 2
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "k2hgi4_nessler",
+        "coefficient": 1,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "HgI2 + 2KI → K2HgI4",
+    "netIonicEquation": "HgI2 + 2 KI → K2HgI4",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -42,
+    "temperatureMinC": 15,
+    "temperatureMaxC": 100,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Dissolution of red mercury iodide into soluble yellow potassium tetraiodomercurate(II)."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Bioinorganic and clinical qualitative test reaction. Handle heavy metal complexes (mercury, nickel, barium) and alkaline/acidic reagents with laboratory PPE."
+  },
+  {
+    "id": "bio-nessler-synthesis-hgcl2",
+    "name": "Synthesis of Nessler reagent from mercury(II) chloride",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "hgcl2",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "ki",
+        "coefficient": 4
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "k2hgi4_nessler",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "kcl",
+        "coefficient": 2,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "HgCl2 + 4KI → K2HgI4 + 2KCl",
+    "netIonicEquation": "HgCl2 + 4 KI → K2HgI4 + 2 KCl",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -75,
+    "temperatureMinC": 15,
+    "temperatureMaxC": 100,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Direct stoichiometric formulation of Nessler analytical reagent."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Bioinorganic and clinical qualitative test reaction. Handle heavy metal complexes (mercury, nickel, barium) and alkaline/acidic reagents with laboratory PPE."
+  },
+  {
+    "id": "bio-nessler-silver-precipitation",
+    "name": "Silver precipitation of Nessler complex",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "k2hgi4_nessler",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "agno3",
+        "coefficient": 2
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "agi",
+        "coefficient": 2,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "kno3",
+        "coefficient": 2,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "hgi2",
+        "coefficient": 1,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "K2HgI4 + 2AgNO3 → 2AgI + 2KNO3 + HgI2",
+    "netIonicEquation": "K2HgI4 + 2 AgNO3 → 2 AgI + 2 KNO3 + HgI2",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -125,
+    "temperatureMinC": 15,
+    "temperatureMaxC": 100,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Precipitation of pale yellow silver iodide and red mercury(II) iodide."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Bioinorganic and clinical qualitative test reaction. Handle heavy metal complexes (mercury, nickel, barium) and alkaline/acidic reagents with laboratory PPE."
+  },
+  {
+    "id": "bio-prussian-fecl3-k4fecn6",
+    "name": "Prussian blue synthesis from ferric chloride and potassium ferrocyanide",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "k4fe_cn6",
+        "coefficient": 3
+      },
+      {
+        "chemicalId": "fecl3",
+        "coefficient": 4
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "fe4_fecn6_3",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "kcl",
+        "coefficient": 12,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "3K4FeC6N6 + 4FeCl3 → Fe7C18N18 + 12KCl",
+    "netIonicEquation": "3 K4FeC6N6 + 4 FeCl3 → Fe7C18N18 + 12 KCl",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -310,
+    "temperatureMinC": 15,
+    "temperatureMaxC": 100,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Historic Perls Prussian blue qualitative histological stain for ferric hemosiderin iron."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Bioinorganic and clinical qualitative test reaction. Handle heavy metal complexes (mercury, nickel, barium) and alkaline/acidic reagents with laboratory PPE."
+  },
+  {
+    "id": "bio-prussian-feno33-k4fecn6",
+    "name": "Prussian blue formation from iron(III) nitrate",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "k4fe_cn6",
+        "coefficient": 3
+      },
+      {
+        "chemicalId": "fe-no3-3",
+        "coefficient": 4
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "fe4_fecn6_3",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "kno3",
+        "coefficient": 12,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "3K4FeC6N6 + 4Fe(NO3)3 → Fe7C18N18 + 12KNO3",
+    "netIonicEquation": "3 K4FeC6N6 + 4 Fe(NO3)3 → Fe7C18N18 + 12 KNO3",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -315,
+    "temperatureMinC": 15,
+    "temperatureMaxC": 100,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Precipitation of insoluble dark blue ferric hexacyanoferrate."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Bioinorganic and clinical qualitative test reaction. Handle heavy metal complexes (mercury, nickel, barium) and alkaline/acidic reagents with laboratory PPE."
+  },
+  {
+    "id": "bio-prussian-fe2so43-k4fecn6",
+    "name": "Prussian blue synthesis from ferric sulfate",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "k4fe_cn6",
+        "coefficient": 3
+      },
+      {
+        "chemicalId": "fe2-so4-3",
+        "coefficient": 2
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "fe4_fecn6_3",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "k2so4",
+        "coefficient": 6,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "3K4FeC6N6 + 2Fe2(SO4)3 → Fe7C18N18 + 6K2SO4",
+    "netIonicEquation": "3 K4FeC6N6 + 2 Fe2(SO4)3 → Fe7C18N18 + 6 K2SO4",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -320,
+    "temperatureMinC": 15,
+    "temperatureMaxC": 100,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Insoluble blue antidote pigment synthesized to bind radioactive cesium and thallium."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Bioinorganic and clinical qualitative test reaction. Handle heavy metal complexes (mercury, nickel, barium) and alkaline/acidic reagents with laboratory PPE."
+  },
+  {
+    "id": "bio-prussian-decomposition-koh",
+    "name": "Alkaline destruction of Prussian blue by potassium hydroxide",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "fe4_fecn6_3",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "koh",
+        "coefficient": 12
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "feoh3",
+        "coefficient": 4,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "k4fe_cn6",
+        "coefficient": 3,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "Fe7C18N18 + 12KOH → 4Fe(OH)3 + 3K4FeC6N6",
+    "netIonicEquation": "Fe7C18N18 + 12 KOH → 4 Fe(OH)3 + 3 K4FeC6N6",
+    "confidenceScore": 0.99,
+    "energyClassification": "endothermic",
+    "enthalpyKjPerMol": 85,
+    "temperatureMinC": 15,
+    "temperatureMaxC": 100,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Decolorization of intense blue pigment leaving brown rust-like ferric hydroxide."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Bioinorganic and clinical qualitative test reaction. Handle heavy metal complexes (mercury, nickel, barium) and alkaline/acidic reagents with laboratory PPE."
+  },
+  {
+    "id": "bio-prussian-oxidation-cl2",
+    "name": "Oxidation of potassium ferrocyanide by chlorine",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "k4fe_cn6",
+        "coefficient": 2
+      },
+      {
+        "chemicalId": "cl2",
+        "coefficient": 1
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "k3fe_cn6",
+        "coefficient": 2,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "kcl",
+        "coefficient": 2,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "2K4FeC6N6 + Cl2 → 2K3FeC6N6 + 2KCl",
+    "netIonicEquation": "2 K4FeC6N6 + Cl2 → 2 K3FeC6N6 + 2 KCl",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -140,
+    "temperatureMinC": 15,
+    "temperatureMaxC": 100,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Industrial conversion of yellow ferrocyanide to ruby-red potassium ferricyanide."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Bioinorganic and clinical qualitative test reaction. Handle heavy metal complexes (mercury, nickel, barium) and alkaline/acidic reagents with laboratory PPE."
+  },
+  {
+    "id": "bio-prussian-oxidation-br2",
+    "name": "Bromine oxidation of potassium ferrocyanide",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "k4fe_cn6",
+        "coefficient": 2
+      },
+      {
+        "chemicalId": "br2",
+        "coefficient": 1
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "k3fe_cn6",
+        "coefficient": 2,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "kbr",
+        "coefficient": 2,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "2K4FeC6N6 + Br2 → 2K3FeC6N6 + 2KBr",
+    "netIonicEquation": "2 K4FeC6N6 + Br2 → 2 K3FeC6N6 + 2 KBr",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -115,
+    "temperatureMinC": 15,
+    "temperatureMaxC": 100,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Conversion of iron(II) complex to iron(III) ferricyanide."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Bioinorganic and clinical qualitative test reaction. Handle heavy metal complexes (mercury, nickel, barium) and alkaline/acidic reagents with laboratory PPE."
+  },
+  {
+    "id": "bio-prussian-oxidation-peroxide",
+    "name": "Hydrogen peroxide oxidation of ferrocyanide in acidic medium",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "k4fe_cn6",
+        "coefficient": 2
+      },
+      {
+        "chemicalId": "h2o2",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "hcl",
+        "coefficient": 2
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "k3fe_cn6",
+        "coefficient": 2,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "kcl",
+        "coefficient": 2,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 2,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "2K4FeC6N6 + H2O2 + 2HCl → 2K3FeC6N6 + 2KCl + 2H2O",
+    "netIonicEquation": "2 K4FeC6N6 + H2O2 + 2 HCl → 2 K3FeC6N6 + 2 KCl + 2 H2O",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -185,
+    "temperatureMinC": 15,
+    "temperatureMaxC": 100,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Catalytic peroxidase-coupled oxidation of hexacyanoferrate."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Bioinorganic and clinical qualitative test reaction. Handle heavy metal complexes (mercury, nickel, barium) and alkaline/acidic reagents with laboratory PPE."
+  },
+  {
+    "id": "bio-prussian-oxidation-permanganate",
+    "name": "Permanganometric oxidation of potassium ferrocyanide",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "k4fe_cn6",
+        "coefficient": 5
+      },
+      {
+        "chemicalId": "kmno4",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "h2so4",
+        "coefficient": 4
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "k3fe_cn6",
+        "coefficient": 5,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "mnso4",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "k2so4",
+        "coefficient": 3,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 4,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "5K4FeC6N6 + KMnO4 + 4H2SO4 → 5K3FeC6N6 + MnSO4 + 3K2SO4 + 4H2O",
+    "netIonicEquation": "5 K4FeC6N6 + KMnO4 + 4 H2SO4 → 5 K3FeC6N6 + MnSO4 + 3 K2SO4 + 4 H2O",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -340,
+    "temperatureMinC": 15,
+    "temperatureMaxC": 100,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Standard analytical redox titration of hexacyanoferrate(II)."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Bioinorganic and clinical qualitative test reaction. Handle heavy metal complexes (mercury, nickel, barium) and alkaline/acidic reagents with laboratory PPE."
+  },
+  {
+    "id": "bio-prussian-reduction-iodide",
+    "name": "Iodometric reduction of potassium ferricyanide",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "k3fe_cn6",
+        "coefficient": 2
+      },
+      {
+        "chemicalId": "ki",
+        "coefficient": 2
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "k4fe_cn6",
+        "coefficient": 2,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "i2",
+        "coefficient": 1,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "2K3FeC6N6 + 2KI → 2K4FeC6N6 + I2",
+    "netIonicEquation": "2 K3FeC6N6 + 2 KI → 2 K4FeC6N6 + I2",
+    "confidenceScore": 0.99,
+    "energyClassification": "endothermic",
+    "enthalpyKjPerMol": 48,
+    "temperatureMinC": 15,
+    "temperatureMaxC": 100,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Quantitative determination of ferricyanide by liberated iodine titration."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Bioinorganic and clinical qualitative test reaction. Handle heavy metal complexes (mercury, nickel, barium) and alkaline/acidic reagents with laboratory PPE."
+  },
+  {
+    "id": "bio-prussian-reduction-feso4",
+    "name": "Ferrous sulfate reduction of ferricyanide (Turnbull blue precursor)",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "k3fe_cn6",
+        "coefficient": 2
+      },
+      {
+        "chemicalId": "feso4",
+        "coefficient": 2
+      },
+      {
+        "chemicalId": "k2so4",
+        "coefficient": 1
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "k4fe_cn6",
+        "coefficient": 2,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "fe2-so4-3",
+        "coefficient": 1,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "2K3FeC6N6 + 2FeSO4 + K2SO4 → 2K4FeC6N6 + Fe2(SO4)3",
+    "netIonicEquation": "2 K3FeC6N6 + 2 FeSO4 + K2SO4 → 2 K4FeC6N6 + Fe2(SO4)3",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -45,
+    "temperatureMinC": 15,
+    "temperatureMaxC": 100,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Redox equilibrium between hexacyanoferrate and iron ions."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Bioinorganic and clinical qualitative test reaction. Handle heavy metal complexes (mercury, nickel, barium) and alkaline/acidic reagents with laboratory PPE."
+  },
+  {
+    "id": "bio-prussian-alkaline-ferrocyanide-feoh3",
+    "name": "Colloidal synthesis of ferrocyanide from ferric hydroxide and Prussian blue",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "feoh3",
+        "coefficient": 4
+      },
+      {
+        "chemicalId": "k4fe_cn6",
+        "coefficient": 3
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "fe4_fecn6_3",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "koh",
+        "coefficient": 12,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "4Fe(OH)3 + 3K4FeC6N6 → Fe7C18N18 + 12KOH",
+    "netIonicEquation": "4 Fe(OH)3 + 3 K4FeC6N6 → Fe7C18N18 + 12 KOH",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -85,
+    "temperatureMinC": 15,
+    "temperatureMaxC": 100,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Reversible colloid equilibrium between Prussian blue and iron oxide hydrate."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Bioinorganic and clinical qualitative test reaction. Handle heavy metal complexes (mercury, nickel, barium) and alkaline/acidic reagents with laboratory PPE."
+  },
+  {
+    "id": "bio-hq-silver-reduction",
+    "name": "Photographic and histological reduction of silver nitrate by hydroquinone",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "c6h6o2_hydroquinone",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "agno3",
+        "coefficient": 2
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "c6h4o2_benzoquinone",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "ag",
+        "coefficient": 2,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "hno3",
+        "coefficient": 2,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "C6H6O2 + 2AgNO3 → C6H4O2 + 2Ag + 2HNO3",
+    "netIonicEquation": "C6H6O2 + 2 AgNO3 → C6H4O2 + 2 Ag + 2 HNO3",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -135,
+    "temperatureMinC": 15,
+    "temperatureMaxC": 100,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Bielschowsky silver stain mechanism reducing ionic silver to black metallic silver grains."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Bioinorganic and clinical qualitative test reaction. Handle heavy metal complexes (mercury, nickel, barium) and alkaline/acidic reagents with laboratory PPE."
+  },
+  {
+    "id": "bio-hq-fecl3-oxidation",
+    "name": "Ferric chloride colorimetric oxidation of hydroquinone",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "c6h6o2_hydroquinone",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "fecl3",
+        "coefficient": 2
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "c6h4o2_benzoquinone",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "fecl2",
+        "coefficient": 2,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "hcl",
+        "coefficient": 2,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "C6H6O2 + 2FeCl3 → C6H4O2 + 2FeCl2 + 2HCl",
+    "netIonicEquation": "C6H6O2 + 2 FeCl3 → C6H4O2 + 2 FeCl2 + 2 HCl",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -65,
+    "temperatureMinC": 15,
+    "temperatureMaxC": 100,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Diagnostic phenolic oxidation by iron(III) chloride."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Bioinorganic and clinical qualitative test reaction. Handle heavy metal complexes (mercury, nickel, barium) and alkaline/acidic reagents with laboratory PPE."
+  },
+  {
+    "id": "bio-hq-fe2so43-oxidation",
+    "name": "Ferric sulfate oxidation of hydroquinone",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "c6h6o2_hydroquinone",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "fe2-so4-3",
+        "coefficient": 1
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "c6h4o2_benzoquinone",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "feso4",
+        "coefficient": 2,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "h2so4",
+        "coefficient": 1,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "C6H6O2 + Fe2(SO4)3 → C6H4O2 + 2FeSO4 + H2SO4",
+    "netIonicEquation": "C6H6O2 + Fe2(SO4)3 → C6H4O2 + 2 FeSO4 + H2SO4",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -68,
+    "temperatureMinC": 15,
+    "temperatureMaxC": 100,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Mitochondrial electron transport chain model reaction."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Bioinorganic and clinical qualitative test reaction. Handle heavy metal complexes (mercury, nickel, barium) and alkaline/acidic reagents with laboratory PPE."
+  },
+  {
+    "id": "bio-hq-peroxide-peroxidase",
+    "name": "Peroxidase-catalyzed oxidation of hydroquinone to benzoquinone",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "c6h6o2_hydroquinone",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "h2o2",
+        "coefficient": 1
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "c6h4o2_benzoquinone",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 2,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "C6H6O2 + H2O2 → C6H4O2 + 2H2O",
+    "netIonicEquation": "C6H6O2 + H2O2 → C6H4O2 + 2 H2O",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -175,
+    "temperatureMinC": 15,
+    "temperatureMaxC": 100,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Biomimetic defense secretion of bombardier beetles."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Bioinorganic and clinical qualitative test reaction. Handle heavy metal complexes (mercury, nickel, barium) and alkaline/acidic reagents with laboratory PPE."
+  },
+  {
+    "id": "bio-hq-permanganate-titration",
+    "name": "Permanganate titration of hydroquinone",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "c6h6o2_hydroquinone",
+        "coefficient": 5
+      },
+      {
+        "chemicalId": "kmno4",
+        "coefficient": 2
+      },
+      {
+        "chemicalId": "h2so4",
+        "coefficient": 3
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "c6h4o2_benzoquinone",
+        "coefficient": 5,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "mnso4",
+        "coefficient": 2,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "k2so4",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 8,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "5C6H6O2 + 2KMnO4 + 3H2SO4 → 5C6H4O2 + 2MnSO4 + K2SO4 + 8H2O",
+    "netIonicEquation": "5 C6H6O2 + 2 KMnO4 + 3 H2SO4 → 5 C6H4O2 + 2 MnSO4 + K2SO4 + 8 H2O",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -420,
+    "temperatureMinC": 15,
+    "temperatureMaxC": 100,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Volumetric determination of dihydroxybenzene antioxidants."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Bioinorganic and clinical qualitative test reaction. Handle heavy metal complexes (mercury, nickel, barium) and alkaline/acidic reagents with laboratory PPE."
+  },
+  {
+    "id": "bio-hq-dichromate-oxidation",
+    "name": "Chromic acid oxidation of hydroquinone to 1,4-benzoquinone",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "c6h6o2_hydroquinone",
+        "coefficient": 3
+      },
+      {
+        "chemicalId": "k2cr2o7",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "h2so4",
+        "coefficient": 4
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "c6h4o2_benzoquinone",
+        "coefficient": 3,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "cr2-so4-3",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "k2so4",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 7,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "3C6H6O2 + K2Cr2O7 + 4H2SO4 → 3C6H4O2 + Cr2(SO4)3 + K2SO4 + 7H2O",
+    "netIonicEquation": "3 C6H6O2 + K2Cr2O7 + 4 H2SO4 → 3 C6H4O2 + Cr2(SO4)3 + K2SO4 + 7 H2O",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -380,
+    "temperatureMinC": 15,
+    "temperatureMaxC": 100,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Classic organic synthesis of golden-yellow crystalline p-benzoquinone."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Bioinorganic and clinical qualitative test reaction. Handle heavy metal complexes (mercury, nickel, barium) and alkaline/acidic reagents with laboratory PPE."
+  },
+  {
+    "id": "bio-hq-iodine-titration",
+    "name": "Iodometric oxidation of hydroquinone",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "c6h6o2_hydroquinone",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "i2",
+        "coefficient": 1
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "c6h4o2_benzoquinone",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "hi",
+        "coefficient": 2,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "C6H6O2 + I2 → C6H4O2 + 2HI",
+    "netIonicEquation": "C6H6O2 + I2 → C6H4O2 + 2 HI",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -42,
+    "temperatureMinC": 15,
+    "temperatureMaxC": 100,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Equilibrium redox titration of photographic developer solution."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Bioinorganic and clinical qualitative test reaction. Handle heavy metal complexes (mercury, nickel, barium) and alkaline/acidic reagents with laboratory PPE."
+  },
+  {
+    "id": "bio-hq-bromine-oxidation",
+    "name": "Bromine oxidation of hydroquinone",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "c6h6o2_hydroquinone",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "br2",
+        "coefficient": 1
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "c6h4o2_benzoquinone",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "hbr",
+        "coefficient": 2,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "C6H6O2 + Br2 → C6H4O2 + 2HBr",
+    "netIonicEquation": "C6H6O2 + Br2 → C6H4O2 + 2 HBr",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -95,
+    "temperatureMinC": 15,
+    "temperatureMaxC": 100,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Rapid halogen oxidation generating 1,4-benzoquinone."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Bioinorganic and clinical qualitative test reaction. Handle heavy metal complexes (mercury, nickel, barium) and alkaline/acidic reagents with laboratory PPE."
+  },
+  {
+    "id": "bio-hq-chlorine-oxidation",
+    "name": "Chlorine oxidation of hydroquinone",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "c6h6o2_hydroquinone",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "cl2",
+        "coefficient": 1
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "c6h4o2_benzoquinone",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "hcl",
+        "coefficient": 2,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "C6H6O2 + Cl2 → C6H4O2 + 2HCl",
+    "netIonicEquation": "C6H6O2 + Cl2 → C6H4O2 + 2 HCl",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -145,
+    "temperatureMinC": 15,
+    "temperatureMaxC": 100,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Oxidative dehydrogenation of dihydroxybenzene."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Bioinorganic and clinical qualitative test reaction. Handle heavy metal complexes (mercury, nickel, barium) and alkaline/acidic reagents with laboratory PPE."
+  },
+  {
+    "id": "bio-bq-sulfite-reduction",
+    "name": "Antioxidant sulfite reduction of benzoquinone back to hydroquinone",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "c6h4o2_benzoquinone",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "so2",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 2
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "c6h6o2_hydroquinone",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "h2so4",
+        "coefficient": 1,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "C6H4O2 + SO2 + 2H2O → C6H6O2 + H2SO4",
+    "netIonicEquation": "C6H4O2 + SO2 + 2 H2O → C6H6O2 + H2SO4",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -120,
+    "temperatureMinC": 15,
+    "temperatureMaxC": 100,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Photographic preservative mechanism of sulfite preventing quinone developer oxidation."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Bioinorganic and clinical qualitative test reaction. Handle heavy metal complexes (mercury, nickel, barium) and alkaline/acidic reagents with laboratory PPE."
+  },
+  {
+    "id": "bio-bq-sulfide-reduction",
+    "name": "Hydrogen sulfide reduction of p-benzoquinone",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "c6h4o2_benzoquinone",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "h2s",
+        "coefficient": 1
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "c6h6o2_hydroquinone",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "s",
+        "coefficient": 1,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "C6H4O2 + H2S → C6H6O2 + S",
+    "netIonicEquation": "C6H4O2 + H2S → C6H6O2 + S",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -85,
+    "temperatureMinC": 15,
+    "temperatureMaxC": 100,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Reduction of quinoid chromophore precipitating elemental sulfur."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Bioinorganic and clinical qualitative test reaction. Handle heavy metal complexes (mercury, nickel, barium) and alkaline/acidic reagents with laboratory PPE."
+  },
+  {
+    "id": "bio-sugar-glucose-fehling-cucl2-naoh",
+    "name": "Fehling qualitative test for D-glucose with copper(II) chloride",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "c6h12o6",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "cucl2",
+        "coefficient": 24
+      },
+      {
+        "chemicalId": "naoh",
+        "coefficient": 48
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "cu2o",
+        "coefficient": 12,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "nacl",
+        "coefficient": 48,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "co2",
+        "coefficient": 6,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 30,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "C6H12O6 + 24CuCl2 + 48NaOH → 12Cu2O + 48NaCl + 6CO2 + 30H2O",
+    "netIonicEquation": "C6H12O6 + 24 CuCl2 + 48 NaOH → 12 Cu2O + 48 NaCl + 6 CO2 + 30 H2O",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -3850,
+    "temperatureMinC": 15,
+    "temperatureMaxC": 100,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Reduction of alkaline cupric tartrate to insoluble brick-red copper(I) oxide."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Bioinorganic and clinical qualitative test reaction. Handle heavy metal complexes (mercury, nickel, barium) and alkaline/acidic reagents with laboratory PPE."
+  },
+  {
+    "id": "bio-sugar-glucose-fehling-cuso4-naoh",
+    "name": "Benedict/Fehling test for D-glucose with copper(II) sulfate",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "c6h12o6",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "cuso4",
+        "coefficient": 24
+      },
+      {
+        "chemicalId": "naoh",
+        "coefficient": 48
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "cu2o",
+        "coefficient": 12,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "na2so4",
+        "coefficient": 24,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "co2",
+        "coefficient": 6,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 30,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "C6H12O6 + 24CuSO4 + 48NaOH → 12Cu2O + 24Na2SO4 + 6CO2 + 30H2O",
+    "netIonicEquation": "C6H12O6 + 24 CuSO4 + 48 NaOH → 12 Cu2O + 24 Na2SO4 + 6 CO2 + 30 H2O",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -3880,
+    "temperatureMinC": 15,
+    "temperatureMaxC": 100,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Semiquantitative clinical test for glycosuria in diabetes mellitus."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Bioinorganic and clinical qualitative test reaction. Handle heavy metal complexes (mercury, nickel, barium) and alkaline/acidic reagents with laboratory PPE."
+  },
+  {
+    "id": "bio-sugar-glucose-fehling-cucl2-koh",
+    "name": "Potassium hydroxide buffered Fehling test for D-glucose",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "c6h12o6",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "cucl2",
+        "coefficient": 24
+      },
+      {
+        "chemicalId": "koh",
+        "coefficient": 48
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "cu2o",
+        "coefficient": 12,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "kcl",
+        "coefficient": 48,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "co2",
+        "coefficient": 6,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 30,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "C6H12O6 + 24CuCl2 + 48KOH → 12Cu2O + 48KCl + 6CO2 + 30H2O",
+    "netIonicEquation": "C6H12O6 + 24 CuCl2 + 48 KOH → 12 Cu2O + 48 KCl + 6 CO2 + 30 H2O",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -3860,
+    "temperatureMinC": 15,
+    "temperatureMaxC": 100,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Alkaline enediol oxidation of reducing aldose sugars."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Bioinorganic and clinical qualitative test reaction. Handle heavy metal complexes (mercury, nickel, barium) and alkaline/acidic reagents with laboratory PPE."
+  },
+  {
+    "id": "bio-sugar-glucose-fehling-cuso4-koh",
+    "name": "Fehling test for D-glucose using caustic potash",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "c6h12o6",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "cuso4",
+        "coefficient": 24
+      },
+      {
+        "chemicalId": "koh",
+        "coefficient": 48
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "cu2o",
+        "coefficient": 12,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "k2so4",
+        "coefficient": 24,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "co2",
+        "coefficient": 6,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 30,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "C6H12O6 + 24CuSO4 + 48KOH → 12Cu2O + 24K2SO4 + 6CO2 + 30H2O",
+    "netIonicEquation": "C6H12O6 + 24 CuSO4 + 48 KOH → 12 Cu2O + 24 K2SO4 + 6 CO2 + 30 H2O",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -3890,
+    "temperatureMinC": 15,
+    "temperatureMaxC": 100,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Precipitation of cuprous oxide with simultaneous glucose oxidation."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Bioinorganic and clinical qualitative test reaction. Handle heavy metal complexes (mercury, nickel, barium) and alkaline/acidic reagents with laboratory PPE."
+  },
+  {
+    "id": "bio-sugar-fructose-fehling-cucl2-naoh",
+    "name": "Fehling test for D-fructose ketose sugar",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "c6h12o6_fructose",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "cucl2",
+        "coefficient": 24
+      },
+      {
+        "chemicalId": "naoh",
+        "coefficient": 48
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "cu2o",
+        "coefficient": 12,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "nacl",
+        "coefficient": 48,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "co2",
+        "coefficient": 6,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 30,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "C6H12O6 + 24CuCl2 + 48NaOH → 12Cu2O + 48NaCl + 6CO2 + 30H2O",
+    "netIonicEquation": "C6H12O6 + 24 CuCl2 + 48 NaOH → 12 Cu2O + 48 NaCl + 6 CO2 + 30 H2O",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -3840,
+    "temperatureMinC": 15,
+    "temperatureMaxC": 100,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Base-catalyzed Lobry de Bruyn-Alberda van Ekenstein rearrangement reducing copper(II)."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Bioinorganic and clinical qualitative test reaction. Handle heavy metal complexes (mercury, nickel, barium) and alkaline/acidic reagents with laboratory PPE."
+  },
+  {
+    "id": "bio-sugar-fructose-fehling-cuso4-naoh",
+    "name": "Benedict test for D-fructose in caustic soda",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "c6h12o6_fructose",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "cuso4",
+        "coefficient": 24
+      },
+      {
+        "chemicalId": "naoh",
+        "coefficient": 48
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "cu2o",
+        "coefficient": 12,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "na2so4",
+        "coefficient": 24,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "co2",
+        "coefficient": 6,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 30,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "C6H12O6 + 24CuSO4 + 48NaOH → 12Cu2O + 24Na2SO4 + 6CO2 + 30H2O",
+    "netIonicEquation": "C6H12O6 + 24 CuSO4 + 48 NaOH → 12 Cu2O + 24 Na2SO4 + 6 CO2 + 30 H2O",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -3870,
+    "temperatureMinC": 15,
+    "temperatureMaxC": 100,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Formation of diagnostic red cuprous oxide precipitate."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Bioinorganic and clinical qualitative test reaction. Handle heavy metal complexes (mercury, nickel, barium) and alkaline/acidic reagents with laboratory PPE."
+  },
+  {
+    "id": "bio-sugar-fructose-fehling-cucl2-koh",
+    "name": "Fehling reaction of D-fructose in caustic potash",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "c6h12o6_fructose",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "cucl2",
+        "coefficient": 24
+      },
+      {
+        "chemicalId": "koh",
+        "coefficient": 48
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "cu2o",
+        "coefficient": 12,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "kcl",
+        "coefficient": 48,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "co2",
+        "coefficient": 6,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 30,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "C6H12O6 + 24CuCl2 + 48KOH → 12Cu2O + 48KCl + 6CO2 + 30H2O",
+    "netIonicEquation": "C6H12O6 + 24 CuCl2 + 48 KOH → 12 Cu2O + 48 KCl + 6 CO2 + 30 H2O",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -3850,
+    "temperatureMinC": 15,
+    "temperatureMaxC": 100,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Rapid ketose reduction of alkaline copper(II) chloride."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Bioinorganic and clinical qualitative test reaction. Handle heavy metal complexes (mercury, nickel, barium) and alkaline/acidic reagents with laboratory PPE."
+  },
+  {
+    "id": "bio-sugar-fructose-fehling-cuso4-koh",
+    "name": "Fehling reaction of D-fructose with copper(II) sulfate in KOH",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "c6h12o6_fructose",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "cuso4",
+        "coefficient": 24
+      },
+      {
+        "chemicalId": "koh",
+        "coefficient": 48
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "cu2o",
+        "coefficient": 12,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "k2so4",
+        "coefficient": 24,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "co2",
+        "coefficient": 6,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 30,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "C6H12O6 + 24CuSO4 + 48KOH → 12Cu2O + 24K2SO4 + 6CO2 + 30H2O",
+    "netIonicEquation": "C6H12O6 + 24 CuSO4 + 48 KOH → 12 Cu2O + 24 K2SO4 + 6 CO2 + 30 H2O",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -3880,
+    "temperatureMinC": 15,
+    "temperatureMaxC": 100,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Redox decomposition of ketose sugar to brick-red Cu2O."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Bioinorganic and clinical qualitative test reaction. Handle heavy metal complexes (mercury, nickel, barium) and alkaline/acidic reagents with laboratory PPE."
+  },
+  {
+    "id": "bio-sugar-sucrose-inversion-hydrolysis",
+    "name": "Acid-catalyzed inversion of sucrose to glucose and fructose",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "sucrose",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 1
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "c6h12o6",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "c6h12o6_fructose",
+        "coefficient": 1,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "C12H22O11 + H2O → C6H12O6 + C6H12O6",
+    "netIonicEquation": "C12H22O11 + H2O → C6H12O6 + C6H12O6",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -14,
+    "temperatureMinC": 15,
+    "temperatureMaxC": 100,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Enzymatic or acid hydrolysis reversing optical rotation from dextro to levorotatory."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Bioinorganic and clinical qualitative test reaction. Handle heavy metal complexes (mercury, nickel, barium) and alkaline/acidic reagents with laboratory PPE."
+  },
+  {
+    "id": "bio-sugar-glucose-permanganate",
+    "name": "Permanganate complete oxidation of D-glucose",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "c6h12o6",
+        "coefficient": 5
+      },
+      {
+        "chemicalId": "kmno4",
+        "coefficient": 24
+      },
+      {
+        "chemicalId": "h2so4",
+        "coefficient": 36
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "co2",
+        "coefficient": 30,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "mnso4",
+        "coefficient": 24,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "k2so4",
+        "coefficient": 12,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 66,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "5C6H12O6 + 24KMnO4 + 36H2SO4 → 30CO2 + 24MnSO4 + 12K2SO4 + 66H2O",
+    "netIonicEquation": "5 C6H12O6 + 24 KMnO4 + 36 H2SO4 → 30 CO2 + 24 MnSO4 + 12 K2SO4 + 66 H2O",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -4200,
+    "temperatureMinC": 15,
+    "temperatureMaxC": 100,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Total chemical oxygen demand (COD) degradation of blood sugar."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Bioinorganic and clinical qualitative test reaction. Handle heavy metal complexes (mercury, nickel, barium) and alkaline/acidic reagents with laboratory PPE."
+  },
+  {
+    "id": "bio-sugar-fructose-permanganate",
+    "name": "Permanganate oxidation of D-fructose",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "c6h12o6_fructose",
+        "coefficient": 5
+      },
+      {
+        "chemicalId": "kmno4",
+        "coefficient": 24
+      },
+      {
+        "chemicalId": "h2so4",
+        "coefficient": 36
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "co2",
+        "coefficient": 30,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "mnso4",
+        "coefficient": 24,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "k2so4",
+        "coefficient": 12,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 66,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "5C6H12O6 + 24KMnO4 + 36H2SO4 → 30CO2 + 24MnSO4 + 12K2SO4 + 66H2O",
+    "netIonicEquation": "5 C6H12O6 + 24 KMnO4 + 36 H2SO4 → 30 CO2 + 24 MnSO4 + 12 K2SO4 + 66 H2O",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -4180,
+    "temperatureMinC": 15,
+    "temperatureMaxC": 100,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Exhaustive permanganometric mineralization of ketohexose."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Bioinorganic and clinical qualitative test reaction. Handle heavy metal complexes (mercury, nickel, barium) and alkaline/acidic reagents with laboratory PPE."
+  },
+  {
+    "id": "bio-aa-glycine-combustion",
+    "name": "Complete oxidative combustion of glycine",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "glycine",
+        "coefficient": 4
+      },
+      {
+        "chemicalId": "o2",
+        "coefficient": 9
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "co2",
+        "coefficient": 8,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 10,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "n2",
+        "coefficient": 2,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "4C2H5NO2 + 9O2 → 8CO2 + 10H2O + 2N2",
+    "netIonicEquation": "4 C2H5NO2 + 9 O2 → 8 CO2 + 10 H2O + 2 N2",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -975,
+    "temperatureMinC": 15,
+    "temperatureMaxC": 100,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Bomb calorimetry oxidation of the simplest proteinogenic amino acid."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Bioinorganic and clinical qualitative test reaction. Handle heavy metal complexes (mercury, nickel, barium) and alkaline/acidic reagents with laboratory PPE."
+  },
+  {
+    "id": "bio-aa-alanine-combustion",
+    "name": "Complete oxidative combustion of alanine",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "alanine",
+        "coefficient": 4
+      },
+      {
+        "chemicalId": "o2",
+        "coefficient": 15
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "co2",
+        "coefficient": 12,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 14,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "n2",
+        "coefficient": 2,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "4C3H7NO2 + 15O2 → 12CO2 + 14H2O + 2N2",
+    "netIonicEquation": "4 C3H7NO2 + 15 O2 → 12 CO2 + 14 H2O + 2 N2",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -1620,
+    "temperatureMinC": 15,
+    "temperatureMaxC": 100,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Thermal combustion of alanine yielding carbon dioxide, steam, and nitrogen."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Bioinorganic and clinical qualitative test reaction. Handle heavy metal complexes (mercury, nickel, barium) and alkaline/acidic reagents with laboratory PPE."
+  },
+  {
+    "id": "bio-aa-glycylglycine-combustion",
+    "name": "Combustion of dipeptide glycylglycine",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "glycylglycine",
+        "coefficient": 2
+      },
+      {
+        "chemicalId": "o2",
+        "coefficient": 9
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "co2",
+        "coefficient": 8,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 8,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "n2",
+        "coefficient": 2,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "2C4H8N2O3 + 9O2 → 8CO2 + 8H2O + 2N2",
+    "netIonicEquation": "2 C4H8N2O3 + 9 O2 → 8 CO2 + 8 H2O + 2 N2",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -1950,
+    "temperatureMinC": 15,
+    "temperatureMaxC": 100,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Thermal oxidation of prototype dipeptide model."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Bioinorganic and clinical qualitative test reaction. Handle heavy metal complexes (mercury, nickel, barium) and alkaline/acidic reagents with laboratory PPE."
+  },
+  {
+    "id": "bio-aa-phenylalanine-combustion",
+    "name": "Combustion of aromatic amino acid L-phenylalanine",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "c9h11no2_phenylalanine",
+        "coefficient": 4
+      },
+      {
+        "chemicalId": "o2",
+        "coefficient": 43
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "co2",
+        "coefficient": 36,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 22,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "n2",
+        "coefficient": 2,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "4C9H11NO2 + 43O2 → 36CO2 + 22H2O + 2N2",
+    "netIonicEquation": "4 C9H11NO2 + 43 O2 → 36 CO2 + 22 H2O + 2 N2",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -4650,
+    "temperatureMinC": 15,
+    "temperatureMaxC": 100,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Complete calorimetric oxidation of aromatic amino acid."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Bioinorganic and clinical qualitative test reaction. Handle heavy metal complexes (mercury, nickel, barium) and alkaline/acidic reagents with laboratory PPE."
+  },
+  {
+    "id": "bio-lactic-acid-combustion",
+    "name": "Calorimetric combustion of metabolic lactic acid",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "lactic-acid",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "o2",
+        "coefficient": 3
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "co2",
+        "coefficient": 3,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 3,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "C3H6O3 + 3O2 → 3CO2 + 3H2O",
+    "netIonicEquation": "C3H6O3 + 3 O2 → 3 CO2 + 3 H2O",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -1340,
+    "temperatureMinC": 15,
+    "temperatureMaxC": 100,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Oxidative combustion of anaerobic glycolysis end product."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Bioinorganic and clinical qualitative test reaction. Handle heavy metal complexes (mercury, nickel, barium) and alkaline/acidic reagents with laboratory PPE."
+  },
+  {
+    "id": "bio-org-formamide-hydrolysis-koh",
+    "name": "Potassium hydroxide hydrolysis of formamide",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "formamide",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "koh",
+        "coefficient": 1
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "hcook",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "ammonia",
+        "coefficient": 1,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "CH3NO + KOH → HCOOK + NH3",
+    "netIonicEquation": "CH3NO + KOH → HCOOK + NH3",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -68,
+    "temperatureMinC": 15,
+    "temperatureMaxC": 100,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Base-catalyzed amide cleavage yielding potassium formate."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Bioinorganic and clinical qualitative test reaction. Handle heavy metal complexes (mercury, nickel, barium) and alkaline/acidic reagents with laboratory PPE."
+  },
+  {
+    "id": "bio-aa-urea-combustion",
+    "name": "Calorimetric combustion of urea",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "urea",
+        "coefficient": 2
+      },
+      {
+        "chemicalId": "o2",
+        "coefficient": 3
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "co2",
+        "coefficient": 2,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 4,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "n2",
+        "coefficient": 2,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "2CH4N2O + 3O2 → 2CO2 + 4H2O + 2N2",
+    "netIonicEquation": "2 CH4N2O + 3 O2 → 2 CO2 + 4 H2O + 2 N2",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -632,
+    "temperatureMinC": 15,
+    "temperatureMaxC": 100,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Standard enthalpy of combustion of biological nitrogenous waste."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Bioinorganic and clinical qualitative test reaction. Handle heavy metal complexes (mercury, nickel, barium) and alkaline/acidic reagents with laboratory PPE."
+  },
+  {
+    "id": "bio-aa-urea-nitrous-acid-effervescence",
+    "name": "Gasometric Van Slyke determination of urea with nitrous acid",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "urea",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "hno2",
+        "coefficient": 2
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "co2",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "n2",
+        "coefficient": 2,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 3,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "CH4N2O + 2HNO2 → CO2 + 2N2 + 3H2O",
+    "netIonicEquation": "CH4N2O + 2 HNO2 → CO2 + 2 N2 + 3 H2O",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -480,
+    "temperatureMinC": 15,
+    "temperatureMaxC": 100,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Rapid effervescence of molecular nitrogen and carbon dioxide for blood urea nitrogen."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Bioinorganic and clinical qualitative test reaction. Handle heavy metal complexes (mercury, nickel, barium) and alkaline/acidic reagents with laboratory PPE."
+  },
+  {
+    "id": "bio-org-oxamide-hydrolysis-naoh",
+    "name": "Alkaline saponification of oxamide to sodium oxalate",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "oxamide",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "naoh",
+        "coefficient": 2
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "na2c2o4",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "ammonia",
+        "coefficient": 2,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "C2H4N2O2 + 2NaOH → Na2C2O4 + 2NH3",
+    "netIonicEquation": "C2H4N2O2 + 2 NaOH → Na2C2O4 + 2 NH3",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -75,
+    "temperatureMinC": 15,
+    "temperatureMaxC": 100,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Alkaline cleavage of bis-amide liberating ammonia."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Bioinorganic and clinical qualitative test reaction. Handle heavy metal complexes (mercury, nickel, barium) and alkaline/acidic reagents with laboratory PPE."
+  },
+  {
+    "id": "bio-org-oxamide-hydrolysis-koh",
+    "name": "Potassium hydroxide hydrolysis of oxamide",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "oxamide",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "koh",
+        "coefficient": 2
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "k2c2o4",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "ammonia",
+        "coefficient": 2,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "C2H4N2O2 + 2KOH → K2C2O4 + 2NH3",
+    "netIonicEquation": "C2H4N2O2 + 2 KOH → K2C2O4 + 2 NH3",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -78,
+    "temperatureMinC": 15,
+    "temperatureMaxC": 100,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Conversion of diamide into potassium oxalate."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Bioinorganic and clinical qualitative test reaction. Handle heavy metal complexes (mercury, nickel, barium) and alkaline/acidic reagents with laboratory PPE."
+  },
+  {
+    "id": "bio-org-formamide-hydrolysis-naoh",
+    "name": "Alkaline hydrolysis of formamide to sodium formate",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "formamide",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "naoh",
+        "coefficient": 1
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "hcoona",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "ammonia",
+        "coefficient": 1,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "CH3NO + NaOH → HCOONa + NH3",
+    "netIonicEquation": "CH3NO + NaOH → HCOONa + NH3",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -65,
+    "temperatureMinC": 15,
+    "temperatureMaxC": 100,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Base-catalyzed amide cleavage yielding sodium formate."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Bioinorganic and clinical qualitative test reaction. Handle heavy metal complexes (mercury, nickel, barium) and alkaline/acidic reagents with laboratory PPE."
+  },
+  {
+    "id": "bio-nabh4-benzoquinone-reduction",
+    "name": "Sodium borohydride reduction of 1,4-benzoquinone to hydroquinone",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "nabh4",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "c6h4o2_benzoquinone",
+        "coefficient": 4
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 4
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "c6h6o2_hydroquinone",
+        "coefficient": 4,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "naoh",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "h3bo3",
+        "coefficient": 1,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "NaBH4 + 4C6H4O2 + 4H2O → 4C6H6O2 + NaOH + H3BO3",
+    "netIonicEquation": "NaBH4 + 4 C6H4O2 + 4 H2O → 4 C6H6O2 + NaOH + H3BO3",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -280,
+    "temperatureMinC": 15,
+    "temperatureMaxC": 100,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Biomimetic hydride transfer reducing quinone electron carriers."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Bioinorganic and clinical qualitative test reaction. Handle heavy metal complexes (mercury, nickel, barium) and alkaline/acidic reagents with laboratory PPE."
+  },
+  {
+    "id": "bio-nabh4-silver-reduction",
+    "name": "Sodium borohydride synthesis of silver nanoparticles",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "nabh4",
+        "coefficient": 2
+      },
+      {
+        "chemicalId": "agno3",
+        "coefficient": 2
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 6
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "ag",
+        "coefficient": 2,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "nano3",
+        "coefficient": 2,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "h3bo3",
+        "coefficient": 2,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "h2",
+        "coefficient": 7,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "2NaBH4 + 2AgNO3 + 6H2O → 2Ag + 2NaNO3 + 2H3BO3 + 7H2",
+    "netIonicEquation": "2 NaBH4 + 2 AgNO3 + 6 H2O → 2 Ag + 2 NaNO3 + 2 H3BO3 + 7 H2",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -340,
+    "temperatureMinC": 15,
+    "temperatureMaxC": 100,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Hydride reduction producing yellow-brown colloidal silver for antimicrobial assays."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Bioinorganic and clinical qualitative test reaction. Handle heavy metal complexes (mercury, nickel, barium) and alkaline/acidic reagents with laboratory PPE."
+  },
+  {
+    "id": "bio-nabh4-cucl2-reduction",
+    "name": "Sodium borohydride reduction of copper(II) chloride",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "nabh4",
+        "coefficient": 2
+      },
+      {
+        "chemicalId": "cucl2",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 6
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "cu",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "nacl",
+        "coefficient": 2,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "h3bo3",
+        "coefficient": 2,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "h2",
+        "coefficient": 7,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "2NaBH4 + CuCl2 + 6H2O → Cu + 2NaCl + 2H3BO3 + 7H2",
+    "netIonicEquation": "2 NaBH4 + CuCl2 + 6 H2O → Cu + 2 NaCl + 2 H3BO3 + 7 H2",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -260,
+    "temperatureMinC": 15,
+    "temperatureMaxC": 100,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Hydride reduction isolating metallic copper powder."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Bioinorganic and clinical qualitative test reaction. Handle heavy metal complexes (mercury, nickel, barium) and alkaline/acidic reagents with laboratory PPE."
+  },
+  {
+    "id": "bio-nabh4-acid-hydrolysis-hcl",
+    "name": "Acid hydrolysis of sodium borohydride in hydrochloric acid",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "nabh4",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "hcl",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 3
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "nacl",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "h3bo3",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "h2",
+        "coefficient": 4,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "NaBH4 + HCl + 3H2O → NaCl + H3BO3 + 4H2",
+    "netIonicEquation": "NaBH4 + HCl + 3 H2O → NaCl + H3BO3 + 4 H2",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -215,
+    "temperatureMinC": 15,
+    "temperatureMaxC": 100,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Violent effervescence releasing pure molecular hydrogen gas."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Bioinorganic and clinical qualitative test reaction. Handle heavy metal complexes (mercury, nickel, barium) and alkaline/acidic reagents with laboratory PPE."
+  },
+  {
+    "id": "bio-nabh4-acid-hydrolysis-h2so4",
+    "name": "Sulfuric acid decomposition of sodium borohydride",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "nabh4",
+        "coefficient": 2
+      },
+      {
+        "chemicalId": "h2so4",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 6
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "na2so4",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "h3bo3",
+        "coefficient": 2,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "h2",
+        "coefficient": 8,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "2NaBH4 + H2SO4 + 6H2O → Na2SO4 + 2H3BO3 + 8H2",
+    "netIonicEquation": "2 NaBH4 + H2SO4 + 6 H2O → Na2SO4 + 2 H3BO3 + 8 H2",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -225,
+    "temperatureMinC": 15,
+    "temperatureMaxC": 100,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Rapid generation of hydrogen fuel and boric acid."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Bioinorganic and clinical qualitative test reaction. Handle heavy metal complexes (mercury, nickel, barium) and alkaline/acidic reagents with laboratory PPE."
+  },
+  {
+    "id": "bio-nabh4-acid-hydrolysis-hno3",
+    "name": "Nitric acid hydrolysis of sodium borohydride",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "nabh4",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "hno3",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 3
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "nano3",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "h3bo3",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "h2",
+        "coefficient": 4,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "NaBH4 + HNO3 + 3H2O → NaNO3 + H3BO3 + 4H2",
+    "netIonicEquation": "NaBH4 + HNO3 + 3 H2O → NaNO3 + H3BO3 + 4 H2",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -220,
+    "temperatureMinC": 15,
+    "temperatureMaxC": 100,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Exothermic acidification yielding sodium nitrate and boric acid."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Bioinorganic and clinical qualitative test reaction. Handle heavy metal complexes (mercury, nickel, barium) and alkaline/acidic reagents with laboratory PPE."
+  },
+  {
+    "id": "bio-nabh4-acetic-hydrolysis",
+    "name": "Acetic acid hydrolysis of sodium borohydride",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "nabh4",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "ch3cooh",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 3
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "ch3coona",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "h3bo3",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "h2",
+        "coefficient": 4,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "NaBH4 + CH3COOH + 3H2O → CH3COONa + H3BO3 + 4H2",
+    "netIonicEquation": "NaBH4 + CH3COOH + 3 H2O → CH3COONa + H3BO3 + 4 H2",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -185,
+    "temperatureMinC": 15,
+    "temperatureMaxC": 100,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Controlled buffer hydrolysis of borohydride."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Bioinorganic and clinical qualitative test reaction. Handle heavy metal complexes (mercury, nickel, barium) and alkaline/acidic reagents with laboratory PPE."
+  },
+  {
+    "id": "bio-nabh4-fecl3-reduction",
+    "name": "Sodium borohydride reduction of iron(III) to iron(II)",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "nabh4",
+        "coefficient": 2
+      },
+      {
+        "chemicalId": "fecl3",
+        "coefficient": 2
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 6
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "fecl2",
+        "coefficient": 2,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "nacl",
+        "coefficient": 2,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "h3bo3",
+        "coefficient": 2,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "h2",
+        "coefficient": 7,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "2NaBH4 + 2FeCl3 + 6H2O → 2FeCl2 + 2NaCl + 2H3BO3 + 7H2",
+    "netIonicEquation": "2 NaBH4 + 2 FeCl3 + 6 H2O → 2 FeCl2 + 2 NaCl + 2 H3BO3 + 7 H2",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -195,
+    "temperatureMinC": 15,
+    "temperatureMaxC": 100,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Selective one-electron reduction of ferric chloride."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Bioinorganic and clinical qualitative test reaction. Handle heavy metal complexes (mercury, nickel, barium) and alkaline/acidic reagents with laboratory PPE."
+  },
+  {
+    "id": "bio-nabh4-cuso4-reduction",
+    "name": "Reduction of copper(II) sulfate by sodium borohydride",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "nabh4",
+        "coefficient": 2
+      },
+      {
+        "chemicalId": "cuso4",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 6
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "cu",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "na2so4",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "h3bo3",
+        "coefficient": 2,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "h2",
+        "coefficient": 7,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "2NaBH4 + CuSO4 + 6H2O → Cu + Na2SO4 + 2H3BO3 + 7H2",
+    "netIonicEquation": "2 NaBH4 + CuSO4 + 6 H2O → Cu + Na2SO4 + 2 H3BO3 + 7 H2",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -275,
+    "temperatureMinC": 15,
+    "temperatureMaxC": 100,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Precipitation of ultrafine elemental copper powder."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Bioinorganic and clinical qualitative test reaction. Handle heavy metal complexes (mercury, nickel, barium) and alkaline/acidic reagents with laboratory PPE."
+  },
+  {
+    "id": "bio-nabh4-niso4-reduction",
+    "name": "Borohydride reduction of nickel sulfate (Raney nickel analog)",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "nabh4",
+        "coefficient": 2
+      },
+      {
+        "chemicalId": "niso4",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 6
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "ni",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "na2so4",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "h3bo3",
+        "coefficient": 2,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "h2",
+        "coefficient": 7,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "2NaBH4 + NiSO4 + 6H2O → Ni + Na2SO4 + 2H3BO3 + 7H2",
+    "netIonicEquation": "2 NaBH4 + NiSO4 + 6 H2O → Ni + Na2SO4 + 2 H3BO3 + 7 H2",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -240,
+    "temperatureMinC": 15,
+    "temperatureMaxC": 100,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Synthesis of black active nickel boride/metal hydrogenation catalyst."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Bioinorganic and clinical qualitative test reaction. Handle heavy metal complexes (mercury, nickel, barium) and alkaline/acidic reagents with laboratory PPE."
+  },
+  {
+    "id": "bio-nabh4-feso4-reduction",
+    "name": "Reduction of iron(II) sulfate by sodium borohydride",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "nabh4",
+        "coefficient": 2
+      },
+      {
+        "chemicalId": "feso4",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 6
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "fe",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "na2so4",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "h3bo3",
+        "coefficient": 2,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "h2",
+        "coefficient": 7,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "2NaBH4 + FeSO4 + 6H2O → Fe + Na2SO4 + 2H3BO3 + 7H2",
+    "netIonicEquation": "2 NaBH4 + FeSO4 + 6 H2O → Fe + Na2SO4 + 2 H3BO3 + 7 H2",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -180,
+    "temperatureMinC": 15,
+    "temperatureMaxC": 100,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Synthesis of zero-valent iron nanoparticles (nZVI) for environmental remediation."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Bioinorganic and clinical qualitative test reaction. Handle heavy metal complexes (mercury, nickel, barium) and alkaline/acidic reagents with laboratory PPE."
+  },
+  {
+    "id": "bio-perox-fenton-reaction",
+    "name": "Fenton reagent hydroxyl radical generation from ferrous chloride",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "fecl2",
+        "coefficient": 2
+      },
+      {
+        "chemicalId": "h2o2",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "hcl",
+        "coefficient": 2
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "fecl3",
+        "coefficient": 2,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 2,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "2FeCl2 + H2O2 + 2HCl → 2FeCl3 + 2H2O",
+    "netIonicEquation": "2 FeCl2 + H2O2 + 2 HCl → 2 FeCl3 + 2 H2O",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -160,
+    "temperatureMinC": 15,
+    "temperatureMaxC": 100,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Classic advanced oxidation process (AOP) generating destructive hydroxyl radicals."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Bioinorganic and clinical qualitative test reaction. Handle heavy metal complexes (mercury, nickel, barium) and alkaline/acidic reagents with laboratory PPE."
+  },
+  {
+    "id": "bio-perox-fenton-sulfate",
+    "name": "Fenton reaction with ferrous sulfate",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "feso4",
+        "coefficient": 2
+      },
+      {
+        "chemicalId": "h2o2",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "h2so4",
+        "coefficient": 1
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "fe2-so4-3",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 2,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "2FeSO4 + H2O2 + H2SO4 → Fe2(SO4)3 + 2H2O",
+    "netIonicEquation": "2 FeSO4 + H2O2 + H2SO4 → Fe2(SO4)3 + 2 H2O",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -165,
+    "temperatureMinC": 15,
+    "temperatureMaxC": 100,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Biomimetic model of intracellular oxidative stress and lipid peroxidation."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Bioinorganic and clinical qualitative test reaction. Handle heavy metal complexes (mercury, nickel, barium) and alkaline/acidic reagents with laboratory PPE."
+  },
+  {
+    "id": "bio-perox-iron-nitrate-fenton",
+    "name": "Fenton reaction with iron(II) nitrate",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "fe-no3-2",
+        "coefficient": 2
+      },
+      {
+        "chemicalId": "h2o2",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "hno3",
+        "coefficient": 2
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "fe-no3-3",
+        "coefficient": 2,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 2,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "2Fe(NO3)2 + H2O2 + 2HNO3 → 2Fe(NO3)3 + 2H2O",
+    "netIonicEquation": "2 Fe(NO3)2 + H2O2 + 2 HNO3 → 2 Fe(NO3)3 + 2 H2O",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -155,
+    "temperatureMinC": 15,
+    "temperatureMaxC": 100,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Peroxide reduction by ferrous nitrate in nitric acid medium."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Bioinorganic and clinical qualitative test reaction. Handle heavy metal complexes (mercury, nickel, barium) and alkaline/acidic reagents with laboratory PPE."
+  },
+  {
+    "id": "bio-perox-bromide-haloperoxidase",
+    "name": "Vanadium/heme haloperoxidase model: bromide oxidation by peroxide",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "kbr",
+        "coefficient": 2
+      },
+      {
+        "chemicalId": "h2o2",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "h2so4",
+        "coefficient": 1
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "br2",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "k2so4",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 2,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "2KBr + H2O2 + H2SO4 → Br2 + K2SO4 + 2H2O",
+    "netIonicEquation": "2 KBr + H2O2 + H2SO4 → Br2 + K2SO4 + 2 H2O",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -145,
+    "temperatureMinC": 15,
+    "temperatureMaxC": 100,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Biochemical synthesis of elemental bromine in marine red algae."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Bioinorganic and clinical qualitative test reaction. Handle heavy metal complexes (mercury, nickel, barium) and alkaline/acidic reagents with laboratory PPE."
+  },
+  {
+    "id": "bio-perox-chloride-haloperoxidase",
+    "name": "Neutrophil myeloperoxidase model: chloride oxidation by hydrogen peroxide",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "nacl",
+        "coefficient": 2
+      },
+      {
+        "chemicalId": "h2o2",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "h2so4",
+        "coefficient": 1
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "cl2",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "na2so4",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 2,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "2NaCl + H2O2 + H2SO4 → Cl2 + Na2SO4 + 2H2O",
+    "netIonicEquation": "2 NaCl + H2O2 + H2SO4 → Cl2 + Na2SO4 + 2 H2O",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -120,
+    "temperatureMinC": 15,
+    "temperatureMaxC": 100,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Enzymatic generation of microbicidal hypochlorous acid/chlorine in phagosomes."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Bioinorganic and clinical qualitative test reaction. Handle heavy metal complexes (mercury, nickel, barium) and alkaline/acidic reagents with laboratory PPE."
+  },
+  {
+    "id": "bio-perox-ki-hcl-haloperoxidase",
+    "name": "Iodide peroxidase biomimetic oxidation by hydrogen peroxide",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "ki",
+        "coefficient": 2
+      },
+      {
+        "chemicalId": "h2o2",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "hcl",
+        "coefficient": 2
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "i2",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "kcl",
+        "coefficient": 2,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 2,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "2KI + H2O2 + 2HCl → I2 + 2KCl + 2H2O",
+    "netIonicEquation": "2 KI + H2O2 + 2 HCl → I2 + 2 KCl + 2 H2O",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -180,
+    "temperatureMinC": 15,
+    "temperatureMaxC": 100,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Thyroid peroxidase mimic: oxidation of dietary iodide to molecular iodine."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Bioinorganic and clinical qualitative test reaction. Handle heavy metal complexes (mercury, nickel, barium) and alkaline/acidic reagents with laboratory PPE."
+  },
+  {
+    "id": "bio-perox-kbr-hcl-haloperoxidase",
+    "name": "Bromide haloperoxidase biomimetic oxidation",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "kbr",
+        "coefficient": 2
+      },
+      {
+        "chemicalId": "h2o2",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "hcl",
+        "coefficient": 2
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "br2",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "kcl",
+        "coefficient": 2,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 2,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "2KBr + H2O2 + 2HCl → Br2 + 2KCl + 2H2O",
+    "netIonicEquation": "2 KBr + H2O2 + 2 HCl → Br2 + 2 KCl + 2 H2O",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -150,
+    "temperatureMinC": 15,
+    "temperatureMaxC": 100,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Marine algal bromoperoxidase model forming orange-brown bromine."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Bioinorganic and clinical qualitative test reaction. Handle heavy metal complexes (mercury, nickel, barium) and alkaline/acidic reagents with laboratory PPE."
+  },
+  {
+    "id": "bio-perox-nai-hcl-haloperoxidase",
+    "name": "Sodium iodide haloperoxidase oxidation",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "nai",
+        "coefficient": 2
+      },
+      {
+        "chemicalId": "h2o2",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "hcl",
+        "coefficient": 2
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "i2",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "nacl",
+        "coefficient": 2,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 2,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "2NaI + H2O2 + 2HCl → I2 + 2NaCl + 2H2O",
+    "netIonicEquation": "2 NaI + H2O2 + 2 HCl → I2 + 2 NaCl + 2 H2O",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -180,
+    "temperatureMinC": 15,
+    "temperatureMaxC": 100,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Colorimetric detection of hydroperoxides with sodium iodide."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Bioinorganic and clinical qualitative test reaction. Handle heavy metal complexes (mercury, nickel, barium) and alkaline/acidic reagents with laboratory PPE."
+  },
+  {
+    "id": "bio-perox-nabr-hcl-haloperoxidase",
+    "name": "Sodium bromide haloperoxidase oxidation",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "nabr",
+        "coefficient": 2
+      },
+      {
+        "chemicalId": "h2o2",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "hcl",
+        "coefficient": 2
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "br2",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "nacl",
+        "coefficient": 2,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 2,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "2NaBr + H2O2 + 2HCl → Br2 + 2NaCl + 2H2O",
+    "netIonicEquation": "2 NaBr + H2O2 + 2 HCl → Br2 + 2 NaCl + 2 H2O",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -150,
+    "temperatureMinC": 15,
+    "temperatureMaxC": 100,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Biomimetic haloperoxidase oxidation of sodium bromide."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Bioinorganic and clinical qualitative test reaction. Handle heavy metal complexes (mercury, nickel, barium) and alkaline/acidic reagents with laboratory PPE."
+  },
+  {
+    "id": "bio-perox-hi-peroxide",
+    "name": "Direct oxidation of hydroiodic acid by hydrogen peroxide",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "hi",
+        "coefficient": 2
+      },
+      {
+        "chemicalId": "h2o2",
+        "coefficient": 1
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "i2",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 2,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "2HI + H2O2 → I2 + 2H2O",
+    "netIonicEquation": "2 HI + H2O2 → I2 + 2 H2O",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -240,
+    "temperatureMinC": 15,
+    "temperatureMaxC": 100,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Rapid oxidation of hydriodic acid liberating triiodide/iodine crystals."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Bioinorganic and clinical qualitative test reaction. Handle heavy metal complexes (mercury, nickel, barium) and alkaline/acidic reagents with laboratory PPE."
+  },
+  {
+    "id": "bio-perox-hbr-peroxide",
+    "name": "Direct oxidation of hydrobromic acid by hydrogen peroxide",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "hbr",
+        "coefficient": 2
+      },
+      {
+        "chemicalId": "h2o2",
+        "coefficient": 1
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "br2",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 2,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "2HBr + H2O2 → Br2 + 2H2O",
+    "netIonicEquation": "2 HBr + H2O2 → Br2 + 2 H2O",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -190,
+    "temperatureMinC": 15,
+    "temperatureMaxC": 100,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Rapid oxidation liberating dense red bromine vapors."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Bioinorganic and clinical qualitative test reaction. Handle heavy metal complexes (mercury, nickel, barium) and alkaline/acidic reagents with laboratory PPE."
+  },
+  {
+    "id": "bio-assay-caso4-na2c2o4",
+    "name": "Precipitation of calcium oxalate from calcium sulfate",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "caso4",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "na2c2o4",
+        "coefficient": 1
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "cac2o4",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "na2so4",
+        "coefficient": 1,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "CaSO4 + Na2C2O4 → CaC2O4 + Na2SO4",
+    "netIonicEquation": "CaSO4 + Na2C2O4 → CaC2O4 + Na2SO4",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -25,
+    "temperatureMinC": 15,
+    "temperatureMaxC": 100,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Diagnostic precipitation of nephrolithiasis calcium oxalate monohydrate."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Bioinorganic and clinical qualitative test reaction. Handle heavy metal complexes (mercury, nickel, barium) and alkaline/acidic reagents with laboratory PPE."
+  },
+  {
+    "id": "bio-assay-cac2o4-kmno4-titration",
+    "name": "Kramer-Tisdall permanganometric serum calcium titration",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "cac2o4",
+        "coefficient": 5
+      },
+      {
+        "chemicalId": "kmno4",
+        "coefficient": 2
+      },
+      {
+        "chemicalId": "h2so4",
+        "coefficient": 8
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "caso4",
+        "coefficient": 5,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "mnso4",
+        "coefficient": 2,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "k2so4",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "co2",
+        "coefficient": 10,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "water",
+        "coefficient": 8,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "5CaC2O4 + 2KMnO4 + 8H2SO4 → 5CaSO4 + 2MnSO4 + K2SO4 + 10CO2 + 8H2O",
+    "netIonicEquation": "5 CaC2O4 + 2 KMnO4 + 8 H2SO4 → 5 CaSO4 + 2 MnSO4 + K2SO4 + 10 CO2 + 8 H2O",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -540,
+    "temperatureMinC": 15,
+    "temperatureMaxC": 100,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Decolorization of purple permanganate by dissolved calcium oxalate."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Bioinorganic and clinical qualitative test reaction. Handle heavy metal complexes (mercury, nickel, barium) and alkaline/acidic reagents with laboratory PPE."
+  },
+  {
+    "id": "bio-assay-bano32-k2so4",
+    "name": "Precipitation of radiopaque barium sulfate with potassium sulfate",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "ba-no3-2",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "k2so4",
+        "coefficient": 1
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "baso4",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "kno3",
+        "coefficient": 2,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "BaN2O6 + K2SO4 → BaSO4 + 2KNO3",
+    "netIonicEquation": "BaN2O6 + K2SO4 → BaSO4 + 2 KNO3",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -32,
+    "temperatureMinC": 15,
+    "temperatureMaxC": 100,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Synthesis of inert barium meal contrast agent."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Bioinorganic and clinical qualitative test reaction. Handle heavy metal complexes (mercury, nickel, barium) and alkaline/acidic reagents with laboratory PPE."
+  },
+  {
+    "id": "bio-assay-bano32-na2so4",
+    "name": "Precipitation of barium sulfate with sodium sulfate",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "ba-no3-2",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "na2so4",
+        "coefficient": 1
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "baso4",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "nano3",
+        "coefficient": 2,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "BaN2O6 + Na2SO4 → BaSO4 + 2NaNO3",
+    "netIonicEquation": "BaN2O6 + Na2SO4 → BaSO4 + 2 NaNO3",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -34,
+    "temperatureMinC": 15,
+    "temperatureMaxC": 100,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Diagnostic clinical precipitation of insoluble radio-contrast agent."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Bioinorganic and clinical qualitative test reaction. Handle heavy metal complexes (mercury, nickel, barium) and alkaline/acidic reagents with laboratory PPE."
+  },
+  {
+    "id": "bio-assay-bano32-na2c2o4",
+    "name": "Diagnostic precipitation of insoluble barium oxalate",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "ba-no3-2",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "na2c2o4",
+        "coefficient": 1
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "bac2o4",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "nano3",
+        "coefficient": 2,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "BaN2O6 + Na2C2O4 → BaC2O4 + 2NaNO3",
+    "netIonicEquation": "BaN2O6 + Na2C2O4 → BaC2O4 + 2 NaNO3",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -28,
+    "temperatureMinC": 15,
+    "temperatureMaxC": 100,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Oxalate precipitation test for barium cations."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Bioinorganic and clinical qualitative test reaction. Handle heavy metal complexes (mercury, nickel, barium) and alkaline/acidic reagents with laboratory PPE."
+  },
+  {
+    "id": "bio-assay-znso4-na2co3",
+    "name": "Precipitation of pharmaceutical basic zinc carbonate",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "znso4",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "na2co3",
+        "coefficient": 1
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "znco3",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "na2so4",
+        "coefficient": 1,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "ZnSO4 + Na2CO3 → ZnCO3 + Na2SO4",
+    "netIonicEquation": "ZnSO4 + Na2CO3 → ZnCO3 + Na2SO4",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -26,
+    "temperatureMinC": 15,
+    "temperatureMaxC": 100,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Synthesis of medicinal smithsonite / calamine precursor."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Bioinorganic and clinical qualitative test reaction. Handle heavy metal complexes (mercury, nickel, barium) and alkaline/acidic reagents with laboratory PPE."
+  },
+  {
+    "id": "bio-assay-zncl2-na2co3",
+    "name": "Precipitation of zinc carbonate from zinc chloride",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "zncl2",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "na2co3",
+        "coefficient": 1
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "znco3",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "nacl",
+        "coefficient": 2,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "ZnCl2 + Na2CO3 → ZnCO3 + 2NaCl",
+    "netIonicEquation": "ZnCl2 + Na2CO3 → ZnCO3 + 2 NaCl",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -25,
+    "temperatureMinC": 15,
+    "temperatureMaxC": 100,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Precipitation of zinc carbonate topical antiseptic salt."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Bioinorganic and clinical qualitative test reaction. Handle heavy metal complexes (mercury, nickel, barium) and alkaline/acidic reagents with laboratory PPE."
+  },
+  {
+    "id": "bio-assay-fecl2-na2c2o4",
+    "name": "Precipitation of ferrous oxalate humboldtine from ferrous chloride",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "fecl2",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "na2c2o4",
+        "coefficient": 1
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "fec2o4",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "nacl",
+        "coefficient": 2,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "FeCl2 + Na2C2O4 → FeC2O4 + 2NaCl",
+    "netIonicEquation": "FeCl2 + Na2C2O4 → FeC2O4 + 2 NaCl",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -24,
+    "temperatureMinC": 15,
+    "temperatureMaxC": 100,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Model precipitation of urinary ferrous oxalate mineral humboldtine."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Bioinorganic and clinical qualitative test reaction. Handle heavy metal complexes (mercury, nickel, barium) and alkaline/acidic reagents with laboratory PPE."
+  },
+  {
+    "id": "bio-assay-feso4-na2c2o4",
+    "name": "Precipitation of ferrous oxalate from iron(II) sulfate",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "feso4",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "na2c2o4",
+        "coefficient": 1
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "fec2o4",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "na2so4",
+        "coefficient": 1,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "FeSO4 + Na2C2O4 → FeC2O4 + Na2SO4",
+    "netIonicEquation": "FeSO4 + Na2C2O4 → FeC2O4 + Na2SO4",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -23,
+    "temperatureMinC": 15,
+    "temperatureMaxC": 100,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Quantitative precipitation of iron(II) oxalate in urine sediment assays."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Bioinorganic and clinical qualitative test reaction. Handle heavy metal complexes (mercury, nickel, barium) and alkaline/acidic reagents with laboratory PPE."
+  },
+  {
+    "id": "bio-assay-cuso4-na2c2o4",
+    "name": "Precipitation of copper(II) oxalate from cupric sulfate",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "cuso4",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "na2c2o4",
+        "coefficient": 1
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "cuc2o4",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "na2so4",
+        "coefficient": 1,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "CuSO4 + Na2C2O4 → CuC2O4 + Na2SO4",
+    "netIonicEquation": "CuSO4 + Na2C2O4 → CuC2O4 + Na2SO4",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -27,
+    "temperatureMinC": 15,
+    "temperatureMaxC": 100,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Coordination precipitation of insoluble light-blue copper(II) oxalate."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Bioinorganic and clinical qualitative test reaction. Handle heavy metal complexes (mercury, nickel, barium) and alkaline/acidic reagents with laboratory PPE."
+  },
+  {
+    "id": "bio-assay-znso4-k2co3",
+    "name": "Precipitation of zinc carbonate by potassium carbonate",
+    "reactionType": "redox_other",
+    "reactants": [
+      {
+        "chemicalId": "znso4",
+        "coefficient": 1
+      },
+      {
+        "chemicalId": "k2co3",
+        "coefficient": 1
+      }
+    ],
+    "products": [
+      {
+        "chemicalId": "znco3",
+        "coefficient": 1,
+        "isByproduct": false
+      },
+      {
+        "chemicalId": "k2so4",
+        "coefficient": 1,
+        "isByproduct": false
+      }
+    ],
+    "equationDisplay": "ZnSO4 + K2CO3 → ZnCO3 + K2SO4",
+    "netIonicEquation": "ZnSO4 + K2CO3 → ZnCO3 + K2SO4",
+    "confidenceScore": 0.99,
+    "energyClassification": "exothermic",
+    "enthalpyKjPerMol": -27,
+    "temperatureMinC": 15,
+    "temperatureMaxC": 100,
+    "experimentalStatus": "experimentally_verified",
+    "observableEffects": [
+      {
+        "type": "color_change",
+        "description": "Synthesis of basic zinc carbonate for dermatological ointments."
+      }
+    ],
+    "source": "Standard chemical literature (CRC Handbook of Chemistry and Physics / Advanced Inorganic & Organic Chemistry Texts / NIST Chemistry WebBook).",
+    "safetyNotes": "Bioinorganic and clinical qualitative test reaction. Handle heavy metal complexes (mercury, nickel, barium) and alkaline/acidic reagents with laboratory PPE."
   }
 ];

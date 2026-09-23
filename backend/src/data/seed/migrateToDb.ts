@@ -1,8 +1,10 @@
 import { PrismaClient } from "@prisma/client";
 import { SEED_REACTIONS, type SeedReaction } from "./reactions.js";
 import { REACTIONS_BATCH_5 } from "./reactionsBatch5.js";
+import { REACTIONS_BATCH_6 } from "./reactionsBatch6.js";
 import { SEED_CHEMICALS, type SeedChemical } from "./chemicals.js";
 import { CHEMICALS_BATCH_5 } from "./chemicalsBatch5.js";
+import { CHEMICALS_BATCH_6 } from "./chemicalsBatch6.js";
 import { parseFormula } from "../../chemistry-engine/formulaParser.js";
 
 const prisma = new PrismaClient();
@@ -11,6 +13,7 @@ const prisma = new PrismaClient();
 const allChemicals = new Map<string, SeedChemical>();
 for (const c of SEED_CHEMICALS) allChemicals.set(c.id, c);
 for (const c of CHEMICALS_BATCH_5) allChemicals.set(c.id, c);
+for (const c of CHEMICALS_BATCH_6) allChemicals.set(c.id, c);
 
 /**
  * Normalizes a list of reactant chemical IDs into a sorted, deterministic key.
@@ -87,10 +90,11 @@ async function migrate() {
   console.log("   MIGRATING CHEMICAL REACTIONS TO SQLITE DB     ");
   console.log("=================================================\n");
 
-  const combinedReactions: SeedReaction[] = [...SEED_REACTIONS, ...REACTIONS_BATCH_5];
+  const combinedReactions: SeedReaction[] = [...SEED_REACTIONS, ...REACTIONS_BATCH_5, ...REACTIONS_BATCH_6];
   console.log(`Total candidate reactions to process: ${combinedReactions.length}`);
   console.log(`  - SEED_REACTIONS: ${SEED_REACTIONS.length}`);
-  console.log(`  - REACTIONS_BATCH_5: ${REACTIONS_BATCH_5.length}\n`);
+  console.log(`  - REACTIONS_BATCH_5: ${REACTIONS_BATCH_5.length}`);
+  console.log(`  - REACTIONS_BATCH_6: ${REACTIONS_BATCH_6.length}\n`);
 
   // Query existing records in database to ensure full idempotency (safe to re-run anytime)
   const existingRows = await prisma.reaction.findMany({
