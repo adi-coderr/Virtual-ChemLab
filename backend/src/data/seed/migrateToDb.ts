@@ -2,9 +2,11 @@ import { PrismaClient } from "@prisma/client";
 import { SEED_REACTIONS, type SeedReaction } from "./reactions.js";
 import { REACTIONS_BATCH_5 } from "./reactionsBatch5.js";
 import { REACTIONS_BATCH_6 } from "./reactionsBatch6.js";
+import { REACTIONS_BATCH_7 } from "./reactionsBatch7.js";
 import { SEED_CHEMICALS, type SeedChemical } from "./chemicals.js";
 import { CHEMICALS_BATCH_5 } from "./chemicalsBatch5.js";
 import { CHEMICALS_BATCH_6 } from "./chemicalsBatch6.js";
+import { CHEMICALS_BATCH_7 } from "./chemicalsBatch7.js";
 import { parseFormula } from "../../chemistry-engine/formulaParser.js";
 
 const prisma = new PrismaClient();
@@ -14,6 +16,7 @@ const allChemicals = new Map<string, SeedChemical>();
 for (const c of SEED_CHEMICALS) allChemicals.set(c.id, c);
 for (const c of CHEMICALS_BATCH_5) allChemicals.set(c.id, c);
 for (const c of CHEMICALS_BATCH_6) allChemicals.set(c.id, c);
+for (const c of CHEMICALS_BATCH_7) allChemicals.set(c.id, c);
 
 /**
  * Normalizes a list of reactant chemical IDs into a sorted, deterministic key.
@@ -90,11 +93,12 @@ async function migrate() {
   console.log("   MIGRATING CHEMICAL REACTIONS TO SQLITE DB     ");
   console.log("=================================================\n");
 
-  const combinedReactions: SeedReaction[] = [...SEED_REACTIONS, ...REACTIONS_BATCH_5, ...REACTIONS_BATCH_6];
+  const combinedReactions: SeedReaction[] = [...SEED_REACTIONS, ...REACTIONS_BATCH_5, ...REACTIONS_BATCH_6, ...REACTIONS_BATCH_7];
   console.log(`Total candidate reactions to process: ${combinedReactions.length}`);
   console.log(`  - SEED_REACTIONS: ${SEED_REACTIONS.length}`);
   console.log(`  - REACTIONS_BATCH_5: ${REACTIONS_BATCH_5.length}`);
-  console.log(`  - REACTIONS_BATCH_6: ${REACTIONS_BATCH_6.length}\n`);
+  console.log(`  - REACTIONS_BATCH_6: ${REACTIONS_BATCH_6.length}`);
+  console.log(`  - REACTIONS_BATCH_7: ${REACTIONS_BATCH_7.length}\n`);
 
   // Query existing records in database to ensure full idempotency (safe to re-run anytime)
   const existingRows = await prisma.reaction.findMany({
@@ -124,7 +128,19 @@ async function migrate() {
 
     // 2. Normalize reactant key
     const reactantKey = normalizeReactantKey(rxn.reactants);
-    if (existingKeys.has(reactantKey) || existingIds.has(rxn.id)) {
+    if (existingIds.has(rxn.id)) {
+      await prisma.reaction.update({
+        where: { id: rxn.id },
+        data: {
+          equation: rxn.equationDisplay,
+          products: rxn.products as any,
+          observations: (rxn.observableEffects || []) as any,
+        },
+      });
+      duplicateKeyCount++;
+      continue;
+    }
+    if (existingKeys.has(reactantKey)) {
       duplicateKeyCount++;
       continue;
     }
