@@ -3,6 +3,7 @@ import { SEED_CHEMICALS, type SeedChemical } from "./chemicals.js";
 import { CHEMICALS_BATCH_5 } from "./chemicalsBatch5.js";
 import { CHEMICALS_BATCH_6 } from "./chemicalsBatch6.js";
 import { CHEMICALS_BATCH_7 } from "./chemicalsBatch7.js";
+import { CHEMICALS_BATCH_8 } from "./chemicalsBatch8.js";
 import { parseFormula } from "../../chemistry-engine/formulaParser.js";
 
 const prisma = new PrismaClient();
@@ -12,6 +13,7 @@ for (const c of SEED_CHEMICALS) allChemicals.set(c.id, c);
 for (const c of CHEMICALS_BATCH_5) allChemicals.set(c.id, c);
 for (const c of CHEMICALS_BATCH_6) allChemicals.set(c.id, c);
 for (const c of CHEMICALS_BATCH_7) allChemicals.set(c.id, c);
+for (const c of CHEMICALS_BATCH_8) allChemicals.set(c.id, c);
 
 const VALID_REACTION_TYPES = new Set([
   "acid_base_neutralization",
