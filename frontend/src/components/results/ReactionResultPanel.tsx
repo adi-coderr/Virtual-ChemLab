@@ -11,6 +11,7 @@ import { MoleculeViewer } from "../molecule/MoleculeViewer";
 import { ProcessBreakdownPanel } from "./ProcessBreakdownPanel";
 import { Tabs } from "../common/Tabs";
 import { formatFormula } from "../../utils/formatFormula";
+import { useSettingsStore } from "../../state/settingsStore";
 import "./ReactionResultPanel.css";
 
 export function ReactionResultPanel({ result }: { result: SimulationResult }) {
@@ -18,6 +19,7 @@ export function ReactionResultPanel({ result }: { result: SimulationResult }) {
   const calorimetry = result.calorimetry ?? resolution.calorimetry;
   const [selectedChemical, setSelectedChemical] = useState<Chemical | null>(null);
   const [selectedId, setSelectedId] = useState<string | null>(null);
+  const openSettings = useSettingsStore((s) => s.openSettings);
 
   const registeredSpecies = [...resolution.reactants, ...resolution.products].filter((s) => s.isRegistered);
 
@@ -41,9 +43,41 @@ export function ReactionResultPanel({ result }: { result: SimulationResult }) {
   return (
     <div className="reaction-result">
       <div className="reaction-result__headline">
-        <ConfidenceBadge tier={resolution.confidenceTier} score={resolution.confidenceScore} />
+        <ConfidenceBadge
+          tier={resolution.confidenceTier}
+          score={resolution.confidenceScore}
+          aiProvider={resolution.aiProvider}
+          isAiPredicted={resolution.isAiPredicted}
+        />
         {resolution.reactionType && <span className="reaction-result__type">{resolution.reactionType.replace(/_/g, " ")}</span>}
       </div>
+
+      {resolution.isAiPredicted && (
+        <div className="reaction-result__ai-banner">
+          ✨ <strong>Dynamic AI Prediction:</strong> This reaction was not found in the 4,391 curated database records and was computed dynamically using {resolution.aiProvider || "the AI engine"}.
+        </div>
+      )}
+
+      {resolution.status === "UNSUPPORTED" && (
+        <div className="reaction-result__ai-key-prompt">
+          <div className="reaction-result__ai-key-prompt-header">
+            <span className="reaction-result__ai-key-icon">✨</span>
+            <div className="reaction-result__ai-key-prompt-content">
+              <strong>Reaction Not in Database — AI Prediction Ready</strong>
+              <p className="reaction-result__ai-key-prompt-desc">
+                This combination is not in our 4,391 curated database. Configure a free Google Gemini, OpenAI, or Claude API key to automatically predict this reaction in the background.
+              </p>
+            </div>
+          </div>
+          <button
+            type="button"
+            className="reaction-result__open-settings-btn"
+            onClick={openSettings}
+          >
+            Configure AI API Key
+          </button>
+        </div>
+      )}
 
       {resolution.balancedEquation ? (
         <EquationDisplay equation={resolution.balancedEquation} />

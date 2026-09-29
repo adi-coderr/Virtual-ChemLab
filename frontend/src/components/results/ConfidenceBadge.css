@@ -62,3 +62,14 @@
 .confidence-badge--unknown .confidence-badge__dot {
   background: var(--tier-unknown);
 }
+
+.confidence-badge--ai {
+  color: #7c3aed;
+  background: #f5f3ff;
+  border-color: #ddd6fe;
+  font-weight: 600;
+}
+.confidence-badge--ai .confidence-badge__dot--ai {
+  background: #8b5cf6;
+  box-shadow: 0 0 0 2px rgba(139, 92, 246, 0.25);
+}

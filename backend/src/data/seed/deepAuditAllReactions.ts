@@ -412,7 +412,7 @@ async function deepAudit() {
     try {
       const parsed = parseFormula(c.formula);
       const computedMass = computeMolarMass(parsed.composition);
-      if (c.molarMass && Math.abs(c.molarMass - computedMass) > 1.0) {
+      if ((c as any).molarMass && Math.abs((c as any).molarMass - computedMass) > 1.0) {
         // Warning if substantial discrepancy
         // console.log(`[Chem Mass Warning] ${id}: stored=${c.molarMass}, computed=${computedMass}`);
       }

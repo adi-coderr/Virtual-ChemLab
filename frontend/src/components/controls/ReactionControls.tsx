@@ -20,10 +20,20 @@ export function ReactionControls({ pendingChemical, onAdded }: { pendingChemical
 
   const addChemical = useLabStore((s) => s.addChemical);
   const isLoading = useLabStore((s) => s.isLoading);
+  const isAiAnalyzing = useLabStore((s) => s.isAiAnalyzing);
   const conditions = useLabStore((s) => s.conditions);
   const setConditions = useLabStore((s) => s.setConditions);
   const runReaction = useLabStore((s) => s.runReaction);
+  const previewReaction = useLabStore((s) => s.previewReaction);
   const activeContainer = useLabStore((s) => s.containers.find((c) => c.id === s.activeContainerId));
+
+  useEffect(() => {
+    if (!activeContainer || activeContainer.contents.length < 2) return;
+    const timer = setTimeout(() => {
+      previewReaction();
+    }, 400);
+    return () => clearTimeout(timer);
+  }, [activeContainer?.contents, conditions, previewReaction]);
 
   useEffect(() => {
     let cancelled = false;
@@ -208,8 +218,18 @@ export function ReactionControls({ pendingChemical, onAdded }: { pendingChemical
           <input type="text" value={conditions.solvent ?? ""} onChange={(e) => setConditions({ solvent: e.target.value })} placeholder="water" />
         </label>
       </div>
+      {isAiAnalyzing && (
+        <div className="reaction-controls__ai-analyzing-status">
+          <span className="reaction-controls__ai-sparkle">✨</span>
+          <span>AI agent analyzing mixture in background…</span>
+        </div>
+      )}
 
-      <Button variant="primary" disabled={isLoading || !activeContainer || activeContainer.contents.length === 0} onClick={() => runReaction()}>
+      <Button
+        variant="primary"
+        disabled={isLoading || !activeContainer || activeContainer.contents.length === 0}
+        onClick={() => runReaction()}
+      >
         {isLoading ? "Running\u2026" : "React"}
       </Button>
     </div>

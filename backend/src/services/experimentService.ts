@@ -44,7 +44,12 @@ export class ExperimentService {
    * from a direct API call or from the AI assistant's parsed intent -- so
    * there is no path for either to bypass validation (product brief section 33).
    */
-  applyAction(experimentId: string, actionType: ExperimentActionType, payload: Record<string, unknown>) {
+  async applyAction(
+    experimentId: string,
+    actionType: ExperimentActionType,
+    payload: Record<string, unknown>,
+    options?: { apiKey?: string; provider?: any }
+  ) {
     this.getById(experimentId); // throws if missing
 
     if (actionType === "ADD_CHEMICAL" || actionType === "REMOVE") {
@@ -57,9 +62,10 @@ export class ExperimentService {
     if (actionType === "RUN_REACTION") {
       const reactants = payload.reactants as { chemicalId: string; amount: number; unit: string; concentrationMolar?: number }[];
       const conditions = (payload.conditions as Record<string, unknown> | undefined) ?? {};
-      const simulationResult = this.simulationService.simulate(
+      const simulationResult = await this.simulationService.simulateWithAi(
         reactants as Parameters<SimulationService["simulate"]>[0],
-        conditions
+        conditions,
+        options
       );
       const action = this.repo.appendAction(experimentId, actionType, payload, simulationResult as unknown as Record<string, unknown>);
       return { action, simulationResult };

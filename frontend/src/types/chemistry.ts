@@ -168,6 +168,8 @@ export interface ReactionResolution {
   missingInfo?: string[];
   processExplanation?: string;
   processBreakdown?: ChemicalProcessBreakdown;
+  aiProvider?: string;
+  isAiPredicted?: boolean;
 }
 
 export interface StoichiometryLine {
@@ -196,6 +198,7 @@ export type Unit = "g" | "kg" | "mg" | "mol" | "mmol" | "mL" | "L";
 
 export interface ReactionInputSpecies {
   chemicalId: string;
+  formula?: string;
   amount: number;
   unit: Unit;
   concentrationMolar?: number;

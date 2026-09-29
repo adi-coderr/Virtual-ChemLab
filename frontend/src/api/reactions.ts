@@ -1,6 +1,25 @@
 import { apiClient } from "./client";
 import type { CuratedReaction, ReactionConditions, ReactionInputSpecies, SimulationResult } from "../types/chemistry";
 
+export interface PredictReactionResponse {
+  simulationResult: SimulationResult;
+  source: "curated_database" | "ai_predicted";
+}
+
+export interface AiStatusResponse {
+  serverKeysConfigured: {
+    gemini: boolean;
+    openai: boolean;
+    anthropic: boolean;
+  };
+  defaultProvider: "gemini" | "openai" | "anthropic";
+}
+
+export interface TestKeyResponse {
+  valid: boolean;
+  message: string;
+}
+
 export const reactionsApi = {
   list: async (limit = 50, offset = 0): Promise<{ items: CuratedReaction[]; total: number }> => {
     const res = await apiClient.get<CuratedReaction[]>(`/reactions?limit=${limit}&offset=${offset}`);
@@ -12,6 +31,28 @@ export const reactionsApi = {
   },
   simulate: async (reactants: ReactionInputSpecies[], conditions?: ReactionConditions): Promise<SimulationResult> => {
     const res = await apiClient.post<SimulationResult>("/reactions/simulate", { reactants, conditions });
+    return res.data;
+  },
+  predictReaction: async (
+    query: string,
+    conditions?: ReactionConditions,
+    apiKey?: string,
+    provider?: "gemini" | "openai" | "anthropic"
+  ): Promise<PredictReactionResponse> => {
+    const res = await apiClient.post<PredictReactionResponse>("/reactions/predict", {
+      query,
+      conditions,
+      apiKey,
+      provider,
+    });
+    return res.data;
+  },
+  getAiStatus: async (): Promise<AiStatusResponse> => {
+    const res = await apiClient.get<AiStatusResponse>("/reactions/ai-status");
+    return res.data;
+  },
+  testApiKey: async (provider: "gemini" | "openai" | "anthropic", apiKey: string): Promise<TestKeyResponse> => {
+    const res = await apiClient.post<TestKeyResponse>("/reactions/test-key", { provider, apiKey });
     return res.data;
   },
   balance: async (reactants: string[], products: string[]) => {

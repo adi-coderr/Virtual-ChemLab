@@ -73,7 +73,25 @@ export function ChemicalSearch({ onSelect }: { onSelect: (chemical: ChemicalSumm
         </ul>
       )}
       {debouncedQuery.trim().length > 0 && !isLoading && results.length === 0 && (
-        <p className="chemical-search__empty">No match in the database yet for &ldquo;{debouncedQuery}&rdquo;.</p>
+        <div className="chemical-search__empty-box">
+          <p className="chemical-search__empty">No match in curated database for &ldquo;{debouncedQuery}&rdquo;.</p>
+          <button
+            type="button"
+            className="chemical-search__add-custom"
+            onClick={() => {
+              const custom: ChemicalSummary = {
+                id: debouncedQuery.toLowerCase().replace(/[^a-z0-9]/g, "-"),
+                formula: debouncedQuery.trim(),
+                commonName: debouncedQuery.trim(),
+                chemicalClass: "other",
+                molarMass: 100,
+              };
+              onSelect(custom);
+            }}
+          >
+            ✨ Select &ldquo;{debouncedQuery}&rdquo; as custom chemical
+          </button>
+        </div>
       )}
     </div>
   );

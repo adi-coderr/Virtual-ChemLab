@@ -242,6 +242,7 @@ export interface CalorimetryResult {
 
 export interface ReactionInputSpecies {
   chemicalId: string;
+  formula?: string;
   amount: number;
   unit: "g" | "kg" | "mg" | "mol" | "mmol" | "mL" | "L";
   concentrationMolar?: number;
@@ -302,6 +303,8 @@ export interface ReactionResolution {
   missingInfo?: string[];
   processExplanation?: string;
   processBreakdown?: ChemicalProcessBreakdown;
+  aiProvider?: string;
+  isAiPredicted?: boolean;
 }
 
 export class ChemistryEngineError extends Error {

@@ -18,11 +18,25 @@ export interface ApiEnvelope<T> {
   total?: number;
 }
 
+function getAiHeaders(): Record<string, string> {
+  try {
+    const key = localStorage.getItem("chemlab_ai_key") || "";
+    const provider = localStorage.getItem("chemlab_ai_provider") || "gemini";
+    const headers: Record<string, string> = {};
+    if (key.trim()) headers["x-api-key"] = key.trim();
+    if (provider.trim()) headers["x-provider"] = provider.trim();
+    return headers;
+  } catch {
+    return {};
+  }
+}
+
 async function request<T>(path: string, init?: RequestInit): Promise<ApiEnvelope<T>> {
   const res = await fetch(`${BASE_URL}${path}`, {
     ...init,
     headers: {
       "Content-Type": "application/json",
+      ...getAiHeaders(),
       ...init?.headers,
     },
   });
@@ -44,5 +58,6 @@ async function request<T>(path: string, init?: RequestInit): Promise<ApiEnvelope
 
 export const apiClient = {
   get: <T>(path: string) => request<T>(path, { method: "GET" }),
-  post: <T>(path: string, body?: unknown) => request<T>(path, { method: "POST", body: body ? JSON.stringify(body) : undefined }),
+  post: <T>(path: string, body?: unknown, headers?: Record<string, string>) =>
+    request<T>(path, { method: "POST", body: body ? JSON.stringify(body) : undefined, headers }),
 };

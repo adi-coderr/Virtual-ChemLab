@@ -26,9 +26,11 @@ export class ExperimentController {
     res.json({ status: "ok", data: result.items, total: result.total });
   };
 
-  addAction = (req: Request, res: Response): void => {
+  addAction = async (req: Request, res: Response): Promise<void> => {
     const { actionType, payload } = req.body as { actionType: Parameters<ExperimentService["applyAction"]>[1]; payload: Record<string, unknown> };
-    const result = this.service.applyAction(req.params.id as string, actionType, payload);
+    const apiKey = (req.headers["x-api-key"] as string) || (payload?.apiKey as string);
+    const provider = (req.headers["x-provider"] as any) || (payload?.provider as any);
+    const result = await this.service.applyAction(req.params.id as string, actionType, payload, { apiKey, provider });
     res.status(201).json({ status: "ok", data: result });
   };
 

@@ -4,6 +4,7 @@ export const unitSchema = z.enum(["g", "kg", "mg", "mol", "mmol", "mL", "L"]);
 
 export const reactionInputSpeciesSchema = z.object({
   chemicalId: z.string().min(1),
+  formula: z.string().optional(),
   amount: z.number().positive(),
   unit: unitSchema,
   concentrationMolar: z.number().positive().optional(),
@@ -52,6 +53,7 @@ export const createExperimentSchema = z.object({
 
 const addChemicalPayloadSchema = z.object({
   chemicalId: z.string().min(1),
+  formula: z.string().optional(),
   amount: z.number().positive(),
   unit: unitSchema,
   concentrationMolar: z.number().positive().optional(),
@@ -84,4 +86,16 @@ export const experimentActionSchema = z.discriminatedUnion("actionType", [
 export const assistantParseSchema = z.object({
   text: z.string().min(1).max(2000),
   experimentId: z.string().optional(),
+});
+
+export const predictReactionSchema = z.object({
+  query: z.string().min(1).max(1000),
+  conditions: reactionConditionsSchema,
+  apiKey: z.string().optional(),
+  provider: z.enum(["gemini", "openai", "anthropic"]).optional(),
+});
+
+export const testApiKeySchema = z.object({
+  provider: z.enum(["gemini", "openai", "anthropic"]),
+  apiKey: z.string().min(1),
 });

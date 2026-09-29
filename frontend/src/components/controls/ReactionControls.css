@@ -146,3 +146,32 @@
   flex: 1;
 }
 
+.reaction-controls__ai-analyzing-status {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  font-size: var(--text-xs);
+  font-weight: 500;
+  color: #7c3aed;
+  background: rgba(124, 58, 237, 0.08);
+  border: 1px solid rgba(124, 58, 237, 0.2);
+  border-radius: var(--radius-md);
+  animation: pulse-ai-status 1.8s infinite ease-in-out;
+}
+
+.reaction-controls__ai-sparkle {
+  font-size: 14px;
+}
+
+@keyframes pulse-ai-status {
+  0%, 100% {
+    opacity: 0.85;
+    background: rgba(124, 58, 237, 0.08);
+  }
+  50% {
+    opacity: 1;
+    background: rgba(124, 58, 237, 0.16);
+  }
+}
+

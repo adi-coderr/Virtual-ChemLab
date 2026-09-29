@@ -1,5 +1,6 @@
 import { create } from "zustand";
 import { experimentsApi } from "../api/experiments";
+import { reactionsApi } from "../api/reactions";
 import type { ChemicalSummary, ReactionConditions, SimulationResult, Unit } from "../types/chemistry";
 import type { Container, ContainerContent, EquipmentType, TimelineEntry } from "../types/experiment";
 
@@ -38,6 +39,7 @@ interface LabState {
   history: { containers: Container[]; timeline: TimelineEntry[] }[];
   conditions: ReactionConditions;
   isLoading: boolean;
+  isAiAnalyzing: boolean;
   error: string | null;
 
   initExperiment: () => Promise<void>;
@@ -51,6 +53,7 @@ interface LabState {
   cool: (targetTemperatureC: number) => Promise<void>;
   setConditions: (conditions: ReactionConditions) => void;
   runReaction: () => Promise<void>;
+  previewReaction: () => Promise<void>;
   resetExperiment: () => Promise<void>;
   undo: () => void;
   clearError: () => void;
@@ -105,6 +108,7 @@ export const useLabStore = create<LabState>((set, get) => ({
   history: [],
   conditions: { temperatureC: 25, solvent: "water" },
   isLoading: false,
+  isAiAnalyzing: false,
   error: null,
 
   initExperiment: async () => {
@@ -308,6 +312,7 @@ export const useLabStore = create<LabState>((set, get) => ({
       const consolidated = consolidateContents(container.contents);
       const reactants = consolidated.map((c) => ({
         chemicalId: c.chemicalId,
+        formula: c.formula,
         amount: c.amount,
         unit: c.unit,
         concentrationMolar: c.concentrationMolar,
@@ -348,7 +353,7 @@ export const useLabStore = create<LabState>((set, get) => ({
                 chemicalId: p.chemicalId,
                 commonName: p.commonName,
                 formula: p.formula,
-                amount: mass > 0 ? parseFloat(mass.toFixed(4)) : 0.1,
+                amount: mass > 0 ? parseFloat(mass.toFixed(4)) : Math.max(0.1, (p.coefficient || 1) * 2),
                 unit: "g" as Unit,
               };
             })
@@ -404,10 +409,37 @@ export const useLabStore = create<LabState>((set, get) => ({
           lastSimulationResult: simulationResult,
           lastReactionContainerId: container.id,
           isLoading: false,
+          isAiAnalyzing: false,
         };
       });
     } catch (err) {
-      set({ isLoading: false, error: err instanceof Error ? err.message : "Failed to run reaction" });
+      set({ isLoading: false, isAiAnalyzing: false, error: err instanceof Error ? err.message : "Failed to run reaction" });
+    }
+  },
+
+  previewReaction: async () => {
+    const state = get();
+    const container = state.containers.find((c) => c.id === state.activeContainerId);
+    if (!container || container.contents.length < 2) return;
+
+    const consolidated = consolidateContents(container.contents);
+    const reactants = consolidated.map((c) => ({
+      chemicalId: c.chemicalId,
+      formula: c.formula,
+      amount: c.amount,
+      unit: c.unit,
+      concentrationMolar: c.concentrationMolar,
+    }));
+
+    set({ isAiAnalyzing: true });
+    try {
+      const simResult = await reactionsApi.simulate(reactants, state.conditions);
+      set({
+        lastSimulationResult: simResult,
+        isAiAnalyzing: false,
+      });
+    } catch {
+      set({ isAiAnalyzing: false });
     }
   },
 

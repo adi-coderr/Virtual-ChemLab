@@ -7,6 +7,9 @@ export interface AppConfig {
   corsOrigin: string;
   nodeEnv: "development" | "production" | "test";
   anthropicApiKey?: string;
+  geminiApiKey?: string;
+  openaiApiKey?: string;
+  defaultAiProvider?: "gemini" | "openai" | "anthropic";
 }
 
 let cached: AppConfig | undefined;
@@ -22,6 +25,9 @@ export function getConfig(): AppConfig {
     corsOrigin: process.env.CORS_ORIGIN ?? "http://localhost:5173",
     nodeEnv,
     anthropicApiKey: process.env.ANTHROPIC_API_KEY,
+    geminiApiKey: process.env.GEMINI_API_KEY,
+    openaiApiKey: process.env.OPENAI_API_KEY,
+    defaultAiProvider: (process.env.DEFAULT_AI_PROVIDER as any) ?? "gemini",
   };
   return cached;
 }

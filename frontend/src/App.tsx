@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useLabStore } from "./state/experimentStore";
+import { useSettingsStore } from "./state/settingsStore";
 import { AppShell } from "./components/layout/AppShell";
 import { ChemicalSearch } from "./components/search/ChemicalSearch";
 import { EquipmentPanel } from "./components/equipment/EquipmentPanel";
@@ -8,6 +9,7 @@ import { LabBench } from "./components/lab/LabBench";
 import { Timeline } from "./components/timeline/Timeline";
 import { ReactionResultPanel } from "./components/results/ReactionResultPanel";
 import { AIAssistant } from "./components/assistant/AIAssistant";
+import { AiSettingsModal } from "./components/settings/AiSettingsModal";
 import { Tabs } from "./components/common/Tabs";
 import { Spinner } from "./components/common/Badge";
 import type { ChemicalSummary } from "./types/chemistry";
@@ -21,11 +23,13 @@ export default function App() {
   const error = useLabStore((s) => s.error);
   const clearError = useLabStore((s) => s.clearError);
   const addEquipment = useLabStore((s) => s.addEquipment);
+  const loadSettings = useSettingsStore((s) => s.loadSettings);
 
   const [pendingChemical, setPendingChemical] = useState<ChemicalSummary | null>(null);
 
   useEffect(() => {
     initExperiment();
+    loadSettings();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -68,7 +72,9 @@ export default function App() {
                 content: lastSimulationResult ? (
                   <ReactionResultPanel result={lastSimulationResult} />
                 ) : (
-                  <p className="app-right-placeholder">Run a reaction to see the balanced equation, products, and properties here.</p>
+                  <p className="app-right-placeholder">
+                    Select chemicals into a container to run or preview the reaction. If the reaction is not in the database, the AI agent will predict all products and properties in the background.
+                  </p>
                 ),
               },
               { id: "assistant", label: "Assistant", content: <AIAssistant /> },
@@ -77,6 +83,7 @@ export default function App() {
         }
         bottom={<Timeline />}
       />
+      <AiSettingsModal />
       {error && (
         <div className="app-error-toast" role="alert">
           {error}

@@ -3,6 +3,8 @@ import type Database from "better-sqlite3";
 import { ReactionService } from "../services/reactionService.js";
 import { SimulationService } from "../services/simulationService.js";
 import { ChemicalService } from "../services/chemicalService.js";
+import { aiReactionPredictor } from "../services/aiReactionPredictor.js";
+import { getConfig } from "../config/env.js";
 import { computeStoichiometry, computePercentageYield } from "../chemistry-engine/stoichiometry.js";
 
 export class ReactionController {
@@ -34,12 +36,51 @@ export class ReactionController {
     res.json({ status: "ok", data: result });
   };
 
-  simulate = (req: Request, res: Response): void => {
+  simulate = async (req: Request, res: Response): Promise<void> => {
     const { reactants, conditions } = req.body as {
       reactants: Parameters<SimulationService["simulate"]>[0];
       conditions?: Parameters<SimulationService["simulate"]>[1];
     };
-    const result = this.simulationService.simulate(reactants, conditions ?? {});
+    const apiKey = (req.headers["x-api-key"] as string) || (req.body?.apiKey as string);
+    const provider = (req.headers["x-provider"] as any) || (req.body?.provider as any);
+    const result = await this.simulationService.simulateWithAi(reactants, conditions ?? {}, { apiKey, provider });
+    res.json({ status: "ok", data: result });
+  };
+
+  predict = async (req: Request, res: Response): Promise<void> => {
+    const { query, conditions, apiKey, provider } = req.body as {
+      query: string;
+      conditions?: any;
+      apiKey?: string;
+      provider?: any;
+    };
+    const resolvedApiKey = (req.headers["x-api-key"] as string) || apiKey;
+    const resolvedProvider = (req.headers["x-provider"] as any) || provider;
+    const result = await this.simulationService.predictAny(query, conditions ?? {}, {
+      apiKey: resolvedApiKey,
+      provider: resolvedProvider,
+    });
+    res.json({ status: "ok", data: result });
+  };
+
+  getAiStatus = (_req: Request, res: Response): void => {
+    const config = getConfig();
+    res.json({
+      status: "ok",
+      data: {
+        serverKeysConfigured: {
+          gemini: !!config.geminiApiKey,
+          openai: !!config.openaiApiKey,
+          anthropic: !!config.anthropicApiKey,
+        },
+        defaultProvider: config.defaultAiProvider || "gemini",
+      },
+    });
+  };
+
+  testKey = async (req: Request, res: Response): Promise<void> => {
+    const { provider, apiKey } = req.body as { provider: any; apiKey: string };
+    const result = await aiReactionPredictor.testApiKey(provider, apiKey);
     res.json({ status: "ok", data: result });
   };
 

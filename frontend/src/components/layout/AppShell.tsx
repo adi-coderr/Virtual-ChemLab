@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect, useCallback, type ReactNode } from "react";
+import { useSettingsStore } from "../../state/settingsStore";
 import "./AppShell.css";
 
 export const DEFAULT_RIGHT_WIDTH = 380;
@@ -19,6 +20,7 @@ export function AppShell({
   bottom: ReactNode;
   onReset: () => void;
 }) {
+  const openSettings = useSettingsStore((s) => s.openSettings);
   const [rightWidth, setRightWidth] = useState<number>(DEFAULT_RIGHT_WIDTH);
   const [isDragging, setIsDragging] = useState(false);
   const dragStartRef = useRef<{ startX: number; startWidth: number }>({ startX: 0, startWidth: DEFAULT_RIGHT_WIDTH });
@@ -125,9 +127,19 @@ export function AppShell({
           <span className="app-shell__title">Virtual Chemistry Laboratory</span>
           <span className="app-shell__version mono">engine v0.1</span>
         </div>
-        <button className="app-shell__reset" onClick={onReset}>
-          Reset experiment
-        </button>
+        <div className="app-shell__header-actions">
+          <button
+            type="button"
+            className="app-shell__ai-settings-btn"
+            onClick={openSettings}
+            title="Configure AI API Key (Google Gemini, OpenAI, Claude)"
+          >
+            ✨ AI Settings
+          </button>
+          <button className="app-shell__reset" onClick={onReset}>
+            Reset experiment
+          </button>
+        </div>
       </header>
       <div className="app-shell__body">
         <aside className="app-shell__left">{left}</aside>
