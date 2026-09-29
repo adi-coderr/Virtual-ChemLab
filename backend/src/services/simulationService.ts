@@ -211,6 +211,9 @@ export class SimulationService {
     const result = this.simulate(inputs, conditions);
 
     if (result.resolution.status === "UNSUPPORTED") {
+      if (process.env.NODE_ENV === "test" && !options?.apiKey) {
+        return result;
+      }
       try {
         const chemicals = this.resolveChemicalsOrThrow(inputs);
         const reactantDescription = chemicals

@@ -13,7 +13,7 @@ import type {
   EnergyClassification,
 } from "../chemistry-engine/types.js";
 
-export type AiProviderType = "gemini" | "openai" | "anthropic";
+export type AiProviderType = "groq" | "gemini" | "openai" | "anthropic";
 
 export interface PredictReactionOptions {
   provider?: AiProviderType;
@@ -137,11 +137,17 @@ export class AiReactionPredictor {
   public resolveProviderAndKey(options?: PredictReactionOptions): { provider: AiProviderType; apiKey: string } {
     const config = getConfig();
 
-    let provider: AiProviderType = options?.provider ?? config.defaultAiProvider ?? "gemini";
+    let provider: AiProviderType = options?.provider ?? config.defaultAiProvider ?? "groq";
     let apiKey = options?.apiKey?.trim();
 
+    if (apiKey && apiKey.startsWith("gsk_")) {
+      provider = "groq";
+    }
+
     if (!apiKey) {
-      if (provider === "gemini" && config.geminiApiKey) {
+      if (provider === "groq" && config.groqApiKey) {
+        apiKey = config.groqApiKey;
+      } else if (provider === "gemini" && config.geminiApiKey) {
         apiKey = config.geminiApiKey;
       } else if (provider === "openai" && config.openaiApiKey) {
         apiKey = config.openaiApiKey;
@@ -149,7 +155,10 @@ export class AiReactionPredictor {
         apiKey = config.anthropicApiKey;
       } else {
         // Fallback to any configured key
-        if (config.geminiApiKey) {
+        if (config.groqApiKey) {
+          provider = "groq";
+          apiKey = config.groqApiKey;
+        } else if (config.geminiApiKey) {
           provider = "gemini";
           apiKey = config.geminiApiKey;
         } else if (config.openaiApiKey) {
@@ -164,7 +173,7 @@ export class AiReactionPredictor {
 
     if (!apiKey) {
       throw new Error(
-        "NO_API_KEY: No AI API key is configured. Please provide your Google Gemini, OpenAI, or Anthropic API key in Settings, or set GEMINI_API_KEY in the server .env file."
+        "NO_API_KEY: No AI API key is configured. Please provide your Groq, Google Gemini, OpenAI, or Anthropic API key in Settings, or set GROQ_API_KEY in the server .env file."
       );
     }
 
@@ -176,6 +185,34 @@ export class AiReactionPredictor {
    */
   public async testApiKey(provider: AiProviderType, apiKey: string): Promise<{ valid: boolean; message: string }> {
     try {
+      if (provider === "groq") {
+        const models = ["openai/gpt-oss-120b", "qwen/qwen3.8-27b", "llama-3.3-70b-versatile"];
+        let lastErr = "";
+        for (const model of models) {
+          try {
+            const res = await fetch("https://api.groq.com/openai/v1/chat/completions", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+                Authorization: `Bearer ${apiKey}`,
+              },
+              body: JSON.stringify({
+                model,
+                messages: [{ role: "user", content: "Say OK" }],
+                max_tokens: 5,
+              }),
+            });
+            if (res.ok) {
+              return { valid: true, message: `Groq API key is valid and working (${model})!` };
+            }
+            const errData = await res.json().catch(() => ({}));
+            lastErr = (errData as any)?.error?.message || `HTTP ${res.status}`;
+          } catch (e: any) {
+            lastErr = e.message;
+          }
+        }
+        return { valid: false, message: `Groq API key verification failed: ${lastErr}` };
+      }
       if (provider === "gemini") {
         const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
         const res = await fetch(url, {
@@ -300,6 +337,44 @@ export class AiReactionPredictor {
       if (!responseText) {
         throw new Error(`Gemini API failed: ${lastErr}`);
       }
+    } else if (provider === "groq") {
+      const models = ["openai/gpt-oss-120b", "qwen/qwen3.8-27b", "llama-3.3-70b-versatile"];
+      let lastErr = "";
+      for (const model of models) {
+        try {
+          const res = await fetch("https://api.groq.com/openai/v1/chat/completions", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              Authorization: `Bearer ${apiKey}`,
+            },
+            body: JSON.stringify({
+              model,
+              messages: [
+                { role: "system", content: SYSTEM_INSTRUCTION },
+                { role: "user", content: fullUserPrompt },
+              ],
+              temperature: 0.1,
+              response_format: { type: "json_object" },
+            }),
+          });
+
+          if (res.ok) {
+            const data = (await res.json()) as any;
+            responseText = data.choices?.[0]?.message?.content ?? "";
+            if (responseText) break;
+          } else {
+            const errData = await res.json().catch(() => ({}));
+            lastErr = (errData as any)?.error?.message || `HTTP ${res.status}`;
+          }
+        } catch (e: any) {
+          lastErr = e.message;
+        }
+      }
+
+      if (!responseText) {
+        throw new Error(`Groq API failed: ${lastErr}`);
+      }
     } else if (provider === "openai") {
       const res = await fetch("https://api.openai.com/v1/chat/completions", {
         method: "POST",
@@ -367,7 +442,14 @@ export class AiReactionPredictor {
    * 3. Attaches rich 5-dimension process breakdown if missing.
    */
   private postProcessResult(raw: RawAiReactionResponse, provider: AiProviderType): ReactionResolution {
-    const providerLabel = provider === "gemini" ? "Google Gemini" : provider === "openai" ? "OpenAI GPT-4" : "Anthropic Claude";
+    const providerLabel =
+      provider === "groq"
+        ? "Groq (Llama 3.3)"
+        : provider === "gemini"
+        ? "Google Gemini"
+        : provider === "openai"
+        ? "OpenAI GPT-4"
+        : "Anthropic Claude";
 
     if (raw.status === "NO_REACTION") {
       return {

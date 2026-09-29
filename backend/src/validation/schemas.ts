@@ -92,10 +92,10 @@ export const predictReactionSchema = z.object({
   query: z.string().min(1).max(1000),
   conditions: reactionConditionsSchema,
   apiKey: z.string().optional(),
-  provider: z.enum(["gemini", "openai", "anthropic"]).optional(),
+  provider: z.enum(["groq", "gemini", "openai", "anthropic"]).optional(),
 });
 
 export const testApiKeySchema = z.object({
-  provider: z.enum(["gemini", "openai", "anthropic"]),
+  provider: z.enum(["groq", "gemini", "openai", "anthropic"]),
   apiKey: z.string().min(1),
 });

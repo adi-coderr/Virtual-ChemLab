@@ -1,7 +1,7 @@
 import { create } from "zustand";
 import { reactionsApi, type AiStatusResponse } from "../api/reactions";
 
-export type AiProvider = "gemini" | "openai" | "anthropic";
+export type AiProvider = "groq" | "gemini" | "openai" | "anthropic";
 
 interface SettingsState {
   isSettingsOpen: boolean;
@@ -23,7 +23,7 @@ interface SettingsState {
 
 export const useSettingsStore = create<SettingsState>((set, get) => ({
   isSettingsOpen: false,
-  provider: (localStorage.getItem("chemlab_ai_provider") as AiProvider) || "gemini",
+  provider: (localStorage.getItem("chemlab_ai_provider") as AiProvider) || "groq",
   apiKey: localStorage.getItem("chemlab_ai_key") || "",
   serverStatus: null,
   isTesting: false,
@@ -38,7 +38,18 @@ export const useSettingsStore = create<SettingsState>((set, get) => ({
   },
 
   setApiKey: (apiKey) => {
-    set({ apiKey, testResult: null });
+    let detectedProvider: AiProvider | undefined;
+    const trimmed = apiKey.trim();
+    if (trimmed.startsWith("gsk_")) detectedProvider = "groq";
+    else if (trimmed.startsWith("AIza")) detectedProvider = "gemini";
+    else if (trimmed.startsWith("sk-ant-")) detectedProvider = "anthropic";
+    else if (trimmed.startsWith("sk-")) detectedProvider = "openai";
+
+    set((state) => ({
+      apiKey,
+      provider: detectedProvider ?? state.provider,
+      testResult: null,
+    }));
   },
 
   loadSettings: async () => {

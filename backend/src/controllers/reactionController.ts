@@ -69,11 +69,12 @@ export class ReactionController {
       status: "ok",
       data: {
         serverKeysConfigured: {
+          groq: !!config.groqApiKey,
           gemini: !!config.geminiApiKey,
           openai: !!config.openaiApiKey,
           anthropic: !!config.anthropicApiKey,
         },
-        defaultProvider: config.defaultAiProvider || "gemini",
+        defaultProvider: config.defaultAiProvider || "groq",
       },
     });
   };

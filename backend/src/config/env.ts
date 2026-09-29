@@ -9,7 +9,8 @@ export interface AppConfig {
   anthropicApiKey?: string;
   geminiApiKey?: string;
   openaiApiKey?: string;
-  defaultAiProvider?: "gemini" | "openai" | "anthropic";
+  groqApiKey?: string;
+  defaultAiProvider?: "groq" | "gemini" | "openai" | "anthropic";
 }
 
 let cached: AppConfig | undefined;
@@ -27,7 +28,8 @@ export function getConfig(): AppConfig {
     anthropicApiKey: process.env.ANTHROPIC_API_KEY,
     geminiApiKey: process.env.GEMINI_API_KEY,
     openaiApiKey: process.env.OPENAI_API_KEY,
-    defaultAiProvider: (process.env.DEFAULT_AI_PROVIDER as any) ?? "gemini",
+    groqApiKey: process.env.GROQ_API_KEY,
+    defaultAiProvider: (process.env.DEFAULT_AI_PROVIDER as any) ?? "groq",
   };
   return cached;
 }

@@ -8,11 +8,12 @@ export interface PredictReactionResponse {
 
 export interface AiStatusResponse {
   serverKeysConfigured: {
+    groq: boolean;
     gemini: boolean;
     openai: boolean;
     anthropic: boolean;
   };
-  defaultProvider: "gemini" | "openai" | "anthropic";
+  defaultProvider: "groq" | "gemini" | "openai" | "anthropic";
 }
 
 export interface TestKeyResponse {
@@ -37,7 +38,7 @@ export const reactionsApi = {
     query: string,
     conditions?: ReactionConditions,
     apiKey?: string,
-    provider?: "gemini" | "openai" | "anthropic"
+    provider?: "groq" | "gemini" | "openai" | "anthropic"
   ): Promise<PredictReactionResponse> => {
     const res = await apiClient.post<PredictReactionResponse>("/reactions/predict", {
       query,
@@ -51,7 +52,7 @@ export const reactionsApi = {
     const res = await apiClient.get<AiStatusResponse>("/reactions/ai-status");
     return res.data;
   },
-  testApiKey: async (provider: "gemini" | "openai" | "anthropic", apiKey: string): Promise<TestKeyResponse> => {
+  testApiKey: async (provider: "groq" | "gemini" | "openai" | "anthropic", apiKey: string): Promise<TestKeyResponse> => {
     const res = await apiClient.post<TestKeyResponse>("/reactions/test-key", { provider, apiKey });
     return res.data;
   },

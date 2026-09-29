@@ -5,9 +5,16 @@ import "./AiSettingsModal.css";
 
 const PROVIDERS: { id: AiProvider; name: string; tag: string; description: string; keyUrl: string }[] = [
   {
+    id: "groq",
+    name: "Groq",
+    tag: "Ultra-Fast / Free Tier",
+    description: "Lightning-fast inference (300+ tok/s) with Llama 3.3 70B. Generous free tier.",
+    keyUrl: "https://console.groq.com/keys",
+  },
+  {
     id: "gemini",
     name: "Google Gemini",
-    tag: "Recommended / Free Tier",
+    tag: "Free Tier / Fast",
     description: "Ultra-fast response times & generous free tier via Google AI Studio.",
     keyUrl: "https://aistudio.google.com/app/apikey",
   },
