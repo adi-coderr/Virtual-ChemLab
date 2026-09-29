@@ -1,33 +1,55 @@
 .equation-display {
-  font-size: var(--text-lg);
+  font-size: 1.15rem;
   font-weight: 500;
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
-  gap: var(--space-2);
+  gap: 6px;
   color: var(--ink-950);
+  line-height: 1.6;
+}
+
+.equation-display sub {
+  font-size: 0.72em;
+  vertical-align: -0.22em;
+  line-height: 0;
+}
+
+.equation-display sup {
+  font-size: 0.72em;
+  vertical-align: 0.42em;
+  line-height: 0;
+  font-weight: 600;
 }
 
 .equation-display__side {
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
-  gap: var(--space-2);
+  gap: 6px;
 }
 
 .equation-display__arrow {
   color: var(--azure-600);
-  margin: 0 var(--space-1);
-  font-size: var(--text-xl);
+  margin: 0 4px;
+  font-size: 1.25rem;
+  font-weight: 600;
 }
 
 .equation-display__plus {
-  margin: 0 var(--space-2);
+  margin: 0 4px;
   color: var(--graphite-400);
+  font-weight: 500;
+}
+
+.equation-display__term {
+  display: inline-flex;
+  align-items: baseline;
+  white-space: nowrap;
 }
 
 .equation-display__coefficient {
-  color: var(--amber-700);
+  color: #b45309;
   margin-right: 2px;
   font-weight: 700;
 }

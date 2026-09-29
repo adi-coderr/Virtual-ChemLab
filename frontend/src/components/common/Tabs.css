@@ -12,6 +12,12 @@
   flex-shrink: 0;
   overflow-x: auto;
   min-width: 0;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+}
+
+.tabs__list::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
 }
 
 .tabs__tab {
@@ -24,8 +30,9 @@
   font-weight: 500;
   color: var(--graphite-600);
   white-space: nowrap;
-  transition: color var(--transition-fast), border-color var(--transition-fast);
+  transition: color var(--transition-fast), border-color var(--transition-fast), background var(--transition-fast);
   flex-shrink: 0;
+  cursor: pointer;
 }
 
 .tabs__tab:hover {
@@ -35,6 +42,7 @@
 .tabs__tab--active {
   color: var(--azure-700);
   border-bottom-color: var(--azure-600);
+  font-weight: 600;
 }
 
 .tabs__panel {

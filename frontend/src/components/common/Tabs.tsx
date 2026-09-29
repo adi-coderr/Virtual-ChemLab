@@ -7,12 +7,20 @@ export interface TabDef {
   content: ReactNode;
 }
 
-export function Tabs({ tabs, defaultTabId }: { tabs: TabDef[]; defaultTabId?: string }) {
+export function Tabs({
+  tabs,
+  defaultTabId,
+  className,
+}: {
+  tabs: TabDef[];
+  defaultTabId?: string;
+  className?: string;
+}) {
   const [activeId, setActiveId] = useState(defaultTabId ?? tabs[0]?.id);
   const active = tabs.find((t) => t.id === activeId) ?? tabs[0];
 
   return (
-    <div className="tabs">
+    <div className={`tabs ${className ?? ""}`}>
       <div className="tabs__list" role="tablist">
         {tabs.map((tab) => (
           <button

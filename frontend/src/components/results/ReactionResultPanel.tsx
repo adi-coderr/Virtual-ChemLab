@@ -40,8 +40,14 @@ export function ReactionResultPanel({ result }: { result: SimulationResult }) {
     };
   }, [selectedId]);
 
+  // Filter out redundant AI engine notes from warnings if already displayed in AI banner
+  const displayWarnings = resolution.warnings.filter(
+    (w) => !w.toLowerCase().includes("dynamically predicted by")
+  );
+
   return (
     <div className="reaction-result">
+      {/* 1. Header with Confidence & Reaction Type */}
       <div className="reaction-result__headline">
         <ConfidenceBadge
           tier={resolution.confidenceTier}
@@ -49,23 +55,30 @@ export function ReactionResultPanel({ result }: { result: SimulationResult }) {
           aiProvider={resolution.aiProvider}
           isAiPredicted={resolution.isAiPredicted}
         />
-        {resolution.reactionType && <span className="reaction-result__type">{resolution.reactionType.replace(/_/g, " ")}</span>}
+        {resolution.reactionType && (
+          <span className="reaction-result__type">{resolution.reactionType.replace(/_/g, " ")}</span>
+        )}
       </div>
 
+      {/* 2. Dynamic AI Prediction Banner */}
       {resolution.isAiPredicted && (
         <div className="reaction-result__ai-banner">
-          ✨ <strong>Dynamic AI Prediction:</strong> This reaction was not found in the 4,391 curated database records and was computed dynamically using {resolution.aiProvider || "the AI engine"}.
+          <span className="reaction-result__ai-badge">✨ Dynamic AI Prediction</span>
+          <p className="reaction-result__ai-text">
+            This reaction was computed in real time using <strong>{resolution.aiProvider || "the AI engine"}</strong> after checking all 4,391 database records.
+          </p>
         </div>
       )}
 
+      {/* 3. Prompt when AI Key is missing for Unsupported Reactions */}
       {resolution.status === "UNSUPPORTED" && (
         <div className="reaction-result__ai-key-prompt">
           <div className="reaction-result__ai-key-prompt-header">
             <span className="reaction-result__ai-key-icon">✨</span>
             <div className="reaction-result__ai-key-prompt-content">
-              <strong>Reaction Not in Database — AI Prediction Ready</strong>
+              <strong>Reaction Not in Database — AI Ready</strong>
               <p className="reaction-result__ai-key-prompt-desc">
-                This combination is not in our 4,391 curated database. Configure a free Google Gemini, OpenAI, or Claude API key to automatically predict this reaction in the background.
+                This combination is not in our 4,391 curated database. Configure your Groq, Gemini, OpenAI, or Claude key to automatically predict products and energetics.
               </p>
             </div>
           </div>
@@ -79,14 +92,36 @@ export function ReactionResultPanel({ result }: { result: SimulationResult }) {
         </div>
       )}
 
-      {resolution.balancedEquation ? (
-        <EquationDisplay equation={resolution.balancedEquation} />
-      ) : (
-        <p className="reaction-result__no-equation">{resolution.status === "NO_REACTION" ? "No net reaction occurs." : "No equation available."}</p>
+      {/* 4. Chemical Equation Card (Balanced Equation + Net Ionic Equation) */}
+      <div className="reaction-result__equation-card">
+        <div className="reaction-result__main-equation">
+          {resolution.balancedEquation ? (
+            <EquationDisplay equation={resolution.balancedEquation} />
+          ) : (
+            <p className="reaction-result__no-equation">
+              {resolution.status === "NO_REACTION" ? "No net reaction occurs." : "No equation available."}
+            </p>
+          )}
+        </div>
+
+        {resolution.netIonicEquation && (
+          <div className="reaction-result__ionic">
+            <span className="reaction-result__ionic-label">Net Ionic</span>
+            <div className="reaction-result__ionic-display">
+              <EquationDisplay equation={resolution.netIonicEquation} />
+            </div>
+          </div>
+        )}
+      </div>
+
+      {/* 5. Scientific Explanation */}
+      {resolution.explanation && (
+        <div className="reaction-result__explanation-box">
+          <p className="reaction-result__explanation">{resolution.explanation}</p>
+        </div>
       )}
 
-      <p className="reaction-result__explanation">{resolution.explanation}</p>
-
+      {/* 6. Calorimetry & Temperature Change Card */}
       {calorimetry && (
         <div
           className={`reaction-result__thermo-card ${
@@ -131,116 +166,130 @@ export function ReactionResultPanel({ result }: { result: SimulationResult }) {
         </div>
       )}
 
-      {resolution.warnings.length > 0 && (
-        <ul className="reaction-result__warnings">
-          {resolution.warnings.map((w, i) => (
-            <li key={i}>{w}</li>
-          ))}
-        </ul>
+      {/* 7. Warnings (Real hazard warnings only) */}
+      {displayWarnings.length > 0 && (
+        <div className="reaction-result__warnings-card">
+          <span className="reaction-result__warnings-icon" aria-hidden="true">⚠️</span>
+          <ul className="reaction-result__warnings-list">
+            {displayWarnings.map((w, i) => (
+              <li key={i}>{w}</li>
+            ))}
+          </ul>
+        </div>
       )}
 
+      {/* 8. Species Selector (if registered chemicals are in reaction) */}
       {registeredSpecies.length > 0 && (
-        <div className="reaction-result__species-picker">
-          {registeredSpecies.map((s) => (
-            <button
-              key={s.chemicalId}
-              className={`reaction-result__species-chip ${s.chemicalId === selectedId ? "is-selected" : ""}`}
-              onClick={() => setSelectedId(s.chemicalId)}
-            >
-              <span className="formula">{formatFormula(s.formula)}</span>
-            </button>
-          ))}
+        <div className="reaction-result__species-picker-wrapper">
+          <span className="reaction-result__species-picker-title">Substance Details:</span>
+          <div className="reaction-result__species-picker">
+            {registeredSpecies.map((s) => (
+              <button
+                key={s.chemicalId}
+                type="button"
+                className={`reaction-result__species-chip ${s.chemicalId === selectedId ? "is-selected" : ""}`}
+                onClick={() => setSelectedId(s.chemicalId)}
+                title={s.commonName}
+              >
+                <span className="formula">{formatFormula(s.formula)}</span>
+                <span className="reaction-result__species-chip-name">{s.commonName}</span>
+              </button>
+            ))}
+          </div>
         </div>
       )}
 
-      <Tabs
-        defaultTabId="process"
-        tabs={[
-          {
-            id: "process",
-            label: "Process breakdown",
-            content: <ProcessBreakdownPanel resolution={resolution} />,
-          },
-          {
-            id: "molecule",
-            label: "Molecular structure",
-            content: selectedChemical ? (
-              <MoleculeViewer chemical={selectedChemical} />
-            ) : (
-              <p className="reaction-result__placeholder">Select a chemical above to view its 3D molecular structure.</p>
-            ),
-          },
-          {
-            id: "properties",
-            label: "Properties",
-            content: selectedChemical ? (
-              <PropertiesPanel chemical={selectedChemical} />
-            ) : (
-              <p className="reaction-result__placeholder">Select a chemical above to view properties.</p>
-            ),
-          },
-          {
-            id: "effects",
-            label: "Observable effects",
-            content: <ObservableEffectsPanel effects={resolution.observableEffects} />,
-          },
-          {
-            id: "safety",
-            label: "Safety",
-            content: selectedChemical ? (
-              <SafetyPanel hazards={selectedChemical.hazards} safetyNotes={resolution.safetyNotes} />
-            ) : (
-              <p className="reaction-result__placeholder">Select a chemical above to view safety notes.</p>
-            ),
-          },
-          {
-            id: "quantities",
-            label: "Quantities",
-            content: stoichiometry ? <QuantitiesTable lines={stoichiometry} /> : <p className="reaction-result__no-stoich">Quantities not computed for this result.</p>,
-          },
-        ]}
-      />
-
-      {resolution.netIonicEquation && (
-        <div className="reaction-result__ionic">
-          <span className="reaction-result__ionic-label">Net ionic equation</span>
-          <EquationDisplay equation={resolution.netIonicEquation} />
-        </div>
-      )}
+      {/* 9. Comprehensive Down Section Tabs: Process, Observations, Safety, Properties, Molecule, Quantities */}
+      <div className="reaction-result__bottom-tabs">
+        <Tabs
+          className="reaction-result__tabs"
+          defaultTabId="process"
+          tabs={[
+            {
+              id: "process",
+              label: "Process",
+              content: <ProcessBreakdownPanel resolution={resolution} />,
+            },
+            {
+              id: "effects",
+              label: "Observations",
+              content: <ObservableEffectsPanel effects={resolution.observableEffects} />,
+            },
+            {
+              id: "safety",
+              label: "Safety",
+              content: selectedChemical ? (
+                <SafetyPanel hazards={selectedChemical.hazards} safetyNotes={resolution.safetyNotes} />
+              ) : (
+                <p className="reaction-result__placeholder">Select a chemical above to view safety notes.</p>
+              ),
+            },
+            {
+              id: "properties",
+              label: "Properties",
+              content: selectedChemical ? (
+                <PropertiesPanel chemical={selectedChemical} />
+              ) : (
+                <p className="reaction-result__placeholder">Select a chemical above to view properties.</p>
+              ),
+            },
+            {
+              id: "molecule",
+              label: "3D Molecule",
+              content: selectedChemical ? (
+                <MoleculeViewer chemical={selectedChemical} />
+              ) : (
+                <p className="reaction-result__placeholder">Select a chemical above to view its 3D molecular structure.</p>
+              ),
+            },
+            {
+              id: "quantities",
+              label: "Quantities",
+              content: stoichiometry ? (
+                <QuantitiesTable lines={stoichiometry} />
+              ) : (
+                <p className="reaction-result__no-stoich">Quantities not computed for this result.</p>
+              ),
+            },
+          ]}
+        />
+      </div>
     </div>
   );
 }
 
 function QuantitiesTable({ lines }: { lines: NonNullable<SimulationResult["stoichiometry"]> }) {
   return (
-    <table className="quantities-table">
-      <thead>
-        <tr>
-          <th>Species</th>
-          <th>Role</th>
-          <th>Input</th>
-          <th>Yield / remaining</th>
-        </tr>
-      </thead>
-      <tbody>
-        {lines.map((line) => (
-          <tr key={line.chemicalId} className={line.isLimiting ? "quantities-table__limiting" : ""}>
-            <td className="formula">{formatFormula(line.formula)}</td>
-            <td>
-              {line.role}
-              {line.isLimiting ? " (limiting)" : ""}
-            </td>
-            <td>{line.inputMoles !== undefined ? `${line.inputMoles.toFixed(4)} mol` : "\u2014"}</td>
-            <td>
-              {line.theoreticalYieldMoles !== undefined
-                ? `${line.theoreticalYieldMoles.toFixed(4)} mol (${line.theoreticalYieldMass?.toFixed(3)} g)`
-                : line.remainingMoles !== undefined
-                  ? `${line.remainingMoles.toFixed(4)} mol left over`
-                  : "\u2014"}
-            </td>
+    <div className="quantities-table-wrapper">
+      <table className="quantities-table">
+        <thead>
+          <tr>
+            <th>Species</th>
+            <th>Role</th>
+            <th>Input</th>
+            <th>Yield / remaining</th>
           </tr>
-        ))}
-      </tbody>
-    </table>
+        </thead>
+        <tbody>
+          {lines.map((line) => (
+            <tr key={line.chemicalId} className={line.isLimiting ? "quantities-table__limiting" : ""}>
+              <td className="formula">{formatFormula(line.formula)}</td>
+              <td>
+                {line.role}
+                {line.isLimiting ? " (limiting)" : ""}
+              </td>
+              <td>{line.inputMoles !== undefined ? `${line.inputMoles.toFixed(4)} mol` : "\u2014"}</td>
+              <td>
+                {line.theoreticalYieldMoles !== undefined
+                  ? `${line.theoreticalYieldMoles.toFixed(4)} mol (${line.theoreticalYieldMass?.toFixed(3)} g)`
+                  : line.remainingMoles !== undefined
+                    ? `${line.remainingMoles.toFixed(4)} mol left over`
+                    : "\u2014"}
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
   );
 }
