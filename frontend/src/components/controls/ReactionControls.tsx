@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { useLabStore } from "../../state/experimentStore";
 import type { ChemicalSummary, CuratedReaction, Unit } from "../../types/chemistry";
 import { reactionsApi } from "../../api/reactions";
@@ -16,7 +16,10 @@ export function ReactionControls({ pendingChemical, onAdded }: { pendingChemical
   const [concentration, setConcentration] = useState<number | "">(0.1);
   const [curatedReactions, setCuratedReactions] = useState<CuratedReaction[]>([]);
   const [selectedReactionId, setSelectedReactionId] = useState<string>("");
+  const [reactionSearchQuery, setReactionSearchQuery] = useState("");
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [loadingPreset, setLoadingPreset] = useState(false);
+  const searchBoxRef = useRef<HTMLDivElement>(null);
 
   const addChemical = useLabStore((s) => s.addChemical);
   const isLoading = useLabStore((s) => s.isLoading);
@@ -44,6 +47,27 @@ export function ReactionControls({ pendingChemical, onAdded }: { pendingChemical
       cancelled = true;
     };
   }, []);
+
+  useEffect(() => {
+    function handleClickOutside(e: MouseEvent) {
+      if (searchBoxRef.current && !searchBoxRef.current.contains(e.target as Node)) {
+        setIsDropdownOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+  const filteredReactions = useMemo(() => {
+    if (!reactionSearchQuery.trim()) return curatedReactions;
+    const q = reactionSearchQuery.toLowerCase();
+    return curatedReactions.filter(
+      (r) =>
+        r.name.toLowerCase().includes(q) ||
+        r.equationDisplay.toLowerCase().includes(q) ||
+        r.reactionType.toLowerCase().includes(q)
+    );
+  }, [curatedReactions, reactionSearchQuery]);
 
   const needsConcentration = VOLUME_UNITS.includes(unit);
   const selectedReaction = curatedReactions.find((r) => r.id === selectedReactionId);
@@ -97,18 +121,75 @@ export function ReactionControls({ pendingChemical, onAdded }: { pendingChemical
       {curatedReactions.length > 0 && (
         <div className="reaction-controls__presets">
           <p className="reaction-controls__section-title">Example Reactions ({curatedReactions.length})</p>
-          <select
-            className="reaction-controls__preset-select"
-            value={selectedReactionId}
-            onChange={(e) => setSelectedReactionId(e.target.value)}
-          >
-            <option value="">-- Choose a curated reaction --</option>
-            {curatedReactions.map((r) => (
-              <option key={r.id} value={r.id}>
-                {r.name}
-              </option>
-            ))}
-          </select>
+          <div className="reaction-controls__search-box" ref={searchBoxRef}>
+            <div className="reaction-controls__search-input-wrapper">
+              <span className="reaction-controls__search-icon" aria-hidden="true">🔍</span>
+              <input
+                type="text"
+                className="reaction-controls__search-input"
+                placeholder="Search reaction (e.g. Haber, rust, FeSO4)..."
+                value={reactionSearchQuery}
+                onChange={(e) => {
+                  setReactionSearchQuery(e.target.value);
+                  setIsDropdownOpen(true);
+                }}
+                onFocus={() => setIsDropdownOpen(true)}
+              />
+              {reactionSearchQuery && (
+                <button
+                  type="button"
+                  className="reaction-controls__clear-search"
+                  onClick={() => {
+                    setReactionSearchQuery("");
+                    setSelectedReactionId("");
+                  }}
+                  aria-label="Clear reaction search"
+                >
+                  ✕
+                </button>
+              )}
+            </div>
+
+            {isDropdownOpen && (
+              <div className="reaction-controls__suggestions-dropdown" role="listbox">
+                <div className="reaction-controls__suggestions-header">
+                  {reactionSearchQuery.trim()
+                    ? `${filteredReactions.length} match${filteredReactions.length === 1 ? "" : "es"} found`
+                    : `All ${curatedReactions.length} Example Reactions`}
+                </div>
+                {filteredReactions.length > 0 ? (
+                  filteredReactions.map((r) => (
+                    <button
+                      key={r.id}
+                      type="button"
+                      className={`reaction-controls__suggestion-item ${
+                        r.id === selectedReactionId ? "reaction-controls__suggestion-item--selected" : ""
+                      }`}
+                      onClick={() => {
+                        setSelectedReactionId(r.id);
+                        setReactionSearchQuery(r.name);
+                        setIsDropdownOpen(false);
+                      }}
+                      role="option"
+                      aria-selected={r.id === selectedReactionId}
+                    >
+                      <div className="reaction-controls__suggestion-header">
+                        <span className="reaction-controls__suggestion-name">{r.name}</span>
+                        <span className="reaction-controls__suggestion-type">
+                          {r.reactionType.replace(/_/g, " ")}
+                        </span>
+                      </div>
+                      <div className="reaction-controls__suggestion-eq">{r.equationDisplay}</div>
+                    </button>
+                  ))
+                ) : (
+                  <div className="reaction-controls__no-suggestions">
+                    No example reactions matching &ldquo;{reactionSearchQuery}&rdquo;
+                  </div>
+                )}
+              </div>
+            )}
+          </div>
 
           {selectedReaction && (
             <div className="reaction-controls__preset-preview">
