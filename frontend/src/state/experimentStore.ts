@@ -133,7 +133,25 @@ export const useLabStore = create<LabState>((set, get) => ({
         isLoading: false,
       });
     } catch (err) {
-      set({ isLoading: false, error: err instanceof Error ? err.message : "Failed to start experiment" });
+      // Graceful fallback to client session if network request fails so the UI never hangs
+      const defaultContainer: Container = {
+        id: makeId(),
+        name: defaultContainerName("beaker", 1),
+        equipmentType: "beaker",
+        contents: [],
+        temperatureC: 25,
+      };
+      set({
+        experimentId: makeId(),
+        experimentStartedAt: Date.now(),
+        containers: [defaultContainer],
+        activeContainerId: defaultContainer.id,
+        timeline: [],
+        history: [],
+        lastSimulationResult: null,
+        isLoading: false,
+        error: err instanceof Error ? err.message : "Failed to connect to server",
+      });
     }
   },
 
