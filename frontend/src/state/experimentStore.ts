@@ -3,6 +3,7 @@ import { experimentsApi } from "../api/experiments";
 import { reactionsApi } from "../api/reactions";
 import type { ChemicalSummary, ReactionConditions, SimulationResult, Unit } from "../types/chemistry";
 import type { Container, ContainerContent, EquipmentType, TimelineEntry } from "../types/experiment";
+import { getChemicalColor } from "../utils/chemicalColorMixer";
 
 function makeId(): string {
   return Math.random().toString(36).slice(2, 10);
@@ -68,8 +69,12 @@ function consolidateContents(contents: ContainerContent[]): ContainerContent[] {
   for (const item of contents) {
     const existing = map.get(item.chemicalId);
     if (!existing) {
-      map.set(item.chemicalId, { ...item });
+      const color = item.substanceColor || getChemicalColor(item.chemicalId, item.formula, item.commonName);
+      map.set(item.chemicalId, { ...item, substanceColor: color });
       continue;
+    }
+    if (!existing.substanceColor && item.substanceColor) {
+      existing.substanceColor = item.substanceColor;
     }
     if (existing.unit === item.unit) {
       if ((existing.unit === "mL" || existing.unit === "L") && existing.concentrationMolar && item.concentrationMolar) {
@@ -363,14 +368,26 @@ export const useLabStore = create<LabState>((set, get) => ({
         let containers = s.containers;
         if (resolution.status === "REACTION") {
           const stoichByChemicalId = new Map((simulationResult.stoichiometry ?? []).map((line) => [line.chemicalId, line]));
+          // Look for any reaction observable effect color_to to apply directly to primary products
+          const primaryColorEffect = resolution.observableEffects?.find(
+            (e) => (e.type === "color_change" || e.type === "precipitation") && e.colorTo
+          );
+
           const productContents: ContainerContent[] = resolution.products
-            .map((p) => {
+            .map((p, idx) => {
               const line = stoichByChemicalId.get(p.chemicalId);
               const mass = line?.theoreticalYieldMass ?? 0;
+              // Real chemical color lookup
+              let color = getChemicalColor(p.chemicalId, p.formula, p.commonName);
+              // If reaction explicitly produces an observable precipitate/color and this is the main product
+              if (!color && idx === 0 && primaryColorEffect?.colorTo) {
+                color = primaryColorEffect.colorTo;
+              }
               return {
                 chemicalId: p.chemicalId,
                 commonName: p.commonName,
                 formula: p.formula,
+                substanceColor: color,
                 amount: mass > 0 ? parseFloat(mass.toFixed(4)) : Math.max(0.1, (p.coefficient || 1) * 2),
                 unit: "g" as Unit,
               };
@@ -384,6 +401,7 @@ export const useLabStore = create<LabState>((set, get) => ({
               chemicalId: line.chemicalId,
               commonName: line.commonName,
               formula: line.formula,
+              substanceColor: getChemicalColor(line.chemicalId, line.formula, line.commonName),
               amount: parseFloat((line.remainingMass ?? 0).toFixed(4)),
               unit: "g" as Unit,
             }));

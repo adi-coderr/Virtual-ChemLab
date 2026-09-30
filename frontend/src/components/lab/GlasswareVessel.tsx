@@ -3,6 +3,7 @@ import type { EquipmentType } from "../../types/experiment";
 import "./GlasswareVessel.css";
 
 interface GlasswareVesselProps {
+  containerId?: string;
   equipmentType: EquipmentType;
   fillPercent: number;
   liquidColor: string;
@@ -11,6 +12,7 @@ interface GlasswareVesselProps {
 }
 
 export function GlasswareVessel({
+  containerId,
   equipmentType,
   fillPercent,
   liquidColor,
@@ -23,6 +25,7 @@ export function GlasswareVessel({
 
   // Compute liquid top y position based on fillPercent (0% to 100%)
   const clampedFill = Math.max(0, Math.min(100, fillPercent));
+  const gradId = `liq-grad-${containerId || equipmentType}`;
 
   return (
     <div className={`glassware-vessel glassware-vessel--${equipmentType}`}>
@@ -56,8 +59,8 @@ export function GlasswareVessel({
           </linearGradient>
 
           {/* Liquid depth lighting gradient */}
-          <linearGradient id={`liq-grad-${equipmentType}`} x1="0%" y1="0%" x2="0%" y2="100%">
-            <stop offset="0%" stopColor={liquidColor} stopOpacity="0.75" />
+          <linearGradient id={gradId} x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stopColor={liquidColor} stopOpacity="0.80" />
             <stop offset="100%" stopColor={liquidColor} stopOpacity="0.95" />
           </linearGradient>
 
@@ -92,20 +95,20 @@ export function GlasswareVessel({
 
         {/* Render specific glassware vessel */}
         {equipmentType === "erlenmeyer_flask" && (
-          <ErlenmeyerSvg fillPercent={clampedFill} hasContents={hasContents} />
+          <ErlenmeyerSvg fillPercent={clampedFill} hasContents={hasContents} gradId={gradId} />
         )}
         {equipmentType === "test_tube" && (
-          <TestTubeSvg fillPercent={clampedFill} hasContents={hasContents} />
+          <TestTubeSvg fillPercent={clampedFill} hasContents={hasContents} gradId={gradId} />
         )}
         {equipmentType === "graduated_cylinder" && (
-          <GraduatedCylinderSvg fillPercent={clampedFill} hasContents={hasContents} />
+          <GraduatedCylinderSvg fillPercent={clampedFill} hasContents={hasContents} gradId={gradId} />
         )}
         {equipmentType === "burette" && (
-          <BuretteSvg fillPercent={clampedFill} hasContents={hasContents} />
+          <BuretteSvg fillPercent={clampedFill} hasContents={hasContents} gradId={gradId} />
         )}
         {(equipmentType === "beaker" ||
           !["erlenmeyer_flask", "test_tube", "graduated_cylinder", "burette"].includes(equipmentType)) && (
-          <BeakerSvg fillPercent={clampedFill} hasContents={hasContents} />
+          <BeakerSvg fillPercent={clampedFill} hasContents={hasContents} gradId={gradId} />
         )}
       </svg>
     </div>
@@ -115,7 +118,7 @@ export function GlasswareVessel({
 /* =========================================================================
  * BEAKER SVG COMPONENT
  * ========================================================================= */
-function BeakerSvg({ fillPercent, hasContents }: { fillPercent: number; hasContents: boolean }) {
+function BeakerSvg({ fillPercent, hasContents, gradId = "liq-grad-beaker" }: { fillPercent: number; hasContents: boolean; gradId?: string }) {
   // Total fillable height in beaker: from y = 190 (bottom) to y = 30 (top) = 160px span
   const liquidHeight = (160 * fillPercent) / 100;
   const liquidY = 190 - liquidHeight;
@@ -130,7 +133,7 @@ function BeakerSvg({ fillPercent, hasContents }: { fillPercent: number; hasConte
             y={liquidY}
             width="120"
             height={liquidHeight + 10}
-            fill="url(#liq-grad-beaker)"
+            fill={`url(#${gradId})`}
             className="glass-liquid-rect"
           />
           {/* Surface Meniscus */}
@@ -192,7 +195,7 @@ function BeakerSvg({ fillPercent, hasContents }: { fillPercent: number; hasConte
 /* =========================================================================
  * ERLENMEYER FLASK SVG COMPONENT
  * ========================================================================= */
-function ErlenmeyerSvg({ fillPercent, hasContents }: { fillPercent: number; hasContents: boolean }) {
+function ErlenmeyerSvg({ fillPercent, hasContents, gradId = "liq-grad-erlenmeyer_flask" }: { fillPercent: number; hasContents: boolean; gradId?: string }) {
   // Height from y = 190 to y = 50 = 140px span
   const liquidHeight = (140 * fillPercent) / 100;
   const liquidY = 190 - liquidHeight;
@@ -207,7 +210,7 @@ function ErlenmeyerSvg({ fillPercent, hasContents }: { fillPercent: number; hasC
             y={liquidY}
             width="130"
             height={liquidHeight + 10}
-            fill="url(#liq-grad-erlenmeyer_flask)"
+            fill={`url(#${gradId})`}
             className="glass-liquid-rect"
           />
           <path
@@ -263,7 +266,7 @@ function ErlenmeyerSvg({ fillPercent, hasContents }: { fillPercent: number; hasC
 /* =========================================================================
  * TEST TUBE SVG COMPONENT
  * ========================================================================= */
-function TestTubeSvg({ fillPercent, hasContents }: { fillPercent: number; hasContents: boolean }) {
+function TestTubeSvg({ fillPercent, hasContents, gradId = "liq-grad-test_tube" }: { fillPercent: number; hasContents: boolean; gradId?: string }) {
   // Height from y = 180 to y = 30 = 150px span
   const liquidHeight = (150 * fillPercent) / 100;
   const liquidY = 180 - liquidHeight;
@@ -278,7 +281,7 @@ function TestTubeSvg({ fillPercent, hasContents }: { fillPercent: number; hasCon
             y={liquidY}
             width="50"
             height={liquidHeight + 20}
-            fill="url(#liq-grad-test_tube)"
+            fill={`url(#${gradId})`}
             className="glass-liquid-rect"
           />
           <path
@@ -320,7 +323,7 @@ function TestTubeSvg({ fillPercent, hasContents }: { fillPercent: number; hasCon
 /* =========================================================================
  * GRADUATED CYLINDER SVG COMPONENT
  * ========================================================================= */
-function GraduatedCylinderSvg({ fillPercent, hasContents }: { fillPercent: number; hasContents: boolean }) {
+function GraduatedCylinderSvg({ fillPercent, hasContents, gradId = "liq-grad-graduated_cylinder" }: { fillPercent: number; hasContents: boolean; gradId?: string }) {
   // Height from y = 170 to y = 25 = 145px span
   const liquidHeight = (145 * fillPercent) / 100;
   const liquidY = 170 - liquidHeight;
@@ -338,7 +341,7 @@ function GraduatedCylinderSvg({ fillPercent, hasContents }: { fillPercent: numbe
             y={liquidY}
             width="50"
             height={liquidHeight + 10}
-            fill="url(#liq-grad-graduated_cylinder)"
+            fill={`url(#${gradId})`}
             className="glass-liquid-rect"
           />
           <path
@@ -384,7 +387,7 @@ function GraduatedCylinderSvg({ fillPercent, hasContents }: { fillPercent: numbe
 /* =========================================================================
  * BURETTE SVG COMPONENT
  * ========================================================================= */
-function BuretteSvg({ fillPercent, hasContents }: { fillPercent: number; hasContents: boolean }) {
+function BuretteSvg({ fillPercent, hasContents, gradId = "liq-grad-burette" }: { fillPercent: number; hasContents: boolean; gradId?: string }) {
   const liquidHeight = (135 * fillPercent) / 100;
   const liquidY = 150 - liquidHeight;
 
@@ -398,7 +401,7 @@ function BuretteSvg({ fillPercent, hasContents }: { fillPercent: number; hasCont
             y={liquidY}
             width="30"
             height={liquidHeight + 10}
-            fill="url(#liq-grad-burette)"
+            fill={`url(#${gradId})`}
             className="glass-liquid-rect"
           />
           <path

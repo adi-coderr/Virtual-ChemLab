@@ -1,11 +1,11 @@
 import type { Container } from "../../types/experiment";
 import { formatFormula } from "../../utils/formatFormula";
+import { calculateMixtureColor, getChemicalColor } from "../../utils/chemicalColorMixer";
 import { GlasswareVessel } from "./GlasswareVessel";
 import "./ContainerView.css";
 
 function mixLiquidColor(container: Container): string {
-  const colored = container.contents.filter((c) => c.substanceColor && c.substanceColor.toLowerCase() !== "#ffffff");
-  return colored[colored.length - 1]?.substanceColor ?? (container.contents.length > 0 ? "#70bce8" : "transparent");
+  return calculateMixtureColor(container.contents);
 }
 
 function computeFillPercent(container: Container): number {
@@ -110,6 +110,7 @@ export function ContainerView({
       {/* Glassware Vessel Graphic */}
       <div className="container-view__vessel-wrapper">
         <GlasswareVessel
+          containerId={container.id}
           equipmentType={container.equipmentType}
           fillPercent={fillPercent}
           liquidColor={liquidColor}
@@ -121,20 +122,23 @@ export function ContainerView({
       {/* Chemical Contents & Volume Readout */}
       <div className="container-view__details">
         <ul className="container-view__contents">
-          {container.contents.map((c, i) => (
-            <li key={`${c.chemicalId}-${i}`} className="container-view__content-item">
-              <div className="container-view__content-chem">
-                {c.substanceColor && c.substanceColor.toLowerCase() !== "#ffffff" && (
-                  <span className="container-view__color-dot" style={{ background: c.substanceColor }} />
-                )}
-                <span className="formula">{formatFormula(c.formula)}</span>
-              </div>
-              <span className="container-view__amount">
-                {c.amount} {c.unit}
-                {c.concentrationMolar ? ` @ ${c.concentrationMolar}M` : ""}
-              </span>
-            </li>
-          ))}
+          {container.contents.map((c, i) => {
+            const chemColor = c.substanceColor || getChemicalColor(c.chemicalId, c.formula, c.commonName);
+            return (
+              <li key={`${c.chemicalId}-${i}`} className="container-view__content-item">
+                <div className="container-view__content-chem">
+                  {chemColor && chemColor.toLowerCase() !== "#ffffff" && (
+                    <span className="container-view__color-dot" style={{ background: chemColor }} />
+                  )}
+                  <span className="formula">{formatFormula(c.formula)}</span>
+                </div>
+                <span className="container-view__amount">
+                  {c.amount} {c.unit}
+                  {c.concentrationMolar ? ` @ ${c.concentrationMolar}M` : ""}
+                </span>
+              </li>
+            );
+          })}
           {!hasContents && (
             <li className="container-view__empty">
               <span>Empty container</span>
