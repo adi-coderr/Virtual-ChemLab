@@ -93,9 +93,10 @@ export class SimulationService {
   private getMolarMass(chemicalId: string, formula?: string): number {
     const registered = this.chemicalRepo.getById(chemicalId);
     if (registered?.molarMass) return registered.molarMass;
-    if (formula) {
+    const candidateFormula = formula || (chemicalId && !chemicalId.includes(" ") ? chemicalId : undefined);
+    if (candidateFormula) {
       try {
-        const parsed = parseFormula(formula);
+        const parsed = parseFormula(candidateFormula);
         return computeMolarMass(parsed.composition);
       } catch {
         return 50.0;
@@ -216,6 +217,21 @@ export class SimulationService {
       }
       try {
         const chemicals = this.resolveChemicalsOrThrow(inputs);
+        const reactantDetails = inputs.map((input) => {
+          const chem = this.chemicalRepo.getById(input.chemicalId);
+          const name = chem?.commonName || input.chemicalId;
+          const formula = chem?.formula || input.formula || input.chemicalId;
+          const conc = input.concentrationMolar ? `${input.concentrationMolar} M` : undefined;
+          const amt = `${input.amount} ${input.unit}`;
+          return {
+            name,
+            formula,
+            amount: conc ? `${amt} (${conc})` : amt,
+            class: chem?.chemicalClass,
+            state: chem?.physicalState,
+          };
+        });
+
         const reactantDescription = chemicals
           .map((c) => `${c.commonName} (${c.formula})`)
           .join(" + ");
@@ -223,6 +239,7 @@ export class SimulationService {
           apiKey: options?.apiKey,
           provider: options?.provider,
           conditions,
+          reactantDetails,
         });
 
         if (aiResolution.status !== "REACTION") {
@@ -247,9 +264,23 @@ export class SimulationService {
         }));
 
         let stoichiometry: StoichiometryLine[] | undefined;
+        let calorimetry: CalorimetryResult | undefined;
         try {
           const stoich = computeStoichiometry(stoichReactants, stoichProducts, inputs);
           stoichiometry = stoich.lines;
+          if (aiResolution.enthalpyKjPerMol !== undefined && stoich.extentMoles > 0) {
+            try {
+              calorimetry = computeCalorimetry({
+                inputs,
+                extentMoles: stoich.extentMoles,
+                enthalpyKjPerMol: aiResolution.enthalpyKjPerMol,
+                initialTemperatureC: conditions.temperatureC ?? 25.0,
+                molarMassLookup: (id) => this.getMolarMass(id),
+              });
+            } catch {
+              // Keep calorimetry optional
+            }
+          }
         } catch {
           // Keep stoichiometry optional if custom inputs
         }
@@ -257,6 +288,7 @@ export class SimulationService {
         return {
           resolution: aiResolution,
           stoichiometry,
+          calorimetry,
         };
       } catch (err: any) {
         logger.info("AI reaction prediction skipped or not available", { error: err.message });
@@ -357,6 +389,13 @@ export class SimulationService {
       conditions,
     });
 
+    if (resolution.status !== "REACTION") {
+      return {
+        simulationResult: { resolution },
+        source: "ai_predicted",
+      };
+    }
+
     const stoichReactants = resolution.reactants.map((r) => ({
       chemicalId: r.chemicalId,
       formula: r.formula,
@@ -381,9 +420,23 @@ export class SimulationService {
     }));
 
     let stoichiometry: StoichiometryLine[] | undefined;
+    let calorimetry: CalorimetryResult | undefined;
     try {
       const stoich = computeStoichiometry(stoichReactants, stoichProducts, mockInputs);
       stoichiometry = stoich.lines;
+      if (resolution.enthalpyKjPerMol !== undefined && stoich.extentMoles > 0) {
+        try {
+          calorimetry = computeCalorimetry({
+            inputs: mockInputs,
+            extentMoles: stoich.extentMoles,
+            enthalpyKjPerMol: resolution.enthalpyKjPerMol,
+            initialTemperatureC: conditions.temperatureC ?? 25.0,
+            molarMassLookup: (id) => this.getMolarMass(id),
+          });
+        } catch {
+          // Keep optional
+        }
+      }
     } catch {
       // Ignore stoichiometry calculation error on unusual predicted formulas
     }
@@ -392,6 +445,7 @@ export class SimulationService {
       simulationResult: {
         resolution,
         stoichiometry,
+        calorimetry,
       },
       source: "ai_predicted",
     };
