@@ -175,8 +175,22 @@ export function generateMoleculeStructure(
     }
   }
 
-  // Pure hydrogen fallback (e.g. H2)
-  if (atoms.length === 0 && (comp["H"] ?? 0) > 0) {
+  // Aliphatic carbon backbone if no ring system was seeded
+  if (atoms.length === 0 && cCount > 0) {
+    const backboneLen = Math.min(cCount, 12);
+    for (let i = 0; i < backboneLen; i++) {
+      const x = (i - (backboneLen - 1) / 2) * 1.35;
+      const y = i % 2 === 0 ? 0.45 : -0.45;
+      const z = i % 4 === 0 || i % 4 === 1 ? 0.25 : -0.25;
+      addAtom("C", x, y, z);
+      if (i > 0) {
+        addBond(i - 1, i, 1);
+      }
+    }
+  }
+
+  // Pure hydrogen fallback (e.g. H2) ONLY if no heavy atoms exist
+  if (atoms.length === 0 && heavyKeys.length === 0 && (comp["H"] ?? 0) > 0) {
     const totalH = comp["H"] ?? 1;
     if (totalH === 1) {
       addAtom("H", 0, 0, 0);
@@ -201,14 +215,17 @@ export function generateMoleculeStructure(
     const needed = totalRequired - (placedCounts[sym] || 0);
 
     for (let k = 0; k < needed; k++) {
-      // Find candidate parent atom that still has available valence
+      // Find candidate parent atom that still has available valence, prioritizing least-substituted heavy atoms
       let parentIdx = -1;
+      let minValence = Infinity;
       for (let p = 0; p < atoms.length; p++) {
         const pElem = atoms[p]!.element;
+        if (pElem === "H") continue;
         const maxV = ELEMENT_MAX_VALENCE[pElem] ?? 4;
-        if (valenceUsed[p]! < maxV) {
+        const used = valenceUsed[p] ?? 0;
+        if (used < maxV && used < minValence) {
+          minValence = used;
           parentIdx = p;
-          break;
         }
       }
 
@@ -254,12 +271,14 @@ export function generateMoleculeStructure(
     }
   }
 
-  // Place Hydrogens: only attach to atoms with remaining valence capacity
-  const hTotal = Math.min(comp["H"] || 0, 32);
+  // Place Hydrogens: distribute them evenly across heavy atoms with remaining valence
+  const hTotal = comp["H"] || 0;
   let placedH = 0;
 
+  // Pass 1: attach to heavy atoms with remaining valence capacity
   for (let p = 0; p < atoms.length && placedH < hTotal; p++) {
     const parent = atoms[p]!;
+    if (parent.element === "H") continue;
     const maxV = ELEMENT_MAX_VALENCE[parent.element] ?? 4;
     const remaining = maxV - (valenceUsed[p] ?? 0);
 
@@ -278,19 +297,27 @@ export function generateMoleculeStructure(
     }
   }
 
-  // If there are still remaining unplaced Hydrogens, distribute them around outer perimeter
-  while (placedH < hTotal && atoms.length > 0) {
-    const parentIdx = placedH % Math.max(1, Math.min(atoms.length - placedH, 10));
-    const parent = atoms[parentIdx]!;
-    const angle = (placedH * 2.399) % (2 * Math.PI);
-    const hDist = 1.09;
-    const x = parent.x3d + hDist * Math.cos(angle);
-    const y = parent.y3d + hDist * Math.sin(angle);
-    const z = parent.z3d + (placedH % 2 === 0 ? 0.6 : -0.6);
+  // Pass 2: any remaining unplaced Hydrogens, distribute them around the outer perimeter of heavy atoms
+  if (placedH < hTotal && atoms.length > 0) {
+    const heavyIndices = atoms
+      .map((a, idx) => ({ elem: a.element, idx }))
+      .filter((item) => item.elem !== "H")
+      .map((item) => item.idx);
+    const targetPool = heavyIndices.length > 0 ? heavyIndices : atoms.map((_, idx) => idx);
 
-    const hIdx = addAtom("H", x, y, z);
-    addBond(parentIdx, hIdx, 1);
-    placedH++;
+    while (placedH < hTotal) {
+      const parentIdx = targetPool[placedH % targetPool.length]!;
+      const parent = atoms[parentIdx]!;
+      const angle = (placedH * 2.399) % (2 * Math.PI);
+      const hDist = 1.09;
+      const x = parent.x3d + hDist * Math.cos(angle);
+      const y = parent.y3d + hDist * Math.sin(angle);
+      const z = parent.z3d + (placedH % 2 === 0 ? 0.6 : -0.6);
+
+      const hIdx = addAtom("H", x, y, z);
+      addBond(parentIdx, hIdx, 1);
+      placedH++;
+    }
   }
 
   // ---------------------------------------------------------------------------
