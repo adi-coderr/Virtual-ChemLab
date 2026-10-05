@@ -22,8 +22,9 @@ export interface TestKeyResponse {
 }
 
 export const reactionsApi = {
-  list: async (limit = 50, offset = 0): Promise<{ items: CuratedReaction[]; total: number }> => {
-    const res = await apiClient.get<CuratedReaction[]>(`/reactions?limit=${limit}&offset=${offset}`);
+  list: async (limit = 50, offset = 0, q?: string): Promise<{ items: CuratedReaction[]; total: number }> => {
+    const queryParam = q ? `&q=${encodeURIComponent(q)}` : "";
+    const res = await apiClient.get<CuratedReaction[]>(`/reactions?limit=${limit}&offset=${offset}${queryParam}`);
     return { items: res.data, total: res.total ?? res.data.length };
   },
   getById: async (id: string): Promise<CuratedReaction> => {

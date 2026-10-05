@@ -23,7 +23,12 @@ export function MoleculeViewer({ chemical }: { chemical: Chemical }) {
   return (
     <div className="molecule-viewer">
       <div className="molecule-viewer__toolbar">
-        <span className="molecule-viewer__title formula">{formatFormula(chemical.formula)}</span>
+        <div className="molecule-viewer__title-container">
+          <span className="molecule-viewer__title formula">{formatFormula(chemical.formula)}</span>
+          {chemical.commonName && chemical.commonName.toLowerCase() !== chemical.formula.toLowerCase() && (
+            <span className="molecule-viewer__common-name">({chemical.commonName})</span>
+          )}
+        </div>
         <div className="molecule-viewer__toggle">
           <button className={mode === "2d" ? "is-active" : ""} onClick={() => setMode("2d")}>
             2D

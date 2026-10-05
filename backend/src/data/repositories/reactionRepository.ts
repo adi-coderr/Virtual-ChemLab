@@ -89,6 +89,30 @@ export class ReactionRepository {
     return { items: rows.map((r) => this.rowToReaction(r)), total };
   }
 
+  search(query: string, limit = 50, offset = 0): { items: CuratedReaction[]; total: number } {
+    const q = `%${query.trim().toLowerCase()}%`;
+    const rows = this.db
+      .prepare(
+        `SELECT * FROM reactions 
+         WHERE LOWER(name) LIKE ? 
+            OR LOWER(equation_display) LIKE ? 
+            OR LOWER(reaction_type) LIKE ? 
+         ORDER BY name LIMIT ? OFFSET ?`
+      )
+      .all(q, q, q, limit, offset) as ReactionRow[];
+    const total = (
+      this.db
+        .prepare(
+          `SELECT COUNT(*) as n FROM reactions 
+           WHERE LOWER(name) LIKE ? 
+              OR LOWER(equation_display) LIKE ? 
+              OR LOWER(reaction_type) LIKE ?`
+        )
+        .get(q, q, q) as { n: number }
+    ).n;
+    return { items: rows.map((r) => this.rowToReaction(r)), total };
+  }
+
   /**
    * Finds every curated reaction whose reactant chemical-id set is exactly
    * equal (order independent) to the given set. Small dataset -> simple

@@ -20,3 +20,11 @@ backend/prisma/*.db-shm
 frontend/dist/
 .vite/
 coverage/
+
+# Large raw datasets & local DB artifacts
+ChemRxn/
+chemrxn/
+data/
+backend/src/data/*.db
+backend/src/data/*.db-wal
+backend/src/data/*.db-shm

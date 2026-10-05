@@ -11,9 +11,22 @@
   justify-content: space-between;
 }
 
+.molecule-viewer__title-container {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
 .molecule-viewer__title {
   font-size: var(--text-md);
   font-weight: 600;
+}
+
+.molecule-viewer__common-name {
+  font-size: var(--text-xs);
+  color: var(--graphite-500);
+  font-weight: 500;
 }
 
 .molecule-viewer__toggle {

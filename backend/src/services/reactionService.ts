@@ -20,7 +20,10 @@ export class ReactionService {
     return reaction;
   }
 
-  list(limit: number, offset: number) {
+  list(limit: number, offset: number, q?: string) {
+    if (q && q.trim()) {
+      return this.repo.search(q, limit, offset);
+    }
     return this.repo.list(limit, offset);
   }
 

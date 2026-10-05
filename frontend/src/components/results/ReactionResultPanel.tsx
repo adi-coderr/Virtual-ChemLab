@@ -65,7 +65,7 @@ export function ReactionResultPanel({ result }: { result: SimulationResult }) {
         <div className="reaction-result__ai-banner">
           <span className="reaction-result__ai-badge">✨ Dynamic AI Prediction</span>
           <p className="reaction-result__ai-text">
-            This reaction was computed in real time using <strong>{resolution.aiProvider || "the AI engine"}</strong> after checking all 4,391 database records.
+            This reaction was computed in real time using <strong>{resolution.aiProvider || "the AI engine"}</strong> after checking our database records.
           </p>
         </div>
       )}
@@ -78,7 +78,7 @@ export function ReactionResultPanel({ result }: { result: SimulationResult }) {
             <div className="reaction-result__ai-key-prompt-content">
               <strong>Reaction Not in Database — AI Ready</strong>
               <p className="reaction-result__ai-key-prompt-desc">
-                This combination is not in our 4,391 curated database. Configure your Groq, Gemini, OpenAI, or Claude key to automatically predict products and energetics.
+                This combination is not in our database. Configure your Groq, Gemini, OpenAI, or Claude key to automatically predict products and energetics.
               </p>
             </div>
           </div>

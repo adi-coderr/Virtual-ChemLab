@@ -15,6 +15,7 @@ export function ReactionControls({ pendingChemical, onAdded }: { pendingChemical
   const [unit, setUnit] = useState<Unit>("mL");
   const [concentration, setConcentration] = useState<number | "">(0.1);
   const [curatedReactions, setCuratedReactions] = useState<CuratedReaction[]>([]);
+  const [searchResults, setSearchResults] = useState<CuratedReaction[]>([]);
   const [selectedReactionId, setSelectedReactionId] = useState<string>("");
   const [reactionSearchQuery, setReactionSearchQuery] = useState("");
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -31,22 +32,40 @@ export function ReactionControls({ pendingChemical, onAdded }: { pendingChemical
   const activeContainer = useLabStore((s) => s.containers.find((c) => c.id === s.activeContainerId));
 
   useEffect(() => {
-    if (!activeContainer || activeContainer.contents.length < 2) return;
-    const timer = setTimeout(() => {
-      previewReaction();
-    }, 400);
-    return () => clearTimeout(timer);
-  }, [activeContainer?.contents, conditions, previewReaction]);
-
-  useEffect(() => {
     let cancelled = false;
-    reactionsApi.list(200).then((res) => {
+    reactionsApi.list(100).then((res) => {
       if (!cancelled) setCuratedReactions(res.items);
     }).catch(() => {});
     return () => {
       cancelled = true;
     };
   }, []);
+
+  useEffect(() => {
+    if (!reactionSearchQuery.trim()) {
+      setSearchResults([]);
+      return;
+    }
+    let cancelled = false;
+    const timer = setTimeout(() => {
+      reactionsApi.list(50, 0, reactionSearchQuery.trim()).then((res) => {
+        if (!cancelled) setSearchResults(res.items);
+      }).catch(() => {});
+    }, 250);
+
+    return () => {
+      cancelled = true;
+      clearTimeout(timer);
+    };
+  }, [reactionSearchQuery]);
+
+  useEffect(() => {
+    if (!activeContainer || activeContainer.contents.length < 2) return;
+    const timer = setTimeout(() => {
+      previewReaction();
+    }, 400);
+    return () => clearTimeout(timer);
+  }, [activeContainer?.contents, conditions, previewReaction]);
 
   useEffect(() => {
     function handleClickOutside(e: MouseEvent) {
@@ -58,19 +77,17 @@ export function ReactionControls({ pendingChemical, onAdded }: { pendingChemical
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  const filteredReactions = useMemo(() => {
-    if (!reactionSearchQuery.trim()) return curatedReactions;
-    const q = reactionSearchQuery.toLowerCase();
-    return curatedReactions.filter(
-      (r) =>
-        r.name.toLowerCase().includes(q) ||
-        r.equationDisplay.toLowerCase().includes(q) ||
-        r.reactionType.toLowerCase().includes(q)
-    );
-  }, [curatedReactions, reactionSearchQuery]);
+  const displayedReactions = useMemo(() => {
+    if (reactionSearchQuery.trim()) {
+      return searchResults;
+    }
+    return curatedReactions;
+  }, [curatedReactions, reactionSearchQuery, searchResults]);
 
   const needsConcentration = VOLUME_UNITS.includes(unit);
-  const selectedReaction = curatedReactions.find((r) => r.id === selectedReactionId);
+  const selectedReaction =
+    curatedReactions.find((r) => r.id === selectedReactionId) ||
+    searchResults.find((r) => r.id === selectedReactionId);
 
   const handleLoadReaction = async (rx: CuratedReaction, autoRun: boolean) => {
     if (!activeContainer) return;
@@ -118,16 +135,16 @@ export function ReactionControls({ pendingChemical, onAdded }: { pendingChemical
 
   return (
     <div className="reaction-controls">
-      {curatedReactions.length > 0 && (
+      {(curatedReactions.length > 0 || searchResults.length > 0) && (
         <div className="reaction-controls__presets">
-          <p className="reaction-controls__section-title">Example Reactions ({curatedReactions.length})</p>
+          <p className="reaction-controls__section-title">Reaction Presets</p>
           <div className="reaction-controls__search-box" ref={searchBoxRef}>
             <div className="reaction-controls__search-input-wrapper">
               <span className="reaction-controls__search-icon" aria-hidden="true">🔍</span>
               <input
                 type="text"
                 className="reaction-controls__search-input"
-                placeholder="Search reaction (e.g. Haber, rust, FeSO4)..."
+                placeholder="Search reaction (e.g. Haber, combustion, synthesis)..."
                 value={reactionSearchQuery}
                 onChange={(e) => {
                   setReactionSearchQuery(e.target.value);
@@ -154,37 +171,38 @@ export function ReactionControls({ pendingChemical, onAdded }: { pendingChemical
               <div className="reaction-controls__suggestions-dropdown" role="listbox">
                 <div className="reaction-controls__suggestions-header">
                   {reactionSearchQuery.trim()
-                    ? `${filteredReactions.length} match${filteredReactions.length === 1 ? "" : "es"} found`
-                    : `All ${curatedReactions.length} Example Reactions`}
+                    ? `${displayedReactions.length} matching reactions`
+                    : `Popular Reactions`}
                 </div>
-                {filteredReactions.length > 0 ? (
-                  filteredReactions.map((r) => (
-                    <button
-                      key={r.id}
-                      type="button"
-                      className={`reaction-controls__suggestion-item ${
-                        r.id === selectedReactionId ? "reaction-controls__suggestion-item--selected" : ""
-                      }`}
-                      onClick={() => {
-                        setSelectedReactionId(r.id);
-                        setReactionSearchQuery(r.name);
-                        setIsDropdownOpen(false);
-                      }}
-                      role="option"
-                      aria-selected={r.id === selectedReactionId}
-                    >
-                      <div className="reaction-controls__suggestion-header">
-                        <span className="reaction-controls__suggestion-name">{r.name}</span>
-                        <span className="reaction-controls__suggestion-type">
-                          {r.reactionType.replace(/_/g, " ")}
-                        </span>
-                      </div>
-                      <div className="reaction-controls__suggestion-eq">{r.equationDisplay}</div>
-                    </button>
-                  ))
-                ) : (
+
+                {displayedReactions.map((r) => (
+                  <button
+                    key={r.id}
+                    type="button"
+                    className={`reaction-controls__suggestion-item ${
+                      r.id === selectedReactionId ? "reaction-controls__suggestion-item--selected" : ""
+                    }`}
+                    onClick={() => {
+                      setSelectedReactionId(r.id);
+                      setReactionSearchQuery(r.name);
+                      setIsDropdownOpen(false);
+                    }}
+                    role="option"
+                    aria-selected={r.id === selectedReactionId}
+                  >
+                    <div className="reaction-controls__suggestion-header">
+                      <span className="reaction-controls__suggestion-name">{r.name}</span>
+                      <span className="reaction-controls__suggestion-type">
+                        {r.reactionType.replace(/_/g, " ")}
+                      </span>
+                    </div>
+                    <div className="reaction-controls__suggestion-eq">{r.equationDisplay}</div>
+                  </button>
+                ))}
+
+                {displayedReactions.length === 0 && (
                   <div className="reaction-controls__no-suggestions">
-                    No example reactions matching &ldquo;{reactionSearchQuery}&rdquo;
+                    No reactions matching &ldquo;{reactionSearchQuery}&rdquo;
                   </div>
                 )}
               </div>

@@ -26,12 +26,20 @@ export default function App() {
   const loadSettings = useSettingsStore((s) => s.loadSettings);
 
   const [pendingChemical, setPendingChemical] = useState<ChemicalSummary | null>(null);
+  const [activeTabId, setActiveTabId] = useState("result");
 
   useEffect(() => {
     initExperiment();
     loadSettings();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  // When a reaction is simulated, switch to Result tab
+  useEffect(() => {
+    if (lastSimulationResult) {
+      setActiveTabId("result");
+    }
+  }, [lastSimulationResult]);
 
   if (!experimentId) {
     return (
@@ -65,6 +73,7 @@ export default function App() {
         center={<LabBench />}
         right={
           <Tabs
+            defaultTabId={activeTabId}
             tabs={[
               {
                 id: "result",
@@ -73,7 +82,7 @@ export default function App() {
                   <ReactionResultPanel result={lastSimulationResult} />
                 ) : (
                   <p className="app-right-placeholder">
-                    Select chemicals into a container to run or preview the reaction. If the reaction is not in the database, the AI agent will predict all products and properties in the background.
+                    Select chemicals into a container to run or preview the reaction.
                   </p>
                 ),
               },

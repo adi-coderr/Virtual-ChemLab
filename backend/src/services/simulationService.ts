@@ -8,6 +8,7 @@ import { computeCalorimetry } from "../chemistry-engine/calorimetry.js";
 import { parseFormula } from "../chemistry-engine/formulaParser.js";
 import { computeMolarMass } from "../chemistry-engine/molarMass.js";
 import { aiReactionPredictor, type PredictReactionOptions } from "./aiReactionPredictor.js";
+import { chemrxnService } from "./chemrxnService.js";
 import { HttpError } from "../utils/errors.js";
 import type {
   CalorimetryResult,
@@ -212,6 +213,24 @@ export class SimulationService {
     const result = this.simulate(inputs, conditions);
 
     if (result.resolution.status === "UNSUPPORTED") {
+      // 1. Check ChemRxn Patent Database (35,000+ real experimental records)
+      try {
+        const reactantTokens = inputs.map((input) => {
+          const chem = this.chemicalRepo.getById(input.chemicalId);
+          return chem?.commonName || chem?.formula || input.formula || input.chemicalId;
+        });
+        const chemrxnMatch = chemrxnService.findByReactants(reactantTokens);
+        if (chemrxnMatch) {
+          logger.info("Found matching ChemRxn patent reaction", {
+            id: chemrxnMatch.id,
+            docId: chemrxnMatch.documentId,
+          });
+          return chemrxnService.simulateChemrxnReaction(chemrxnMatch, conditions);
+        }
+      } catch (err: any) {
+        logger.warn("ChemRxn lookup skipped", { error: err.message });
+      }
+
       if (process.env.NODE_ENV === "test" && !options?.apiKey) {
         return result;
       }
@@ -382,7 +401,22 @@ export class SimulationService {
       };
     }
 
-    // 2. Not in database: use AI Reaction Predictor
+    // 2. Check ChemRxn Patent Database
+    try {
+      const chemrxnRes = chemrxnService.search({ q: clean, limit: 1 });
+      if (chemrxnRes.items.length > 0 && chemrxnRes.items[0]) {
+        const match = chemrxnRes.items[0];
+        const simRes = chemrxnService.simulateChemrxnReaction(match, conditions);
+        return {
+          simulationResult: simRes,
+          source: "curated_database",
+        };
+      }
+    } catch (err: any) {
+      logger.warn("ChemRxn predict lookup skipped", { error: err.message });
+    }
+
+    // 3. Not in database: use AI Reaction Predictor
     const resolution = await aiReactionPredictor.predict(clean, {
       apiKey: options?.apiKey,
       provider: options?.provider,

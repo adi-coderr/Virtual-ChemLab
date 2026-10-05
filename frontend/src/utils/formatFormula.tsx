@@ -10,6 +10,10 @@ import type { JSX } from "react";
  */
 export function formatFormula(formula: string): (string | JSX.Element)[] {
   let str = formula.trim();
+  // Guard: If it looks like a chemical name (contains 3+ consecutive lowercase letters or spaces), return unchanged
+  if (/[a-z]{3,}/.test(str) || /\s/.test(str)) {
+    return [formula];
+  }
   let phase = "";
   const phaseMatch = str.match(/\s*\(((?:aq|s|l|g|solid|gas|liquid|aqueous))\)$/i);
   if (phaseMatch && phaseMatch[1]) {
