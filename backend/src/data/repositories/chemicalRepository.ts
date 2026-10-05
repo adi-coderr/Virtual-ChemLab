@@ -221,7 +221,12 @@ export class ChemicalRepository {
       .all(chemicalId) as Hazard[];
   }
 
-  private getStructure(chemicalId: string, formula?: string, commonName?: string): MoleculeStructure | undefined {
+  private getStructure(
+    chemicalId: string,
+    formula?: string,
+    commonName?: string,
+    smiles?: string
+  ): MoleculeStructure | undefined {
     const atoms = this.db
       .prepare("SELECT * FROM molecule_atoms WHERE chemical_id = ? ORDER BY atom_index")
       .all(chemicalId) as {
@@ -266,8 +271,8 @@ export class ChemicalRepository {
 
     // Dynamic 3D molecular structure generation for all compounds
     const comp = this.getComposition(chemicalId);
-    if (Object.keys(comp).length > 0 || (formula && /^[A-Z]/.test(formula))) {
-      return generateMoleculeStructure(chemicalId, formula || "", comp, commonName || "");
+    if (Object.keys(comp).length > 0 || (formula && /^[A-Z]/.test(formula)) || smiles) {
+      return generateMoleculeStructure(chemicalId, formula || "", comp, commonName || "", smiles);
     }
 
     return undefined;
@@ -308,7 +313,7 @@ export class ChemicalRepository {
       substanceColor: row.substance_color ?? undefined,
       aliases: this.getAliases(row.id),
       hazards: this.getHazards(row.id),
-      structure: this.getStructure(row.id, row.formula, row.common_name),
+      structure: this.getStructure(row.id, row.formula, row.common_name, row.smiles ?? undefined),
       provenance: {
         source: row.source,
         reference: row.reference ?? undefined,
